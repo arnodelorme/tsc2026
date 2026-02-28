@@ -46,10 +46,19 @@ img { max-width: 100%; height: auto; }
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
 
+/* ── Construction Banner ─────────────────────── */
+.construction-banner {
+  background: #e8a727; color: #0a2440;
+  text-align: center; padding: .5rem 1rem;
+  font-size: .85rem; font-weight: 600;
+  position: fixed; top: 56px; left: 0; right: 0; z-index: 99;
+  letter-spacing: .02em;
+}
+
 /* ── Hero ─────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 92vh; margin-top: 30px;
   display: flex; align-items: center; justify-content: center;
   text-align: center; color: #fff;
   overflow: hidden;
@@ -277,6 +286,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   </ul>
 </nav>
 
+<!-- ═══ CONSTRUCTION BANNER ═══ -->
+<div class="construction-banner">This website is under construction &mdash; details subject to change.</div>
+
 <!-- ═══ HERO ═══ -->
 <header class="hero" id="home">
   <div class="hero-content">
@@ -310,15 +322,17 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <h2 class="section-title">Conference Themes</h2>
     <p class="section-lead">Exploring the frontiers of consciousness research across disciplines.</p>
     <div class="themes-grid">
-      <div class="theme-card">Photons in the Brain</div>
-      <div class="theme-card">Origins of Life &amp; Consciousness</div>
-      <div class="theme-card">Mitochondria &amp; Consciousness</div>
+      <div class="theme-card">Neural Correlates of Consciousness</div>
+      <div class="theme-card">Predictive Coding &amp; Consciousness</div>
+      <div class="theme-card">Theories of Consciousness</div>
+      <div class="theme-card">Philosophy of Mind &amp; Consciousness</div>
       <div class="theme-card">Quantum Brain Biology</div>
-      <div class="theme-card">Consciousness &amp; Reality</div>
+      <div class="theme-card">Origins of Life &amp; Consciousness</div>
       <div class="theme-card">Can AI Be Conscious?</div>
       <div class="theme-card">Psychedelic Actions in the Brain</div>
-      <div class="theme-card">Quantum AI</div>
-      <div class="theme-card">Measuring Correlates of Consciousness</div>
+      <div class="theme-card">Consciousness &amp; Reality</div>
+      <div class="theme-card">Mitochondria &amp; Consciousness</div>
+      <div class="theme-card">The Hard Problem &amp; Phenomenology</div>
       <div class="theme-card">Awakening &amp; Enlightenment</div>
     </div>
   </div>
