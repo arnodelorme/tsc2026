@@ -253,6 +253,13 @@ footer {
 }
 footer a { color: #c8ddf0; }
 footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+.footer-logos {
+  display: flex; align-items: center; justify-content: center; gap: 2.5rem;
+  margin: 1.5rem 0 1rem; flex-wrap: wrap;
+}
+.footer-logos img { height: 44px; opacity: .85; transition: opacity .2s; }
+.footer-logos img:hover { opacity: 1; }
+.footer-sponsor { font-size: .8rem; color: #8baac8; margin-bottom: .8rem; }
 
 /* ── Responsive ───────────────────────────────── */
 @media (max-width: 768px) {
@@ -579,6 +586,11 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="foot-brand">The Science of Consciousness 2026</div>
+  <div class="footer-logos">
+    <a href="https://ucsd.edu"><img src="img/ucsd-logo-white.png" alt="UC San Diego"></a>
+    <a href="https://noetic.org"><img src="img/ions-logo.jpg" alt="Institute of Noetic Sciences" style="background:#fff;padding:4px 10px;border-radius:4px;"></a>
+  </div>
+  <p class="footer-sponsor">Fiscal sponsor: Institute of Noetic Sciences (IONS)</p>
   <p>&copy; 2026 TSC Conference. All rights reserved.</p>
   <p style="margin-top:.3rem;">
     Contact: <a href="mailto:tsc2026@ucsd.edu">tsc2026@ucsd.edu</a>
