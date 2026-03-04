@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program &mdash; Consciousness Science 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.5;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle { font-size: 1.05rem; opacity: .85; }
+
+/* ── Timetable ───────────────────────────────── */
+.timetable-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+  overflow-x: auto;
+}
+.timetable-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.5rem;
+}
+.timetable {
+  display: grid;
+  grid-template-columns: 70px repeat(6, 1fr);
+  border-left: 2px solid #bbb;
+  min-width: 900px;
+  font-size: .8rem;
+}
+
+/* time labels column */
+.t-time {
+  grid-column: 1;
+  text-align: right; padding-right: .6rem;
+  font-size: .75rem; color: #666; font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex; align-items: flex-start; justify-content: flex-end;
+  padding-top: 2px;
+}
+
+/* day headers */
+.t-day {
+  text-align: center; font-weight: 700; font-size: .85rem;
+  padding: .6rem .3rem;
+  background: #f5f8fb;
+  border-bottom: 2px solid #bbb;
+  color: #0a2440;
+}
+
+/* grid cells */
+.t-cell {
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  min-height: 38px;
+  position: relative;
+}
+
+/* session blocks */
+.t-block {
+  border-radius: 4px;
+  padding: .45rem .55rem;
+  margin: 2px;
+  font-size: .78rem;
+  line-height: 1.35;
+  height: calc(100% - 4px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.t-block .session-title {
+  font-weight: 700; font-size: .8rem;
+  margin-bottom: .15rem;
+}
+.t-block .session-speakers {
+  font-size: .72rem; font-style: italic; opacity: .85;
+}
+.t-block .session-note {
+  font-size: .68rem; opacity: .7; margin-top: .1rem;
+}
+
+/* Color coding */
+.bg-plenary   { background: #e4b8be; color: #3a1018; }
+.bg-break     { background: #e8e8e8; color: #555; text-align: center; }
+.bg-concurrent { background: #c5d5e4; color: #1a3050; }
+.bg-poster    { background: #d4c4a8; color: #3a3020; }
+.bg-workshop  { background: #b8d4d8; color: #1a3a3e; }
+.bg-social    { background: #dde0d0; color: #3a3a2a; }
+.bg-closing   { background: #e8a727; color: #0a2440; }
+.bg-breakfast { background: #f0e0e0; color: #6a3030; }
+.bg-lunch     { background: #e0ddd0; color: #555; text-align: center; }
+
+/* span helpers for multi-column blocks */
+.span-all { grid-column: 2 / -1; }
+.span-2   { grid-column: span 2; }
+.span-3   { grid-column: span 3; }
+
+/* ── Day sections (stacked for clarity) ──────── */
+.day-section {
+  margin-bottom: 2.5rem;
+}
+.day-section h3 {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .8rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.day-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border-left: 2px solid #bbb;
+}
+.dg-time {
+  font-size: .78rem; color: #666; font-weight: 600;
+  padding: .5rem .6rem .5rem 0;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+.dg-content {
+  border-bottom: 1px solid #eee;
+  padding: .35rem .5rem;
+}
+.dg-block {
+  border-radius: 5px;
+  padding: .55rem .7rem;
+  margin: 2px 0;
+}
+.dg-block .session-title {
+  font-weight: 700; font-size: .88rem;
+  margin-bottom: .15rem;
+}
+.dg-block .session-speakers {
+  font-size: .8rem; font-style: italic; opacity: .85;
+}
+.dg-block .session-note {
+  font-size: .75rem; opacity: .7; margin-top: .15rem;
+}
+
+/* ── Legend ───────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  margin: 1.5rem 0 2rem;
+  font-size: .78rem;
+}
+.legend-item {
+  display: flex; align-items: center; gap: .35rem;
+}
+.legend-swatch {
+  width: 16px; height: 16px; border-radius: 3px;
+}
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .timetable-wrap { padding: 1.5rem .5rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="SC Logo">
+    <span>SC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="index.html#themes">Themes</a></li>
+    <li><a href="index.html#venue">Venue</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Conference Program</h1>
+  <p class="subtitle">October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
+</header>
+
+<!-- ═══ PROGRAM ═══ -->
+<div class="timetable-wrap">
+
+<h2>Detailed Timetable</h2>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch bg-plenary"></div> Plenary</div>
+  <div class="legend-item"><div class="legend-swatch bg-concurrent"></div> Concurrent sessions</div>
+  <div class="legend-item"><div class="legend-swatch bg-workshop"></div> Workshops</div>
+  <div class="legend-item"><div class="legend-swatch bg-poster"></div> Posters</div>
+  <div class="legend-item"><div class="legend-swatch bg-social"></div> Social / experiential</div>
+  <div class="legend-item"><div class="legend-swatch bg-break"></div> Break</div>
+</div>
+
+<!-- ── MONDAY ── -->
+<div class="day-section">
+  <h3>Monday, October 12 &mdash; Pre-Conference Workshops</h3>
+  <div class="day-grid">
+    <div class="dg-time">9:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-workshop">
+        <div class="session-title">Morning Workshops (5 parallel sessions)</div>
+        <div class="session-note">See detailed workshop schedule</div>
+      </div>
+    </div>
+    <div class="dg-time">12:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break">
+        <div class="session-title">Lunch break</div>
+      </div>
+    </div>
+    <div class="dg-time">1:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-workshop">
+        <div class="session-title">Afternoon Workshops (5 parallel sessions)</div>
+        <div class="session-note">See detailed workshop schedule</div>
+      </div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Welcome reception &amp; registration</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TUESDAY ── -->
+<div class="day-section">
+  <h3>Tuesday, October 13</h3>
+  <div class="day-grid">
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-1: Photons, Brain and Consciousness</div>
+        <div class="session-speakers">Nirosha Murugan, Lew Lim, Jack Tuszynski</div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-2: Consciousness and Biology</div>
+        <div class="session-speakers">Alysson Muotri, Kenneth Kosik</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-3: Can AI Be Conscious?</div>
+        <div class="session-speakers">Ben Goertzel, Robert Long, Susan Schneider</div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-concurrent">
+        <div class="session-title">Concurrent Sessions (8&ndash;10 parallel)</div>
+        <div class="session-note">See detailed concurrent schedule</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WEDNESDAY ── -->
+<div class="day-section">
+  <h3>Wednesday, October 14</h3>
+  <div class="day-grid">
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-4: Psi and Telepathy</div>
+        <div class="session-speakers">Diane Hennacy, Arnaud Delorme, David Chartrand</div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-5: Altered States of Consciousness</div>
+        <div class="session-speakers">Robin Carhart-Harris, Fadel Zeidan</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-6: Quantum AI</div>
+        <div class="session-speakers">Hartmut Neven, Suzanne Gildert, Anirban Bandyopadhyay</div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-concurrent">
+        <div class="session-title">Concurrent Sessions (8&ndash;10 parallel)</div>
+        <div class="session-note">See detailed concurrent schedule</div>
+      </div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-poster">
+        <div class="session-title">Poster Session 1</div>
+        <div class="session-note">Catalina Ballroom K</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── THURSDAY ── -->
+<div class="day-section">
+  <h3>Thursday, October 15</h3>
+  <div class="day-grid">
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-7: Origin of Life 1</div>
+        <div class="session-speakers">Dante Lauretta, Nick Lane, Lee Cronin</div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-8: Awakening and Enlightenment</div>
+        <div class="session-speakers">Jeffery A. Martin, Thomas Campbell</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-9: Neuroscience &amp; Consciousness 1</div>
+        <div class="session-speakers">Andr&eacute; M. Bastos, Edward Boyden, Edward Large</div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">4:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-concurrent">
+        <div class="session-title">Concurrent Sessions (8&ndash;10 parallel)</div>
+        <div class="session-note">See detailed concurrent schedule</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FRIDAY ── -->
+<div class="day-section">
+  <h3>Friday, October 16</h3>
+  <div class="day-grid">
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-10: Origin of Life 2</div>
+        <div class="session-speakers">Steen Rasmussen, Martin Picard, Sara Imari Walker</div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-11: Psi and UAPs</div>
+        <div class="session-speakers">Dean Radin, Beatriz Villarroel</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-12: Neuroscience and Consciousness 2</div>
+        <div class="session-speakers">Eric Halgren, Sarika Katiyar, Mike Wiest</div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-concurrent">
+        <div class="session-title">Concurrent Sessions (8&ndash;10 parallel)</div>
+        <div class="session-note">See detailed concurrent schedule</div>
+      </div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-poster">
+        <div class="session-title">Poster Session 2</div>
+        <div class="session-note">Catalina Ballroom K</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SATURDAY ── -->
+<div class="day-section">
+  <h3>Saturday, October 17</h3>
+  <div class="day-grid">
+    <div class="dg-time">9:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-13: Which Came First? Life or Consciousness?</div>
+        <div class="session-speakers">Michael Levin (Remote), Stuart Hameroff, Farhan Lakhany</div>
+      </div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary">
+        <div class="session-title">PL-14: &ldquo;Eschermatics&rdquo; &mdash; Geometry and Consciousness</div>
+        <div class="session-speakers">Sir Roger Penrose (Remote)</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-closing">
+        <div class="session-title">Conference Close: The Future of Consciousness</div>
+        <div class="session-speakers">Stuart Hameroff, Dante Lauretta</div>
+      </div>
+    </div>
+    <div class="dg-time">1:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">End of conference</div></div>
+    </div>
+  </div>
+</div>
+
+<p style="font-size:.85rem;color:#888;margin-top:1rem;">Program is preliminary and subject to change. Concurrent session and poster details will be announced separately.</p>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="foot-brand">Consciousness Science 2026</div>
+  <p>&copy; 2026 SC Conference. All rights reserved.</p>
+  <p style="margin-top:.3rem;">
+    Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a>
+  </p>
+</footer>
+
+<!-- ═══ JS ═══ -->
+<script>
+document.querySelectorAll('.topnav ul li a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topnav ul').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
