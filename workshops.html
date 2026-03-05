@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshops &mdash; Consciousness Science 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+.back-bar a:hover { text-decoration: underline; }
+
+.session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
+.session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #b8d4d8; border-color: #1a96b8; }
+.menu-btn .btn-time { font-size: .72rem; font-weight: 400; color: #555; display: block; margin-top: .15rem; }
+
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel { display: none; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: .5rem; }
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .3rem; }
+.session-panel .ws-meta { font-size: .82rem; color: #666; margin-bottom: .8rem; }
+.session-panel ol { margin: 0 0 0 1.2rem; padding: 0; font-size: .88rem; line-height: 1.6; }
+.session-panel ol li { margin-bottom: .4rem; }
+.session-panel ol li strong { color: #0a2440; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+.login-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.login-box {
+  background: #fff; border-radius: 12px; padding: 2.5rem 2rem;
+  max-width: 360px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.3); text-align: center;
+}
+.login-box h2 { font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem; }
+.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
+.login-box input {
+  display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
+  border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; font-family: inherit;
+}
+.login-box input:focus { outline: none; border-color: #1a96b8; }
+.login-box button {
+  width: 100%; padding: .6rem; background: #0a2440; color: #fff;
+  border: none; border-radius: 6px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .2s;
+}
+.login-box button:hover { background: #14628a; }
+.login-error { color: #c0392b; font-size: .8rem; margin-top: .5rem; display: none; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2>Program Access</h2>
+    <p>This page is restricted to committee members.</p>
+    <form onsubmit="return checkLogin()">
+      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button type="submit">Enter</button>
+      <div class="login-error" id="loginError">Incorrect login or password.</div>
+    </form>
+  </div>
+</div>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="SC Logo">
+    <span>SC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="index.html#themes">Themes</a></li>
+    <li><a href="index.html#venue">Venue</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <h1 id="pageTitle">Workshops</h1>
+  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 10 workshops</p>
+</header>
+
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<div class="session-menu">
+  <h2>Select a workshop:</h2>
+  <div class="menu-grid">
+    <button class="menu-btn" data-slot="morning" data-panel="s1" onclick="showSession(this,'s1')">W1: Quantum Cognition <span class="btn-time">Morning 9:00&ndash;12:30</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s2" onclick="showSession(this,'s2')">W2: Indian Knowledge Systems <span class="btn-time">Morning 9:00&ndash;12:30</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s3" onclick="showSession(this,'s3')">W3: Education &amp; Quantum Mind <span class="btn-time">Morning 9:00&ndash;10:20</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s4" onclick="showSession(this,'s4')">W4: Economic Systems <span class="btn-time">Morning 10:40&ndash;12:30</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s5" onclick="showSession(this,'s5')">W5: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W6: Photobiomodulation <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s7" onclick="showSession(this,'s7')">W7: Psi &amp; Consciousness <span class="btn-time">Afternoon 2:00&ndash;3:50</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W8: NDEs &amp; OBEs <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s9" onclick="showSession(this,'s9')">W9: Enlightenment <span class="btn-time">Afternoon 4:10&ndash;6:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s10" onclick="showSession(this,'s10')">W10: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;10:00</span></button>
+  </div>
+</div>
+
+<div class="session-wrap">
+
+<div class="session-panel" data-slot="morning" id="s1">
+  <h3>W1: Quantum Cognition</h3>
+  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm</div>
+  <ol>
+    <li><strong>Jerome R. Busemeyer</strong></li>
+    <li><strong>Harald Atmanspacher</strong></li>
+    <li><strong>Nao Tsuchiya</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s2">
+  <h3>W2: Bridging Awareness Dimensions through Quantum Perception, Biology and Music in the Indian Knowledge System Framework</h3>
+  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm &middot; Chair: Laxmidhar Behera</div>
+  <ol>
+    <li><strong>Chayan Nandi</strong></li>
+    <li><strong>Venkatesh Chembrulu</strong></li>
+    <li><strong>Archi Banerjee</strong></li>
+    <li><strong>Chitravina Ravikiran</strong></li>
+    <li><strong>Ganpati Ramanath</strong></li>
+    <li><strong>Arnav Bhavsar</strong></li>
+    <li><strong>Ramajayam Govindaraji</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s3">
+  <h3>W3: Education and Transformative Learning, Quantum Mind</h3>
+  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 10:20 am</div>
+  <ol>
+    <li><strong>Joan Walton</strong></li>
+    <li><strong>Laurel Waterman</strong></li>
+    <li><strong>Marjorie Woollacott</strong></li>
+    <li><strong>Suzanne Gildert</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s4">
+  <h3>W4: Consciousness of Economic Systems</h3>
+  <div class="ws-meta">Sunday morning &middot; 10:40 am &ndash; 12:30 pm</div>
+  <ol>
+    <li><strong>Ron Chrisley</strong></li>
+    <li><strong>Richard Ebstein</strong></li>
+    <li><strong>Giorgia Lucchini</strong></li>
+    <li><strong>Kathryn Nave</strong></li>
+    <li><strong>Chew Soo Hong</strong></li>
+    <li><strong>Patrick Schotanus</strong></li>
+    <li><strong>Uzi Awret</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s5">
+  <h3>W5: Brain Electromagnetic Field Generation and Information Processing</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm</div>
+  <ol>
+    <li><strong>M. Bruce MacIver</strong></li>
+    <li><strong>Johnjoe McFadden</strong></li>
+    <li><strong>Michael Levin</strong> (Remote)</li>
+    <li><strong>Arnaud Delorme</strong></li>
+    <li><strong>Tam Hunt</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s6">
+  <h3>W6: Photobiomodulation (PBM)-Induced Deep Meditation &ldquo;Jhana&rdquo; States</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm &middot; Audience participation</div>
+  <ol>
+    <li><strong>Lew Lim</strong></li>
+    <li><strong>Sanjay Manchandran</strong></li>
+    <li><strong>Reza Zomorrodi</strong></li>
+    <li><strong>Vielight staff</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s7">
+  <h3>W7: Psi &amp; Consciousness &ndash; Telepathy &amp; Mindsight</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 3:50 pm</div>
+  <ol>
+    <li><strong>Arnaud Delorme</strong></li>
+    <li><strong>Thomas Brophy</strong></li>
+    <li><strong>Dean Radin</strong></li>
+    <li><strong>Diane Hennacy</strong></li>
+    <li><strong>David Chartrand</strong></li>
+    <li><strong>Beatriz Villarroel</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s8">
+  <h3>W8: Research at the Edge of Consciousness: NDEs, OBEs and Past Life Memories</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm</div>
+  <ol>
+    <li><strong>Kim Penberthy</strong></li>
+    <li><strong>Martin Fleming</strong></li>
+    <li><strong>Philip Cozzoli</strong></li>
+    <li><strong>Marina Weiler</strong></li>
+    <li><strong>Douglas Watson</strong></li>
+    <li><strong>Kunal Mooley</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s9">
+  <h3>W9: Enlightenment and Awakened States</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 4:10 pm &ndash; 6:00 pm</div>
+  <ol>
+    <li><strong>Jeffery A. Martin</strong></li>
+    <li><strong>Thomas Campbell</strong></li>
+  </ol>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s10">
+  <h3>W10: The Varieties of Non-Human Consciousness</h3>
+  <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 10:00 pm</div>
+  <ol>
+    <li><strong>Susan Schneider</strong></li>
+    <li><strong>Rajnish Khanna</strong></li>
+    <li><strong>Ben Goertzel</strong></li>
+    <li><strong>Nao Tsuchiya</strong></li>
+    <li><strong>Hartmut Neven</strong></li>
+    <li><strong>Alysson Muotri</strong></li>
+    <li><strong>Anirban Bandyopadhyay</strong></li>
+    <li><strong>Dana Kippel</strong></li>
+    <li><strong>Stuart Hameroff</strong></li>
+  </ol>
+</div>
+
+</div>
+
+<footer>
+  <div class="foot-brand">Consciousness Science 2026</div>
+  <p>&copy; 2026 SC Conference. All rights reserved.</p>
+  <p style="margin-top:.3rem;">Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a></p>
+</footer>
+
+<script>
+function checkLogin() {
+  var u = document.getElementById('loginUser').value;
+  var p = document.getElementById('loginPass').value;
+  if (u === 'cs2026' && p === 'cs2026') {
+    document.getElementById('loginOverlay').style.display = 'none';
+    sessionStorage.setItem('programAuth', '1');
+    return false;
+  }
+  document.getElementById('loginError').style.display = 'block';
+  return false;
+}
+if (sessionStorage.getItem('programAuth') === '1') {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
+
+function showSession(btn, id) {
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Filter by hash: #morning shows W1-W4, #afternoon shows W5-W10
+function filterBySlot() {
+  var slot = location.hash.replace('#', '');
+  if (slot !== 'morning' && slot !== 'afternoon') return;
+
+  // Hide buttons and panels that don't match
+  document.querySelectorAll('.menu-btn').forEach(function(b) {
+    b.style.display = b.getAttribute('data-slot') === slot ? '' : 'none';
+    b.classList.remove('active');
+  });
+  document.querySelectorAll('.session-panel').forEach(function(p) {
+    p.classList.remove('active');
+  });
+
+  // Activate first visible button and its panel
+  var first = document.querySelector('.menu-btn[data-slot="' + slot + '"]');
+  if (first) {
+    first.classList.add('active');
+    document.getElementById(first.getAttribute('data-panel')).classList.add('active');
+  }
+
+  // Update title and subtitle
+  if (slot === 'morning') {
+    document.getElementById('pageTitle').textContent = 'Morning Workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 9:00 am\u20131:00 pm &middot; 4 workshops';
+  } else {
+    document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 6 workshops';
+  }
+}
+
+filterBySlot();
+// If no hash, show all with first active
+if (!location.hash || (location.hash !== '#morning' && location.hash !== '#afternoon')) {
+  var firstBtn = document.querySelector('.menu-btn');
+  if (firstBtn) {
+    firstBtn.classList.add('active');
+    document.getElementById(firstBtn.getAttribute('data-panel')).classList.add('active');
+  }
+}
+
+document.querySelectorAll('.topnav ul li a').forEach(function(a) {
+  a.addEventListener('click', function() { document.querySelector('.topnav ul').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

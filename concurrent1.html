@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concurrent Sessions 1 &mdash; Consciousness Science 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Nav */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* Header */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+/* Back link */
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+.back-bar a:hover { text-decoration: underline; }
+
+/* Session menu */
+.session-menu {
+  max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem;
+}
+.session-menu h2 {
+  font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem;
+}
+.menu-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: .5rem;
+}
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #c5d5e4; border-color: #1a96b8; }
+
+/* Session panels */
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel {
+  display: none; background: #fff; border: 1px solid #ddd;
+  border-radius: 8px; padding: 1.5rem; margin-top: .5rem;
+}
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.session-panel ol { margin: 0 0 0 1.2rem; padding: 0; font-size: .88rem; line-height: 1.6; }
+.session-panel ol li { margin-bottom: .4rem; }
+.session-panel ol li strong { color: #0a2440; }
+.talk-title { font-style: italic; color: #444; }
+
+/* Footer */
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* Login overlay */
+.login-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.login-box {
+  background: #fff; border-radius: 12px; padding: 2.5rem 2rem;
+  max-width: 360px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.3); text-align: center;
+}
+.login-box h2 { font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem; }
+.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
+.login-box input {
+  display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
+  border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; font-family: inherit;
+}
+.login-box input:focus { outline: none; border-color: #1a96b8; }
+.login-box button {
+  width: 100%; padding: .6rem; background: #0a2440; color: #fff;
+  border: none; border-radius: 6px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .2s;
+}
+.login-box button:hover { background: #14628a; }
+.login-error { color: #c0392b; font-size: .8rem; margin-top: .5rem; display: none; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Login -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2>Program Access</h2>
+    <p>This page is restricted to committee members.</p>
+    <form onsubmit="return checkLogin()">
+      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button type="submit">Enter</button>
+      <div class="login-error" id="loginError">Incorrect login or password.</div>
+    </form>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="SC Logo">
+    <span>SC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="index.html#themes">Themes</a></li>
+    <li><a href="index.html#venue">Venue</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+  </ul>
+</nav>
+
+<!-- Header -->
+<header class="page-header">
+  <h1>Concurrent Sessions 1</h1>
+  <p class="subtitle">Monday, October 12 &middot; 5:00&ndash;7:30 pm &middot; 8 parallel sessions</p>
+</header>
+
+<!-- Back -->
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<!-- Session Menu -->
+<div class="session-menu">
+  <h2>Select a session:</h2>
+  <div class="menu-grid">
+    <button class="menu-btn active" onclick="showSession(this,'s1')">C1: Correlates of Consciousness (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s2')">C2: Philosophy (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s3')">C3: Quantum Consciousness (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s4')">C4: Therapeutics (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s5')">C5: Death and Consciousness (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s6')">C6: AI Consciousness (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s7')">C7: Fundamental Approaches (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s8')">C8: E-Cognition and Consciousness</button>
+  </div>
+</div>
+
+<!-- Session Panels -->
+<div class="session-wrap">
+
+<div class="session-panel active" id="s1">
+  <h3>C1: Correlates of Consciousness (1)</h3>
+  <ol>
+    <li><strong>Antonia Di Francesco</strong> &ndash; <span class="talk-title">Mental correlates of fingertip biophoton emission</span></li>
+    <li><strong>Schea Fissel</strong> &ndash; <span class="talk-title">Attentional states emerge as complexity attractors</span></li>
+    <li><strong>Logan T. Trujillo</strong> &ndash; <span class="talk-title">EEG characteristics of the visual awareness negativity</span></li>
+    <li><strong>Reza Zomorrodi</strong> &ndash; <span class="talk-title">&lsquo;BICE&rsquo;: An objective metric for elevated consciousness</span></li>
+    <li><strong>Laura &amp; Peter Sordillo</strong> &ndash; <span class="talk-title">Cognitive impairment after chemotherapy resembles post-anesthesia impairment</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s2">
+  <h3>C2: Philosophy (1)</h3>
+  <ol>
+    <li><strong>William S. Robinson</strong> &ndash; <span class="talk-title">Partial access to visual periphery</span></li>
+    <li><strong>Craig DeLancey</strong> &ndash; <span class="talk-title">Teleology and the character of phenomenal events</span></li>
+    <li><strong>Robert N. Van Gulick</strong> &ndash; <span class="talk-title">Consciousness &ndash; Fifty years since Nagel&rsquo;s Bat</span></li>
+    <li><strong>Paul Skokowski</strong> &ndash; <span class="talk-title">Naturalizing qualia</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s3">
+  <h3>C3: Quantum Consciousness (1)</h3>
+  <ol>
+    <li><strong>Avtar Singh</strong> &ndash; <span class="talk-title">Particle instability with gravity in collapse of the wavefunction</span></li>
+    <li><strong>Thomas Brophy</strong> &ndash; <span class="talk-title">Puthoff&rsquo;s physics and metaphysics in context of Orch OR</span></li>
+    <li><strong>James Tagg</strong> &ndash; <span class="talk-title">Orch-OR and quantum Darwinism</span></li>
+    <li><strong>Mark S. Valladares</strong> &ndash; <span class="talk-title">Rigged Hilbert space: Continuous Orch OR as the flow state</span></li>
+    <li><strong>Thomas E. Klepach</strong> &ndash; <span class="talk-title">Dielectric bridges for intercellular quantum coherence</span></li>
+    <li><strong>Paula L. Roeterdink</strong> &ndash; <span class="talk-title">Orch-OR and synthetic sentience</span></li>
+    <li><strong>Seungju Ahn</strong> &ndash; <span class="talk-title">Quantum error-correction codes for biological Orch-OR</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s4">
+  <h3>C4: Therapeutics (1)</h3>
+  <ol>
+    <li><strong>Ana Marcos-Gonzalez</strong> &ndash; <span class="talk-title">Ultrasound in neurodegenerative diseases</span></li>
+    <li><strong>Nima Farshid</strong> &ndash; <span class="talk-title">Consciousness and the human biofield</span></li>
+    <li><strong>Rubin Naiman</strong> &ndash; <span class="talk-title">From cognitive to conscious behavior therapy</span></li>
+    <li><strong>John F. DeCarlo</strong> &ndash; <span class="talk-title">Treating glioblastoma through microtubules and holography</span></li>
+    <li><strong>Lance Rayborn</strong> &ndash; <span class="talk-title">Reducing pain and stress through holographic memory resolution</span> (R)</li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s5">
+  <h3>C5: Death and Consciousness (1)</h3>
+  <ol>
+    <li><strong>Jennifer Kim Penberthy</strong> &ndash; <span class="talk-title">Meditation, psychedelics, and after-death communication</span></li>
+    <li><strong>Lee von Kraus</strong> &ndash; <span class="talk-title">Perimortem observations in veterinary euthanasia</span></li>
+    <li><strong>Anatoly D. Goldstein</strong> &ndash; <span class="talk-title">Geometry of direct voice mediumship</span></li>
+    <li><strong>Steve Ferrara</strong> &ndash; <span class="talk-title">A new paradigm on death</span></li>
+    <li><strong>Marina Weiler</strong> &ndash; <span class="talk-title">Stylistic and thematic evidence for authorship in mediumistic poetry of Chico Xavier</span></li>
+    <li><strong>Alicia Campos Masso</strong> &ndash; <span class="talk-title">Memory as inheritance: Reframing reincarnation</span></li>
+    <li><strong>Alexandre Caroli Rocha</strong> &ndash; <span class="talk-title">Authorship in the mediumistic poetry of Chico Xavier</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s6">
+  <h3>C6: AI Consciousness (1)</h3>
+  <ol>
+    <li><strong>Marcin L. Bowakowski</strong> &ndash; <span class="talk-title">The internal observer for quantum AI and self-aware systems</span></li>
+    <li><strong>Timothy Griffin</strong> &ndash; <span class="talk-title">Criminal justice and the science of consciousness</span></li>
+    <li><strong>Kristina Sekrst</strong> &ndash; <span class="talk-title">How to miss a mind</span></li>
+    <li><strong>Lomax Boyd</strong> &ndash; <span class="talk-title">Shaping attitudes toward synthetic biological intelligence</span></li>
+    <li><strong>Erez Firt</strong> &ndash; <span class="talk-title">Why AI consciousness will likely remain hidden</span></li>
+    <li><strong>Xuemei Wu</strong> &ndash; <span class="talk-title">DeepSeek Chinese Emotion Challenge and a coexistence-predictive AI approach</span></li>
+    <li><strong>Marcus Arvan</strong> &ndash; <span class="talk-title">Brains are analog</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s7">
+  <h3>C7: Fundamental Approaches (1)</h3>
+  <ol>
+    <li><strong>Deepavalli Arumuganainar</strong> &ndash; <span class="talk-title">Quantum energy envelopes and the persistence of the information vortex</span></li>
+    <li><strong>Djuro Koruga</strong> &ndash; <span class="talk-title">Triskeleion consciousness: Darwin&rsquo;s paradox</span></li>
+    <li><strong>Arunvel Thangamani</strong> &ndash; <span class="talk-title">Quantum energy vortices connecting life and consciousness</span></li>
+    <li><strong>Dana B. Kippel</strong> &ndash; <span class="talk-title">Plasma consciousness</span></li>
+    <li><strong>Robert J. Parsons</strong> &ndash; <span class="talk-title">A grand unification framework integrating gravity and awareness</span></li>
+    <li><strong>Stephen W. Marshall</strong> &ndash; <span class="talk-title">Experiential structure of spacetime for agency</span></li>
+    <li><strong>Krys Ra El</strong> &ndash; <span class="talk-title">Ether physics and resonant based consciousness</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s8">
+  <h3>C8: E-Cognition and Consciousness</h3>
+  <ol>
+    <li><strong>Michael D. Silberstein</strong> &ndash; <span class="talk-title">Extended consciousness as radical empiricism</span></li>
+    <li><strong>Luis H. Favela</strong> &ndash; <span class="talk-title">Eliminativism and E-Cognition</span></li>
+    <li><strong>Robert C. Bishop</strong> &ndash; <span class="talk-title">Context, 4E-Cognition, evolution, and consciousness</span></li>
+    <li><strong>Scott Jordan</strong> &ndash; <span class="talk-title">Wild Aboutness: Science, literature, and the trans-Turing nature of consciousness</span></li>
+  </ol>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-brand">Consciousness Science 2026</div>
+  <p>&copy; 2026 SC Conference. All rights reserved.</p>
+  <p style="margin-top:.3rem;">Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a></p>
+</footer>
+
+<script>
+function checkLogin() {
+  var u = document.getElementById('loginUser').value;
+  var p = document.getElementById('loginPass').value;
+  if (u === 'cs2026' && p === 'cs2026') {
+    document.getElementById('loginOverlay').style.display = 'none';
+    sessionStorage.setItem('programAuth', '1');
+    return false;
+  }
+  document.getElementById('loginError').style.display = 'block';
+  return false;
+}
+if (sessionStorage.getItem('programAuth') === '1') {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
+
+function showSession(btn, id) {
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+document.querySelectorAll('.topnav ul li a').forEach(function(a) {
+  a.addEventListener('click', function() { document.querySelector('.topnav ul').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

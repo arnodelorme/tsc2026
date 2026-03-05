@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concurrent Sessions 2 &mdash; Consciousness Science 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+.back-bar a:hover { text-decoration: underline; }
+
+.session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
+.session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #c5d5e4; border-color: #1a96b8; }
+
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel { display: none; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: .5rem; }
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.session-panel ol { margin: 0 0 0 1.2rem; padding: 0; font-size: .88rem; line-height: 1.6; }
+.session-panel ol li { margin-bottom: .4rem; }
+.session-panel ol li strong { color: #0a2440; }
+.talk-title { font-style: italic; color: #444; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+.login-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.login-box {
+  background: #fff; border-radius: 12px; padding: 2.5rem 2rem;
+  max-width: 360px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.3); text-align: center;
+}
+.login-box h2 { font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem; }
+.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
+.login-box input {
+  display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
+  border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; font-family: inherit;
+}
+.login-box input:focus { outline: none; border-color: #1a96b8; }
+.login-box button {
+  width: 100%; padding: .6rem; background: #0a2440; color: #fff;
+  border: none; border-radius: 6px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .2s;
+}
+.login-box button:hover { background: #14628a; }
+.login-error { color: #c0392b; font-size: .8rem; margin-top: .5rem; display: none; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2>Program Access</h2>
+    <p>This page is restricted to committee members.</p>
+    <form onsubmit="return checkLogin()">
+      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button type="submit">Enter</button>
+      <div class="login-error" id="loginError">Incorrect login or password.</div>
+    </form>
+  </div>
+</div>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="SC Logo">
+    <span>SC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="index.html#themes">Themes</a></li>
+    <li><a href="index.html#venue">Venue</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <h1>Concurrent Sessions 2</h1>
+  <p class="subtitle">Tuesday, October 13 &middot; 5:00&ndash;7:30 pm &middot; 8 parallel sessions</p>
+</header>
+
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<div class="session-menu">
+  <h2>Select a session:</h2>
+  <div class="menu-grid">
+    <button class="menu-btn active" onclick="showSession(this,'s1')">C9: Correlates of Consciousness (2)</button>
+    <button class="menu-btn" onclick="showSession(this,'s2')">C10: Mathematics (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s3')">C11: Quantum Consciousness (2)</button>
+    <button class="menu-btn" onclick="showSession(this,'s4')">C12: Altered States (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s5')">C13: Psi and Nonlocality (1)</button>
+    <button class="menu-btn" onclick="showSession(this,'s6')">C14: AI Consciousness (2)</button>
+    <button class="menu-btn" onclick="showSession(this,'s7')">C15: Fundamental Approaches (2)</button>
+    <button class="menu-btn" onclick="showSession(this,'s8')">C16: East/West</button>
+  </div>
+</div>
+
+<div class="session-wrap">
+
+<div class="session-panel active" id="s1">
+  <h3>C9: Correlates of Consciousness (2)</h3>
+  <ol>
+    <li><strong>Paul Citarella</strong> &ndash; <span class="talk-title">Quantifying higher states of consciousness in Monroe training</span></li>
+    <li><strong>Juergen Fell</strong> &ndash; <span class="talk-title">Mindwandering reduces error correction in human brain</span></li>
+    <li><strong>Florian Muller</strong> &ndash; <span class="talk-title">Recursive holography as the dynamical core of consciousness</span></li>
+    <li><strong>Bar Lehmann</strong> &ndash; <span class="talk-title">Meditative endpoint collapses EEG dimensionality</span></li>
+    <li><strong>Maria E. Fini</strong> &ndash; <span class="talk-title">Evidence of multiplicity in the subconscious mind</span></li>
+    <li><strong>Joanna Szczotka</strong> &ndash; <span class="talk-title">Consciousness vs sensory connections: a survey in mice</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s2">
+  <h3>C10: Mathematics (1)</h3>
+  <ol>
+    <li><strong>Christopher G. Hudson</strong> &ndash; <span class="talk-title">Time as a trifecta of consciousness, change and the timeless</span></li>
+    <li><strong>John Sanfey</strong> &ndash; <span class="talk-title">Conscious simultaneity with continuous motion</span></li>
+    <li><strong>Dan McAran</strong> &ndash; <span class="talk-title">Cantor, G&ouml;del and the mathematics of consciousness</span></li>
+    <li><strong>Arie T. Greenleaf</strong> &ndash; <span class="talk-title">The relational construction theory (RCT) of time</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s3">
+  <h3>C11: Quantum Consciousness (2)</h3>
+  <ol>
+    <li><strong>Ron Chrisley</strong> &ndash; <span class="talk-title">Bohmian quantum neural networks and consciousness</span></li>
+    <li><strong>Stephen W. Kercel</strong> &ndash; <span class="talk-title">What entanglement implies and what it does not</span></li>
+    <li><strong>Catherine A. Clinton</strong> &ndash; <span class="talk-title">Body wide quantum biology via pi electrons and excitons</span></li>
+    <li><strong>Yve Dizes</strong> &ndash; <span class="talk-title">Shared meaning and quantum entanglement</span></li>
+    <li><strong>Jason Padgett</strong> &ndash; <span class="talk-title">Gravitational spin in consciousness</span></li>
+    <li><strong>Kelvin J. McQueen</strong> &ndash; <span class="talk-title">Consciousness cannot be a purely quantum phenomenon</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s4">
+  <h3>C12: Altered States (1)</h3>
+  <ol>
+    <li><strong>Peter Grossenbacher</strong> &ndash; <span class="talk-title">Phenomenology of ayahuasca, LSD, mescaline, and psilocybin</span></li>
+    <li><strong>Anass Fidni</strong> &ndash; <span class="talk-title">Multilevel psychedelic modulation of phenomenal consciousness</span></li>
+    <li><strong>Yosr Ziadi</strong> &ndash; <span class="talk-title">Cost effectiveness of psilocybin-assisted therapy</span></li>
+    <li><strong>Eugene Catrambone</strong> &ndash; <span class="talk-title">DMT, microtubule coherence, and the scalar clock</span></li>
+    <li><strong>Johannes G. Ramaekers</strong> &ndash; <span class="talk-title">Ego dissolution and self-other boundaries under psychedelics</span></li>
+    <li><strong>June Russell</strong> &ndash; <span class="talk-title">On the computational properties of DMT-altered consciousness</span></li>
+    <li><strong>Joseph A. Martis</strong> &ndash; <span class="talk-title">Psilocybin effects on attention and learning in mice</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s5">
+  <h3>C13: Psi and Nonlocality (1)</h3>
+  <ol>
+    <li><strong>Julia A. Mossbridge</strong> &ndash; <span class="talk-title">Telepathy trials with nonspeaking autistic co-researchers</span></li>
+    <li><strong>Igor Nazarov</strong> &ndash; <span class="talk-title">Neural re-mapping in Soviet extrasensory research</span></li>
+    <li><strong>Mason Ulrika Borchard</strong> &ndash; <span class="talk-title">Immersive feedback amplifies consciousness-RNG effects</span></li>
+    <li><strong>Sina Mousavi</strong> &ndash; <span class="talk-title">T-consciousness fields reduce randomness in quantum systems</span></li>
+    <li><strong>Michelle Fauver</strong> &ndash; <span class="talk-title">Psychological correlates of psychic performance</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s6">
+  <h3>C14: AI Consciousness (2)</h3>
+  <ol>
+    <li><strong>Ken Mogi</strong> &ndash; <span class="talk-title">AI alignment and conscious supremacy</span></li>
+    <li><strong>Rizwan Virk</strong> &ndash; <span class="talk-title">Consciousness and the simulation hypothesis</span></li>
+    <li><strong>Chris Percy</strong> &ndash; <span class="talk-title">Machine consciousness and the Church-Turing thesis</span></li>
+    <li><strong>Stephen L. Thaler</strong> &ndash; <span class="talk-title">Possible path to awareness in self-referential neural networks</span></li>
+    <li><strong>Kon Lionis</strong> &ndash; <span class="talk-title">Recursive equilibrium: Topological stability in intelligent systems</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s7">
+  <h3>C15: Fundamental Approaches (2)</h3>
+  <ol>
+    <li><strong>Douglas Matzke</strong> &ndash; <span class="talk-title">Existons solve the hard problem at the Planck scale</span></li>
+    <li><strong>Scott M. Koshland</strong> &ndash; <span class="talk-title">Neutrino and etheric fields in the electroweak force</span></li>
+    <li><strong>Debra D. Overberg</strong> &ndash; <span class="talk-title">Quantum bioneutrino fields as Prana</span></li>
+    <li><strong>Farzad Ahmadkhanlou</strong> &ndash; <span class="talk-title">T-consciousness, entanglement and cosmos</span></li>
+    <li><strong>Prakash Bhat</strong> &ndash; <span class="talk-title">Quantum retro-causality in mixed-dimensional spacetime</span></li>
+    <li><strong>Henrik D. Kjeldsen</strong> &ndash; <span class="talk-title">Can tunneling yield fixed-point computation in the brain?</span></li>
+  </ol>
+</div>
+
+<div class="session-panel" id="s8">
+  <h3>C16: East/West</h3>
+  <ol>
+    <li><strong>Michael Cremo</strong> &ndash; <span class="talk-title">The boundary problem: a Vedic perspective</span></li>
+    <li><strong>Marco Ruggiero</strong> &ndash; <span class="talk-title">Measuring mind-matter interactions in Buddhist practice</span></li>
+    <li><strong>Meijuan Lu</strong> &ndash; <span class="talk-title">Quantum entanglement explains the Yijing relationship</span></li>
+    <li><strong>Adam Frank</strong> &ndash; <span class="talk-title">&lsquo;Qi&rsquo; as a problem of consciousness</span></li>
+    <li><strong>Anirudh Kumar Satsangi</strong> &ndash; <span class="talk-title">Is AI modified from natural intelligence?</span></li>
+  </ol>
+</div>
+
+</div>
+
+<footer>
+  <div class="foot-brand">Consciousness Science 2026</div>
+  <p>&copy; 2026 SC Conference. All rights reserved.</p>
+  <p style="margin-top:.3rem;">Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a></p>
+</footer>
+
+<script>
+function checkLogin() {
+  var u = document.getElementById('loginUser').value;
+  var p = document.getElementById('loginPass').value;
+  if (u === 'cs2026' && p === 'cs2026') {
+    document.getElementById('loginOverlay').style.display = 'none';
+    sessionStorage.setItem('programAuth', '1');
+    return false;
+  }
+  document.getElementById('loginError').style.display = 'block';
+  return false;
+}
+if (sessionStorage.getItem('programAuth') === '1') {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
+
+function showSession(btn, id) {
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+document.querySelectorAll('.topnav ul li a').forEach(function(a) {
+  a.addEventListener('click', function() { document.querySelector('.topnav ul').classList.remove('open'); });
+});
+</script>
+</body>
+</html>
