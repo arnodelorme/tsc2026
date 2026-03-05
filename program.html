@@ -192,6 +192,13 @@ img { max-width: 100%; height: auto; }
   width: 16px; height: 16px; border-radius: 3px;
 }
 
+/* ── Speaker mismatch highlight ──────────────── */
+.speaker-missing { color: #c0392b; font-weight: 700; }
+
+.speaker-new { color: #39c02b; font-weight: 700; }
+
+.speaker-maybe { color: #392bc0; font-weight: 700; }
+
 /* ── Footer ───────────────────────────────────── */
 footer {
   background: #0a2440; color: #8baac8;
@@ -346,7 +353,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-1: Photons, Brain and Consciousness</div>
-        <div class="session-speakers">Nirosha Murugan, Lew Lim, Jack Tuszynski</div>
+        <div class="session-speakers">Nirosha Murugan, <span class="speaker-missing">Lew Lim</span>, <span class="speaker-missing">Jack Tuszynski</span></div>
       </div>
     </div>
     <div class="dg-time">10:40 am</div>
@@ -357,7 +364,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-2: Consciousness and Biology</div>
-        <div class="session-speakers">Alysson Muotri, Kenneth Kosik</div>
+        <div class="session-speakers">Alysson Muotri, <span class="speaker-missing">Kenneth Kosik</span></div>
       </div>
     </div>
     <div class="dg-time">12:30 pm</div>
@@ -368,7 +375,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-3: Can AI Be Conscious?</div>
-        <div class="session-speakers">Ben Goertzel, Robert Long, Susan Schneider</div>
+        <div class="session-speakers"><span class="speaker-missing">xxxxxxx</span>, Robert Long, Susan Schneider</div>
       </div>
     </div>
     <div class="dg-time">4:10 pm</div>
@@ -392,7 +399,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-4: Psi and Telepathy</div>
-        <div class="session-speakers">Diane Hennacy, Arnaud Delorme, David Chartrand</div>
+        <div class="session-speakers"><span class="speaker-missing">Diane Hennacy</span>, <span class="speaker-new">Helane Wahbeh</span>, <span class="speaker-maybe">David Chartrand</span></div>
       </div>
     </div>
     <div class="dg-time">10:40 am</div>
@@ -403,7 +410,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-5: Altered States of Consciousness</div>
-        <div class="session-speakers">Robin Carhart-Harris, Fadel Zeidan</div>
+        <div class="session-speakers">Robin Carhart-Harris, <span class="speaker-missing">Fadel Zeidan</span></div>
       </div>
     </div>
     <div class="dg-time">12:30 pm</div>
@@ -445,7 +452,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-7: Origin of Life 1</div>
-        <div class="session-speakers">Dante Lauretta, Nick Lane, Lee Cronin</div>
+        <div class="session-speakers"><span class="speaker-missing">xxxxxxxxx</span>, Nick Lane, Lee Cronin</div>
       </div>
     </div>
     <div class="dg-time">10:40 am</div>
@@ -456,7 +463,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-8: Awakening and Enlightenment</div>
-        <div class="session-speakers">Jeffery A. Martin, Thomas Campbell</div>
+        <div class="session-speakers"><span class="speaker-missing">xxxxxxx</span>, <span class="speaker-missing">Thomas Campbell</span></div>
       </div>
     </div>
     <div class="dg-time">12:30 pm</div>
@@ -502,7 +509,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-11: Psi and UAPs</div>
-        <div class="session-speakers">Dean Radin, Beatriz Villarroel</div>
+        <div class="session-speakers">Dean Radin, <span class="speaker-missing">Beatriz Villarroel</span></div>
       </div>
     </div>
     <div class="dg-time">12:30 pm</div>
@@ -513,7 +520,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-12: Neuroscience and Consciousness 2</div>
-        <div class="session-speakers">Eric Halgren, Sarika Katiyar, Mike Wiest</div>
+        <div class="session-speakers"><span class="speaker-missing">Eric Halgren</span>, Sarika Katiyar, Mike Wiest</div>
       </div>
     </div>
     <div class="dg-time">4:10 pm</div>
@@ -544,7 +551,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-plenary">
         <div class="session-title">PL-13: Which Came First? Life or Consciousness?</div>
-        <div class="session-speakers">Michael Levin (Remote), Stuart Hameroff, Farhan Lakhany</div>
+        <div class="session-speakers">Michael Levin (Remote), Stuart Hameroff, <span class="speaker-missing">Farhan Lakhany</span></div>
       </div>
     </div>
     <div class="dg-time">11:10 am</div>
@@ -562,7 +569,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="dg-content">
       <div class="dg-block bg-closing">
         <div class="session-title">Conference Close: The Future of Consciousness</div>
-        <div class="session-speakers">Stuart Hameroff, Dante Lauretta</div>
+        <div class="session-speakers">Stuart Hameroff, <span class="speaker-new">Arnaud Delorme</span></div>
       </div>
     </div>
     <div class="dg-time">1:00 pm</div>
