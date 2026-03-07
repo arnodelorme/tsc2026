@@ -294,7 +294,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <li><a href="#venue">Venue</a></li>
     <li><a href="program.html">Program</a></li>
     <li><a href="conduct.html">Conduct</a></li>
-    <li id="navPledges" style="display:none;"><a href="pledges.html">Sponsors</a></li>
+    <li><a href="pledges.html">Sponsors</a></li>
   </ul>
 </nav>
 
@@ -608,11 +608,6 @@ document.querySelectorAll('.topnav ul li a').forEach(function(a) {
     document.querySelector('.topnav ul').classList.remove('open');
   });
 });
-
-// Show Sponsors nav if sponsor cookie exists
-if (document.cookie.split(';').some(function(c) { return c.trim().indexOf('sc26sponsor=') === 0; })) {
-  document.getElementById('navPledges').style.display = '';
-}
 
 // Highlight active nav on scroll
 var sections = document.querySelectorAll('section[id]');

@@ -127,6 +127,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <li><a href="index.html#venue">Venue</a></li>
     <li><a href="program.html">Program</a></li>
     <li><a href="conduct.html">Conduct</a></li>
+    <li><a href="pledges.html">Sponsors</a></li>
   </ul>
 </nav>
 
@@ -300,8 +301,7 @@ function checkLogin() {
   document.getElementById('loginError').style.display = 'block';
   return false;
 }
-if (sessionStorage.getItem('programAuth') === '1' ||
-    document.cookie.split(';').some(function(c) { return c.trim().indexOf('sc26sponsor=') === 0; })) {
+if (sessionStorage.getItem('programAuth') === '1') {
   document.getElementById('loginOverlay').style.display = 'none';
 }
 

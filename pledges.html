@@ -141,6 +141,42 @@ footer {
 footer a { color: #c8ddf0; }
 footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
 
+/* ── Login overlay ───────────────────────────── */
+.login-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.login-box {
+  background: #fff; border-radius: 12px;
+  padding: 2.5rem 2rem; max-width: 360px; width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  text-align: center;
+}
+.login-box h2 {
+  font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem;
+}
+.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
+.login-box input {
+  display: block; width: 100%;
+  padding: .55rem .8rem; margin-bottom: .8rem;
+  border: 1px solid #ccc; border-radius: 6px;
+  font-size: .9rem; font-family: inherit;
+}
+.login-box input:focus { outline: none; border-color: #1a96b8; }
+.login-box button {
+  width: 100%; padding: .6rem;
+  background: #0a2440; color: #fff;
+  border: none; border-radius: 6px;
+  font-size: .95rem; font-weight: 600;
+  cursor: pointer; transition: background .2s;
+}
+.login-box button:hover { background: #14628a; }
+.login-error {
+  color: #c0392b; font-size: .8rem; margin-top: .5rem;
+  display: none;
+}
+
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
   .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
@@ -154,6 +190,20 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 </style>
 </head>
 <body>
+
+<!-- ═══ LOGIN OVERLAY ═══ -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2>Sponsors Access</h2>
+    <p>This page is restricted to committee members.</p>
+    <form onsubmit="return checkLogin()">
+      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button type="submit">Enter</button>
+      <div class="login-error" id="loginError">Incorrect login or password.</div>
+    </form>
+  </div>
+</div>
 
 <!-- ═══ NAV ═══ -->
 <nav class="topnav">
@@ -171,6 +221,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <li><a href="index.html#venue">Venue</a></li>
     <li><a href="program.html">Program</a></li>
     <li><a href="conduct.html">Conduct</a></li>
+    <li><a href="pledges.html">Sponsors</a></li>
   </ul>
 </nav>
 
@@ -265,15 +316,22 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <!-- ═══ JS ═══ -->
 <script>
-// Set sponsor cookie (expires in 90 days)
-(function() {
-  var d = new Date();
-  d.setTime(d.getTime() + 90 * 24 * 60 * 60 * 1000);
-  document.cookie = 'sc26sponsor=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
-})();
-
-// Also set sessionStorage so program pages work immediately
-sessionStorage.setItem('programAuth', '1');
+// Login gate
+function checkLogin() {
+  var u = document.getElementById('loginUser').value;
+  var p = document.getElementById('loginPass').value;
+  if (u === 'cs2026' && p === 'cs2026') {
+    document.getElementById('loginOverlay').style.display = 'none';
+    sessionStorage.setItem('programAuth', '1');
+    return false;
+  }
+  document.getElementById('loginError').style.display = 'block';
+  return false;
+}
+// Persist for session
+if (sessionStorage.getItem('programAuth') === '1') {
+  document.getElementById('loginOverlay').style.display = 'none';
+}
 
 // Mobile nav
 document.querySelectorAll('.topnav ul li a').forEach(function(a) {
