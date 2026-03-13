@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donor &amp; Speaker Vetting &mdash; Consciousness Science 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul {
+  list-style: none; display: flex; gap: 1.6rem;
+}
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em;
+  transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+
+/* hamburger */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle {
+  font-size: 1.05rem; opacity: .85;
+}
+
+/* ── Content ─────────────────────────────────── */
+.content { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+.content h2 {
+  font-size: 1.5rem; font-weight: 700; color: #0a2440;
+  margin: 2.5rem 0 .6rem; padding-bottom: .4rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.content h2:first-of-type { margin-top: 0; }
+.content h3 {
+  font-size: 1.15rem; font-weight: 600; color: #0d3868;
+  margin: 1.5rem 0 .5rem;
+}
+.content p { margin-bottom: 1rem; }
+.content ul, .content ol { margin: .5rem 0 1.2rem 1.4rem; }
+.content li { margin-bottom: .4rem; }
+.content strong { color: #0a2440; }
+
+.callout {
+  background: #f5f8fb; border-left: 4px solid #1a96b8;
+  padding: 1.2rem 1.5rem; margin: 1.5rem 0; border-radius: 4px;
+  font-size: .95rem;
+}
+.callout-warn {
+  background: #fef7ea; border-left-color: #e8a727;
+}
+
+.step-list { counter-reset: step; list-style: none; margin-left: 0; }
+.step-list li {
+  counter-increment: step;
+  padding: .6rem 0 .6rem 2.5rem;
+  position: relative;
+  margin-bottom: .3rem;
+}
+.step-list li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: .55rem;
+  width: 1.8rem; height: 1.8rem;
+  background: #0a2440; color: #fff;
+  border-radius: 50%; text-align: center;
+  font-weight: 700; font-size: .85rem; line-height: 1.8rem;
+}
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .content { padding: 2rem 1.2rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="SC Logo">
+    <span>SC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="index.html#themes">Themes</a></li>
+    <li><a href="index.html#venue">Venue</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+    <li><a href="vetting.html">Vetting</a></li>
+    <li><a href="pledges.html">Sponsors</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Donor &amp; Speaker Vetting</h1>
+  <p class="subtitle">Transparency and accountability in conference funding and participation</p>
+</header>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content">
+
+<h2>Epstein Disclosure</h2>
+
+<p>The predecessor of this conference, <em>The Science of Consciousness</em> (TSC), received a $50,000 donation from Jeffrey Epstein in 2017. Several speakers and organizers from previous editions of the conference were named in the Epstein files released in early 2026. The former conference director publicly acknowledged these connections and cancelled the original TSC 2026.</p>
+
+<p><strong>Consciousness Science 2026</strong> has been reorganized under new leadership and governance. We are committed to full transparency regarding past funding and to ensuring that no future donations come from individuals or entities with ties to exploitation, trafficking, or serious criminal conduct.</p>
+
+<div class="callout">
+<strong>Our commitment:</strong> All donors and major sponsors are screened through a structured vetting protocol before any funds are accepted. Any flagged results trigger mandatory manual review by the organizing committee.
+</div>
+
+<h2>Vetting Protocol</h2>
+
+<p>We have adopted a systematic, seven-step web-screening protocol for vetting all donors, sponsors, and invited speakers. The protocol uses publicly available information and produces a structured risk assessment for each individual or entity.</p>
+
+<h3>The Seven Steps</h3>
+
+<ol class="step-list">
+  <li><strong>Identity Resolution</strong> &mdash; Confirm the correct individual or entity using public profiles, company records, and biographical sources.</li>
+  <li><strong>Criminal and Legal History</strong> &mdash; Search for criminal charges, civil litigation, settlements, and regulatory actions via news outlets, court records, and government enforcement agencies.</li>
+  <li><strong>Association with Known High-Risk Figures</strong> &mdash; Screen for documented relationships with individuals involved in major scandals, including Epstein-related reporting, flight logs, and financial ties.</li>
+  <li><strong>Reputation Risk Screening</strong> &mdash; Search for controversies, allegations, and investigations, assessing whether they are verified by multiple independent sources.</li>
+  <li><strong>Philanthropy and Institutional Relationships</strong> &mdash; Review donation history and institutional affiliations, flagging cases where institutions have previously returned donations.</li>
+  <li><strong>Political Exposure and Sanctions</strong> &mdash; Check government sanction lists and politically exposed person databases for foreign influence or corruption concerns.</li>
+  <li><strong>Summary Risk Scoring</strong> &mdash; Assign a categorical risk score (0&ndash;3) based on findings. Any Epstein-related result, criminal conviction, or multiple independent allegations of serious misconduct triggers automatic escalation and additional review and discussion by the chairs.</li>
+</ol>
+
+<h3>Methodology</h3>
+
+<p>Each step involves targeted web searches using the individual&rsquo;s name combined with specific keywords by Antropic Claude. Results are cross-referenced against major news outlets, government records, and investigative journalism. The output is a structured risk profile including occupation, known associations, criminal and civil records, and an overall risk score.</p>
+
+<div class="callout callout-warn">
+<strong>Escalation policy:</strong> Any individual scoring 1 or above (significant allegations or litigation) trigger an automatic escalation flag undergoes full manual review by the organizing committee before any invitation or donation is accepted.
+</div>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="foot-brand">Consciousness Science 2026</div>
+  <p>&copy; 2026 SC Conference. All rights reserved.</p>
+  <p style="margin-top:.3rem;">
+    Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a>
+  </p>
+</footer>
+
+<!-- ═══ JS ═══ -->
+<script>
+// Mobile nav
+document.querySelectorAll('.topnav ul li a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.querySelector('.topnav ul').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
