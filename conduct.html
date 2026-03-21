@@ -120,18 +120,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#speakers">Speakers</a></li>
-    <li><a href="index.html#themes">Themes</a></li>
-    <li><a href="index.html#venue">Venue</a></li>
-    <li><a href="program.html">Program</a></li>
-    <li><a href="conduct.html">Conduct</a></li>
-    <li><a href="vetting.html">Vetting</a></li>
-    <li><a href="pledges.html">Sponsors</a></li>
-  </ul>
+  <ul></ul>
 </nav>
-
+<script src="nav.js"></script>
 <!-- ═══ PAGE HEADER ═══ -->
 <header class="page-header">
   <h1>Attendance &amp; Conduct Policy</h1>
@@ -274,15 +265,6 @@ Sexual harassment and threats of violence carry no warning. A single incident re
     Contact: <a href="mailto:consciousness@ucsd.edu">consciousness@ucsd.edu</a>
   </p>
 </footer>
-
-<!-- ═══ JS ═══ -->
-<script>
-document.querySelectorAll('.topnav ul li a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    document.querySelector('.topnav ul').classList.remove('open');
-  });
-});
-</script>
 
 </body>
 </html>

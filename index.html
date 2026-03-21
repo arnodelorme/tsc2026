@@ -286,18 +286,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#speakers">Speakers</a></li>
-    <li><a href="#themes">Themes</a></li>
-    <li><a href="#organizers">Committee</a></li>
-    <li><a href="#venue">Venue</a></li>
-    <li><a href="program.html">Program</a></li>
-    <li><a href="conduct.html">Conduct</a></li>
-    <li><a href="vetting.html">Vetting</a></li>
-    <li><a href="pledges.html">Sponsors</a></li>
-  </ul>
+  <ul></ul>
 </nav>
+<script src="nav.js"></script>
 
 <!-- ═══ CONSTRUCTION BANNER ═══ -->
 <div class="construction-banner">This website is under construction &mdash; details subject to change.</div>
@@ -530,68 +521,6 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   </div>
 </section>
 
-<!-- ═══ ORGANIZERS ═══ -->
-<section id="organizers">
-  <div class="container">
-    <h2 class="section-title">Scientific Committee</h2>
-    <p class="section-lead">Conference leadership and organization.</p>
-    <div class="org-group-label">Chair</div>
-    <div class="org-grid">
-      <div class="org-card">
-        <img class="org-icon" src="img/arnaud-delorme.jpg" alt="Arnaud Delorme">
-        <div>
-          <div class="org-name">Arnaud Delorme</div>
-          <div class="org-role">Chair</div>
-          <div class="org-inst">UC San Diego</div>
-        </div>
-      </div>
-    </div>
-    <div class="org-group-label">Co-Chairs</div>
-    <div class="org-grid">
-   <!--   <div class="org-card">
-        <img class="org-icon" src="img/daniel-sheehan.png" alt="Daniel Sheehan">
-        <div>
-          <div class="org-name">Daniel Sheehan</div>
-          <div class="org-role">Co-Chair</div>
-          <div class="org-inst">University of San Diego</div>
-        </div>
-      </div> -->
-      <div class="org-card">
-        <img class="org-icon" src="img/susan-schneider.jpg" alt="Susan Schneider">
-        <div>
-          <div class="org-name">Susan Schneider</div>
-          <div class="org-role">Co-Chair</div>
-          <div class="org-inst">Florida Atlantic University</div>
-        </div>
-      </div>
-      <div class="org-card">
-        <img class="org-icon" src="img/thomas-brophy.png" alt="Thomas Brophy">
-        <div>
-          <div class="org-name">Thomas Brophy</div>
-          <div class="org-role">Co-Chair</div>
-          <div class="org-inst">Institute of Noetic Sciences</div>
-        </div>
-      </div>
-      <div class="org-card">
-        <img class="org-icon" src="img/tracy-brandmeyer.jpg" alt="Tracy Brandmeyer">
-        <div>
-          <div class="org-name">Tracy Brandmeyer</div>
-          <div class="org-role">Co-Chair</div>
-          <div class="org-inst">Cognigenics</div>
-        </div>
-      </div>
-      <div class="org-card">
-        <img class="org-icon" src="img/stuart-hameroff.jpg" alt="Stuart Hameroff">
-        <div>
-          <div class="org-name">Stuart Hameroff</div>
-          <div class="org-role">Co-Chair</div>
-          <div class="org-inst">University of Arizona</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ VENUE ═══ -->
 <section id="venue">
   <div class="container">
@@ -635,13 +564,6 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <!-- ═══ JS ═══ -->
 <script>
-// Close mobile nav on link click
-document.querySelectorAll('.topnav ul li a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    document.querySelector('.topnav ul').classList.remove('open');
-  });
-});
-
 // Highlight active nav on scroll
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.topnav ul li a');
