@@ -12,7 +12,8 @@
     [prefix + '#venue',         'Venue',    null],
     ['conduct.html',            'Conduct',  null],
     ['vetting.html',            'Vetting',  null],
-    ['pledges.html',            'Sponsors', null]
+    ['pledges.html',            'Sponsors', null],
+    ['festival.html',           'Festival', null]
   ];
 
   /* On index.html the About link points to about.html (not #about) */
