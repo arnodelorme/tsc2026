@@ -9,6 +9,7 @@
   var tabs = [
     { href: 'program.html', label: 'Program' },
     { href: 'about.html',   label: 'About', children: [
+      { href: 'about.html',     label: 'History' },
       { href: 'committee.html', label: 'Committee' },
       { href: 'conduct.html',   label: 'Conduct' },
       { href: 'vetting.html',   label: 'Vetting' },
