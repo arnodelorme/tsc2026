@@ -13,7 +13,7 @@
     ['conduct.html',            'Conduct',  null],
     ['vetting.html',            'Vetting',  null],
     ['pledges.html',            'Sponsors', null],
-    ['festival.html',           'Festival', null]
+    ['festival.html',           'Hangout',  null]
   ];
 
   /* On index.html the About link points to about.html (not #about) */
