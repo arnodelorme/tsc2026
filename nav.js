@@ -4,22 +4,31 @@
    Supports dropdown submenus via the "children" property. */
 (function () {
   var isIndex = /index\.html$/.test(location.pathname) || /\/$/.test(location.pathname);
-  var prefix = isIndex ? '' : 'index.html';
+
+  /* Detect if we are in a subdirectory (e.g. past/) by checking the
+     script's own src attribute — it is always loaded from the root. */
+  var scripts = document.querySelectorAll('script[src$="nav.js"]');
+  var base = '';
+  if (scripts.length) {
+    var src = scripts[scripts.length - 1].getAttribute('src');
+    var m = src.match(/^((?:\.\.\/)+)/);
+    if (m) base = m[1];
+  }
 
   var tabs = [
-    { href: 'program.html', label: 'Program' },
-    { href: 'about.html',   label: 'About', children: [
-      { href: 'about.html',     label: 'History' },
-      { href: 'committee.html', label: 'Committee' },
-      { href: 'conduct.html',   label: 'Conduct' },
-      { href: 'vetting.html',   label: 'Vetting' },
-      { href: 'pledges.html',   label: 'Sponsors' }
+    { href: base + 'program.html', label: 'Program' },
+    { href: base + 'about.html',   label: 'About', children: [
+      { href: base + 'about.html',     label: 'History' },
+      { href: base + 'committee.html', label: 'Committee' },
+      { href: base + 'conduct.html',   label: 'Conduct' },
+      { href: base + 'vetting.html',   label: 'Vetting' },
+      { href: base + 'pledges.html',   label: 'Sponsors' }
     ]},
-    { href: 'community.html', label: 'Community', children: [
-      { href: 'festival.html',  label: 'Hangout' },
-      { href: 'hackathon.html', label: 'Hackathon' }
+    { href: base + 'community.html', label: 'Community', children: [
+      { href: base + 'festival.html',  label: 'Hangout' },
+      { href: base + 'hackathon.html', label: 'Hackathon' }
     ]},
-    { href: 'register.html', label: 'Register' }
+    { href: base + 'register.html', label: 'Register' }
   ];
 
   /* Inject dropdown CSS once */
@@ -53,7 +62,7 @@
   /* Home link — only on non-index pages */
   if (!isIndex) {
     var li = document.createElement('li');
-    li.innerHTML = '<a href="index.html">Home</a>';
+    li.innerHTML = '<a href="' + base + 'index.html">Home</a>';
     ul.appendChild(li);
   }
 
