@@ -21,8 +21,7 @@
       { href: base + 'about.html',     label: 'History' },
       { href: base + 'committee.html', label: 'Committee' },
       { href: base + 'conduct.html',   label: 'Conduct' },
-      { href: base + 'vetting.html',   label: 'Vetting' },
-      { href: base + 'pledges.html',   label: 'Sponsors' }
+      { href: base + 'vetting.html',   label: 'Vetting' }
     ]},
     { href: base + 'community.html', label: 'Community', children: [
       { href: base + 'festival.html',  label: 'Hangout' },
