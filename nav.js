@@ -80,12 +80,10 @@
   if (!ul) return;
   ul.innerHTML = '';
 
-  /* Home link — only on non-index pages */
-  if (!isIndex) {
-    var li = document.createElement('li');
-    li.innerHTML = '<a href="' + base + 'index.html">Home</a>';
-    ul.appendChild(li);
-  }
+  /* Home link — on all pages for consistent navigation */
+  var li = document.createElement('li');
+  li.innerHTML = '<a href="' + base + 'index.html">Home</a>';
+  ul.appendChild(li);
 
   tabs.forEach(function (t) {
     var li = document.createElement('li');
