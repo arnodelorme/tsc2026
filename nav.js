@@ -55,6 +55,27 @@
     document.head.appendChild(style);
   }
 
+  /* Normalize brand text to "CS 2026" on every page */
+  var brand = document.querySelector('.topnav .nav-brand');
+  if (brand) {
+    var brandSpan = brand.querySelector('span');
+    if (brandSpan) brandSpan.textContent = 'CS 2026';
+    var brandImg = brand.querySelector('img');
+    if (brandImg) brandImg.alt = 'CS Logo';
+  }
+
+  /* Inject "under construction" banner */
+  if (!document.getElementById('construction-banner')) {
+    var banner = document.createElement('div');
+    banner.id = 'construction-banner';
+    banner.style.cssText = 'background:#e8a727;color:#0a2440;text-align:center;padding:.35rem 1rem;font-size:.82rem;font-weight:600;position:fixed;top:56px;left:0;right:0;z-index:99;';
+    banner.textContent = 'Website under construction — content may change';
+    document.body.appendChild(banner);
+    /* push page content down to avoid overlap */
+    var header = document.querySelector('.page-header') || document.querySelector('.hero');
+    if (header) header.style.paddingTop = (parseFloat(getComputedStyle(header).paddingTop) + 28) + 'px';
+  }
+
   var ul = document.querySelector('.topnav ul');
   if (!ul) return;
   ul.innerHTML = '';

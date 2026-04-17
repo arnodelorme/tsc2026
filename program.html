@@ -217,64 +217,15 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   .timetable-wrap { padding: 1.5rem .5rem 3rem; }
 }
 
-/* ── Login overlay ───────────────────────────── */
-.login-overlay {
-  position: fixed; inset: 0; z-index: 9999;
-  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
-  display: flex; align-items: center; justify-content: center;
-}
-.login-box {
-  background: #fff; border-radius: 12px;
-  padding: 2.5rem 2rem; max-width: 360px; width: 90%;
-  box-shadow: 0 8px 32px rgba(0,0,0,.3);
-  text-align: center;
-}
-.login-box h2 {
-  font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem;
-}
-.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
-.login-box input {
-  display: block; width: 100%;
-  padding: .55rem .8rem; margin-bottom: .8rem;
-  border: 1px solid #ccc; border-radius: 6px;
-  font-size: .9rem; font-family: inherit;
-}
-.login-box input:focus { outline: none; border-color: #1a96b8; }
-.login-box button {
-  width: 100%; padding: .6rem;
-  background: #0a2440; color: #fff;
-  border: none; border-radius: 6px;
-  font-size: .95rem; font-weight: 600;
-  cursor: pointer; transition: background .2s;
-}
-.login-box button:hover { background: #14628a; }
-.login-error {
-  color: #c0392b; font-size: .8rem; margin-top: .5rem;
-  display: none;
-}
 </style>
 </head>
 <body>
 
-<!-- ═══ LOGIN OVERLAY ═══ -->
-<div class="login-overlay" id="loginOverlay">
-  <div class="login-box">
-    <h2>Program Access</h2>
-    <p>This page is restricted to committee members.</p>
-    <form onsubmit="return checkLogin()">
-      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
-      <input type="password" id="loginPass" placeholder="Password">
-      <button type="submit">Enter</button>
-      <div class="login-error" id="loginError">Incorrect login or password.</div>
-    </form>
-  </div>
-</div>
-
 <!-- ═══ NAV ═══ -->
 <nav class="topnav">
   <a href="index.html" class="nav-brand">
-    <img src="img/logo.png" alt="SC Logo">
-    <span>SC 2026</span>
+    <img src="img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
   </a>
   <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -583,26 +534,6 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <footer></footer>
 <script src="footer.js"></script>
 
-<!-- ═══ JS ═══ -->
-<script>
-// Login gate
-function checkLogin() {
-  var u = document.getElementById('loginUser').value;
-  var p = document.getElementById('loginPass').value;
-  if (u === 'cs2026' && p === 'cs2026') {
-    document.getElementById('loginOverlay').style.display = 'none';
-    sessionStorage.setItem('programAuth', '1');
-    return false;
-  }
-  document.getElementById('loginError').style.display = 'block';
-  return false;
-}
-// Persist for session
-if (sessionStorage.getItem('programAuth') === '1') {
-  document.getElementById('loginOverlay').style.display = 'none';
-}
-
-</script>
 
 </body>
 </html>
