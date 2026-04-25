@@ -120,16 +120,65 @@ img { max-width: 100%; height: auto; }
   font-size: .68rem; opacity: .7; margin-top: .1rem;
 }
 
-/* Color coding */
-.bg-plenary   { background: #e4b8be; color: #3a1018; }
-.bg-break     { background: #e8e8e8; color: #555; text-align: center; }
-.bg-concurrent { background: #c5d5e4; color: #1a3050; }
-.bg-poster    { background: #d4c4a8; color: #3a3020; }
-.bg-workshop  { background: #b8d4d8; color: #1a3a3e; }
-.bg-social    { background: #dde0d0; color: #3a3a2a; }
-.bg-closing   { background: #e8a727; color: #0a2440; }
-.bg-breakfast { background: #f0e0e0; color: #6a3030; }
-.bg-lunch     { background: #e0ddd0; color: #555; text-align: center; }
+/* Color coding — pastels derived from navy/teal/gold palette */
+.bg-plenary    { background: #d6e6f0; color: #1a3050; }
+.bg-break      { background: #eaedf0; color: #666; text-align: center; }
+.bg-concurrent { background: #d0eaee; color: #1a4a50; }
+.bg-poster     { background: #ede4d4; color: #4a3a20; }
+.bg-workshop   { background: #dce8e0; color: #2a4030; }
+.bg-social     { background: #f2ead4; color: #4a3a18; }
+.bg-closing    { background: #f0e4b8; color: #3a3010; }
+.bg-breakfast  { background: #eaedf0; color: #555; }
+.bg-lunch      { background: #eaedf0; color: #666; text-align: center; }
+
+/* ── Week-at-a-glance overview ──────────────── */
+.overview-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 0;
+}
+.overview-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1rem;
+}
+.ov-scroll { overflow-x: auto; margin-bottom: 1rem; }
+.ov-table {
+  table-layout: fixed; width: 100%; min-width: 860px;
+  border-collapse: collapse;
+  font-size: .78rem; line-height: 1.35;
+}
+.ov-table th, .ov-table td {
+  border: 1px solid #dde3ed;
+  padding: .45rem .5rem;
+  vertical-align: top;
+}
+.ov-table thead th {
+  background: #0a2440; color: #fff;
+  text-align: center; font-weight: 700;
+  font-size: .8rem; padding: .55rem .4rem;
+}
+.ov-table thead th span {
+  display: block; font-weight: 400; font-size: .7rem; opacity: .75;
+}
+.ov-table .ov-time {
+  width: 65px; text-align: right; padding-right: .6rem;
+  font-size: .72rem; font-weight: 600; color: #555;
+  background: #f8f9fb;
+  white-space: nowrap;
+}
+.ov-table td .ov-title {
+  font-weight: 600; font-size: .73rem; color: #0a2440;
+}
+.ov-table td .ov-speakers {
+  font-size: .66rem; color: #666; font-style: italic;
+  margin-top: .1rem;
+}
+.ov-table td.bg-plenary,
+.ov-table td.bg-concurrent,
+.ov-table td.bg-workshop,
+.ov-table td.bg-poster,
+.ov-table td.bg-social,
+.ov-table td.bg-closing { min-height: 52px; }
+.ov-table .ov-row-plenary td.bg-plenary { height: 60px; }
 
 /* span helpers for multi-column blocks */
 .span-all { grid-column: 2 / -1; }
@@ -215,6 +264,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   .hamburger { display: block; }
   .page-header h1 { font-size: 1.6rem; }
   .timetable-wrap { padding: 1.5rem .5rem 3rem; }
+  .overview-wrap { padding: 1.5rem .5rem 0; }
 }
 
 </style>
@@ -239,6 +289,134 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <h1>Conference Program</h1>
   <p class="subtitle">October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
 </header>
+
+<!-- ═══ WEEK AT A GLANCE ═══ -->
+<div class="overview-wrap">
+<h2>Week at a Glance</h2>
+<div class="ov-scroll">
+<table class="ov-table">
+<thead>
+  <tr>
+    <th style="width:65px"></th>
+    <th>Sunday<span>Oct 11</span></th>
+    <th>Monday<span>Oct 12</span></th>
+    <th>Tuesday<span>Oct 13</span></th>
+    <th>Wednesday<span>Oct 14</span></th>
+    <th>Thursday<span>Oct 15</span></th>
+    <th>Friday<span>Oct 16</span></th>
+  </tr>
+</thead>
+<tbody>
+  <!-- Morning workshops (Sunday only) -->
+  <tr>
+    <td class="ov-time">9:00 am</td>
+    <td class="bg-workshop"><div class="ov-title">Morning Workshops</div></td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td class="ov-time">1:30 pm</td>
+    <td class="bg-workshop"><div class="ov-title">Afternoon Workshops</div></td>
+    <td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <!-- AM Plenary 1 -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">8:30 am</td>
+    <td></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-1: Photons, Brain &amp; Consciousness</div>
+      <div class="ov-speakers">Murugan, xxx, Tuszynski</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-4: Altered States of Consciousness</div>
+      <div class="ov-speakers">Carhart-Harris, Zeidan, xxx</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-7: Origin of Life 1</div>
+      <div class="ov-speakers">Lane, Cronin, xxx</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-10: Origin of Life 2</div>
+      <div class="ov-speakers">Rasmussen, xxx, Walker</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-13: Life or Consciousness First?</div>
+      <div class="ov-speakers">Levin, Hameroff, Lakhany</div>
+    </td>
+  </tr>
+  <!-- AM Plenary 2 -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">11:10 am</td>
+    <td></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-2: Consciousness &amp; Biology</div>
+      <div class="ov-speakers">Muotri, Kosik</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-5: Non-local Consciousness</div>
+      <div class="ov-speakers">Hennacy, Wahbeh</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-8: Awakening &amp; Enlightenment</div>
+      <div class="ov-speakers">xxx, Campbell</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-11: Psi &amp; UAPs</div>
+      <div class="ov-speakers">Radin, Villarroel</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-14: Geometry &amp; Consciousness</div>
+      <div class="ov-speakers">Penrose</div>
+    </td>
+  </tr>
+  <!-- PM Plenary -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">2:00 pm</td>
+    <td></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-3: Can AI Be Conscious?</div>
+      <div class="ov-speakers">Sejnowski, xxx, Schneider</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-6: Quantum AI</div>
+      <div class="ov-speakers">Neven, xxx, Bandyopadhyay</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-9: Neuroscience &amp; Consciousness 1</div>
+      <div class="ov-speakers">Bastos, Boyden, Large</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-12: Neuroscience &amp; Consciousness 2</div>
+      <div class="ov-speakers">Halgren, Katiyar, Wiest</div>
+    </td>
+    <td class="bg-closing">
+      <div class="ov-title">Closing: Future of Consciousness</div>
+      <div class="ov-speakers">Hameroff, Delorme</div>
+    </td>
+  </tr>
+  <!-- Late afternoon -->
+  <tr>
+    <td class="ov-time">5:00 pm</td>
+    <td class="bg-social"><div class="ov-title">Light Reception</div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 1</div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 2</div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 3</div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 4</div></td>
+    <td></td>
+  </tr>
+  <!-- Evening -->
+  <tr>
+    <td class="ov-time">7:00 pm</td>
+    <td class="bg-plenary"><div class="ov-title">Featured Workshop</div></td>
+    <td class="bg-social"><div class="ov-title">Reception</div></td>
+    <td class="bg-poster"><div class="ov-title">Poster Session 1</div></td>
+    <td></td>
+    <td class="bg-poster"><div class="ov-title">Poster 2 + Reception</div></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
 
 <!-- ═══ PROGRAM ═══ -->
 <div class="timetable-wrap">
