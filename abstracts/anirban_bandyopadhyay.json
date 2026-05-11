@@ -1,0 +1,13 @@
+{
+  "speaker": "Anirban Bandyopadhyay",
+  "affiliation": "National Institute for Materials Science, Tsukuba, Japan",
+  "type": "plenary",
+  "remote": false,
+  "title": "Quantum LLMs for No-Algorithm Regimes: Contextuality-Theatre Intelligence via Invariant Fibers and Multi-Clock Dynamics",
+  "abstract": "Artificial intelligence has achieved remarkable competence when the task definition, data grammar, and target labels remain stable. However, many real systems do not behave that way. In finance, neural data, cybersecurity, climate signals, and complex bio-omics, the “meaning” of correlations can reorganize abruptly: variables become relevant or irrelevant without warning, interaction rules mutate, and the notion of classes itself can drift. In these no-algorithm regimes, even problems that look tractable under fixed assumptions become effectively intractable because the assumptions are the first thing to break. This talk proposes a new architecture—Quantum Large Language Models (Q-LLMs)—designed not merely to accelerate classical pipelines, but to exploit quantum structure as a native representational advantage for rapidly self-redefining data. We introduce a contextuality–perturbation theatre: a structured space of interventions that simultaneously edits contextual dependence and probes system response. Each theatre “cell” yields an invariant signature—topological and geometric features that remain stable under specific disturbances while sharply changing under others. From streaming inputs, Q-LLMs do not aim to predict a single fixed label; instead, they construct a layered invariant atlas and search for sparse, persistent fiber-like pathways that stitch together invariants across layers. These fibers form a learnable relational substrate that behaves as an automaton with multi-clock dynamics, enabling fast detection of regime shifts, instantaneous reclassification of emergent structures, and discovery of cross-domain regularities without requiring a hand-crafted algorithm for each new grammar. We outline how quantum resources—context sensitivity, interference-based filtering, and entanglement-enabled relational encoding—can be fused with LLM-style representation learning to produce self-updating intelligence: models that remain operational when the task definition itself becomes a moving target. The result is a pathway toward quantum AI systems that do not merely compute faster, but interpret faster—turning instability from a failure mode into a measurable, navigable signal.",
+  "authors": "Anirban Bandyopadhyay",
+  "submission_id": 463,
+  "decision": "Pending",
+  "category": "1.0 Philosophy",
+  "topic": "[02.12]…Quantum brain biology"
+}

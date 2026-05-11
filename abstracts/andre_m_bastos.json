@@ -1,0 +1,13 @@
+{
+  "speaker": "André M. Bastos",
+  "affiliation": "Vanderbilt University",
+  "type": "plenary",
+  "remote": false,
+  "title": "Predictive Coding: A More Cognitive Process Than We Thought?",
+  "abstract": "In predictive coding (PC), higher-order brain areas generate predictions that are sent to lower-order sensory areas. Top-down predictions are compared with bottom-up sensory data, and mismatches evoke prediction errors. In PC, the prediction errors are encoded in layer 2/3 pyramidal neurons of sensory cortex that feed forward. The PC model has been tested with multiple recording modalities using the global–local oddball paradigm. Consistent with PC, neuroimaging studies reported prediction error responses in sensory and higher-order areas. However, recent studies of neuronal spiking suggest that genuine prediction errors emerge in prefrontal cortex (PFC). This implies that predictive processing is a more cognitive than sensory-based mechanism – an observation that challenges PC and better aligns with a framework we call predictive routing (PR).",
+  "authors": "André Bastos",
+  "submission_id": 461,
+  "decision": "Pending",
+  "category": "2.0 Neuroscience",
+  "topic": "[01.19]…Emergence"
+}

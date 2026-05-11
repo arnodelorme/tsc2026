@@ -1,0 +1,13 @@
+{
+  "speaker": "Kenneth Kosik",
+  "affiliation": "UC Santa Barbara",
+  "type": "plenary",
+  "remote": false,
+  "title": "Effects of Natural Xenon on Human Brain Organoids and Cultured Neurons",
+  "abstract": "Effects of Natural Xenon on Human Brain Organoids and Cultured Neurons Han R, Van der Molen T, Camargo C, Morales Bontempo A, Bustamante C Lippincott H, Bouwmeester D, Kosik KS* *Departments of Molecular Cellular and Developmental Biology and the Neuroscience Research Institute, University of California, Santa Barbara. Anesthetics are a powerful heuristic tool for the study of consciousness. They are a diverse set of chemically unrelated compounds that share the property of specificity for consciousness. Among the compounds in this toolbox is the inert noble gas Xenon, widely considered to be safe while supporting hemodynamic stability and rapid recovery. We have delivered natural Xenon to human brain cortical organoids and primary neuronal cultures over a graded set of gage pressures and observed its effects on neuronal activity with high density micro-electrode arrays and calcium dyes in a two photon. Under baseline conditions, neuronal activity in brain organoids approximates the brain activity of a second trimester fetus in which the predominate activity is periodic bursting. Within the bursts we have reported highly structured low dimensional activity clustered by their more rapid firing rates that form a characteristic geometric manifold (Van der Molen et al Nat Neurosci 2025) while inter-burst activity is high dimensional. Xenon disperses the highly correlated units within the burst, disperses the phase separation of the burst and shifts the firing to a slower uncorrelated pattern while the total number of active units remains unchanged. We interpret this effect as a Xenon-induced dissociation of networked units, a phenomenon that speculatively might bear some relationship to consciousness.",
+  "authors": "Kenneth S. Kosik, R. Han, T. Van der Molen, C. Camargo, A. Morales Bontempo, C. Bustamante, H. Lippincott, D. Bouwmeester",
+  "submission_id": 462,
+  "decision": "Accepted: Plenary",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.24] Miscellaneous"
+}

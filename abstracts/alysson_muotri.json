@@ -1,0 +1,13 @@
+{
+  "speaker": "Alysson Muotri",
+  "affiliation": "UC San Diego",
+  "type": "plenary",
+  "remote": false,
+  "title": "Brain organoids as a reductionist model for human consciousness studies",
+  "abstract": "Human brain organoids are dynamic, self-assembling neural tissues made from stem cells. Structural and transcriptional changes during early brain development follow predetermined programs set by genetics. However, whether this applies to functional network activity remains unclear, mainly due to the difficulty of studying the earliest stages of a living human brain. We created cortical organoids that naturally produce rhythmic and regular oscillatory network events relying on glutamatergic and GABAergic signaling. These nested oscillations exhibit cross-frequency coupling, which is believed to facilitate the coordination of neuronal computation and communication. As a sign of network maturation, the oscillatory activity later shifted to more complex, irregular patterns, resembling features seen in preterm human EEG recordings. These findings suggest that the development of organized network activity in the human neocortex may follow stable genetic instructions, even without external or subcortical input. We argue that this reductionist model system can be used to study the emergence of human consciousness. Opportunities and applications of this model will be presented.",
+  "authors": "Alysson Muotri",
+  "submission_id": 70,
+  "decision": "Accepted: Plenary",
+  "category": "2.0 Neuroscience",
+  "topic": "[Experiential Approaches]"
+}
