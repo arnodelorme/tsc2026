@@ -83,7 +83,7 @@ def extract_speakers_from_line(line):
     text = decode_entities(text)
     # Split by comma
     names = [n.strip() for n in text.split(",")]
-    return [n for n in names if n and n != "TBD"]
+    return [n for n in names if n and n not in ("TBD", "TBA")]
 
 
 def escape_html_title(title):
@@ -170,7 +170,7 @@ def update_program():
                         else:
                             note = (f'{indent}<div class="session-note" '
                                     f'data-auto="{TAG}">'
-                                    f'{last_name}: TBD</div>')
+                                    f'{last_name}: TBA</div>')
                             stats["tbd"] += 1
                         new_lines.append(note)
 
