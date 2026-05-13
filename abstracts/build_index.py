@@ -33,6 +33,7 @@ def build_index():
             "has_abstract": data.get("abstract") is not None,
             "decision": data.get("decision"),
             "submission_id": data.get("submission_id"),
+            "photo": data.get("photo"),
         })
 
     with open(INDEX_PATH, "w") as f:

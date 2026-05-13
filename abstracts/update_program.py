@@ -4,7 +4,10 @@
 For each plenary block in the Detailed Timetable, extracts speaker names
 from the session-speakers div, looks up their talk title in abstracts/*.json
 by matching last name (and first name to disambiguate), and inserts
-session-note divs with "LastName: Title" or "LastName: TBD".
+session-note divs with "LastName: Title" or "LastName: TBA".
+
+When a speaker has an abstract, the title is wrapped in a link to the
+corresponding page in abstracts_html/.
 
 Existing auto-generated talk-title notes are replaced on each run.
 """
@@ -20,6 +23,16 @@ ABSTRACTS_DIR = Path(__file__).resolve().parent
 
 # Tag used to mark auto-generated lines so we can replace them on re-run
 TAG = "talk-title"
+
+
+def name_to_slug(name):
+    """Convert speaker name to URL-friendly slug for abstract page links."""
+    slug = name.lower()
+    for src, dst in [("é", "e"), ("á", "a"), ("ü", "u"), ("ö", "o"),
+                     ("ñ", "n"), ("ç", "c"), ("â", "a")]:
+        slug = slug.replace(src, dst)
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    return re.sub(r"\s+", "-", slug.strip())
 
 
 def load_abstracts():
@@ -46,6 +59,8 @@ def load_abstracts():
             "last": last,
             "full_name": name,
             "title": data.get("title"),
+            "has_abstract": data.get("abstract") is not None,
+            "slug": name_to_slug(name),
         }
     return abstracts
 
@@ -102,26 +117,31 @@ def escape_html_title(title):
 
 
 def lookup_speaker(name, abstracts):
-    """Look up a speaker name in the abstracts dict. Returns (last_name, title|None)."""
+    """Look up a speaker in the abstracts dict.
+
+    Returns (last_name, title|None, has_abstract, slug|None).
+    """
     norm = normalize_name(name)
     parts = norm.split()
     if not parts:
-        return None, None
+        return None, None, False, None
     last = parts[-1]
-    first = parts[0]
+
+    def _result(entry):
+        return (entry["full_name"].split()[-1], entry["title"],
+                entry["has_abstract"], entry["slug"])
 
     # Try exact last name match
     if last in abstracts:
-        entry = abstracts[last]
-        return entry["full_name"].split()[-1], entry["title"]
+        return _result(abstracts[last])
 
     # Try hyphenated last names (e.g. "carhart-harris" -> "carhartharris")
     last_nohyphen = last.replace("-", "")
     for key, entry in abstracts.items():
         if key.replace("-", "") == last_nohyphen:
-            return entry["full_name"].split()[-1], entry["title"]
+            return _result(entry)
 
-    return last.capitalize(), None
+    return last.capitalize(), None, False, None
 
 
 def update_program():
@@ -159,13 +179,21 @@ def update_program():
                 # Determine indentation from current line
                 indent = re.match(r"(\s*)", line).group(1)
                 for spk in speakers:
-                    last_name, title = lookup_speaker(spk, abstracts)
+                    last_name, title, has_abstract, slug = \
+                        lookup_speaker(spk, abstracts)
                     if last_name:
                         if title:
                             safe_title = escape_html_title(title)
+                            if has_abstract and slug:
+                                href = f"abstracts_html/{slug}.html"
+                                content = (f'{last_name}: '
+                                           f'<a href="{href}">'
+                                           f'{safe_title}</a>')
+                            else:
+                                content = f'{last_name}: {safe_title}'
                             note = (f'{indent}<div class="session-note" '
                                     f'data-auto="{TAG}">'
-                                    f'{last_name}: {safe_title}</div>')
+                                    f'{content}</div>')
                             stats["added"] += 1
                         else:
                             note = (f'{indent}<div class="session-note" '

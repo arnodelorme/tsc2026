@@ -8,7 +8,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 70
+    "submission_id": 70,
+    "photo": "img/alysson-muotri.jpg"
   },
   {
     "file": "andre_m_bastos.json",
@@ -19,7 +20,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Pending",
-    "submission_id": 461
+    "submission_id": 461,
+    "photo": "img/andre-bastos.jpg"
   },
   {
     "file": "anirban_bandyopadhyay.json",
@@ -30,7 +32,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Pending",
-    "submission_id": 463
+    "submission_id": 463,
+    "photo": "img/anirban-bandyopadhyay.jpg"
   },
   {
     "file": "beatriz_villarroel.json",
@@ -41,7 +44,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Keynote",
-    "submission_id": 448
+    "submission_id": 448,
+    "photo": "img/beatriz-villarroel.png"
   },
   {
     "file": "dean_radin.json",
@@ -52,7 +56,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 456
+    "submission_id": 456,
+    "photo": "img/dean-radin.jpg"
   },
   {
     "file": "edward_boyden.json",
@@ -63,7 +68,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/edward-boyden.jpg"
   },
   {
     "file": "edward_large.json",
@@ -74,7 +80,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 105
+    "submission_id": 105,
+    "photo": "img/edward-large.jpg"
   },
   {
     "file": "hartmut_neven.json",
@@ -85,7 +92,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/hartmut-neven.jpg"
   },
   {
     "file": "helane_wahbeh.json",
@@ -96,7 +104,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/helane-wahbeh.jpg"
   },
   {
     "file": "jennifer_prendki.json",
@@ -107,7 +116,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/jennifer-prendki.jpg"
   },
   {
     "file": "kenneth_kosik.json",
@@ -118,7 +128,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 462
+    "submission_id": 462,
+    "photo": "img/kenneth-kosik.png"
   },
   {
     "file": "lea_gassab.json",
@@ -129,7 +140,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/lea-gassab.png"
   },
   {
     "file": "michael_levin.json",
@@ -140,7 +152,8 @@
     "remote": true,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 459
+    "submission_id": 459,
+    "photo": "img/michael-levin.jpg"
   },
   {
     "file": "nirosha_murugan.json",
@@ -151,7 +164,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 81
+    "submission_id": 81,
+    "photo": "img/nirosha-murugan.jpg"
   },
   {
     "file": "robin_carhartharris.json",
@@ -162,7 +176,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/robin-carhart-harris.jpg"
   },
   {
     "file": "roger_penrose.json",
@@ -173,7 +188,8 @@
     "remote": true,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/roger-penrose.jpg"
   },
   {
     "file": "roumiana_tsenkova.json",
@@ -184,7 +200,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/roumiana-tsenkova.png"
   },
   {
     "file": "sarika_katiyar.json",
@@ -195,7 +212,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Accepted: Plenary",
-    "submission_id": 177
+    "submission_id": 177,
+    "photo": "img/Sarika-Katiyar.jpg"
   },
   {
     "file": "steen_rasmussen.json",
@@ -206,7 +224,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/steen-rasmussen.jpg"
   },
   {
     "file": "stuart_hameroff.json",
@@ -217,7 +236,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/stuart-hameroff.jpg"
   },
   {
     "file": "susan_schneider.json",
@@ -228,7 +248,8 @@
     "remote": false,
     "has_abstract": true,
     "decision": "Pending",
-    "submission_id": 221
+    "submission_id": 221,
+    "photo": "img/susan-schneider.jpg"
   },
   {
     "file": "terry_sejnowski.json",
@@ -239,7 +260,8 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/terry-sejnowski.jpg"
   },
   {
     "file": "tracy_brandmeyer.json",
@@ -250,6 +272,7 @@
     "remote": false,
     "has_abstract": false,
     "decision": null,
-    "submission_id": null
+    "submission_id": null,
+    "photo": "img/tracy-brandmeyer.jpg"
   }
 ]
