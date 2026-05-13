@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness Conferences &mdash; CS 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em;
+  transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+
+/* hamburger */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle {
+  font-size: 1.05rem; opacity: .85;
+}
+
+/* ── Content ─────────────────────────────────── */
+.content { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+.content .intro { margin-bottom: 2rem; font-size: .95rem; color: #444; }
+
+/* ── Conference cards ────────────────────────── */
+.conf-list { list-style: none; }
+.conf-card {
+  display: block;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dde4ec;
+  border-radius: 8px;
+  transition: box-shadow .2s, border-color .2s;
+  color: inherit;
+  text-decoration: none;
+}
+a.conf-card:hover { border-color: #1a96b8; box-shadow: 0 2px 12px rgba(26,150,184,.15); text-decoration: none; }
+.conf-card .conf-date {
+  font-size: .78rem; font-weight: 700; color: #1a96b8;
+  text-transform: uppercase; letter-spacing: .03em;
+  margin-bottom: .25rem;
+}
+.conf-card h3 {
+  font-size: 1.1rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .25rem;
+}
+.conf-card .conf-location {
+  font-size: .88rem; color: #666; margin-bottom: .4rem;
+}
+.conf-card .conf-desc {
+  font-size: .88rem; color: #444; line-height: 1.5;
+}
+.conf-card.conf-highlight {
+  border-color: #1a96b8;
+  background: #f4fafe;
+}
+.conf-card .conf-note {
+  font-size: .82rem; color: #888; font-style: italic;
+  margin-top: .4rem;
+}
+.conf-card .conf-cancelled {
+  font-size: .82rem; color: #b44; font-weight: 600;
+  margin-top: .3rem;
+}
+
+/* ── Year headers ────────────────────────────── */
+.year-header {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin: 2.5rem 0 1rem; padding-bottom: .3rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.year-header:first-of-type { margin-top: 0; }
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .content { padding: 2rem 1.2rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script src="nav.js"></script>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Consciousness Conferences</h1>
+  <p class="subtitle">A guide to upcoming meetings in consciousness science and related fields</p>
+</header>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content">
+
+<p class="intro">The study of consciousness is an inherently interdisciplinary endeavor, and the community of researchers spans many conferences around the world. Below is a curated list of upcoming meetings relevant to consciousness science, organized chronologically. We encourage participants to engage broadly across these events.</p>
+
+<h2 class="year-header">2026</h2>
+
+<ul class="conf-list">
+
+  <li>
+    <a class="conf-card" href="https://www.usonainstitute.org/events/the-2026-international-forum-on-consciousness" target="_blank" rel="noopener">
+      <div class="conf-date">May 21&ndash;22, 2026</div>
+      <h3>International Forum on Consciousness</h3>
+      <div class="conf-location">Fitchburg, Wisconsin, USA</div>
+      <div class="conf-desc">Organized by the BTC Institute and Usona Institute, this forum explores &ldquo;other ways of knowing&rdquo;&mdash;forms of intelligence and awareness that transcend conventional cognition, spanning neurodivergent experiences, animal and plant consciousness, contemplative traditions, and psychedelic states.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://iksmha.iitmandi.ac.in/mbcc/2026/" target="_blank" rel="noopener">
+      <div class="conf-date">June 3&ndash;6, 2026</div>
+      <h3>Mind, Brain, and Consciousness Conference (MBCC 2026)</h3>
+      <div class="conf-location">IIT Mandi, Himachal Pradesh, India</div>
+      <div class="conf-desc">An interdisciplinary conference integrating Indian knowledge systems with contemporary scientific inquiry across neuroscience, psychology, cognitive science, and AI. Features plenary talks, technical presentations, and panel discussions bridging traditional knowledge and modern science.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://www.icpr-conference.com/" target="_blank" rel="noopener">
+      <div class="conf-date">June 4&ndash;6, 2026</div>
+      <h3>Interdisciplinary Conference on Psychedelic Research (ICPR 2026)</h3>
+      <div class="conf-location">Philharmonie Haarlem, The Netherlands</div>
+      <div class="conf-desc">Europe&rsquo;s premier scientific conference on psychedelic research and therapy. The seventh edition brings together academics, clinicians, therapists, policymakers, and the public for the latest advances in the field.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://theassc.org/assc-29/" target="_blank" rel="noopener">
+      <div class="conf-date">June 30 &ndash; July 3, 2026</div>
+      <h3>ASSC 29 &mdash; Association for the Scientific Study of Consciousness</h3>
+      <div class="conf-location">Pontificia Universidad Cat&oacute;lica de Chile, Santiago, Chile</div>
+      <div class="conf-desc">The 29th annual meeting of ASSC, the leading academic society for empirical, theoretical, and philosophical investigations into consciousness. Welcomes submissions spanning psychology, medicine, neuroscience, computer science, philosophy, biology, and mathematics.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://psychedelics.berkeley.edu/event/conference-on-consciousness/" target="_blank" rel="noopener">
+      <div class="conf-date">October 1, 2026</div>
+      <h3>Conference on Consciousness</h3>
+      <div class="conf-location">UC Berkeley Center for the Science of Psychedelics, California, USA</div>
+      <div class="conf-desc">A gathering uniting scholars, scientists, artists, and practitioners to explore consciousness from integrated humanities and scientific perspectives, with a focus on altered states and psychedelic experience.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://www.alpsconference.com/" target="_blank" rel="noopener">
+      <div class="conf-date">October 9&ndash;10, 2026</div>
+      <h3>ALPS &mdash; Awareness Lectures on Psychedelics in Switzerland</h3>
+      <div class="conf-location">Aarau, Switzerland</div>
+      <div class="conf-desc">The sixth edition of the ALPS conference, featuring two days of cutting-edge psychedelic science, distinguished speakers, interactive panels, and community building in the Swiss tradition.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://thesynapse.co/" target="_blank" rel="noopener">
+      <div class="conf-date">October 9&ndash;11, 2026</div>
+      <h3>The Synapse</h3>
+      <div class="conf-location">Atlanta, Georgia, USA</div>
+      <div class="conf-desc">A three-day convening of women leaders working at the intersection of AI, robotics, cognitive science, and consciousness. Organized by Applied Love Labs and led by neuroscientist Julia Mossbridge, the intimate gathering (100 participants) features workshops, facilitated dialogue, and cross-disciplinary collaboration.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card conf-highlight" href="program.html">
+      <div class="conf-date">October 11&ndash;16, 2026</div>
+      <h3>Consciousness Science 2026 (CS 2026)</h3>
+      <div class="conf-location">Paradise Point Resort &amp; Spa, San Diego, California, USA</div>
+      <div class="conf-desc">Our conference. Five and a half days of workshops, plenary lectures, concurrent sessions, posters, and interdisciplinary dialogue, bringing together 600&ndash;700 participants from around the world to explore the science of consciousness.</div>
+      <div class="conf-note">We apologize for the date overlap with MoC7 in Copenhagen and other October events. Our dates were determined by venue availability at Paradise Point, which was contracted well in advance. We look forward to coordination and cross-pollination between the meetings.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://amcs-community.org/events/moc7-2026/" target="_blank" rel="noopener">
+      <div class="conf-date">October 12&ndash;16, 2026</div>
+      <h3>Models of Consciousness 7 (MoC7)</h3>
+      <div class="conf-location">University of Copenhagen, Denmark</div>
+      <div class="conf-desc">The seventh biennial conference organized by the Association for Mathematical Consciousness Science. Focuses on philosophical foundations, methodologies and measures, AI and consciousness, and phenomenological investigations. Features Nobel Laureate John O&rsquo;Keefe and an excursion to the Louisiana Museum of Modern Art.</div>
+    </a>
+  </li>
+
+  <li>
+    <a class="conf-card" href="https://psychedelics.berkeley.edu/event/conference-on-consciousness/" target="_blank" rel="noopener">
+      <div class="conf-date">October 14&ndash;15, 2026</div>
+      <h3>Conference on Consciousness and Psychedelics</h3>
+      <div class="conf-location">UC Berkeley, California, USA</div>
+      <div class="conf-desc">A two-day event from the Berkeley Center for the Science of Psychedelics exploring consciousness from integrated humanities and scientific perspectives, examining philosophical, artistic, and cultural viewpoints on altered states of consciousness.</div>
+    </a>
+  </li>
+
+</ul>
+
+<p style="font-size:.85rem;color:#888;margin-top:2rem;">Know of a conference that should be listed here? Email <a href="mailto:info@cs2026.org">info@cs2026.org</a>.</p>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer></footer>
+<script src="footer.js"></script>
+
+</body>
+</html>
