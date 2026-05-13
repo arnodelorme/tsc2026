@@ -1,0 +1,92 @@
+name: Add Conference from Form
+
+on:
+  repository_dispatch:
+    types: [add-conference]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  add-conference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Create branch
+        run: |
+          SLUG=$(echo "${{ github.event.client_payload.name }}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd 'a-z0-9-' | head -c 40)
+          BRANCH="conf/${SLUG}-$(date +%s)"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+          git checkout -b "$BRANCH"
+
+      - name: Run add_conference.py
+        env:
+          CONF_NAME:        ${{ github.event.client_payload.name }}
+          CONF_START_DATE:  ${{ github.event.client_payload.start_date }}
+          CONF_END_DATE:    ${{ github.event.client_payload.end_date }}
+          CONF_LOCATION:    ${{ github.event.client_payload.location }}
+          CONF_URL:         ${{ github.event.client_payload.url }}
+          CONF_DESCRIPTION: ${{ github.event.client_payload.description }}
+          CONF_YEAR:        ${{ github.event.client_payload.year }}
+          CONF_EVENT_TYPE:  ${{ github.event.client_payload.event_type }}
+        run: python3 pipeline/add_conference.py
+
+      - name: Validate HTML
+        env:
+          CONF_NAME: ${{ github.event.client_payload.name }}
+        run: |
+          echo "Verifying generated HTML..."
+          if ! grep -q "$CONF_NAME" conferences.html; then
+            echo "ERROR: conference not found in conferences.html after insertion"
+            exit 1
+          fi
+          python3 -c "
+          from pathlib import Path
+          html = Path('conferences.html').read_text()
+          opens = html.count('<li>')
+          closes = html.count('</li>')
+          if opens != closes:
+              print(f'WARNING: mismatched li tags: {opens} opens, {closes} closes')
+              exit(1)
+          print(f'HTML OK: {opens} conference cards, li tags balanced')
+          "
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add conferences.html
+          git commit -m "feat: add conference ${{ github.event.client_payload.name }}"
+          git push origin "$BRANCH"
+
+      - name: Create pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --title "Add conference: ${{ github.event.client_payload.name }}" \
+            --body "$(cat <<'EOF'
+          ## New conference submission
+
+          | Field | Value |
+          |-------|-------|
+          | **Name** | ${{ github.event.client_payload.name }} |
+          | **Dates** | ${{ github.event.client_payload.start_date }} to ${{ github.event.client_payload.end_date }} |
+          | **Location** | ${{ github.event.client_payload.location }} |
+          | **Type** | ${{ github.event.client_payload.event_type }} |
+          | **URL** | ${{ github.event.client_payload.url }} |
+
+          > ${{ github.event.client_payload.description }}
+
+          ---
+          Submitted via Google Form. Review the diff and merge if correct.
+          EOF
+          )" \
+            --base main \
+            --head "$BRANCH"
