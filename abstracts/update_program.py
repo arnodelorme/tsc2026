@@ -210,5 +210,53 @@ def update_program():
           f"{stats['tbd']} marked TBD ({total} total speakers in plenary blocks)")
 
 
+INDEX = ROOT / "index.html"
+ABSTRACTS_HTML = ROOT / "abstracts_html"
+
+
+def update_index():
+    """Add links from speaker cards in index.html to their abstract pages.
+
+    Wraps the speaker name <h3> text inside an <a> to abstracts_html/slug.html
+    when an abstract page exists.  Previously injected links are stripped first
+    so the script is idempotent.
+    """
+    abstracts = load_abstracts()
+    text = INDEX.read_text(encoding="utf-8")
+    lines = text.split("\n")
+
+    # Build a lookup: normalized last name -> slug (only if page exists)
+    slug_for = {}
+    for entry in abstracts.values():
+        page = ABSTRACTS_HTML / f"{entry['slug']}.html"
+        if page.exists():
+            slug_for[entry["last"]] = entry["slug"]
+
+    new_lines = []
+    linked = 0
+
+    for line in lines:
+        # Match <h3>Speaker Name</h3> possibly already wrapped in <a>
+        m = re.search(
+            r'(\s*)<h3>(?:<a [^>]*>)?([^<]+?)(?:</a>)?</h3>', line)
+        if m and "speaker-card" not in line:
+            indent = m.group(1)
+            name = m.group(2).strip()
+            norm = normalize_name(name)
+            parts = norm.split()
+            last = parts[-1] if parts else ""
+            if last in slug_for:
+                href = f"abstracts_html/{slug_for[last]}.html"
+                new_lines.append(
+                    f'{indent}<h3><a href="{href}">{name}</a></h3>')
+                linked += 1
+                continue
+        new_lines.append(line)
+
+    INDEX.write_text("\n".join(new_lines), encoding="utf-8")
+    print(f"Updated index.html: {linked} speaker names linked to abstracts")
+
+
 if __name__ == "__main__":
     update_program()
+    update_index()
