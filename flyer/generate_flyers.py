@@ -105,7 +105,7 @@ def logo_image(x, y, width, height=None, corner_radius=None):
     clip_id = f"logoClip{_logo_clip_counter}"
     return (
         f'<clipPath id="{clip_id}"><rect x="{x}" y="{y}" width="{width}" height="{height}" rx="{corner_radius:.1f}" /></clipPath>\n'
-        f'<image x="{x}" y="{y}" width="{width}" height="{height}" href="data:image/png;base64,{LOGO_B64}" clip-path="url(#{clip_id})" />\n'
+        f'<image x="{x}" y="{y}" width="{width}" height="{height}" xlink:href="data:image/png;base64,{LOGO_B64}" clip-path="url(#{clip_id})" />\n'
     )
 
 
@@ -113,7 +113,7 @@ def aerial_image(x, y, width, height, clip_id=None, opacity=1.0):
     """Embed aerial photo. Aspect ratio ~1.6:1."""
     clip = f'clip-path="url(#{clip_id})"' if clip_id else ""
     op = f'opacity="{opacity}"' if opacity < 1.0 else ""
-    return f'<image x="{x}" y="{y}" width="{width}" height="{height}" href="data:image/jpeg;base64,{AERIAL_B64}" preserveAspectRatio="xMidYMid slice" {clip} {op} />\n'
+    return f'<image x="{x}" y="{y}" width="{width}" height="{height}" xlink:href="data:image/jpeg;base64,{AERIAL_B64}" preserveAspectRatio="xMidYMid slice" {clip} {op} />\n'
 
 
 def text_elem(x, y, text, size=4, weight=400, fill=WHITE, anchor="middle", spacing=None, transform=None):
@@ -648,7 +648,7 @@ def variant_08():
 
     # Title
     s += text_elem(W/2, 62, "CONSCIOUSNESS", size=8.5, weight=800, fill=WHITE, spacing="0.5")
-    s += text_elem(W/2, 72, "SCIENCE 2026", size=6.5, weight=300, fill=WHITE, spacing="1.2")
+    s += text_elem(W/2, 72, "SCIENCE", size=6.5, weight=300, fill=WHITE, spacing="1.2")
 
     s += text_elem(W/2, 80, SUBTITLE, size=2.8, weight=400, fill=NEAR_WHITE)
 
@@ -657,12 +657,28 @@ def variant_08():
     s += text_elem(W/2, 98, VENUE, size=3, weight=500, fill=WHITE)
     s += text_elem(W/2, 103, LOCATION, size=2.8, weight=400, fill=NEAR_WHITE)
 
-    # Themes over the diagonal area
-    s += text_elem(W/2, 140, "THEMES", size=2.5, weight=600, fill=GOLD, spacing="1")
-    left_themes = THEMES_SHORT[:6]
-    right_themes = THEMES_SHORT[6:]
-    s += themes_column(12, 146, left_themes, size=2.3, fill=NEAR_WHITE)
-    s += themes_column(W/2 + 4, 146, right_themes, size=2.3, fill=NEAR_WHITE)
+    # Plenary session themes over the diagonal area
+    s += text_elem(W/2, 118, "PLENARY SESSIONS", size=2.8, weight=600, fill=GOLD, spacing="0.8")
+    plenary_left = [
+        "Quantum Biophotonics",
+        "Cerebral Organoids",
+        "Neuroscience",
+        "Psychedelics & Consciousness",
+        "Non-Local Consciousness & Psi",
+        "Quantum AI & Consciousness",
+        "Origins of Life & Consciousness",
+    ]
+    plenary_right = [
+        "Psi and UAP",
+        "Connectomics or Wavefields?",
+        "Life or Consciousness First?",
+        "Altered States of Consciousness",
+        "Consciousness and AI",
+        "Anesthesia & Consciousness",
+        "Geometry & Platonic Values",
+    ]
+    s += themes_column(12, 124, plenary_left, size=2.8, fill=NEAR_WHITE)
+    s += themes_column(W/2 + 4, 124, plenary_right, size=2.8, fill=NEAR_WHITE)
 
     # Abstract deadline
     s += rect(12, 178, W-24, 12, GOLD, rx=2, opacity=0.95)
