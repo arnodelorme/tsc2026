@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness Science 2026 &mdash; San Diego</title>
+<style>
+/* ── Reset ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #fff;
+  overflow-x: hidden;
+}
+a { color: #AB0520; text-decoration: none; }
+a:hover { color: #0C234B; }
+img { max-width: 100%; height: auto; }
+
+/* UA Colors: Red #AB0520, Blue #0C234B, White #fff */
+
+/* ── Sticky Nav ────────────────────────────── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 54px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem;
+  background: #fff;
+  border-bottom: 2px solid #0C234B;
+  transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.1); }
+.nav .logo-link {
+  display: flex; align-items: center; gap: .6rem;
+}
+.nav .logo-link img { height: 32px; border-radius: 3px; }
+.nav .logo-link span {
+  font-weight: 800; font-size: .95rem; color: #0C234B;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+.nav-links a {
+  font-size: .8rem; font-weight: 600; color: #0C234B;
+  text-transform: uppercase; letter-spacing: .08em;
+  margin-left: 2rem; position: relative;
+  transition: color .2s;
+}
+.nav-links a::after {
+  content: ''; position: absolute;
+  left: 0; bottom: -4px; width: 0; height: 2px;
+  background: #AB0520; transition: width .2s;
+}
+.nav-links a:hover { text-decoration: none; color: #AB0520; }
+.nav-links a:hover::after { width: 100%; }
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  flex-direction: column; gap: 5px; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px; background: #0C234B;
+  border-radius: 1px; transition: .3s;
+}
+
+/* ── Hero Split ────────────────────────────── */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  margin-top: 54px;
+}
+.hero-img {
+  position: relative;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-img .color-bar {
+  position: absolute; top: 0; right: 0;
+  width: 6px; height: 100%;
+  background: linear-gradient(to bottom, #AB0520, #0C234B);
+}
+.hero-text {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3.5rem;
+  background: #0C234B;
+  color: #fff;
+}
+.hero-text .overline {
+  font-size: .75rem; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: #AB0520;
+  margin-bottom: .5rem;
+}
+.hero-text .heritage {
+  font-size: .78rem; font-weight: 600;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 1rem;
+  letter-spacing: .02em;
+}
+.hero-text h1 {
+  font-size: 3.2rem; font-weight: 900;
+  line-height: 1.08; margin-bottom: 1rem;
+}
+.hero-text h1 em {
+  font-style: normal; color: #AB0520;
+}
+.hero-text .lead {
+  font-size: 1.1rem; color: rgba(255,255,255,.75);
+  max-width: 420px; margin-bottom: 1.5rem;
+}
+.hero-text .date-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 6px; padding: .5rem 1.2rem;
+  font-weight: 700; font-size: .9rem;
+  margin-bottom: 1.8rem;
+}
+.hero-text .date-badge .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #AB0520;
+}
+.hero-text .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-red {
+  display: inline-block; padding: .6rem 1.8rem;
+  background: #AB0520; color: #fff;
+  font-weight: 700; font-size: .9rem;
+  border-radius: 4px; border: none; cursor: pointer;
+  transition: background .2s;
+}
+.btn-red:hover { background: #c4173a; text-decoration: none; }
+.btn-ghost {
+  display: inline-block; padding: .6rem 1.8rem;
+  background: transparent; color: #fff;
+  font-weight: 600; font-size: .9rem;
+  border-radius: 4px; border: 1px solid rgba(255,255,255,.3);
+  cursor: pointer; transition: all .2s;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); text-decoration: none; }
+
+/* ── Content Blocks ────────────────────────── */
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+}
+.block.reverse .block-img { order: 2; }
+.block.reverse .block-content { order: 1; }
+
+.block-img {
+  position: relative;
+  overflow: hidden;
+}
+.block-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.block-img .tag {
+  position: absolute; top: 1.5rem; left: 1.5rem;
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: #fff; padding: .35rem .8rem;
+  background: rgba(12,35,75,.7);
+  backdrop-filter: blur(4px);
+  border-radius: 3px;
+}
+.block-content {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem 3rem;
+}
+.block-content .section-num {
+  font-size: .7rem; font-weight: 800;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: #AB0520; margin-bottom: .8rem;
+}
+.block-content h2 {
+  font-size: 2rem; font-weight: 800; color: #0C234B;
+  line-height: 1.15; margin-bottom: 1rem;
+}
+.block-content p {
+  color: #555; font-size: 1rem; line-height: 1.75;
+  max-width: 460px;
+}
+.block.dark .block-content {
+  background: #0C234B; color: #fff;
+}
+.block.dark .block-content h2 { color: #fff; }
+.block.dark .block-content p { color: rgba(255,255,255,.7); }
+.block.dark .block-content .section-num { color: #AB0520; }
+
+.block.light-alt .block-content { background: #f5f6fa; }
+
+/* ── Full-Width Quote ──────────────────────── */
+.quote-band {
+  background: #AB0520;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.quote-band blockquote {
+  max-width: 700px; margin: 0 auto;
+  font-size: 1.5rem; font-weight: 600;
+  color: #fff; line-height: 1.5;
+  font-style: italic;
+}
+.quote-band cite {
+  display: block; margin-top: 1rem;
+  font-size: .85rem; font-weight: 400;
+  color: rgba(255,255,255,.7);
+  font-style: normal;
+}
+
+/* ── CTA Footer ────────────────────────────── */
+.cta-footer {
+  background: #0C234B;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+.cta-footer img { height: 50px; border-radius: 6px; margin-bottom: 1.2rem; }
+.cta-footer h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: .5rem; }
+.cta-footer p { color: rgba(255,255,255,.65); margin-bottom: 1.5rem; }
+
+/* ── Slide-In Animations ──────────────────── */
+.slide-left {
+  opacity: 0; transform: translateX(-50px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.slide-right {
+  opacity: 0; transform: translateX(50px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.slide-up {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.slide-left.visible, .slide-right.visible, .slide-up.visible {
+  opacity: 1; transform: translate(0);
+}
+
+/* ── Footer ────────────────────────────────── */
+.footer {
+  background: #060a14;
+  padding: 2rem;
+  text-align: center;
+  border-top: 2px solid #0C234B;
+}
+.footer p { color: #5a6070; font-size: .8rem; }
+.footer a { color: #AB0520; }
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 54px; left: 0; right: 0;
+    background: #fff; border-bottom: 2px solid #0C234B;
+    padding: 1rem 2rem;
+  }
+  .nav-links.open a { margin: .5rem 0; margin-left: 0; }
+  .hero-split { grid-template-columns: 1fr; min-height: auto; }
+  .hero-img { min-height: 50vh; }
+  .hero-text { padding: 2.5rem 1.5rem; }
+  .hero-text h1 { font-size: 2.2rem; }
+  .block { grid-template-columns: 1fr; min-height: auto; }
+  .block.reverse .block-img { order: 0; }
+  .block.reverse .block-content { order: 0; }
+  .block-img { min-height: 45vh; }
+  .block-content { padding: 2.5rem 1.5rem; }
+  .quote-band blockquote { font-size: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-text .lead { font-size: 1rem; }
+  .block-content h2 { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────── -->
+<header class="nav" id="mainNav">
+  <a class="logo-link" href="#">
+    <img src="img/logo.png" alt="CS2026">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="#heritage">Heritage</a>
+    <a href="#openinquiry">Open Inquiry</a>
+    <a href="#frontier">Frontier</a>
+    <a href="#join">Join</a>
+  </div>
+</header>
+
+<!-- ── Hero Split ──────────────────────────── -->
+<section class="hero-split">
+  <div class="hero-img">
+    <img src="img_new/alien.jpg" alt="Exploring the unknown frontiers of consciousness">
+    <div class="color-bar"></div>
+  </div>
+  <div class="hero-text">
+    <div class="overline">Est. 1994 &mdash; The World's Oldest Consciousness Conference</div>
+    <div class="heritage">32 years of pioneering open inquiry</div>
+    <h1>The Science of<br><em>Consciousness</em></h1>
+    <p class="lead">Where mainstream science and unconventional
+    perspectives meet as equals &mdash; bridging neuroscience,
+    philosophy, physics, and beyond.</p>
+    <div class="date-badge">
+      <span class="dot"></span>
+      October 11&ndash;16, 2026 &bull; San Diego
+    </div>
+    <div class="cta-group">
+      <a class="btn-red" href="https://consciousness.arizona.edu/science-consciousness-conference-2026">Register</a>
+      <a class="btn-ghost" href="#heritage">Our Heritage</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Block 1: Heritage ─────────────────────── -->
+<section id="heritage" class="block reverse">
+  <div class="block-img slide-right">
+    <img src="img_new/simulation.jpeg" alt="Simulation theory and digital consciousness" loading="lazy">
+    <span class="tag">Since 1994</span>
+  </div>
+  <div class="block-content slide-left">
+    <div class="section-num">01 &mdash; Heritage</div>
+    <h2>The Original Consciousness Conference</h2>
+    <p>Founded in Tucson, Arizona in 1994, this is the world's
+    longest-running conference on the science of consciousness.
+    For over three decades, we have set the standard for rigorous,
+    cross-disciplinary investigation into the nature of mind
+    and subjective experience.</p>
+  </div>
+</section>
+
+<!-- ── Quote ────────────────────────────────── -->
+<div class="quote-band slide-up">
+  <blockquote>
+    &ldquo;The study of consciousness requires intellectual courage
+    &mdash; the willingness to follow evidence wherever it leads.&rdquo;
+    <cite>&mdash; Conference founding principle</cite>
+  </blockquote>
+</div>
+
+<!-- ── Block 2: Open Inquiry ─────────────────── -->
+<section id="openinquiry" class="block dark">
+  <div class="block-img slide-left">
+    <img src="img_new/jb-rhine-paranormal.png" alt="Parapsychology and the boundaries of science" loading="lazy">
+    <span class="tag">Open Inquiry</span>
+  </div>
+  <div class="block-content slide-right">
+    <div class="section-num">02 &mdash; Open Inquiry</div>
+    <h2>Where Bold Hypotheses Are Welcome</h2>
+    <p>We believe that the hardest problem in science demands
+    the broadest inquiry. Our program gives equal platform to
+    mainstream neuroscience and unconventional perspectives &mdash;
+    from parapsychology to panpsychism, from contemplative
+    traditions to quantum consciousness. No serious question
+    is off the table.</p>
+  </div>
+</section>
+
+<!-- ── Block 3: Frontier ───────────────────── -->
+<section id="frontier" class="block reverse light-alt">
+  <div class="block-img slide-right">
+    <img src="img_new/phylosophy.png" alt="Philosophy of mind" loading="lazy">
+    <span class="tag">Philosophy of Mind</span>
+  </div>
+  <div class="block-content slide-left">
+    <div class="section-num">03 &mdash; Frontier</div>
+    <h2>The Hard Problem Meets New Science</h2>
+    <p>From integrated information theory to higher-order thought,
+    from predictive processing to illusionism &mdash; hear the
+    architects of today's leading theories present new evidence
+    and engage in direct debate across six days of plenaries,
+    workshops, and experiential sessions.</p>
+  </div>
+</section>
+
+<!-- ── Block 4: Quantum Biology ────────────── -->
+<section class="block dark">
+  <div class="block-img slide-left">
+    <img src="img_new/microtubules.jpg" alt="Quantum processes in microtubules" loading="lazy">
+    <span class="tag">Quantum Biology</span>
+  </div>
+  <div class="block-content slide-right">
+    <div class="section-num">04 &mdash; Quantum Scale</div>
+    <h2>Consciousness in the Microtubule</h2>
+    <p>Orchestrated objective reduction, quantum coherence in
+    microtubules, and the Penrose&ndash;Hameroff theory continue
+    to generate new experimental predictions at the intersection
+    of physics and neuroscience.</p>
+  </div>
+</section>
+
+<!-- ── CTA Footer ──────────────────────────── -->
+<section id="join" class="cta-footer">
+  <img src="img/logo.png" alt="CS2026">
+  <h2>Join the Tradition</h2>
+  <p>October 11&ndash;16, 2026 &bull; Paradise Point Resort &amp; Spa, San Diego</p>
+  <a class="btn-red" href="https://consciousness.arizona.edu/science-consciousness-conference-2026">Register Now</a>
+</section>
+
+<!-- ── Footer ──────────────────────────────── -->
+<footer class="footer">
+  <p>&copy; 2026 Consciousness Science Conference &bull;
+  <a href="https://consciousness.arizona.edu">consciousness.arizona.edu</a></p>
+</footer>
+
+<!-- ── Scripts ─────────────────────────────── -->
+<script>
+(function() {
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  var navLinks = document.querySelector('.nav-links');
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { navLinks.classList.remove('open'); });
+  });
+
+  var els = document.querySelectorAll('.slide-left, .slide-right, .slide-up');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+</body>
+</html>
