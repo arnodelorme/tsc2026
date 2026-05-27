@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness Science 2026 &mdash; San Diego</title>
+<style>
+/* ── Reset ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: auto; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  background: #000;
+  overflow-x: hidden;
+}
+a { color: #e8a727; text-decoration: none; }
+a:hover { color: #f0bc4a; }
+
+/* ── Floating Logo ─────────────────────────── */
+.floating-logo {
+  position: fixed; top: 1.2rem; left: 1.5rem; z-index: 100;
+  display: flex; align-items: center; gap: .5rem;
+  opacity: 0; transition: opacity .4s;
+}
+.floating-logo.show { opacity: 1; }
+.floating-logo img {
+  height: 30px; border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+.floating-logo span {
+  font-weight: 700; font-size: .8rem;
+  color: #fff; letter-spacing: .06em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0,0,0,.6);
+}
+
+/* ── Scroll Indicator ──────────────────────── */
+.scroll-hint {
+  position: fixed; bottom: 2rem; left: 50%; z-index: 100;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center;
+  gap: .3rem; opacity: 1;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+.scroll-hint.hide { opacity: 0; }
+.scroll-hint span {
+  font-size: .7rem; text-transform: uppercase;
+  letter-spacing: .12em; color: rgba(255,255,255,.5);
+}
+.scroll-hint .arrow {
+  width: 20px; height: 20px;
+  border-right: 2px solid rgba(255,255,255,.4);
+  border-bottom: 2px solid rgba(255,255,255,.4);
+  transform: rotate(45deg);
+  animation: scrollBounce 1.8s infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: .4; }
+  50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+}
+
+/* ── Snap Container ────────────────────────── */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* ── Frame (each full-screen panel) ────────── */
+.frame {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.frame-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 8s ease-out;
+}
+.frame.active .frame-bg { transform: scale(1.06); }
+
+/* Vignette overlay */
+.frame::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.65) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Frame Content ─────────────────────────── */
+.frame-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  max-width: 750px; padding: 2rem;
+  opacity: 0; transform: translateY(25px);
+  transition: opacity .8s ease .2s, transform .8s ease .2s;
+}
+.frame.active .frame-content {
+  opacity: 1; transform: translateY(0);
+}
+
+.frame-content .label {
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: #e8a727;
+  margin-bottom: .8rem;
+}
+.frame-content h2 {
+  font-size: 3rem; font-weight: 900;
+  line-height: 1.1;
+  text-shadow: 0 3px 20px rgba(0,0,0,.5);
+  margin-bottom: .8rem;
+}
+.frame-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.8);
+  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  max-width: 580px; margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Hero Frame ────────────────────────────── */
+.frame.hero-frame .frame-content { max-width: 620px; }
+.frame.hero-frame h1 {
+  font-size: 3.6rem; font-weight: 900;
+  line-height: 1.06;
+  text-shadow: 0 3px 24px rgba(0,0,0,.5);
+  margin-bottom: .6rem;
+}
+.frame.hero-frame .subtitle {
+  font-size: 1.2rem; color: rgba(255,255,255,.8);
+  margin-bottom: .5rem;
+}
+.frame.hero-frame .dateplace {
+  display: inline-block; margin-top: .8rem;
+  padding: .45rem 1.4rem; border-radius: 30px;
+  font-weight: 700; font-size: .9rem;
+  background: rgba(232,167,39,0.2);
+  border: 1px solid rgba(232,167,39,0.4);
+  color: #e8a727;
+}
+.frame.hero-frame .logo-hero {
+  width: 160px; border-radius: 12px; margin-bottom: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+}
+.frame.hero-frame .cta-row {
+  margin-top: 1.8rem;
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+.btn-gold {
+  display: inline-block; padding: .6rem 2rem;
+  background: #e8a727; color: #0a2440;
+  font-weight: 700; font-size: .9rem;
+  border-radius: 30px; border: none; cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+.btn-gold:hover { background: #f0bc4a; transform: translateY(-1px); text-decoration: none; }
+.btn-line {
+  display: inline-block; padding: .6rem 2rem;
+  color: #fff; font-weight: 600; font-size: .9rem;
+  border-radius: 30px; border: 1px solid rgba(255,255,255,.35);
+  transition: all .2s;
+}
+.btn-line:hover { border-color: #fff; background: rgba(255,255,255,.08); text-decoration: none; }
+
+/* ── Progress Dots ─────────────────────────── */
+.progress-dots {
+  position: fixed; right: 1.5rem; top: 50%; z-index: 100;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.progress-dots .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.3);
+  transition: all .3s;
+  cursor: pointer;
+  padding: 0; -webkit-appearance: none;
+}
+.progress-dots .dot.active {
+  background: #e8a727;
+  border-color: #e8a727;
+  transform: scale(1.3);
+}
+
+/* ── Final Frame ───────────────────────────── */
+.frame.final::after { display: none; }
+.frame.final .frame-content { max-width: 500px; }
+.frame.final img { height: 48px; border-radius: 6px; margin-bottom: 1.2rem; }
+.frame.final h2 { font-size: 2.2rem; margin-bottom: .5rem; }
+.frame.final p { margin-bottom: 1.5rem; }
+.frame.final .footer-note {
+  margin-top: 2rem; font-size: .75rem;
+  color: rgba(255,255,255,.35);
+}
+.frame.final .footer-note a { color: rgba(255,255,255,.45); }
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .frame.hero-frame h1 { font-size: 2.4rem; }
+  .frame-content h2 { font-size: 2.2rem; }
+  .frame-content p { font-size: 1rem; }
+  .progress-dots { right: .8rem; gap: 10px; }
+  .progress-dots .dot { width: 8px; height: 8px; }
+  .floating-logo { top: .8rem; left: 1rem; }
+}
+@media (max-width: 480px) {
+  .frame.hero-frame h1 { font-size: 1.9rem; }
+  .frame-content h2 { font-size: 1.7rem; }
+  .frame.hero-frame .logo-hero { width: 120px; }
+  .progress-dots { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Floating Logo ───────────────────────── -->
+<div class="floating-logo" id="floatingLogo">
+  <img src="img/logo.png" alt="CS2026">
+  <span>CS 2026</span>
+</div>
+
+<!-- ── Scroll Hint ─────────────────────────── -->
+<div class="scroll-hint" id="scrollHint">
+  <span>Scroll</span>
+  <div class="arrow"></div>
+</div>
+
+<!-- ── Progress Dots ───────────────────────── -->
+<nav class="progress-dots" id="progressDots" aria-label="Sections">
+  <button class="dot active" data-index="0" aria-label="Hero"></button>
+  <button class="dot" data-index="1" aria-label="AI Consciousness"></button>
+  <button class="dot" data-index="2" aria-label="Psychedelics"></button>
+  <button class="dot" data-index="3" aria-label="Quantum Biology"></button>
+  <button class="dot" data-index="4" aria-label="Free Will"></button>
+  <button class="dot" data-index="5" aria-label="Join Us"></button>
+</nav>
+
+<!-- ── Snap Container ──────────────────────── -->
+<div class="snap-container" id="snapContainer">
+
+  <!-- Frame 0: Hero -->
+  <section class="frame hero-frame active">
+    <div class="frame-bg" style="background-image: url('img_new/simulation.jpeg');"></div>
+    <div class="frame-content">
+      <img class="logo-hero" src="img/logo.png" alt="Consciousness Science 2026">
+      <h1>Consciousness Science 2026</h1>
+      <p class="subtitle">The International Interdisciplinary Conference</p>
+      <div class="dateplace">October 11&ndash;16 &bull; San Diego</div>
+      <div class="cta-row">
+        <a class="btn-gold" href="https://consciousness.arizona.edu/science-consciousness-conference-2026">Register</a>
+        <a class="btn-line" href="#" onclick="document.querySelectorAll('.frame')[1].scrollIntoView({behavior:'smooth'});return false;">Discover</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frame 1: AI Consciousness -->
+  <section class="frame">
+    <div class="frame-bg" style="background-image: url('img_new/conscious_ai.png');"></div>
+    <div class="frame-content">
+      <div class="label">Artificial Minds</div>
+      <h2>Can Machines Become Conscious?</h2>
+      <p>As large language models and neural networks reach new thresholds
+      of capability, the question moves from philosophy to engineering.
+      What would it mean for an AI to have subjective experience?</p>
+    </div>
+  </section>
+
+  <!-- Frame 2: Psychedelics -->
+  <section class="frame">
+    <div class="frame-bg" style="background-image: url('img_new/psychedelics.png');"></div>
+    <div class="frame-content">
+      <div class="label">Altered States</div>
+      <h2>Psychedelics and the Architecture of Awareness</h2>
+      <p>From psilocybin-assisted therapy to DMT neuroimaging, the
+      psychedelic renaissance is revealing new dimensions of
+      consciousness &mdash; and offering unexpected therapeutic
+      breakthroughs.</p>
+    </div>
+  </section>
+
+  <!-- Frame 3: Microtubules -->
+  <section class="frame">
+    <div class="frame-bg" style="background-image: url('img_new/microtubules.jpg');"></div>
+    <div class="frame-content">
+      <div class="label">Quantum Biology</div>
+      <h2>Consciousness at the Quantum Scale</h2>
+      <p>Orchestrated objective reduction, quantum coherence in
+      microtubules, and the Penrose&ndash;Hameroff theory continue to
+      spark debate and generate new experimental predictions at the
+      intersection of physics and neuroscience.</p>
+    </div>
+  </section>
+
+  <!-- Frame 4: Free Will -->
+  <section class="frame">
+    <div class="frame-bg" style="background-image: url('img_new/free_will.jpg');"></div>
+    <div class="frame-content">
+      <div class="label">Agency &amp; Determinism</div>
+      <h2>The Illusion of Free Will?</h2>
+      <p>Neuroscience, philosophy, and physics converge on the oldest
+      question: do we truly choose, or is volition itself a product
+      of deterministic processes we cannot access?</p>
+    </div>
+  </section>
+
+  <!-- Frame 5: CTA / Footer -->
+  <section class="frame final">
+    <div class="frame-bg" style="background: linear-gradient(135deg, #0a2440 0%, #0d3868 50%, #14628a 100%);"></div>
+    <div class="frame-content">
+      <img src="img/logo.png" alt="CS2026">
+      <h2>Join Us in San Diego</h2>
+      <p>Six days of plenary lectures, workshops, poster sessions,
+      and experiential events at Paradise Point Resort&nbsp;&amp;&nbsp;Spa.</p>
+      <a class="btn-gold" href="https://consciousness.arizona.edu/science-consciousness-conference-2026">Register Now</a>
+      <div class="footer-note">
+        &copy; 2026 Consciousness Science Conference &bull;
+        <a href="https://consciousness.arizona.edu">consciousness.arizona.edu</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── Script ──────────────────────────────── -->
+<script>
+(function() {
+  var container = document.getElementById('snapContainer');
+  var frames = container.querySelectorAll('.frame');
+  var dots = document.querySelectorAll('.progress-dots .dot');
+  var floatingLogo = document.getElementById('floatingLogo');
+  var scrollHint = document.getElementById('scrollHint');
+
+  /* Track which frame is active via IntersectionObserver */
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        /* Activate this frame */
+        frames.forEach(function(f) { f.classList.remove('active'); });
+        entry.target.classList.add('active');
+
+        /* Update dots */
+        var idx = Array.prototype.indexOf.call(frames, entry.target);
+        dots.forEach(function(d, i) {
+          d.classList.toggle('active', i === idx);
+        });
+
+        /* Show logo after first frame */
+        floatingLogo.classList.toggle('show', idx > 0);
+
+        /* Hide scroll hint after first scroll */
+        if (idx > 0) scrollHint.classList.add('hide');
+      }
+    });
+  }, {
+    root: container,
+    threshold: 0.55
+  });
+  frames.forEach(function(f) { observer.observe(f); });
+
+  /* Click dots to jump */
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      var idx = parseInt(this.getAttribute('data-index'));
+      frames[idx].scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
