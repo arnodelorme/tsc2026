@@ -97,6 +97,13 @@
     ul.appendChild(li);
   });
 
+  /* Mark the link matching the current page as active */
+  var currentFile = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  ul.querySelectorAll('a').forEach(function (a) {
+    var href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
+    if (href && href === currentFile) a.classList.add('active');
+  });
+
   /* hamburger close on click (but not parent dropdown links on mobile) */
   ul.querySelectorAll('.dropdown-menu a, li:not(.dropdown) > a').forEach(function (a) {
     a.addEventListener('click', function () {

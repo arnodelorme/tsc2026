@@ -160,6 +160,7 @@ footer .foot-brand {{ font-size: 1.05rem; font-weight: 700; color: #fff; margin-
   .abstract-wrap {{ padding: 1.5rem 1rem 3rem; }}
 }}
 </style>
+<link rel="stylesheet" href="../theme.css">
 </head>
 <body>
 
