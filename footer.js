@@ -6,7 +6,7 @@
   if (!footer) return;
   footer.innerHTML =
     '<div class="foot-brand">The Science of Consciousness 2026</div>' +
-    '<p>&copy; 2026 CS Conference. All rights reserved.</p>' +
+    '<p>&copy; 2026 TSC Conference. All rights reserved.</p>' +
     '<p style="margin-top:.3rem;">' +
     'Contact: <a href="mailto:info@cs2026.org">info@cs2026.org</a>' +
     '</p>';

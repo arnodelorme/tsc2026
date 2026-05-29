@@ -55,13 +55,13 @@
     document.head.appendChild(style);
   }
 
-  /* Normalize brand text to "CS 2026" on every page */
+  /* Normalize brand text to "TSC 2026" on every page */
   var brand = document.querySelector('.topnav .nav-brand');
   if (brand) {
     var brandSpan = brand.querySelector('span');
-    if (brandSpan) brandSpan.textContent = 'CS 2026';
+    if (brandSpan) brandSpan.textContent = 'TSC 2026';
     var brandImg = brand.querySelector('img');
-    if (brandImg) brandImg.alt = 'CS Logo';
+    if (brandImg) brandImg.alt = 'TSC Logo';
   }
 
   var ul = document.querySelector('.topnav ul');
