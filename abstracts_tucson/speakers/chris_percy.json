@@ -1,0 +1,28 @@
+{
+  "name": "Chris Percy",
+  "submission_id": 194,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Mind uploading & machine consciousness: Limits of the Church-Turing thesis",
+  "abstract": "Progress in neuroscience has prompted an existential question: Could we upload a human mind? Could we scan a brain and recreate its consciousness inside a machine? I argue the stakes are high. If we get it right, immortality beckons. If we get it wrong, we risk mass suicide. Different technology trajectories that lead to mind uploading also provide different insights on a key question in machine consciousness: the potential for more human-style complex conscious experiences in a digital system. ",
+  "authors": "Chris Percy",
+  "category": "1.0 Philosophy",
+  "topic": "[04.14]...Quantum theories of consciousness",
+  "affiliation": "University of Warwick / University of Derby (visiting)",
+  "position": "Independent researcher / Director of CoSentience Initiative",
+  "field": "Machine consciousness, Church-Turing thesis",
+  "institution_tier": "independent",
+  "estimated_publications": 10,
+  "estimated_citations": 50,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Director of CoSentience Initiative; created cf-debate.com on digital consciousness",
+  "notes": "Introduced 'Step-Structure Principle' as testable limit on Church-Turing thesis for brain emulation.",
+  "rating": {
+    "institution_score": 5,
+    "publication_score": 10,
+    "citation_score": 3,
+    "h_index_score": 0,
+    "total_score": 18,
+    "tier": "Tier 5 - Early Career/Independent"
+  }
+}

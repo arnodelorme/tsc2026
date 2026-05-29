@@ -1,0 +1,28 @@
+{
+  "name": "Henrik Kjeldsen",
+  "submission_id": 201,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Experimentally testing if Temporal Anomalies in Tunneling can yield Fixed-Point Computation",
+  "abstract": "How the brain is able to run on 20w is an open question. Especially in the context of how it can solve hard problems whilst Turing based computing's core feature is the infinite energy required to dissipate heat generated during operation. What physics persists in the brain that makes it different from and more energy efficient than computers? What experiments can be done to isolate what that physics might be? Can one devise an experiment to test if any uncovered physics can then be exploited sy",
+  "authors": "Henrik Kjeldsen, Michael Masters",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[06.13]...Visual Art Forms",
+  "affiliation": "Truust Neuroimaging",
+  "position": "CEO / Neuroscientist",
+  "field": "Neuroimaging, EEG super-resolution, brain energy flow",
+  "institution_tier": "industry",
+  "estimated_publications": 5,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "CEO of Truust Neuroimaging; Master of AI, Master of Biomedical Research, Doctor of Neuroscience",
+  "notes": "Developed super-resolution EEG technology.",
+  "rating": {
+    "institution_score": 12,
+    "publication_score": 6,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 18,
+    "tier": "Tier 5 - Early Career/Independent"
+  }
+}

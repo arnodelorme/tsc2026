@@ -1,0 +1,28 @@
+{
+  "name": "Seungju Ahn",
+  "submission_id": 202,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Analyzing Several Quantum Error-Correction Codes for Biological Orch-OR Model",
+  "abstract": "The Orchestrated Objective Reduction (Orch OR) theory, proposed by Roger Penrose and Stuart Hameroff, associates consciousness with quantum phenomena occurring at the level of tubulin and microtubules, which are protein structures within the brain's sub-neuronal architecture. Although direct experimental evidence validating this theory has not yet been observed, the properties of tubulin as an information unit, as they proposed, are being demonstrated in indirect forms through various experiment",
+  "authors": "Seungju Ahn, Byung-Soo Choi",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[02.12]…Quantum brain biology",
+  "affiliation": "Unknown (likely South Korea)",
+  "position": "Unknown",
+  "field": "Quantum error-correction, Orch-OR",
+  "institution_tier": "independent",
+  "estimated_publications": 3,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Possible author on surface code/Orch-OR paper (BioSystems, 2025)",
+  "notes": "Limited online presence.",
+  "rating": {
+    "institution_score": 5,
+    "publication_score": 3,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 8,
+    "tier": "Tier 5 - Early Career/Independent"
+  }
+}

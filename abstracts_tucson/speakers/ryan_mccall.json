@@ -1,0 +1,28 @@
+{
+  "name": "Ryan McCall",
+  "submission_id": 350,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The Hopf Brain: A Topological Photonic Architecture for Synthetic Phenomenology",
+  "abstract": "Current neuromorphic architectures rely predominantly on scalar weights and vector matrix multiplication, effectively modeling intelligence as a statistical correlation engine. However, theories of biological consciousness—from Integrated Information Theory (IIT) to Orchestrated Objective Reduction—suggest that the \"feeling\" of existence arises not from processing speed, but from the topological integration of information into a unified, resonant whole. We propose a novel hardware architecture, ",
+  "authors": "Ryan McCall",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[04.05]…Emergence, nonlinear dynamics and complexity",
+  "affiliation": "Harvard Brain Tissue Resource Center",
+  "position": "Researcher",
+  "field": "Neuroscience, Hopf fibration models of brain",
+  "institution_tier": "R1",
+  "estimated_publications": 1,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Dual degrees in Biochemistry and Philosophy.",
+  "notes": "Early career.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 3,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 28,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

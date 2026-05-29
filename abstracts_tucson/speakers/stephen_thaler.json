@@ -1,0 +1,28 @@
+{
+  "name": "Stephen Thaler",
+  "submission_id": 189,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Intrinsic Evaluation and Concept Stabilization in Self-Referential Neural Networks\n--When generation and judgment converge, self-awareness begins.",
+  "abstract": "This study proposes a computational model of consciousness grounded in the internal self-evaluation of generative neural systems. Unlike architectures that separate generation and criticism, the design embeds evaluative feedback directly within the same neural substrate. Distributed modules form hypergraph structures linking multimodal associations, while “hot buttons,” representing high-salience memory traces, regulate the consolidation of meaning. A supervisory Main Associative Memory (MAM) mo",
+  "authors": "Stephen Thaler",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[02.01]…Neural correlates of consciousness (general)",
+  "affiliation": "Imagination Engines, Inc.",
+  "position": "President and CEO",
+  "field": "Artificial intelligence, self-referential neural networks, machine consciousness",
+  "institution_tier": "industry",
+  "estimated_publications": 25,
+  "estimated_citations": 1127,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Inventor of Creativity Machine and DABUS AI; PhD in Physics; central figure in AI inventorship legal battles globally",
+  "notes": "Pioneer of autonomous AI creativity. DABUS generated inventions and art.",
+  "rating": {
+    "institution_score": 12,
+    "publication_score": 14,
+    "citation_score": 15,
+    "h_index_score": 0,
+    "total_score": 41,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

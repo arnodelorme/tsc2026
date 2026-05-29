@@ -1,0 +1,28 @@
+{
+  "name": "Joanna Szczotka",
+  "submission_id": 391,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Consciousness vs sensory connectedness: a large-scale, high-density Neuropixels survey of spiking activity across cortical and subcortical sensory hierarchies in mice",
+  "abstract": "Probing the mechanisms of consciousness is often inadvertently entangled with probing the mechanisms of sensory connectedness. Experimental assays typically rely on detecting a behavioural response to a stimulus, perceptual report, or evoked potential—treating the ability to register the external world as a proxy for the presence of consciousness itself. Yet sensory connectedness and consciousness can vary orthogonally. A brain may lose access to the external world while preserving a rich consci",
+  "authors": "Joanna Szczotka",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.15]…Sleep and waking",
+  "affiliation": "University of Wisconsin-Madison",
+  "position": "PhD Candidate (Neuroscience Training Program)",
+  "field": "Integrated information theory, systems neuroscience, consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 5,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Co-author with Giulio Tononi on Nature Neuroscience paper; works at Center for Sleep and Consciousness",
+  "notes": "PhD candidate working with Giulio Tononi.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 6,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 31,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

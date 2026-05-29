@@ -1,0 +1,28 @@
+{
+  "name": "Erez Firt",
+  "submission_id": 40,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The Undetectable Mind: Why AI Consciousness Will Likely Remain Hidden",
+  "abstract": "This paper argues that even if AI systems develop genuine consciousness – defined as subjective, qualitative experience in Nagel's (1974) sense of “what it is like” to be that entity – humans will likely fail to detect or accept them as conscious due to fundamental epistemological barriers. This phenomenal dimension, supported by contemporary work on consciousness (Chalmers, 1996; Block, 1995), creates what philosophers call the \"hard problem\" of consciousness, which resists objective detection ",
+  "authors": "Erez Firt",
+  "category": "1.0 Philosophy",
+  "topic": "[01.06]…Machine consciousness",
+  "affiliation": "University of Haifa / Technion",
+  "position": "Academic Director, Center for Humanities and AI",
+  "field": "Philosophy of AI / machine ethics / philosophy of mind",
+  "institution_tier": "R1",
+  "estimated_publications": 14,
+  "estimated_citations": 62,
+  "h_index": 4,
+  "google_scholar": true,
+  "notable": "Academic Director of Center for Humanities and AI at University of Haifa",
+  "notes": "Publishes on artificial moral agents, AI understanding, and calibrating machine behavior.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 10,
+    "citation_score": 3,
+    "h_index_score": 2,
+    "total_score": 40,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

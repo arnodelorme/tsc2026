@@ -1,0 +1,28 @@
+{
+  "name": "Logan Trujillo",
+  "submission_id": 168,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "An Exploratory Investigation into the EEG Characteristics of the Visual Awareness Negativity",
+  "abstract": "One of the most consistent event-related potential (ERP) correlates of phenomenal consciousness is the visual awareness negativity (VAN), a posterior negative shift in the ERP waveform within an approximately 200 – 300 ms post-stimulus time range for seen versus unseen visual stimuli [1]. This electrophysiological response likely originates from occipito-temporal cortical sources and may reflect the onset of recurrent cortical processing of visual information [1, 2]. However, there is still much",
+  "authors": "Logan Trujillo, Taehoon Kang, Alia Shermer, Rael Morley",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.02]…Methodologies (fMRI, EEG etc.)",
+  "affiliation": "Texas State University",
+  "position": "Associate Professor",
+  "field": "Cognitive neuroscience, EEG/ERP, visual awareness",
+  "institution_tier": "R2",
+  "estimated_publications": 25,
+  "estimated_citations": 500,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Interdisciplinary degrees in mathematics, physics, and psychology from University of Arizona",
+  "notes": "Research uses EEG/ERP methods to study perception, attention, consciousness.",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 14,
+    "citation_score": 11,
+    "h_index_score": 0,
+    "total_score": 43,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

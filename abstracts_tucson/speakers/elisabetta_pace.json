@@ -1,0 +1,28 @@
+{
+  "name": "Elisabetta Pace",
+  "submission_id": 360,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The luminous brain: do astrocytes use biophotons to exchange information?",
+  "abstract": "Recent interest has focused on the role of biophotons in cellular communication and disease monitoring. For the first time, biophoton emission from cultured astrocytes and glioblastoma cells has been measured using an ultra-sensitive setup based on a low-noise photomultiplier operated in single-photon mode. Statistical analyses of the collected data revealed a clear distinction between cellular signals and dark noise, confirming the high sensitivity of the apparatus. Furthermore, Diffusion Entro",
+  "authors": "Elisabetta Pace, Luca De Paolis, Chiara Mazzanti, Mariangela Morelli, Francesca Di Lorenzo, Lucio Tonello, Catalina Curceanu, Alberto Clozza, Maurizio Grandi, Ivan Davoli, Angelo Gemignani, Paolo Grigolini, Maurizio Benfatto",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[04.05]…Emergence, nonlinear dynamics and complexity",
+  "affiliation": "INFN - Laboratori Nazionali di Frascati",
+  "position": "Researcher",
+  "field": "Particle physics, biophotons, astrocyte emissions",
+  "institution_tier": "institute",
+  "estimated_publications": 26,
+  "estimated_citations": 328,
+  "h_index": 8,
+  "google_scholar": false,
+  "notable": "First experimental measurements of biophotons from astrocytes and glioblastoma cell cultures.",
+  "notes": "Physicist at Italian National Institute of Nuclear Physics (INFN).",
+  "rating": {
+    "institution_score": 15,
+    "publication_score": 14,
+    "citation_score": 7,
+    "h_index_score": 5,
+    "total_score": 41,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

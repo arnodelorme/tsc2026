@@ -1,0 +1,28 @@
+{
+  "name": "Thoma Varley",
+  "submission_id": 122,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Identification of brain-like complex information architectures in aneural basal Xenobots.",
+  "abstract": "The emergence of coordinated, higher-order patterns is a foundational feature of complex life - from the emergence of the first multicellular colonial organisms to the incredibly integrated and efficient information-processing architecture of the brain. Increasingly, scientists are using tools and ideas from complexity science and information theory to characterize the structure and function of these emergent patterns - and relate them to ideas of cognition and behavior. In neuroscience, alterat",
+  "authors": "Thoma Varley, Vaibhav Pai, Caitlin Grasso, Jeantine Lunshof, Mike Levin, Josh Bongard",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[01.19]…Emergence",
+  "affiliation": "University of Vermont",
+  "position": "Postdoctoral Researcher",
+  "field": "Complex systems, information theory, consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 30,
+  "estimated_citations": 1366,
+  "h_index": 15,
+  "google_scholar": true,
+  "notable": "Demonstrated brain-like functional information in xenobots; Vermont Complex Systems Institute",
+  "notes": "Also referred to as 'Thoma Varley'. Applies multivariate information theory to study emergent properties in complex systems.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 14,
+    "citation_score": 15,
+    "h_index_score": 11,
+    "total_score": 65,
+    "tier": "Tier 2 - Strong Academic"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Trevor Nestor",
+  "submission_id": 283,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Why Current AI Architectures are Not Conscious: Neural Networks as Spinfoam Networks in a Theory of Quantum Gravity",
+  "abstract": "Classical deep neural networks excel at many tasks and even multimodal generative outputs but remain energetically inefficient by orders of magnitude from the human brain, lack mechanisms for integrated binding, and have been argued exhibit no genuine route to consciousness. While inspired by neural architectures in brain tissue, deep neural networks face scaling limits. Drawing on loop quantum gravity (LQG) and the Orchestrated Objective Reduction (Orch-OR) theory of consciousness, we introduce",
+  "authors": "Trevor Nestor",
+  "category": "2.0 Neuroscience",
+  "topic": "[01.04]…Ontology of consciousness",
+  "affiliation": "University of California, Berkeley",
+  "position": "Senior Researcher",
+  "field": "Quantum gravity, spinfoam networks, consciousness, AI",
+  "institution_tier": "R1",
+  "estimated_publications": 8,
+  "estimated_citations": 10,
+  "h_index": 2,
+  "google_scholar": false,
+  "notable": "Published Neural Spinfoam Networks framework (2025)",
+  "notes": "Integrates loop quantum gravity with Orch-OR theory.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 6,
+    "citation_score": 3,
+    "h_index_score": 2,
+    "total_score": 36,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

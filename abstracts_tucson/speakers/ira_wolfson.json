@@ -1,0 +1,28 @@
+{
+  "name": "Ira Wolfson",
+  "submission_id": 156,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Fetal Consciousness and Graduated Moral Status: A Bayesian Approach to Abortion Ethics",
+  "abstract": "Binary approaches to abortion ethics generate intractable conflicts by demanding certainty about fetal moral status despite genuine empirical uncertainty about consciousness onset. Pro-life positions require treating fertilized eggs as persons (necessitating IUD prohibition and miscarriage investigation); pro-choice consistency demands permitting late-term elective abortion as mere contraception. Both fail reductio ad absurdum tests. Building on Bayesian epistemological foundations showing that ",
+  "authors": "Ira Wolfson",
+  "category": "1.0 Philosophy",
+  "topic": "[03.11]…Cognitive development",
+  "affiliation": "Braude College of Engineering (Israel)",
+  "position": "Senior Lecturer",
+  "field": "Computational physics, Bayesian epistemology, fetal consciousness ethics",
+  "institution_tier": "R2",
+  "estimated_publications": 5,
+  "estimated_citations": 10,
+  "h_index": 2,
+  "google_scholar": true,
+  "notable": "Published Bayesian framework for graduated moral status of fetal consciousness",
+  "notes": "Uses Talmudic ethical reasoning applied to AI consciousness research.",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 6,
+    "citation_score": 3,
+    "h_index_score": 2,
+    "total_score": 29,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

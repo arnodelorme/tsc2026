@@ -1,0 +1,28 @@
+{
+  "name": "Changsoo Shin",
+  "submission_id": 292,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Recursive Heaviside Potentials as Source-Driven Wave Structures in Cognitive Dynamics",
+  "abstract": "This study develops a mathematical framework in which recursive Heaviside sequence functions are used to model discrete cognitive activation events distributed along an intrinsic time-like coordinate, τ. Each activation behaves as a threshold-triggered switch, and the recursive structure generates a cascade of such switches at progressively deeper levels of cognitive organization. When examined jointly in physical time and intrinsic time, these step-like activations propagate as a transport proc",
+  "authors": "Changsoo Shin, Jessica Chon",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[01.21]…Higher Order Theories",
+  "affiliation": "Seoul National University",
+  "position": "Professor of Geophysics",
+  "field": "Geophysics, recursive Heaviside functions, cognitive dynamics",
+  "institution_tier": "R1",
+  "estimated_publications": 308,
+  "estimated_citations": 6535,
+  "h_index": 40,
+  "google_scholar": true,
+  "notable": "308 papers; pioneer in Laplace-domain full waveform inversion; published cognitive model in Cognitive Neurodynamics (2025)",
+  "notes": "Distinguished geophysicist who expanded into consciousness/cognitive modeling.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 25,
+    "citation_score": 23,
+    "h_index_score": 17,
+    "total_score": 90,
+    "tier": "Tier 1 - Top Academic"
+  }
+}

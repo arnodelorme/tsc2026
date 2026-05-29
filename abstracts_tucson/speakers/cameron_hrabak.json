@@ -1,0 +1,28 @@
+{
+  "name": "Cameron Hrabak",
+  "submission_id": 277,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The Illusion of Clinical Competence: Disentangling Semantic Fluency from Grounded Reasoning in Large Language Models",
+  "abstract": "Background: As Large Language Models approach “Artificial General Intelligence”, they are increasingly tasked with high-stakes cognitive labor, such as medical consulting. However, a fundamental debate among these models persists. Do the LLM’s possess semantic grounding (knowing that words stand for real things, events, or ideas), or are they just exhibiting a high degree of syntactic fluency? We investigated this by subjecting three leading architectures (OpenAI ChatGPT-4o, Google Gemini 2.5 fl",
+  "authors": "Cameron Hrabak, Ashley Brudzinski, Michael Moore, Eugenia Lin, Melissa Esparaza",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[03.12]…Artificial intelligence and robotics",
+  "affiliation": "Unknown",
+  "position": "Unknown",
+  "field": "Semantic fluency, grounded reasoning, LLMs",
+  "institution_tier": "independent",
+  "estimated_publications": 0,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "",
+  "notes": "No academic profile found.",
+  "rating": {
+    "institution_score": 5,
+    "publication_score": 0,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 5,
+    "tier": "Tier 5 - Early Career/Independent"
+  }
+}

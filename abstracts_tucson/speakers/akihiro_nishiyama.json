@@ -1,0 +1,28 @@
+{
+  "name": "Akihiro Nishiyama",
+  "submission_id": 7,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Waveguide Quantum Electrodynamics:\n\nTryptophans Entangled with Water as Data Qubits  in a  Microtubule",
+  "abstract": "In this talk we investigate waveguide Quantum Electrodynamics (wQED) for the description of tryptophan residues in microtubules representing data qubits for information storage and possibly information processing. We propose a Hamiltonian in wQED and derive Heisenberg equations for qubits and photons. Using the Heisenberg equations, we derive time-evolution equations for the probability of qubits and distribution of photons both at finite temperature. We then demonstrate the resultant sub-radian",
+  "authors": "Akihiro Nishiyama, Shigenori Tanaka, Jack Tuszynski",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[04.15]...Photons and entanglement in the brain",
+  "affiliation": "Kobe University",
+  "position": "Postdoc",
+  "field": "Quantum electrodynamics / quantum brain dynamics / microtubules",
+  "institution_tier": "R1",
+  "estimated_publications": 20,
+  "estimated_citations": 150,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Collaborates with Jack Tuszynski and Shigenori Tanaka on waveguide QED models of microtubules; published in MDPI journals",
+  "notes": "Works on quantum brain dynamics, holographic brain theory, and super-radiance in microtubules. PostDoc at Kobe University Graduate School of System Informatics.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 14,
+    "citation_score": 7,
+    "h_index_score": 0,
+    "total_score": 46,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

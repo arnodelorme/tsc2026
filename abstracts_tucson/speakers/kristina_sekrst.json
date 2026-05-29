@@ -1,0 +1,28 @@
+{
+  "name": "Kristina Šekrst",
+  "submission_id": 18,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "How to Miss a Mind",
+  "abstract": "The question of machine consciousness rearticulates the classical problem of other minds in artificial domains. Since we have access only to outward behavior, any attribution of mentality to another system remains inferential. This difficulty becomes acute in the case of contemporary AI, whose outputs increasingly resemble human discourse. Claims of self-awareness, emotional states, or subjective experience may be produced with fluency, yet such utterances reflect hallucinatory outputs rather th",
+  "authors": "Kristina Šekrst",
+  "category": "1.0 Philosophy",
+  "topic": "[01.09]…Philosophical theories of consciousness",
+  "affiliation": "University of Zagreb",
+  "position": "Lecturer",
+  "field": "Logic / philosophy of AI / consciousness / linguistics",
+  "institution_tier": "R1",
+  "estimated_publications": 25,
+  "estimated_citations": 115,
+  "h_index": 5,
+  "google_scholar": true,
+  "notable": "Author of 'The Illusion Engine: The Quest for Machine Consciousness' (2025); PhD in Logic from University of Zagreb",
+  "notes": "Interdisciplinary researcher bridging logic, AI, philosophy of mind, and linguistics.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 14,
+    "citation_score": 7,
+    "h_index_score": 5,
+    "total_score": 51,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

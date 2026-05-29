@@ -1,0 +1,28 @@
+{
+  "name": "Ulf Holmberg",
+  "submission_id": 42,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Entropy and Market Sentiment Revisited: A Preregistered Out-of-Sample Confirmation of the Global Consciousness Project–VIX Link",
+  "abstract": "This study presents results from a preregistered empirical follow-up paper, examining the link between entropy fluctuations in the Global Consciousness Project (GCP) random number generator (RNG) network and financial market behavior. The research builds directly on Holmberg (2024, Journal of Economic Studies), which used the Max[Z] variable, a daily summary of global entropy deviation derived from GCP data and showed that it significantly improved the prediction of next-day returns, a result al",
+  "authors": "Ulf Holmberg",
+  "category": "5.0 Experiential Approaches",
+  "topic": "[03.19]…Cognitive theories of consciousness",
+  "affiliation": "Independent (formerly Umeå University / Swedbank)",
+  "position": "Independent researcher (retired senior lecturer)",
+  "field": "Economics / consciousness / Global Consciousness Project",
+  "institution_tier": "independent",
+  "estimated_publications": 15,
+  "estimated_citations": 100,
+  "h_index": 5,
+  "google_scholar": true,
+  "notable": "PhD in Economics; published in Journal of Economic Studies (2024)",
+  "notes": "Swedish economist who transitioned to consciousness research.",
+  "rating": {
+    "institution_score": 5,
+    "publication_score": 10,
+    "citation_score": 7,
+    "h_index_score": 5,
+    "total_score": 27,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

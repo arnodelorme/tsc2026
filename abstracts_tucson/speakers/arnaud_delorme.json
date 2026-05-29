@@ -1,0 +1,28 @@
+{
+  "name": "Arnaud Delorme",
+  "submission_id": 309,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Exploring the Mechanisms of Biofield Therapy Through Joint Electrophysiological Recordings in Humans and Mice",
+  "abstract": "In this case study, a self-described biofield therapy (BT) therapist and a sham therapist participated in multiple (n=24) treatment and control (non-treatment) sessions under double-blind conditions. During the treatment phases, BT and sham therapists attempted to influence mice with cancer and control mice, alternating BT with rest phases where no such efforts were made. Both the 64-channel EEG of the human participants and the simultaneous 3-channel EEG and 1-channel EMG of the mice were recor",
+  "authors": "Arnaud Delorme, Andrew Cusimano, Megan Tran, Phuong Nguyen, Defeng Deng, Chris Fields, Libor Velíšek, Richard Wagner, Peiying Yang, Lorenzo Cohen",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.01]…Neural correlates of consciousness (general)",
+  "affiliation": "UCSD / CNRS / Institute of Noetic Sciences",
+  "position": "Research Scientist / CNRS Principal Investigator",
+  "field": "EEG signal processing, computational neuroscience, consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 200,
+  "estimated_citations": 50000,
+  "h_index": 70,
+  "google_scholar": true,
+  "notable": "Creator of EEGLAB (9500+ citations for reference paper alone). Bettencourt-Schueller Young Investigator Award. Professor at Paul Sabatier University.",
+  "notes": "Well-known EEG researcher. Adjunct faculty at Swartz Center for Computational Neuroscience (UCSD).",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 25,
+    "citation_score": 30,
+    "h_index_score": 20,
+    "total_score": 100,
+    "tier": "Tier 1 - Top Academic"
+  }
+}

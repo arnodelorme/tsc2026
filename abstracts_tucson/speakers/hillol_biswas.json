@@ -1,0 +1,28 @@
+{
+  "name": "Hillol Biswas",
+  "submission_id": 356,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Is Quantum Integrated Information Flow Simulation Possible in Hybrid Networks",
+  "abstract": "Nearly all attempts at \"quantum consciousness\" fall into one of two categories: philosophical conjecture (Penrose–Hameroff ORCH-OR, wavefunction collapse theory) and ambiguous comparisons (entanglement = consciousness) and uncertainty in biology: are microtubules quantum? However, would it be possible to avoid all of these and build computational frameworks? Therefore, in the current era of quantum computing, with both simulation and real quantum hardware, it is proposed that, instead, a proper ",
+  "authors": "Hillol Biswas",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[02.23]...Neural networks",
+  "affiliation": "Harish-Chandra Research Institute / IEEE",
+  "position": "Independent researcher",
+  "field": "Quantum computing, quantum information, cognitive science",
+  "institution_tier": "institute",
+  "estimated_publications": 8,
+  "estimated_citations": 18,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Published on quantum circuits for migratory bird magnetoreception.",
+  "notes": "R&D researcher in power T&D cybersecurity and quantum computing.",
+  "rating": {
+    "institution_score": 15,
+    "publication_score": 6,
+    "citation_score": 3,
+    "h_index_score": 0,
+    "total_score": 24,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

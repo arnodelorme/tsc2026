@@ -1,0 +1,28 @@
+{
+  "name": "Justin Riddle",
+  "submission_id": 378,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Hierarchical Brain Architecture as a Mechanism for Entity Encounters in Altered States",
+  "abstract": "Entity encounters are a widely reported feature of certain psychedelic states, including those induced by N,N-dimethyltryptamine (DMT), ayahuasca, ibogaine, and high-dose psilocybin, but they also arise in non-pharmacological contexts such as advanced meditation practices (e.g., Fire Kasina) and trance-based active imagination. Their recurrence across diverse induction methods suggests that entity encounters represent a core dimension of mystical experience that warrants rigorous scientific inve",
+  "authors": "Justin Riddle, Maria Fini, Paul Seli, Jonathan Schooler",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.01]…Neural correlates of consciousness (general)",
+  "affiliation": "Florida State University",
+  "position": "Assistant Professor",
+  "field": "Cognitive control, brain stimulation, hierarchical consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 42,
+  "estimated_citations": 1710,
+  "h_index": 18,
+  "google_scholar": true,
+  "notable": "Developed the Nested Observer Windows (NOW) model; PhD from UC Berkeley with Mark D'Esposito",
+  "notes": "PI of the Riddle Lab studying neural basis of cognitive control.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 14,
+    "citation_score": 15,
+    "h_index_score": 11,
+    "total_score": 65,
+    "tier": "Tier 2 - Strong Academic"
+  }
+}

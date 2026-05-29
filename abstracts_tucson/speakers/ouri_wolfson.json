@@ -1,0 +1,28 @@
+{
+  "name": "Ouri Wolfson",
+  "submission_id": 248,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Machine Correlates of Consciousness are Analogous to Neural Correlates of Consciousness: Why is it important?",
+  "abstract": "Detecting phenomenal consciousness in AI systems remains a fundamental challenge. Current approaches—structural tests comparing AI architectures to consciousness theories, and behavioral tests examining consciousness-related responses—face critical limitations. Structural approaches depend on unproven theories (Global Workspace, Integrated Information Theory), while behavioral approaches cannot distinguish genuine subjective experience from sophisticated mimicry in systems known to deceive. The ",
+  "authors": "Ouri Wolfson",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[03.12]…Artificial intelligence and robotics",
+  "affiliation": "University of Illinois Chicago",
+  "position": "Professor of Computer Science",
+  "field": "Computer science, spatial databases, AI consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 200,
+  "estimated_citations": 17737,
+  "h_index": 56,
+  "google_scholar": true,
+  "notable": "Fellow of ACM, IEEE, and AAAS; University of Illinois Scholar 2009; 7 patents; 200+ publications",
+  "notes": "Primary career in spatial databases. Recent pivot to consciousness research.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 25,
+    "citation_score": 27,
+    "h_index_score": 17,
+    "total_score": 94,
+    "tier": "Tier 1 - Top Academic"
+  }
+}

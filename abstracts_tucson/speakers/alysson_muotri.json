@@ -1,0 +1,28 @@
+{
+  "name": "Alysson Muotri",
+  "submission_id": 70,
+  "decision": "Accepted: Plenary",
+  "abstract_title": "Brain organoids as a reductionist model for human consciousness studies",
+  "abstract": "Human brain organoids are dynamic, self-assembling neural tissues made from stem cells. Structural and transcriptional changes during early brain development follow predetermined programs set by genetics. However, whether this applies to functional network activity remains unclear, mainly due to the difficulty of studying the earliest stages of a living human brain. We created cortical organoids that naturally produce rhythmic and regular oscillatory network events relying on glutamatergic and G",
+  "authors": "Alysson Muotri",
+  "category": "2.0 Neuroscience",
+  "topic": "[Experiential Approaches]",
+  "affiliation": "University of California, San Diego (UCSD)",
+  "position": "Professor (Pediatrics, Cellular & Molecular Medicine); Director, UCSD Stem Cell Program",
+  "field": "Neuroscience / brain organoids / stem cell biology / autism",
+  "institution_tier": "R1",
+  "estimated_publications": 162,
+  "estimated_citations": 27835,
+  "h_index": 70,
+  "google_scholar": true,
+  "notable": "Pioneer in brain organoid technology; created 'Neanderthalized' brain organoids; demonstrated Zika-microcephaly link",
+  "notes": "One of the highest-profile speakers. Published in Nature, Cell, Science. Plenary speaker.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 22,
+    "citation_score": 30,
+    "h_index_score": 20,
+    "total_score": 97,
+    "tier": "Tier 1 - Top Academic"
+  }
+}

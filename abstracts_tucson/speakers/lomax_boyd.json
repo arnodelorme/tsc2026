@@ -1,0 +1,28 @@
+{
+  "name": "Lomax Boyd",
+  "submission_id": 22,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Views Toward Consciousness Shape Moral and Epistemic Attitudes Toward Synthetic Biological Intelligence",
+  "abstract": "Rapid advances in neuromorphic technology are laying the foundation for engineering synthetic biological intelligence. These ‘biocomputers’ are composed of biological and in silico components with the potential to expand our understanding of cognition. Yet biocomputers raise ethical and moral questions, such as whether possession of cognitive traits, such as consciousness, confers moral status to engineered systems. To better understand the relationship between cognitive attributes and ethical c",
+  "authors": "Lomax Boyd, Nathanel Lipshitz",
+  "category": "6.0 Culture and Humanities",
+  "topic": "[01.09]…Philosophical theories of consciousness",
+  "affiliation": "Johns Hopkins University (Berman Institute of Bioethics)",
+  "position": "Postdoctoral Fellow / Research Associate",
+  "field": "Neuroethics / consciousness / moral status of synthetic entities",
+  "institution_tier": "R1",
+  "estimated_publications": 10,
+  "estimated_citations": 50,
+  "h_index": 4,
+  "google_scholar": false,
+  "notable": "PhD in neurogenetics from Duke; postdoc at Rockefeller University; Civic Science Fellow at Johns Hopkins",
+  "notes": "Researches moral status of brain organoids and neuromorphic entities.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 10,
+    "citation_score": 3,
+    "h_index_score": 2,
+    "total_score": 40,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Schea Fissel Brannick",
+  "submission_id": 290,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Complexity Matching Between Physiological Dynamics and Artificial Attractors Reveals the Emergence of Mesoscopic Attentional States",
+  "abstract": "The time course of spontaneous eye blinking, a physiological index of attention, oscillates between periods of blink inhibition, reflecting active attentional engagement, and blink facilitation, which marks the end of an attentional episode and initiates a reset of the attentional system. Inter-blink intervals (IBIs), the durations between consecutive blinks, may capture how we dynamically model, predict, and update internal representations of the world in relation to the self. When modeled as a",
+  "authors": "Schea Fissel Brannick, Arianna LaCroix",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[03.01]…Attention",
+  "affiliation": "Midwestern University",
+  "position": "Associate Professor, Speech-Language Pathology",
+  "field": "Complexity matching, physiological dynamics, autism",
+  "institution_tier": "R2",
+  "estimated_publications": 15,
+  "estimated_citations": 80,
+  "h_index": 5,
+  "google_scholar": false,
+  "notable": "PhD from Kent State; published in Scientific Reports (2025) and Autism (2025)",
+  "notes": "Speech-language pathologist researching complexity matching.",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 10,
+    "citation_score": 3,
+    "h_index_score": 5,
+    "total_score": 36,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

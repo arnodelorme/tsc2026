@@ -1,0 +1,28 @@
+{
+  "name": "Kelvin McQueen",
+  "submission_id": 150,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Consciousness cannot be a purely quantum phenomenon",
+  "abstract": "What are the physical requirements for consciousness? Building on our earlier work on the physical requirements for agency (arxiv.org/abs/2510.13247), we argue that a purely quantum system (one evolving unitarily in a coherent regime without decoherence or collapse) fails to satisfy two plausible requirements for consciousness. Both involve copying information in ways that would violate the quantum no-cloning theorem if conscious states were quantum states. Our first requirement concerns percept",
+  "authors": "Kelvin McQueen",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[01.12]…Free will and agency",
+  "affiliation": "Chapman University",
+  "position": "Associate Professor",
+  "field": "Philosophy of quantum mechanics, quantum consciousness",
+  "institution_tier": "R2",
+  "estimated_publications": 25,
+  "estimated_citations": 448,
+  "h_index": 10,
+  "google_scholar": true,
+  "notable": "Co-authored 'Consciousness and the Collapse of the Wave Function' with David Chalmers (OUP 2022)",
+  "notes": "Faculty at Chapman's Institute for Quantum Studies.",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 14,
+    "citation_score": 7,
+    "h_index_score": 8,
+    "total_score": 47,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

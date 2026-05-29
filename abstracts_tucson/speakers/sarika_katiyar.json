@@ -1,0 +1,28 @@
+{
+  "name": "Sarika Katiyar",
+  "submission_id": 177,
+  "decision": "Accepted: Plenary",
+  "abstract_title": "Brain Megahertz Signatures of Anaesthetic-Induced Loss of Consciousness in the Surgical Operating Room",
+  "abstract": "Introduction: Coherent electromagnetic oscillations in triplet patterns between 6 and 26 megahertz have been detected consistently from temporal scalp and other regions in conscious humans (refs). They are part of the ‘DDG’ (‘dodeconogram’, ref), which consists of 12 orders of frequency oscillations (kilohertz, megahertz, gigahertz, terahertz) from microtubules inside neurons, which appear to underlie the ‘EEG’ (electroencephalogram). During surgical procedures with general anaesthesia, the ‘dep",
+  "authors": "Sarika Katiyar",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.10]…Anesthesia",
+  "affiliation": "Bhopal Memorial Hospital and Research Centre (BMHRC)",
+  "position": "Professor of Anesthesiology",
+  "field": "Anesthesiology, megahertz brain signatures",
+  "institution_tier": "institute",
+  "estimated_publications": 15,
+  "estimated_citations": 100,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Pioneering research on megahertz brain signals during anesthesia with Dr. Anirban Bandyopadhyay (NIMS, Japan)",
+  "notes": "Plenary speaker. Research uses spectrum analyzer to detect megahertz-range brain signals.",
+  "rating": {
+    "institution_score": 15,
+    "publication_score": 10,
+    "citation_score": 7,
+    "h_index_score": 0,
+    "total_score": 32,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Felix Schoeller",
+  "submission_id": 251,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Aesthetic Chills: Neural Mechanisms and Clinical Implications for Depression",
+  "abstract": "Over the past 10 years, my collaborators and I have been exploring the phenomenon of aesthetic chills, these peak emotional experiences characterized by shivers and goosebumps that often accompany the sudden emergence of surprising and meaningful content into consciousness. We have built the technological infrastructure necessary to study this relatively rare phenomenon in the laboratory, across neural, phenomenological, behavioral, and even sociological levels. In this talk, I will briefly revi",
+  "authors": "Felix Schoeller",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.14]…Emotion",
+  "affiliation": "Institute for Advanced Consciousness Studies (IACS)",
+  "position": "Senior Research Scientist",
+  "field": "Aesthetic chills, emotion, consciousness",
+  "institution_tier": "institute",
+  "estimated_publications": 30,
+  "estimated_citations": 500,
+  "h_index": 12,
+  "google_scholar": true,
+  "notable": "PhD EHESS Paris; postdocs at MIT Media Lab, Gonda Brain Research Centre, INSERM; created ChillsDB",
+  "notes": "Cognitive scientist specializing in aesthetic chills.",
+  "rating": {
+    "institution_score": 15,
+    "publication_score": 14,
+    "citation_score": 11,
+    "h_index_score": 8,
+    "total_score": 48,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

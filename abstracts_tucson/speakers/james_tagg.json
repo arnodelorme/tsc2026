@@ -1,0 +1,28 @@
+{
+  "name": "James Tagg",
+  "submission_id": 464,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Orch-OR and the origin of life. Computation in an Orch-OR world.",
+  "abstract": "We propose a new framework wherein quantum self-replication drives gravitational collapse in prebiotic molecular systems, serving as a natural quantum search mechanism. Inspired by Grover’s algorithm, but grounded in Penrose-Hameroff Orch-OR theory, our model suggests that the amplification of mass-energy through self-replication within a quantum superposition triggers objective reduction. This process selects self-replicating configurations without the need for phase inversion or decoherence pr",
+  "authors": "James Tagg",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[01.06]…Machine consciousness",
+  "affiliation": "Penrose Institute / Valis Corporation",
+  "position": "Co-Founder (Penrose Institute); CEO (Valis Corporation)",
+  "field": "Quantum consciousness, Orch-OR, quantum biocomputing",
+  "institution_tier": "industry",
+  "estimated_publications": 5,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": false,
+  "notable": "Co-founded Penrose Institute with Roger Penrose; original inventor of touchscreen; 200+ patents; studied Physics at Manchester, Engineering at Cambridge",
+  "notes": "Serial tech entrepreneur turned consciousness researcher.",
+  "rating": {
+    "institution_score": 12,
+    "publication_score": 6,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 18,
+    "tier": "Tier 5 - Early Career/Independent"
+  }
+}

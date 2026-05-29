@@ -1,0 +1,28 @@
+{
+  "name": "William Bosl",
+  "submission_id": 205,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "An Empirical Neurophenomenological Framework for Investigating Conscious Experience Across Biological and Artificial Systems",
+  "abstract": "Introduction. The rapid development of artificial intelligence (AI) has renewed urgency around a longstanding question: Can artificial systems become conscious or sentient, and thus qualify as moral agents or patients? Addressing this requires frameworks that relate first person experience to neural or computational dynamics without assuming a specific metaphysical theory of consciousness. Prominent philosophers emphasize the “explanatory gap” between physical processes and subjective experience",
+  "authors": "William Bosl, Jenny Capua Shenkar",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[03.22]…Neurophenomenology",
+  "affiliation": "University of San Francisco",
+  "position": "Professor",
+  "field": "Clinical neuroinformatics, EEG biomarkers, AI, consciousness",
+  "institution_tier": "R2",
+  "estimated_publications": 50,
+  "estimated_citations": 2000,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Director of Healthcare AI Initiative at USF; affiliate at Boston Children's Hospital/Harvard; two PhDs (Stanford and BU)",
+  "notes": "Published on developing neuroelectric fields in emerging consciousness (Current Opinion in Behavioral Sciences, 2025).",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 18,
+    "citation_score": 19,
+    "h_index_score": 0,
+    "total_score": 55,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

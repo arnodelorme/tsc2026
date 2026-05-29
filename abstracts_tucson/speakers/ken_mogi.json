@@ -1,0 +1,28 @@
+{
+  "name": "Ken Mogi",
+  "submission_id": 157,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "AI alignment and conscious supremacy.",
+  "abstract": "In exploring ways to align Artificial Intelligence (AI) with humans, it is interesting and important to identify subsets of computation that can be uniquely executed by conscious processes. This approach is essential not only in developing technological configurations to optimize the interaction between AI and humans, but also as a means of identifying elements that support consciousness and eventually solving the hard problem (Chalmers 1995, Hameroff 2012). In theory of computation, it has been",
+  "authors": "Ken Mogi",
+  "category": "3.0 Cognitive Science and Psychology",
+  "topic": "[01.06]…Machine consciousness",
+  "affiliation": "Sony Computer Science Laboratories / University of Tokyo",
+  "position": "Senior Researcher / Visiting Professor",
+  "field": "Cognitive neuroscience, AI alignment, qualia",
+  "institution_tier": "industry",
+  "estimated_publications": 69,
+  "estimated_citations": 473,
+  "h_index": 10,
+  "google_scholar": true,
+  "notable": "Global bestselling author of IKIGAI book (58 countries, 32 languages); over 50 books in Japanese; proposed 'conscious supremacy' concept",
+  "notes": "Prolific public intellectual in Japan.",
+  "rating": {
+    "institution_score": 12,
+    "publication_score": 18,
+    "citation_score": 7,
+    "h_index_score": 8,
+    "total_score": 45,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

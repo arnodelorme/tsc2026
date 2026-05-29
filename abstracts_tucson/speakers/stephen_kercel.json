@@ -1,0 +1,28 @@
+{
+  "name": "Stephen Kercel",
+  "submission_id": 16,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "What entanglement implies and what it does not",
+  "abstract": "Three events need to be viewed with respect to their connection with each other. In 1935, EPR proposed that there was something that quantum mechanics could not do. They observed that the solutions to Schrodinger's equation for two-component processes included several solutions that could not be factored into sub-processes in which the process could be described as the cumulative interaction of the sub-processes. These unfactorable states were subsequently called the \"Bell States.\" EPR claimed t",
+  "authors": "Stephen Kercel",
+  "category": "1.0 Philosophy",
+  "topic": "[01.04]…Ontology of consciousness",
+  "affiliation": "University of New England (Maine)",
+  "position": "Independent researcher / Engineer",
+  "field": "Engineering / consciousness / human-machine interfaces",
+  "institution_tier": "independent",
+  "estimated_publications": 57,
+  "estimated_citations": 907,
+  "h_index": 12,
+  "google_scholar": false,
+  "notable": "Co-authored with Paul Bach-y-Rita on sensory substitution; work on hard and soft computing applications",
+  "notes": "Engineering background with publications bridging engineering and consciousness. Previously Oak Ridge National Laboratory.",
+  "rating": {
+    "institution_score": 5,
+    "publication_score": 18,
+    "citation_score": 11,
+    "h_index_score": 8,
+    "total_score": 42,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

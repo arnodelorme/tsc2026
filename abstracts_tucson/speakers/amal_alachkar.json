@@ -1,0 +1,28 @@
+{
+  "name": "Amal Alachkar",
+  "submission_id": 169,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The Material Substrate for Agency: A DOPA-Based Biophysical Scaffold in the Brain",
+  "abstract": "My presentation reframes L-3,4-dihydroxyphenylalanine (DOPA) not as a passive precursor for dopamine, but as a fundamental evolutionary scaffold. I trace its journey from its plausible origins in prebiotic chemistry, arguing that the core physicochemical properties of its aromatic catechol group—redox activity, metal chelation, and polymerization—were essential for the emergence of life. These properties enabled primitive catalysis, photoprotection via melanin-like polymers, and the formation of",
+  "authors": "Amal Alachkar",
+  "category": "2.0 Neuroscience",
+  "topic": "[04.10]…Origin and nature of life",
+  "affiliation": "University of California, Irvine",
+  "position": "Professor",
+  "field": "Neuropharmacology, dopamine, neuropsychiatric disorders",
+  "institution_tier": "R1",
+  "estimated_publications": 50,
+  "estimated_citations": 1500,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "IIE Global Changemaker; member of UCI Center for Neurobiology of Learning and Memory; developed 'Lab-In-A-Syringe'",
+  "notes": "DOPA biophysical scaffold research is a newer direction bridging molecular biophysics with higher-order cognition.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 18,
+    "citation_score": 15,
+    "h_index_score": 0,
+    "total_score": 58,
+    "tier": "Tier 3 - Established Researcher"
+  }
+}

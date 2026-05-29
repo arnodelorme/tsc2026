@@ -1,0 +1,28 @@
+{
+  "name": "Vikas O'Reilly-Shah",
+  "submission_id": 143,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "A Caveat Regarding the Unfolding Argument: Implications of Plasticity for Computational Theories of Consciousness",
+  "abstract": "The unfolding argument in the neuroscience of consciousness posits that causal structure cannot account for consciousness because any recurrent neural network (RNN) can be “unfolded” into a functionally equivalent feedforward neural network (FNN) with identical input-output behavior. Subsequent debate has focused on dynamical properties and philosophy of science critiques. We examine a novel caveat to the unfolding argument for RNN systems with rapid plasticity in their connection weights. We de",
+  "authors": "Vikas O'Reilly-Shah, Alessandro Selvitella, Aaron Schurger",
+  "category": "2.0 Neuroscience",
+  "topic": "[03.13] .Neural networks and connectionism",
+  "affiliation": "University of Washington",
+  "position": "Professor",
+  "field": "Anesthesiology, computational theories of consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 110,
+  "estimated_citations": 2021,
+  "h_index": 20,
+  "google_scholar": true,
+  "notable": "MD PhD FASA; mathematical disproof of unfolding argument; proposed Computational Dynamic Monism (CDM)",
+  "notes": "Primary expertise in anesthesiology. Consciousness work is a secondary but rigorous mathematical contribution.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 22,
+    "citation_score": 19,
+    "h_index_score": 11,
+    "total_score": 77,
+    "tier": "Tier 2 - Strong Academic"
+  }
+}

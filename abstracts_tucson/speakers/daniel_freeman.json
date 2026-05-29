@@ -1,0 +1,28 @@
+{
+  "name": "Daniel Freeman",
+  "submission_id": 79,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "Transcranial Focused Ultrasound for Identifying the Neural Substrate of Conscious Perception",
+  "abstract": "Identifying what aspects of brain activity are responsible for conscious perception remains one of the most challenging problems in science. While progress has been made through psychophysical studies employing EEG and fMRI, research would greatly benefit from improved methods for stimulating the brain in healthy human subjects. Traditional techniques for neural stimulation through the skull, including electrical or magnetic stimulation, suffer from coarse spatial resolution and have limited abi",
+  "authors": "Daniel Freeman",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.02]…Methodologies (fMRI, EEG etc.)",
+  "affiliation": "MIT Lincoln Laboratory",
+  "position": "Technical Staff Member",
+  "field": "Transcranial focused ultrasound and consciousness",
+  "institution_tier": "R1",
+  "estimated_publications": 10,
+  "estimated_citations": 0,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Leading researcher on using tFUS to study neural substrates of conscious perception",
+  "notes": "Engineer by training; previously at Draper Laboratory developing neural stimulators.",
+  "rating": {
+    "institution_score": 25,
+    "publication_score": 10,
+    "citation_score": 0,
+    "h_index_score": 0,
+    "total_score": 35,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Marcin Nowakowski",
+  "submission_id": 203,
+  "decision": "Accepted: Concurrent",
+  "abstract_title": "The Internal Observer: A New Frontier for Quantum AI and Self-Aware Systems",
+  "abstract": "The science of consciousness stands at a crossroads, where the intersection of quantum physics, artificial intelligence, and cognitive science opens pathways toward deeper understanding. This talk presents the Internal Observer (IO) Theory [1-2] that synthesizes contemporary advances in quantum physics and artificial general intelligence to address the foundational role of the observer in both physical reality, AI and conscious experience. We begin by tracing the centrality of the observer in th",
+  "authors": "Marcin Nowakowski",
+  "category": "4.0 Physical and Biological Sciences",
+  "topic": "[04.21]…Artificial intelligence and robotics",
+  "affiliation": "Gdansk University of Technology, Poland",
+  "position": "Assistant Professor",
+  "field": "Quantum information theory, internal observers, quantum AI",
+  "institution_tier": "R2",
+  "estimated_publications": 30,
+  "estimated_citations": 300,
+  "h_index": 0,
+  "google_scholar": true,
+  "notable": "Member of scientific council of National Quantum Information Center in Poland; founder of ObserveQ (quantum AI startup)",
+  "notes": "Research on internal vs external observers in quantum mechanics.",
+  "rating": {
+    "institution_score": 18,
+    "publication_score": 14,
+    "citation_score": 7,
+    "h_index_score": 0,
+    "total_score": 39,
+    "tier": "Tier 4 - Emerging/Niche Researcher"
+  }
+}
