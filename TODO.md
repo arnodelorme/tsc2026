@@ -1,5 +1,8 @@
 Pending
 - Get rooms for IONS
+- Poster boards
+- Hotel plus or minus 3 days
+
 
 To do
 - Get workshops reconfirmed
