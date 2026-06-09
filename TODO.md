@@ -1,10 +1,6 @@
 Pending
 - Get rooms for IONS
 - Poster boards
-- Hotel plus or minus 3 days
-- New image for the hotel
-- 
-
 
 To do
 - Get workshops reconfirmed
