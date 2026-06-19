@@ -1,6 +1,9 @@
 Pending
 - Get rooms for IONS
 - Poster boards
+- Add missing speakers
+- Add Chalmer
+- Reconsider Hoffman, Schwitzgebel?
 
 To do
 - Get workshops reconfirmed
