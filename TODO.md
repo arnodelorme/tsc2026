@@ -4,6 +4,10 @@ Pending
 - Add missing speakers
 - Add Chalmer
 - Reconsider Hoffman, Schwitzgebel?
+- What cancelation do we want?
+- Setup for exhibitor and map
+- Certificate of attendance
+- Google Adds issue
 
 To do
 - Get workshops reconfirmed
