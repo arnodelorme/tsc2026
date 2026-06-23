@@ -370,6 +370,63 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
   <a class="btn" href="register.html">Register Now</a>
 </section>
 
+<!-- ═══ SPONSORS ═══ -->
+<style>
+.sponsors { padding: 4.5rem 2rem; text-align: center; background: #f7f9fb; }
+.sponsors h2 { font-size: 1.7rem; font-weight: 800; color: #0a2440; margin-bottom: .4rem; }
+.sponsors .sp-lead { color: #5a6b7a; font-size: .95rem; margin-bottom: 2.5rem; }
+.sp-tier { margin-bottom: 2.5rem; }
+.sp-tier:last-child { margin-bottom: 0; }
+.sp-tier-label {
+  font-size: .78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; margin-bottom: 1.1rem;
+}
+.sp-tier-gold .sp-tier-label { color: #e8a727; }
+.sp-tier-silver .sp-tier-label { color: #8a98a6; }
+.sp-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 3rem;
+}
+.sp-row a, .sp-row span {
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform .2s, filter .2s; filter: grayscale(15%);
+}
+.sp-row a:hover { transform: translateY(-3px); filter: grayscale(0%); }
+.sp-tier-gold img   { height: 72px; width: auto; max-width: 260px; }
+.sp-tier-silver img { height: 64px; width: auto; max-width: 240px; }
+@media (max-width: 768px) {
+  .sponsors { padding: 3rem 1.25rem; }
+  .sp-row { gap: 2rem; }
+  .sp-tier-gold img   { height: 56px; }
+  .sp-tier-silver img { height: 52px; }
+}
+</style>
+<section id="sponsors" class="sponsors reveal">
+  <div class="sp-tier sp-tier-gold">
+    <div class="sp-tier-label">Gold Sponsors</div>
+    <div class="sp-row">
+      <a href="https://www.noetic.org/" target="_blank" rel="noopener" title="Institute of Noetic Sciences">
+        <img src="sponsors/IONS.png" alt="Institute of Noetic Sciences">
+      </a>
+      <a href="https://oss.capital/" target="_blank" rel="noopener" title="OSS Capital">
+        <img src="sponsors/ossc-logo.svg" alt="OSS Capital">
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Cyan_Banister" target="_blank" rel="noopener" title="Cyan Banister">
+        <img src="sponsors/cyan-banister.png" alt="Cyan Banister">
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-tier sp-tier-silver">
+    <div class="sp-tier-label">Silver Sponsor</div>
+    <div class="sp-row">
+      <a href="https://cofo.org/" target="_blank" rel="noopener" title="The Consciousness Foundation">
+        <img src="sponsors/cofo-small.png" alt="The Consciousness Foundation">
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FOOTER (shared via footer.js) ═══ -->
 <footer></footer>
 <script src="footer.js"></script>
