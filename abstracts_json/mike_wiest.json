@@ -1,0 +1,14 @@
+{
+  "speaker": "Mike Wiest",
+  "affiliation": "Wellesley College",
+  "type": "plenary",
+  "remote": false,
+  "title": "Orchestrated objective reduction is quantum active inference",
+  "abstract": "Active inference is a mathematical predictive processing framework that unifies optimal perceptual inference with optimal motor control. Under the theory consciousness may be identified operationally as the output of an implicit short-term planning process. A variety of behavioral, anatomical, and neurophysiological evidence strongly supports that brains implement active inference to optimize perceptual inference and behavior, but it is unclear how its sophisticated optimizing computations could be implemented fast enough (i.e. within about 200 ms) by realistic classical neural models. After reviewing apparently intractable computational challenges faced by the classical models to date, I point out that an appropriately “orchestrated” quantum system could perform these computations straightforwardly, because the quantum evolution is mathematically equivalent to the path integral describing conscious agents under the active inference formalism. I then argue that adopting an objective reduction (OR) perspective on the quantum measurement problem provides (i) an objective physical basis for the unity of consciousness (phenomenal binding), (ii) an objective physical basis for experimentally demonstrated discrete non-overlapping perceptual cycles, and (iii) causally efficacious and advantageous conscious states so as to account for their biological evolution. This solves the puzzle of “mental causation” without resorting to any problematic causal interactions between physical and mental degrees of freedom. Adopting OR also confers (iv) the benefit of accounting for both physical and psychological arrows of time. Finally, I will review experimental evidence supporting that biological consciousness does indeed involve macroscopic quantum states, and that the primary physical substrate of the consciousness-related quantum state is intraneuronal microtubules (MTs), as proposed in the original Orch OR theory of Penrose and Hameroff. This will include new evidence from my lab implicating MTs as functional anesthetic targets in mice and in the single-celled ciliate Tetrahymena.",
+  "authors": "Michael Wiest",
+  "submission_id": 547,
+  "decision": "Accepted: Plenary",
+  "category": "2.0 Neuroscience",
+  "topic": "[01.07]…Mental causation and the function of consciousness",
+  "photo": "img/mike-wiest.jpg"
+}

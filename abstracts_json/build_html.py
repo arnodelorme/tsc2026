@@ -12,7 +12,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ABSTRACTS_DIR = ROOT / "abstracts"
+ABSTRACTS_DIR = Path(__file__).resolve().parent
 HTML_DIR = ROOT / "abstracts_html"
 SKIP = {"index.json"}
 
@@ -21,7 +21,7 @@ def speaker_to_slug(name):
     """Convert speaker name to URL-friendly slug."""
     name = name.lower()
     for src, dst in [("é", "e"), ("á", "a"), ("ü", "u"), ("ö", "o"),
-                     ("ñ", "n"), ("ç", "c"), ("â", "a")]:
+                     ("ñ", "n"), ("ń", "n"), ("ç", "c"), ("â", "a")]:
         name = name.replace(src, dst)
     name = re.sub(r"[^a-z0-9\s-]", "", name)
     return re.sub(r"\s+", "-", name.strip())

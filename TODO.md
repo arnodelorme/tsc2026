@@ -1,20 +1,23 @@
 Pending
+- CUSSAC
+- Move Garry to Monday
 - Get rooms for IONS
 - Poster boards
+- Joseph
 - Add missing speakers
 - Add Chalmer
 - Reconsider Hoffman, Schwitzgebel?
 - What cancelation do we want?
+- Mossbridge on Monday
 - Setup for exhibitor and map
 - Certificate of attendance
 - Google Adds issue
+- 
+- Mossbridge which session with Penrose
+- CUSAC
 
-To do
 - Get workshops reconfirmed
-- Call Matt
-- Reinvite Hinton
-- Reinvite directly top concurent people and tell them we will keep their presentation
-- Work on flyer (selected if 8)
+- Update flyer (selected if 8)
 - Add sponsors
 
 Later

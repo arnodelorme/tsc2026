@@ -29,7 +29,7 @@ def name_to_slug(name):
     """Convert speaker name to URL-friendly slug for abstract page links."""
     slug = name.lower()
     for src, dst in [("é", "e"), ("á", "a"), ("ü", "u"), ("ö", "o"),
-                     ("ñ", "n"), ("ç", "c"), ("â", "a")]:
+                     ("ñ", "n"), ("ń", "n"), ("ç", "c"), ("â", "a")]:
         slug = slug.replace(src, dst)
     slug = re.sub(r"[^a-z0-9\s-]", "", slug)
     return re.sub(r"\s+", "-", slug.strip())
@@ -49,7 +49,7 @@ def load_abstracts():
         # Normalize: remove accents for matching
         norm = name.lower()
         for src, dst in [("é", "e"), ("á", "a"), ("ü", "u"), ("ö", "o"),
-                         ("ñ", "n"), ("ç", "c")]:
+                         ("ñ", "n"), ("ń", "n"), ("ç", "c")]:
             norm = norm.replace(src, dst)
         parts = norm.split()
         last = parts[-1] if parts else ""
@@ -82,7 +82,7 @@ def normalize_name(name):
     name = re.sub(r"\(.*?\)", "", name).strip()
     name = name.lower()
     for src, dst in [("é", "e"), ("á", "a"), ("ü", "u"), ("ö", "o"),
-                     ("ñ", "n"), ("ç", "c")]:
+                     ("ñ", "n"), ("ń", "n"), ("ç", "c")]:
         name = name.replace(src, dst)
     return name
 

@@ -1,0 +1,14 @@
+{
+  "speaker": "Eric Halgren",
+  "affiliation": "UC San Diego",
+  "type": "plenary",
+  "remote": false,
+  "title": "A Possible Mechanism of Cortical Integration Supporting Mental Activity in Humans",
+  "abstract": "The cerebral cortex integrates processed sensory information from all modalities, current and recent events, strategies, constraints, values, and objectives, to arrive at a coherent mental experience including intentional actions. This integration is central to the physical manifestation of the conscious mind, but currently proposed neurophysiological mechanisms are highly speculative, functionally inadequate, and/or logically flawed. Using extensive micro- and macro-array recordings of local field potentials and large numbers of single units in thinking humans we recently discovered a possible mechanism for the synchronous integration of association cortex (and related limbic areas) across all lobes and both hemispheres: a network of zero-lag phase-locked ~100ms long ~90Hz oscillations connected as coupled oscillators. Such ‘co-ripples’ appear to facilitate and organize the co-firing of neurons in distant cortical and limbic locations during cognitive tasks and spontaneous mentation. Unlike the currently dominant proposed mechanisms of cortical integration, co-ripple enabled integration is: emergent not directed, synchronous not sequential, distributed not focal, consensual not deductive, and democratic not hierarchical. Furthermore, this mechanism is deeply consistent with known neuroanatomy and neurophysiology. I acknowledge the deep collaboration of Charles Dickey, Jacob Garrett, Ilya Verzhbinsky, and Sierra Wilson in this research.",
+  "authors": "Eric Halgren",
+  "submission_id": 601,
+  "decision": "Accepted: Plenary",
+  "category": "2.0 Neuroscience",
+  "topic": "[02.01]…Neural correlates of consciousness (general)",
+  "photo": "img/eric-halgren.png"
+}

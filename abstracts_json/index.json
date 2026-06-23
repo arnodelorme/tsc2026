@@ -84,6 +84,30 @@
     "photo": "img/edward-large.jpg"
   },
   {
+    "file": "eric_halgren.json",
+    "speaker": "Eric Halgren",
+    "affiliation": "UC San Diego",
+    "title": "A Possible Mechanism of Cortical Integration Supporting Mental Activity in Humans",
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": true,
+    "decision": "Accepted: Plenary",
+    "submission_id": 601,
+    "photo": "img/eric-halgren.png"
+  },
+  {
+    "file": "farhan_lakhany.json",
+    "speaker": "Farhan Lakhany",
+    "affiliation": "San José State University",
+    "title": "Evaluating the Quantum Pleasure Principle",
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": true,
+    "decision": "Accepted: Plenary",
+    "submission_id": 553,
+    "photo": "img/farhan-lakhany.png"
+  },
+  {
     "file": "hartmut_neven.json",
     "speaker": "Hartmut Neven",
     "affiliation": "Google Quantum AI",
@@ -106,6 +130,30 @@
     "decision": null,
     "submission_id": null,
     "photo": "img/helane-wahbeh.jpg"
+  },
+  {
+    "file": "hemal_patel.json",
+    "speaker": "Hemal Patel",
+    "affiliation": "UC San Diego",
+    "title": "The Caveolar Consciousness Hypothesis: How Lipids, Mitochondria, and the Cytoskeleton Shape Anesthesia",
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": true,
+    "decision": "Pending",
+    "submission_id": 641,
+    "photo": "img/hemal-patel.png"
+  },
+  {
+    "file": "jack_tuszynski.json",
+    "speaker": "Jack Tuszyński",
+    "affiliation": "Politecnico di Torino",
+    "title": "An overview of the experimental tests of the Orch OR theory: UV and visible light absorption and re-emission of photons by tubulin and microtubules",
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": true,
+    "decision": "Accepted: Plenary",
+    "submission_id": 544,
+    "photo": "img/jack-tuszynski.png"
   },
   {
     "file": "jennifer_prendki.json",
@@ -166,6 +214,18 @@
     "decision": "Accepted: Plenary",
     "submission_id": 459,
     "photo": "img/michael-levin.jpg"
+  },
+  {
+    "file": "mike_wiest.json",
+    "speaker": "Mike Wiest",
+    "affiliation": "Wellesley College",
+    "title": "Orchestrated objective reduction is quantum active inference",
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": true,
+    "decision": "Accepted: Plenary",
+    "submission_id": 547,
+    "photo": "img/mike-wiest.jpg"
   },
   {
     "file": "nirosha_murugan.json",
