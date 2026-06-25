@@ -1,4 +1,13 @@
 Pending
+- 
+- > TennisCentric Tues-Fri 7:00-7:45am
+  > Binaural Beats Tues-Fri 1:00-1:45* 
+  > Yoga :  Mon Workshop: 10am-12noon*
+  > Yoga : Tues-Fri  mornings 7:00-8:00am
+
+  
+
+- Redirect HTTP to HTTPS
 - CUSSAC
 - Move Garry to Monday
 - Get rooms for IONS
