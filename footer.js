@@ -40,6 +40,6 @@
     '</div>' +
     '<p>&copy; 2026 TSC Conference. All rights reserved.</p>' +
     '<p style="margin-top:.3rem;">' +
-    'Contact: <a href="mailto:info@cs2026.org">info@cs2026.org</a>' +
+    'Contact: <a href="mailto:info@tsc2026.org">info@tsc2026.org</a>' +
     '</p>';
 })();

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>IONS Members &mdash; The Science of Consciousness 2026</title>
+
+<!-- Unlock the IONS area for this browser. Runs before nav.js so the IONS tab
+     appears immediately on first landing and persists across the site. -->
+<script>
+  document.cookie = "tsc_ions=1; path=/; max-age=" + (60 * 60 * 24 * 365) + "; SameSite=Lax";
+</script>
+
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0a2440; --navy-deep: #0C234B; --teal: #1a96b8; --gold: #e8a727;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav (shared scaffold) ────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header with background image (shared style) ── */
+.page-header {
+  position: relative; color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem; overflow: hidden;
+}
+.page-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('img/paradise-point-aerial_2.png') center center / cover no-repeat;
+  z-index: 0;
+}
+.page-header::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,36,64,.82) 0%, rgba(13,56,104,.7) 40%, rgba(20,98,138,.6) 70%, rgba(26,150,184,.5) 100%);
+  z-index: 1;
+}
+.page-header > * { position: relative; z-index: 2; }
+.page-header h1 {
+  font-size: 2.4rem; font-weight: 800; color: #fff !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.55); margin-bottom: .4rem;
+}
+.page-header .subtitle {
+  font-size: 1.1rem; color: #fff !important; max-width: 760px; margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0,0,0,.55);
+}
+.hero-top {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.3rem; margin-bottom: 1.4rem; flex-wrap: wrap;
+}
+.member-badge {
+  display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold);
+  border: 1px solid rgba(232,167,39,.7); border-radius: 999px; padding: .4rem 1.1rem;
+  background: rgba(10,36,64,.35);
+}
+.ions-logo-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; border-radius: 14px; padding: .6rem .9rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.ions-logo-chip img { height: 52px; width: auto; display: block; }
+
+/* ── Sections ─────────────────────────────────── */
+.section { max-width: 1040px; margin: 0 auto; padding: 3.4rem 1.5rem; }
+.section h2 { font-size: 1.7rem; color: var(--navy); margin-bottom: .5rem; line-height: 1.2; }
+.section .eyebrow {
+  display: block; font-size: .75rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: .5rem;
+}
+.section .lead { color: #555; font-size: 1.02rem; max-width: 760px; margin-bottom: 1.8rem; }
+.section.alt { background: #f4f8fb; max-width: none; }
+.section.alt > .inner { max-width: 1040px; margin: 0 auto; }
+
+.soon {
+  display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--teal); background: rgba(26,150,184,.12);
+  border: 1px solid rgba(26,150,184,.45); border-radius: 999px; padding: .25rem .8rem;
+  margin-left: .55rem; vertical-align: middle;
+}
+
+/* mission cards */
+.mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+.mission-card {
+  background: #fff; border: 1px solid #e2ecf3; border-left: 4px solid var(--teal);
+  border-radius: 8px; padding: 1.2rem 1.3rem; box-shadow: 0 2px 8px rgba(10,36,64,.05);
+}
+.mission-card h3 { font-size: 1.02rem; color: var(--navy); margin-bottom: .35rem; }
+.mission-card p { font-size: .92rem; color: #555; margin: 0; }
+
+/* claim band */
+.headline-claim { margin: 0; text-align: center; font-size: 1.08rem; color: var(--navy); font-weight: 600; }
+.headline-claim .hl { color: var(--teal); }
+
+/* premiere highlight cards */
+.premieres { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.premiere {
+  display: flex; gap: 1rem; align-items: center; background: #fff;
+  border: 1px solid #e2ecf3; border-radius: 10px; padding: 1.2rem;
+  box-shadow: 0 3px 12px rgba(10,36,64,.06);
+}
+.premiere .avatar {
+  width: 84px; height: 84px; border-radius: 50%; flex: 0 0 84px;
+  object-fit: cover; box-shadow: 0 4px 14px rgba(10,36,64,.18);
+}
+.premiere .tag {
+  display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: #fff; background: var(--gold);
+  padding: .2rem .6rem; border-radius: 4px; margin-bottom: .35rem;
+}
+.premiere h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: .15rem; }
+.premiere .role { font-size: .8rem; color: var(--teal); font-weight: 600; margin-bottom: .3rem; }
+.premiere p { font-size: .9rem; color: #555; margin: 0; }
+
+/* speaker grid */
+.people { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem 1.3rem; }
+.person { text-align: center; }
+.person .avatar {
+  width: 110px; height: 110px; border-radius: 50%; margin: 0 auto .7rem;
+  object-fit: cover; box-shadow: 0 4px 14px rgba(10,36,64,.18);
+}
+.person h3 { font-size: 1rem; color: var(--navy); margin-bottom: .15rem; }
+.person .role { font-size: .82rem; color: var(--teal); font-weight: 600; }
+
+/* track tags */
+.tracks { margin-top: .4rem; }
+.track {
+  display: inline-block; font-size: .62rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; border-radius: 999px; padding: .16rem .55rem; margin: .15rem .1rem 0;
+}
+.track-plenary { background: rgba(10,36,64,.1); color: var(--navy); border: 1px solid rgba(10,36,64,.25); }
+.track-workshop { background: rgba(232,167,39,.16); color: #9a6b08; border: 1px solid rgba(232,167,39,.55); }
+.track-concurrent { background: rgba(26,150,184,.12); color: #137491; border: 1px solid rgba(26,150,184,.4); }
+.track-hackathon { background: rgba(123,77,196,.12); color: #6a3fb0; border: 1px solid rgba(123,77,196,.4); }
+
+/* booth / on-site */
+.booth {
+  display: flex; align-items: center; gap: 1.6rem; max-width: 720px;
+  background: #fff; border: 1px solid #e2ecf3; border-radius: 12px;
+  padding: 1.6rem; box-shadow: 0 3px 12px rgba(10,36,64,.06);
+}
+.booth-photo {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  flex: 0 0 120px; box-shadow: 0 4px 14px rgba(10,36,64,.18);
+}
+.booth-text h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: .15rem; }
+.booth-text .role { font-size: .85rem; color: var(--teal); font-weight: 600; margin-bottom: .5rem; }
+.booth-text p { font-size: .95rem; color: #555; margin: 0; }
+
+/* offer / CTA (understated) */
+.offer {
+  background: #f7fafc; border: 1px solid #e6eef4; border-radius: 12px;
+  padding: 2.4rem 1.8rem 2.4rem; text-align: center; margin-top: .5rem;
+}
+.offer .code {
+  display: inline-block; font-family: 'Courier New', monospace; font-weight: 700;
+  font-size: 1.15rem; letter-spacing: .18em; color: var(--navy);
+  background: #fff; border: 1px solid #d9e2ea; border-radius: 6px;
+  padding: .45rem 1.1rem; margin: .5rem 0 1.4rem;
+}
+.offer p { color: #555; max-width: 600px; margin: 0 auto; font-size: .98rem; }
+.btn-cta {
+  display: inline-block; background: var(--teal); color: #fff !important;
+  font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .95rem;
+  padding: .9rem 2.2rem; border-radius: 8px; margin-top: .6rem; margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(26,150,184,.4); transition: transform .15s, background .2s;
+}
+.btn-cta:hover { background: #157c99; text-decoration: none; transform: translateY(-1px); }
+.fine { font-size: .82rem; color: #8a98a8; margin-top: .4rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .mission-grid, .premieres { grid-template-columns: 1fr; }
+  .people { grid-template-columns: repeat(2, 1fr); }
+  .booth { flex-direction: column; text-align: center; }
+  .booth-photo { flex-basis: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script src="nav.js"></script>
+
+<!-- ═══ HEADER (shared page-header style) ═══ -->
+<header class="page-header">
+  <div class="hero-top">
+    <div class="ions-logo-chip"><img src="img/ions-logo.jpg" alt="Institute of Noetic Sciences"></div>
+    <span class="member-badge">A Private Invitation &middot; IONS Members</span>
+  </div>
+  <h1>This is our conference, too.</h1>
+  <p class="subtitle">The Institute of Noetic Sciences sits at the scientific heart of The Science of Consciousness 2026 &mdash; the world's longest-running interdisciplinary conference on consciousness. IONS members belong at the center of it.</p>
+  <p class="subtitle" style="font-size:.95rem; margin-top:.6rem;">October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
+</header>
+
+<!-- ═══ WHY IT FITS IONS ═══ -->
+<section class="section">
+  <span class="eyebrow">Mission alignment, not just visibility</span>
+  <h2>Why TSC 2026 is IONS's conference</h2>
+  <p class="lead">For four decades IONS has championed rigorous, open inquiry into consciousness and non-local phenomena. TSC 2026 advances that exact frontier &mdash; and the people in the room are precisely the IONS community.</p>
+  <div class="mission-grid">
+    <div class="mission-card">
+      <h3>A shared scientific mission</h3>
+      <p>TSC 2026 advances rigorous, open inquiry into consciousness &mdash; the precise frontier IONS has championed for over four decades.</p>
+    </div>
+    <div class="mission-card">
+      <h3>IONS is already at the center</h3>
+      <p>IONS researchers and fellows are featured among the plenary speakers and the workshop leaders.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Our exact community</h3>
+      <p>Scientists, clinicians, contemplatives, and supporters who care about noetic and non-local phenomena are precisely who attends.</p>
+    </div>
+    <div class="mission-card">
+      <h3>A leadership role</h3>
+      <p>With IONS President Thomas Brophy and IONS researcher Arnaud Delorme serving as conference co-chairs, the Institute helps shape TSC 2026 as it establishes its new San Diego home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS / CLAIM ═══ -->
+<section class="section alt">
+  <div class="inner">
+    <p class="headline-claim">Outside of IONS's own conferences, this is the <span class="hl">largest gathering of IONS scientists and fellows ever assembled</span> &mdash; on one stage, in one week.</p>
+  </div>
+</section>
+
+<!-- ═══ WORLD PREMIERES (Sunday IONS workshop) ═══ -->
+<section class="section alt">
+  <div class="inner">
+    <span class="eyebrow">Sunday, October 11 &middot; The 4-hour IONS workshop</span>
+    <h2>World premieres <span class="soon">Workshop coming soon</span></h2>
+    <p class="lead">At the dedicated IONS workshop &mdash; opened by board chair <strong>Claudia Welss</strong> and organized by IONS President <strong>Thomas Brophy</strong> &mdash; two members of the science team take the microphone: Sitara Tadeo for the very first time, and Erik Brinsmead for the second.</p>
+    <div class="premieres">
+      <div class="premiere">
+        <img class="avatar" src="img/sitara-tadeo.jpeg" alt="Sitara Tadeo">
+        <div>
+          <span class="tag">World premiere</span>
+          <h3>Sitara Tadeo</h3>
+          <div class="role">IONS Science Team</div>
+          <p>Presents her research on the <strong>psychological changes associated with out-of-body experiences (OBEs)</strong> &mdash; a first public look at IONS's OBE work.</p>
+        </div>
+      </div>
+      <div class="premiere">
+        <img class="avatar" src="img/erik-brinsmead.png" alt="Erik Brinsmead">
+        <div>
+          <span class="tag">Second appearance &middot; AI</span>
+          <h3>Erik Brinsmead</h3>
+          <div class="role">IONS Science Team &middot; AI Lead</div>
+          <p>Our new AI expert will present an <strong>AI-driven analysis of channeled data</strong>, where machine learning meets the noetic archive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ALL IONS PARTICIPANTS (single roster) ═══ -->
+<section class="section">
+  <span class="eyebrow">The IONS contingent</span>
+  <h2>IONS at TSC 2026</h2>
+  <p class="lead">IONS scientists and fellows appear across the program &mdash; on the plenary stage, in the Sunday workshop, and throughout the concurrent tracks. <a href="program.html">See the full program &rarr;</a></p>
+  <div class="people">
+
+    <div class="person">
+      <img class="avatar" src="img/dean-radin.jpg" alt="Dean Radin">
+      <h3>Dean Radin</h3>
+      <div class="role">Chief Scientist, IONS</div>
+      <div class="tracks"><span class="track track-plenary">Plenary</span><span class="track track-workshop">Workshop</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/helane-wahbeh.jpg" alt="Helané Wahbeh">
+      <h3>Helan&eacute; Wahbeh</h3>
+      <div class="role">Director of Research, IONS</div>
+      <div class="tracks"><span class="track track-plenary">Plenary</span><span class="track track-workshop">Workshop</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/arnaud-delorme.jpg" alt="Arnaud Delorme">
+      <h3>Arnaud Delorme</h3>
+      <div class="role">IONS Research Scientist &middot; Conference Chair</div>
+      <div class="tracks"><span class="track track-plenary">Plenary</span><span class="track track-workshop">Workshop</span><span class="track track-concurrent">Concurrent</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/julia-mossbridge.jpeg" alt="Julia Mossbridge">
+      <h3>Julia Mossbridge</h3>
+      <div class="role">IONS Fellow</div>
+      <div class="tracks"><span class="track track-plenary">Plenary</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/thomas-brophy.jpg" alt="Thomas Brophy">
+      <h3>Thomas Brophy</h3>
+      <div class="role">President, IONS &middot; Conference Co-Chair</div>
+      <div class="tracks"><span class="track track-workshop">Workshop</span><span class="track track-concurrent">Concurrent</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/claudia-welss.jpg" alt="Claudia Welss">
+      <h3>Claudia Welss</h3>
+      <div class="role">Chair, IONS Board</div>
+      <div class="tracks"><span class="track track-workshop">Workshop</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/sitara-tadeo.jpeg" alt="Sitara Tadeo">
+      <h3>Sitara Tadeo</h3>
+      <div class="role">IONS Science Team</div>
+      <div class="tracks"><span class="track track-workshop">Workshop</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/erik-brinsmead.png" alt="Erik Brinsmead">
+      <h3>Erik Brinsmead</h3>
+      <div class="role">IONS Science Team &middot; AI Lead</div>
+      <div class="tracks"><span class="track track-workshop">Workshop</span><span class="track track-hackathon">Hackathon</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/cassandra-vieten.jpg" alt="Cassandra Vieten">
+      <h3>Cassandra Vieten</h3>
+      <div class="role">IONS Fellow</div>
+      <div class="tracks"><span class="track track-concurrent">Concurrent</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/marilyn-schlitz.jpeg" alt="Marilyn Schlitz">
+      <h3>Marilyn Schlitz</h3>
+      <div class="role">IONS Fellow</div>
+      <div class="tracks"><span class="track track-concurrent">Concurrent</span></div>
+    </div>
+
+    <div class="person">
+      <img class="avatar" src="img/cedric-cannard.jpg" alt="Cedric Cannard">
+      <h3>Cedric Cannard</h3>
+      <div class="role">IONS Fellow</div>
+      <div class="tracks"><span class="track track-concurrent">Concurrent</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ IONS BOOTH / ON-SITE ═══ -->
+<section class="section alt">
+  <div class="inner">
+    <span class="eyebrow">On site all week</span>
+    <h2>Visit the IONS booth</h2>
+    <p class="lead">IONS is a sponsor of The Science of Consciousness 2026, and the Institute will host a booth throughout the conference &mdash; a place to learn about its many programs, from research to community and education.</p>
+    <div class="booth">
+      <img class="booth-photo" src="img/leslie-lovejoy.png" alt="Leslie Lovejoy">
+      <div class="booth-text">
+        <h3>Leslie Lovejoy</h3>
+        <div class="role">Associate Director of Marketing Communications, IONS</div>
+        <p>Leslie will manage the IONS booth, sharing the Institute's different programs with attendees. Additional IONS staff are expected on site; Leslie is the team member confirmed so far.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MEMBER OFFER / CTA ═══ -->
+<section class="section">
+  <div class="offer">
+    <p>IONS members are warmly invited to join us in San Diego &mdash; and to use the code below for $50 off registration.</p>
+    <div class="code">NOETIC50</div>
+    <a class="btn-cta" href="register.html">Register &rarr;</a>
+    <p class="fine">Questions? Email <a href="mailto:info@noetic.org">info@noetic.org</a>.<br>We look forward to coming together, October 11&ndash;16, 2026.</p>
+  </div>
+</section>
+
+<footer></footer>
+<script src="footer.js"></script>
+</body>
+</html>

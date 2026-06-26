@@ -31,6 +31,13 @@
     { href: base + 'register.html', label: 'Register' }
   ];
 
+  /* IONS members: the hidden IONS page (ions.html) sets the `tsc_ions` cookie
+     when first visited. Once set, surface the IONS tab right after Home on
+     every page. Without the cookie the tab stays hidden. */
+  if (/(?:^|;\s*)tsc_ions=1(?:\s*;|\s*$)/.test(document.cookie)) {
+    tabs.unshift({ href: base + 'ions.html', label: 'IONS' });
+  }
+
   /* Inject dropdown CSS once */
   if (!document.getElementById('nav-dropdown-css')) {
     var style = document.createElement('style');
