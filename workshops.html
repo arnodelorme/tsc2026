@@ -123,10 +123,10 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <button class="menu-btn" data-slot="morning" data-panel="s1" onclick="showSession(this,'s1')">W1: Psi &amp; Consciousness <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
     <button class="menu-btn" data-slot="morning" data-panel="s2" onclick="showSession(this,'s2')">W2: Indian Knowledge Systems <span class="btn-time">Morning 9:00&ndash;12:30</span></button>
     <button class="menu-btn" data-slot="morning" data-panel="s3" onclick="showSession(this,'s3')">W3: Women in Consciousness Science <span class="btn-time">Morning 9:00&ndash;10:20</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s7" onclick="showSession(this,'s7')">W7: Psychedelics <span class="btn-time">Morning 10:30&ndash;12:30</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s4" onclick="showSession(this,'s4')">W4: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s5" onclick="showSession(this,'s5')">W5: NDEs &amp; OBEs <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W6: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;10:00</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s7" onclick="showSession(this,'s7')">W7: Psychedelics <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W8: Extraocular Perception <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
   </div>
 </div>
@@ -214,9 +214,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Could consciousness extend beyond the human brain &mdash; to animals, plants, cultured neurons, or artificial systems? This workshop probes the criteria and evidence for consciousness in non-human systems, from brain organoids and microtubule-based models to machine intelligence, and asks how we might recognize or measure minds unlike our own.</p>
 </div>
 
-<div class="session-panel" data-slot="afternoon" id="s7">
+<div class="session-panel" data-slot="morning" id="s7">
   <h3>W7: Consciousness and Psychedelics</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Rael Cahn</div>
+  <div class="ws-meta">Sunday morning &middot; 10:30 am &ndash; 12:30 pm &middot; Chair: Rael Cahn</div>
   <div class="spk-grid">
     <div class="spk"><img class="av" src="img/rael-cahn.jpg" alt="Rael Cahn"><span class="nm">Rael Cahn<br><em>(Chair)</em></span></div>
     <div class="spk"><img class="av" src="img/joe-tafur.png" alt="Joe Tafur"><span class="nm">Joe Tafur</span></div>
@@ -282,10 +282,10 @@ function filterBySlot() {
   // Update title and subtitle
   if (slot === 'morning') {
     document.getElementById('pageTitle').textContent = 'Morning Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 3 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 4 workshops';
   } else {
     document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 5 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 4 workshops';
   }
 }
 
