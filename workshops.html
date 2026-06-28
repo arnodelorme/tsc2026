@@ -82,6 +82,15 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   .page-header h1 { font-size: 1.5rem; }
   .menu-grid { grid-template-columns: 1fr; }
 }
+
+/* speaker photo chips */
+.spk-grid { display: flex; flex-wrap: wrap; gap: 1rem 1.1rem; margin: .6rem 0 .2rem; }
+.spk { width: 124px; text-align: center; font-size: .84rem; }
+.spk .av, .spk .ini { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; display: flex; align-items: center; justify-content: center; margin: 0 auto .45rem; box-shadow: 0 3px 10px rgba(10,36,64,.2); }
+.spk .ini { background: linear-gradient(135deg, #1a96b8, #0a2440); color: #fff; font-weight: 700; font-size: 1.8rem; }
+.spk .nm { display: block; color: #0a2440; line-height: 1.2; }
+.spk .nm em { color: #777; font-style: italic; }
+.av-sm { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: .35rem; box-shadow: 0 1px 4px rgba(10,36,64,.2); }
 </style>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -101,7 +110,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <header class="page-header">
   <h1 id="pageTitle">Workshops</h1>
-  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 6 workshops</p>
+  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 8 workshops</p>
 </header>
 
 <div class="back-bar">
@@ -117,6 +126,8 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <button class="menu-btn" data-slot="afternoon" data-panel="s4" onclick="showSession(this,'s4')">W4: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s5" onclick="showSession(this,'s5')">W5: NDEs &amp; OBEs <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W6: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;10:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s7" onclick="showSession(this,'s7')">W7: Psychedelics <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W8: Extraocular Perception <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
   </div>
 </div>
 
@@ -126,80 +137,104 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <h3>W2: Bridging Awareness Dimensions through Quantum Perception, Biology and Music in the Indian Knowledge System Framework</h3>
   <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm &middot; Chair: Anirban Bandyopadhyay</div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Rooted in the Indian Knowledge System, this workshop bridges contemplative insight with modern science &mdash; exploring how quantum perception, biology, and music illuminate the structure of awareness. Drawing on quantum biology, music cognition, signal processing, and meditative practice, the speakers consider consciousness as a resonant, multi-dimensional phenomenon spanning matter, sound, and mind.</p>
-  <ol>
-    <li><strong>Chayan Nandi</strong></li>
-    <li><strong>Venkatesh Chembrulu</strong></li>
-    <li><strong>Archi Banerjee</strong></li>
-    <li><strong>Chitravina Ravikiran</strong></li>
-    <li><strong>Ganpati Ramanath</strong></li>
-    <li><strong>Arnav Bhavsar</strong></li>
-    <li><strong>Ramajayam Govindaraji</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><div class="ini">CN</div><span class="nm">Chayan Nandi</span></div>
+    <div class="spk"><div class="ini">VC</div><span class="nm">Venkatesh Chembrulu</span></div>
+    <div class="spk"><div class="ini">AB</div><span class="nm">Archi Banerjee</span></div>
+    <div class="spk"><div class="ini">CR</div><span class="nm">Chitravina Ravikiran</span></div>
+    <div class="spk"><div class="ini">GR</div><span class="nm">Ganpati Ramanath</span></div>
+    <div class="spk"><div class="ini">AB</div><span class="nm">Arnav Bhavsar</span></div>
+    <div class="spk"><div class="ini">RG</div><span class="nm">Ramajayam Govindaraji</span></div>
+  </div>
 </div>
 
 <div class="session-panel" data-slot="morning" id="s3">
   <h3>W3: Women in Consciousness Science and Education</h3>
   <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 10:20 am</div>
-  <ol>
-    <li><strong>Joan Walton</strong></li>
-    <li><strong>Laurel Waterman</strong></li>
-    <li><strong>Marjorie Woollacott</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><div class="ini">JW</div><span class="nm">Joan Walton</span></div>
+    <div class="spk"><div class="ini">LW</div><span class="nm">Laurel Waterman</span></div>
+    <div class="spk"><div class="ini">MW</div><span class="nm">Marjorie Woollacott</span></div>
+  </div>
 </div>
 
 <div class="session-panel" data-slot="afternoon" id="s4">
   <h3>W4: Brain Electromagnetic Field Generation and Information Processing</h3>
   <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: M. Bruce MacIver</div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Electromagnetic field (EMF) theories propose that consciousness arises from the dynamic electromagnetic field generated by the brain&rsquo;s neuronal currents &mdash; the activity reflected in the EEG. Building on evidence that the brain&rsquo;s strongest field activity is directed inward toward its central regions, the workshop examines how these fields integrate neural activity, why external shielding leaves consciousness unaffected while deep-brain stimulation alters it, and what this implies for the binding and &ldquo;hard&rdquo; problems of consciousness. (See MacIver, <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2022.1032339/full" target="_blank" rel="noopener">Consciousness and inward electromagnetic field interactions</a>.)</p>
-  <ol>
-    <li><strong>M. Bruce MacIver</strong></li>
-    <li><strong>Johnjoe McFadden</strong></li>
-    <li><strong>Michael Levin</strong> (Remote)</li>
-    <li><strong>Tam Hunt</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><div class="ini">BM</div><span class="nm">M. Bruce MacIver</span></div>
+    <div class="spk"><div class="ini">JM</div><span class="nm">Johnjoe McFadden</span></div>
+    <div class="spk"><img class="av" src="img/michael-levin.jpg" alt="Michael Levin"><span class="nm">Michael Levin <em>(Remote)</em></span></div>
+    <div class="spk"><div class="ini">TH</div><span class="nm">Tam Hunt</span></div>
+  </div>
 </div>
 
 <div class="session-panel" data-slot="morning" id="s1">
   <h3>W1: Psi &amp; Consciousness</h3>
   <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 12:30 pm &middot; Chair: Thomas Brophy</div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Can mind reach beyond the brain and body? This workshop presents the experimental study of telepathy, mediumship, out-of-body experiences, and mind&ndash;matter interaction &mdash; with an emphasis on methodological rigour, replication, and peer-reviewed evidence. Together, the talks survey much of the research program of the Institute of Noetic Sciences (IONS).</p>
-  <ol>
-    <li><strong>Claudia Welss</strong></li>
-    <li><strong>Thomas Brophy</strong></li>
-    <li><strong>Dean Radin</strong></li>
-    <li><strong>Helan&eacute; Wahbeh</strong></li>
-    <li><strong>Erik Brinsmead</strong></li>
-    <li><strong>Sitara Tadeo</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/claudia-welss.jpg" alt="Claudia Welss"><span class="nm">Claudia Welss</span></div>
+    <div class="spk"><img class="av" src="img/thomas-brophy.jpg" alt="Thomas Brophy"><span class="nm">Thomas Brophy</span></div>
+    <div class="spk"><img class="av" src="img/dean-radin.jpg" alt="Dean Radin"><span class="nm">Dean Radin</span></div>
+    <div class="spk"><img class="av" src="img/helane-wahbeh.jpg" alt="Helane Wahbeh"><span class="nm">Helan&eacute; Wahbeh</span></div>
+    <div class="spk"><img class="av" src="img/erik-brinsmead.png" alt="Erik Brinsmead"><span class="nm">Erik Brinsmead</span></div>
+    <div class="spk"><img class="av" src="img/sitara-tadeo.jpeg" alt="Sitara Tadeo"><span class="nm">Sitara Tadeo</span></div>
+  </div>
 </div>
 
 <div class="session-panel" data-slot="afternoon" id="s5">
   <h3>W5: Research at the Edge of Consciousness: NDEs, OBEs and Past Life Memories</h3>
   <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Kunal Mooley</div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">At the borderlands of consciousness, near-death experiences (NDEs), out-of-body experiences (OBEs), and reports of past-life memories raise pointed questions about whether consciousness depends entirely on the brain. This workshop reviews the scientific study of these phenomena &mdash; from prospective hospital NDE research and tests of perception during OBEs to systematically investigated cases of children who report past-life memories &mdash; and what they may imply for theories of mind.</p>
-  <ol>
-    <li><strong>Kim Penberthy</strong></li>
-    <li><strong>Martin Fleming</strong></li>
-    <li><strong>Philip Cozzoli</strong></li>
-    <li><strong>Marina Weiler</strong></li>
-    <li><strong>Douglas Watson</strong></li>
-    <li><strong>Kunal Mooley</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><div class="ini">KP</div><span class="nm">Kim Penberthy</span></div>
+    <div class="spk"><div class="ini">MF</div><span class="nm">Martin Fleming</span></div>
+    <div class="spk"><div class="ini">PC</div><span class="nm">Philip Cozzoli</span></div>
+    <div class="spk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler"><span class="nm">Marina Weiler</span></div>
+    <div class="spk"><div class="ini">DW</div><span class="nm">Douglas Watson</span></div>
+    <div class="spk"><div class="ini">KM</div><span class="nm">Kunal Mooley</span></div>
+  </div>
 </div>
 
 <div class="session-panel" data-slot="afternoon" id="s6">
   <h3>W6: The Varieties of Non-Human Consciousness</h3>
   <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 10:00 pm &middot; Chair: Susan Schneider</div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Could consciousness extend beyond the human brain &mdash; to animals, plants, cultured neurons, or artificial systems? This workshop probes the criteria and evidence for consciousness in non-human systems, from brain organoids and microtubule-based models to machine intelligence, and asks how we might recognize or measure minds unlike our own.</p>
-  <ol>
-    <li><strong>Susan Schneider</strong></li>
-    <li><strong>Rajnish Khanna</strong></li>
-    <li><strong>Alysson Muotri</strong></li>
-    <li><strong>Anirban Bandyopadhyay</strong></li>
-    <li><strong>Dana Kippel</strong></li>
-    <li><strong>Mike Wiest</strong></li>
-    <li><strong>Garry Nolan</strong></li>
-  </ol>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/susan-schneider.jpg" alt="Susan Schneider"><span class="nm">Susan Schneider</span></div>
+    <div class="spk"><div class="ini">RK</div><span class="nm">Rajnish Khanna</span></div>
+    <div class="spk"><img class="av" src="img/alysson-muotri.jpg" alt="Alysson Muotri"><span class="nm">Alysson Muotri</span></div>
+    <div class="spk"><img class="av" src="img/anirban-bandyopadhyay.jpg" alt="Anirban Bandyopadhyay"><span class="nm">Anirban Bandyopadhyay</span></div>
+    <div class="spk"><div class="ini">DK</div><span class="nm">Dana Kippel</span></div>
+    <div class="spk"><img class="av" src="img/mike-wiest.jpg" alt="Mike Wiest"><span class="nm">Mike Wiest</span></div>
+    <div class="spk"><img class="av" src="img/garry-nolan.jpg" alt="Garry Nolan"><span class="nm">Garry Nolan</span></div>
+  </div>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s7">
+  <h3>W7: Consciousness and Psychedelics</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Rael Cahn</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Psychedelics have re-emerged as powerful tools for probing consciousness and easing mental suffering. This workshop brings together clinicians and researchers to examine the neuroscience, therapeutic potential, and contemplative dimensions of psychedelic states &mdash; from controlled clinical trials to the interplay of meditation and altered states.</p>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/rael-cahn.jpg" alt="Rael Cahn"><span class="nm">Rael Cahn</span></div>
+    <div class="spk"><div class="ini">JT</div><span class="nm">Joe Tafur</span></div>
+    <div class="spk"><img class="av" src="img/robin-carhart-harris.jpg" alt="Robin Carhart-Harris"><span class="nm">Robin Carhart-Harris</span></div>
+    <div class="spk"><img class="av" src="img/cassandra-vieten.jpg" alt="Cassandra Vieten"><span class="nm">Cassandra Vieten</span></div>
+  </div>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s8">
+  <h3>W8: The MindSwan Prize: The Search for Extraocular Perception</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Stacey Murphy (CUSAC)</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Extraocular perception &mdash; the claimed ability to perceive without the eyes &mdash; is a striking and contested frontier in consciousness research. The MindSwan Prize is an international scientific challenge that investigates such claims through rigorous, replicable methods. The workshop unfolds in three parts:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Marina Weiler</strong> (neuroscientist, Division of Perceptual Studies, University of Virginia) opens by reviewing what extraocular perception is, the existing scientific literature, and videos of current claims &mdash; then introduces the MindSwan research protocol, the challenges it raises, and how they can be met with scientific rigour. <strong>David Chartrand</strong> (Executive Director, CUSAC) explains the vision behind the MindSwan Prize and how open scientific challenges can advance consciousness research through collaboration and public participation. The session closes with a <strong>live protocol demonstration and open discussion</strong> (invited: Martin Monti), considering what successful results would actually represent and how future studies could distinguish between competing explanations.</p>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/stacey-murphy.jpg" alt="Stacey Murphy"><span class="nm">Stacey Murphy <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler"><span class="nm">Marina Weiler</span></div>
+    <div class="spk"><img class="av" src="img/david-chartrand.png" alt="David Chartrand"><span class="nm">David Chartrand</span></div>
+  </div>
 </div>
 
 </div>
@@ -246,20 +281,21 @@ function filterBySlot() {
     document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 3 workshops';
   } else {
     document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 3 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 5 workshops';
   }
 }
 
 // Direct-link hooks: e.g. workshops.html#obe opens the W8 tab, same as clicking it.
 var WORKSHOP_HASH = {
   'psi': 's1', 'indian-knowledge': 's2', 'women': 's3', 'education': 's3',
-  'emf': 's4', 'em-fields': 's4', 'obe': 's5', 'nde': 's5', 'non-human': 's6'
+  'emf': 's4', 'em-fields': 's4', 'obe': 's5', 'nde': 's5', 'non-human': 's6',
+  'psychedelics': 's7', 'extraocular': 's8', 'mindswan': 's8'
 };
 
 // Reverse map: clicking a workshop writes its hook into the URL.
 var PANEL_HASH = {
   's1': 'psi', 's2': 'indian-knowledge', 's3': 'women',
-  's4': 'emf', 's5': 'obe', 's6': 'non-human'
+  's4': 'emf', 's5': 'obe', 's6': 'non-human', 's7': 'psychedelics', 's8': 'extraocular'
 };
 
 function showByPanel(panelId) {
