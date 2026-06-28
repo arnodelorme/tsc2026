@@ -42,13 +42,13 @@ DARK_TEXT = "#222222"
 GRAY = "#555555"
 
 # Conference content
-TITLE = "Consciousness Science 2026"
-SUBTITLE = "International Interdisciplinary Conference"
+TITLE = "The Science of Consciousness 2026"
+SUBTITLE = "The Science of Consciousness (TSC) • International Interdisciplinary Conference"
 DATES = "October 11–16, 2026"
 VENUE = "Paradise Point Resort & Spa"
 LOCATION = "San Diego, California"
-WEBSITE = "cs2026.org"
-ABSTRACT_DEADLINE = "Abstract Deadline: July 1, 2026"
+WEBSITE = "tsc2026.org"
+ABSTRACT_DEADLINE = "Abstract Deadline: July 15, 2026"
 ABSTRACT_NOTE = "(check website for extensions)"
 
 THEMES_SHORT = [

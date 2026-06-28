@@ -62,9 +62,9 @@
 		</image>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 106.124 203.748)" class="st3 st4 st5 st6">CONSCIOUSNESS</text>
-<text transform="matrix(1 0 0 1 169.7959 232.0938)" class="st3 st7 st8 st9">SCIENCE</text>
-<text transform="matrix(1 0 0 1 118.9678 254.7715)" class="st10 st11 st12">International Interdisciplinary Conference (formerly TSC)</text>
+<text transform="matrix(1 0 0 1 221.1 200)" text-anchor="middle" class="st3 st7 st16 st9">THE SCIENCE OF</text>
+<text transform="matrix(1 0 0 1 221.1 228)" text-anchor="middle" class="st3 st4 st5 st6">CONSCIOUSNESS</text>
+<text transform="matrix(1 0 0 1 221.1 254.7715)" text-anchor="middle" class="st10 st11 st12">The Science of Consciousness (TSC) &#8226; International Interdisciplinary Conference</text>
 <text transform="matrix(1 0 0 1 166.5742 286.7871)" class="st13 st4 st14">October 11–16, 2026</text>
 <text transform="matrix(1 0 0 1 166.9795 303.7949)" class="st3 st11 st15">Paradise Point Resort &amp; Spa</text>
 <text transform="matrix(1 0 0 1 183.6016 317.9688)" class="st10 st11 st12">San Diego, California</text>
@@ -88,5 +88,5 @@
 <text transform="matrix(1 0 0 1 147.4775 552.9922)" class="st19 st4 st20">Abstract Deadline: July 15, 2026</text>
 <text transform="matrix(1 0 0 1 179.1631 564.3301)" class="st19 st11 st21">(check website for extensions)</text>
 <rect y="598.1" class="st22" width="442.2" height="25.5"/>
-<text transform="matrix(1 0 0 1 195.1807 613.6992)" class="st13 st4 st23">cs2026.org</text>
+<text transform="matrix(1 0 0 1 221.1 613.6992)" text-anchor="middle" class="st13 st4 st23">tsc2026.org</text>
 </svg>

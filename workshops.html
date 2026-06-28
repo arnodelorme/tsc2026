@@ -74,28 +74,6 @@ footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: 
 footer a { color: #c8ddf0; }
 footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
 
-.login-overlay {
-  position: fixed; inset: 0; z-index: 9999;
-  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
-  display: flex; align-items: center; justify-content: center;
-}
-.login-box {
-  background: #fff; border-radius: 12px; padding: 2.5rem 2rem;
-  max-width: 360px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.3); text-align: center;
-}
-.login-box h2 { font-size: 1.3rem; color: #0a2440; margin-bottom: .3rem; }
-.login-box p { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
-.login-box input {
-  display: block; width: 100%; padding: .55rem .8rem; margin-bottom: .8rem;
-  border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; font-family: inherit;
-}
-.login-box input:focus { outline: none; border-color: #1a96b8; }
-.login-box button {
-  width: 100%; padding: .6rem; background: #0a2440; color: #fff;
-  border: none; border-radius: 6px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .2s;
-}
-.login-box button:hover { background: #14628a; }
-.login-error { color: #c0392b; font-size: .8rem; margin-top: .5rem; display: none; }
 
 @media (max-width: 768px) {
   .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
@@ -108,19 +86,6 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-
-<div class="login-overlay" id="loginOverlay">
-  <div class="login-box">
-    <h2>Program Access</h2>
-    <p>This page is restricted to committee members.</p>
-    <form onsubmit="return checkLogin()">
-      <input type="text" id="loginUser" placeholder="Login" autocomplete="off">
-      <input type="password" id="loginPass" placeholder="Password">
-      <button type="submit">Enter</button>
-      <div class="login-error" id="loginError">Incorrect login or password.</div>
-    </form>
-  </div>
-</div>
 
 <nav class="topnav">
   <a href="index.html" class="nav-brand">
@@ -136,7 +101,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <header class="page-header">
   <h1 id="pageTitle">Workshops</h1>
-  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 10 workshops</p>
+  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 6 workshops</p>
 </header>
 
 <div class="back-bar">
@@ -146,34 +111,21 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <div class="session-menu">
   <h2>Select a workshop:</h2>
   <div class="menu-grid">
-    <button class="menu-btn" data-slot="morning" data-panel="s1" onclick="showSession(this,'s1')">W1: Quantum Cognition <span class="btn-time">Morning 9:00&ndash;12:30</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s1" onclick="showSession(this,'s1')">W1: Psi &amp; Consciousness <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
     <button class="menu-btn" data-slot="morning" data-panel="s2" onclick="showSession(this,'s2')">W2: Indian Knowledge Systems <span class="btn-time">Morning 9:00&ndash;12:30</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s3" onclick="showSession(this,'s3')">W3: Education &amp; Quantum Mind <span class="btn-time">Morning 9:00&ndash;10:20</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s4" onclick="showSession(this,'s4')">W4: Economic Systems <span class="btn-time">Morning 10:40&ndash;12:30</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s5" onclick="showSession(this,'s5')">W5: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W6: Photobiomodulation <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s7" onclick="showSession(this,'s7')">W7: Psi &amp; Consciousness <span class="btn-time">Afternoon 2:00&ndash;3:50</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W8: NDEs &amp; OBEs <span class="btn-time">Afternoon 2:00&ndash;6:00</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s9" onclick="showSession(this,'s9')">W9: Enlightenment <span class="btn-time">Afternoon 4:10&ndash;6:00</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s10" onclick="showSession(this,'s10')">W10: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;10:00</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s3" onclick="showSession(this,'s3')">W3: Women in Consciousness Science <span class="btn-time">Morning 9:00&ndash;10:20</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s4" onclick="showSession(this,'s4')">W4: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s5" onclick="showSession(this,'s5')">W5: NDEs &amp; OBEs <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
+    <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W6: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;10:00</span></button>
   </div>
 </div>
 
 <div class="session-wrap">
 
-<div class="session-panel" data-slot="morning" id="s1">
-  <h3>W1: Quantum Cognition</h3>
-  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm</div>
-  <ol>
-    <li><strong>Jerome R. Busemeyer</strong></li>
-    <li><strong>Harald Atmanspacher</strong></li>
-    <li><strong>Nao Tsuchiya</strong></li>
-  </ol>
-</div>
-
 <div class="session-panel" data-slot="morning" id="s2">
   <h3>W2: Bridging Awareness Dimensions through Quantum Perception, Biology and Music in the Indian Knowledge System Framework</h3>
-  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm &middot; Chair: Laxmidhar Behera</div>
+  <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 12:30 pm &middot; Chair: Anirban Bandyopadhyay</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Rooted in the Indian Knowledge System, this workshop bridges contemplative insight with modern science &mdash; exploring how quantum perception, biology, and music illuminate the structure of awareness. Drawing on quantum biology, music cognition, signal processing, and meditative practice, the speakers consider consciousness as a resonant, multi-dimensional phenomenon spanning matter, sound, and mind.</p>
   <ol>
     <li><strong>Chayan Nandi</strong></li>
     <li><strong>Venkatesh Chembrulu</strong></li>
@@ -186,69 +138,45 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 </div>
 
 <div class="session-panel" data-slot="morning" id="s3">
-  <h3>W3: Education and Transformative Learning, Quantum Mind</h3>
+  <h3>W3: Women in Consciousness Science and Education</h3>
   <div class="ws-meta">Sunday morning &middot; 9:00 am &ndash; 10:20 am</div>
   <ol>
     <li><strong>Joan Walton</strong></li>
     <li><strong>Laurel Waterman</strong></li>
     <li><strong>Marjorie Woollacott</strong></li>
-    <li><strong>Suzanne Gildert</strong></li>
   </ol>
 </div>
 
-<div class="session-panel" data-slot="morning" id="s4">
-  <h3>W4: Consciousness of Economic Systems</h3>
-  <div class="ws-meta">Sunday morning &middot; 10:40 am &ndash; 12:30 pm</div>
-  <ol>
-    <li><strong>Ron Chrisley</strong></li>
-    <li><strong>Richard Ebstein</strong></li>
-    <li><strong>Giorgia Lucchini</strong></li>
-    <li><strong>Kathryn Nave</strong></li>
-    <li><strong>Chew Soo Hong</strong></li>
-    <li><strong>Patrick Schotanus</strong></li>
-    <li><strong>Uzi Awret</strong></li>
-  </ol>
-</div>
-
-<div class="session-panel" data-slot="afternoon" id="s5">
-  <h3>W5: Brain Electromagnetic Field Generation and Information Processing</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm</div>
+<div class="session-panel" data-slot="afternoon" id="s4">
+  <h3>W4: Brain Electromagnetic Field Generation and Information Processing</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: M. Bruce MacIver</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Electromagnetic field (EMF) theories propose that consciousness arises from the dynamic electromagnetic field generated by the brain&rsquo;s neuronal currents &mdash; the activity reflected in the EEG. Building on evidence that the brain&rsquo;s strongest field activity is directed inward toward its central regions, the workshop examines how these fields integrate neural activity, why external shielding leaves consciousness unaffected while deep-brain stimulation alters it, and what this implies for the binding and &ldquo;hard&rdquo; problems of consciousness. (See MacIver, <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2022.1032339/full" target="_blank" rel="noopener">Consciousness and inward electromagnetic field interactions</a>.)</p>
   <ol>
     <li><strong>M. Bruce MacIver</strong></li>
     <li><strong>Johnjoe McFadden</strong></li>
     <li><strong>Michael Levin</strong> (Remote)</li>
-    <li><strong>Arnaud Delorme</strong></li>
     <li><strong>Tam Hunt</strong></li>
   </ol>
 </div>
 
-<div class="session-panel" data-slot="afternoon" id="s6">
-  <h3>W6: Photobiomodulation (PBM)-Induced Deep Meditation &ldquo;Jhana&rdquo; States</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm &middot; Audience participation</div>
+<div class="session-panel" data-slot="morning" id="s1">
+  <h3>W1: Psi &amp; Consciousness</h3>
+  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 12:30 pm &middot; Chair: Thomas Brophy</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Can mind reach beyond the brain and body? This workshop presents the experimental study of telepathy, mediumship, out-of-body experiences, and mind&ndash;matter interaction &mdash; with an emphasis on methodological rigour, replication, and peer-reviewed evidence. Together, the talks survey much of the research program of the Institute of Noetic Sciences (IONS).</p>
   <ol>
-    <li><strong>Lew Lim</strong></li>
-    <li><strong>Sanjay Manchandran</strong></li>
-    <li><strong>Reza Zomorrodi</strong></li>
-    <li><strong>Vielight staff</strong></li>
-  </ol>
-</div>
-
-<div class="session-panel" data-slot="afternoon" id="s7">
-  <h3>W7: Psi &amp; Consciousness &ndash; Telepathy &amp; Mindsight</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 3:50 pm</div>
-  <ol>
-    <li><strong>Arnaud Delorme</strong></li>
+    <li><strong>Claudia Welss</strong></li>
     <li><strong>Thomas Brophy</strong></li>
     <li><strong>Dean Radin</strong></li>
-    <li><strong>Diane Hennacy</strong></li>
-    <li><strong>David Chartrand</strong></li>
-    <li><strong>Beatriz Villarroel</strong></li>
+    <li><strong>Helan&eacute; Wahbeh</strong></li>
+    <li><strong>Erik Brinsmead</strong></li>
+    <li><strong>Sitara Tadeo</strong></li>
   </ol>
 </div>
 
-<div class="session-panel" data-slot="afternoon" id="s8">
-  <h3>W8: Research at the Edge of Consciousness: NDEs, OBEs and Past Life Memories</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 6:00 pm</div>
+<div class="session-panel" data-slot="afternoon" id="s5">
+  <h3>W5: Research at the Edge of Consciousness: NDEs, OBEs and Past Life Memories</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Kunal Mooley</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">At the borderlands of consciousness, near-death experiences (NDEs), out-of-body experiences (OBEs), and reports of past-life memories raise pointed questions about whether consciousness depends entirely on the brain. This workshop reviews the scientific study of these phenomena &mdash; from prospective hospital NDE research and tests of perception during OBEs to systematically investigated cases of children who report past-life memories &mdash; and what they may imply for theories of mind.</p>
   <ol>
     <li><strong>Kim Penberthy</strong></li>
     <li><strong>Martin Fleming</strong></li>
@@ -259,28 +187,18 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   </ol>
 </div>
 
-<div class="session-panel" data-slot="afternoon" id="s9">
-  <h3>W9: Enlightenment and Awakened States</h3>
-  <div class="ws-meta">Sunday afternoon &middot; 4:10 pm &ndash; 6:00 pm</div>
-  <ol>
-    <li><strong>Jeffery A. Martin</strong></li>
-    <li><strong>Thomas Campbell</strong></li>
-  </ol>
-</div>
-
-<div class="session-panel" data-slot="afternoon" id="s10">
-  <h3>W10: The Varieties of Non-Human Consciousness</h3>
-  <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 10:00 pm</div>
+<div class="session-panel" data-slot="afternoon" id="s6">
+  <h3>W6: The Varieties of Non-Human Consciousness</h3>
+  <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 10:00 pm &middot; Chair: Susan Schneider</div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Could consciousness extend beyond the human brain &mdash; to animals, plants, cultured neurons, or artificial systems? This workshop probes the criteria and evidence for consciousness in non-human systems, from brain organoids and microtubule-based models to machine intelligence, and asks how we might recognize or measure minds unlike our own.</p>
   <ol>
     <li><strong>Susan Schneider</strong></li>
     <li><strong>Rajnish Khanna</strong></li>
-    <li><strong>Ben Goertzel</strong></li>
-    <li><strong>Nao Tsuchiya</strong></li>
-    <li><strong>Hartmut Neven</strong></li>
     <li><strong>Alysson Muotri</strong></li>
     <li><strong>Anirban Bandyopadhyay</strong></li>
     <li><strong>Dana Kippel</strong></li>
-    <li><strong>Stuart Hameroff</strong></li>
+    <li><strong>Mike Wiest</strong></li>
+    <li><strong>Garry Nolan</strong></li>
   </ol>
 </div>
 
@@ -290,29 +208,18 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <script src="footer.js"></script>
 
 <script>
-function checkLogin() {
-  var u = document.getElementById('loginUser').value;
-  var p = document.getElementById('loginPass').value;
-  if (u === 'cs2026' && p === 'cs2026') {
-    document.getElementById('loginOverlay').style.display = 'none';
-    sessionStorage.setItem('programAuth', '1');
-    return false;
-  }
-  document.getElementById('loginError').style.display = 'block';
-  return false;
-}
-if (sessionStorage.getItem('programAuth') === '1') {
-  document.getElementById('loginOverlay').style.display = 'none';
-}
-
 function showSession(btn, id) {
   document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
   document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
+  // Reflect the choice in the URL bar (no reload/scroll) so the link can be copied & shared.
+  if (PANEL_HASH[id] && window.history && history.replaceState) {
+    history.replaceState(null, '', '#' + PANEL_HASH[id]);
+  }
 }
 
-// Filter by hash: #morning shows W1-W4, #afternoon shows W5-W10
+// Filter by hash: #morning / #afternoon show only that time slot.
 function filterBySlot() {
   var slot = location.hash.replace('#', '');
   if (slot !== 'morning' && slot !== 'afternoon') return;
@@ -336,22 +243,53 @@ function filterBySlot() {
   // Update title and subtitle
   if (slot === 'morning') {
     document.getElementById('pageTitle').textContent = 'Morning Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 9:00 am\u20131:00 pm &middot; 4 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 3 workshops';
   } else {
     document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 6 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u201310:00 pm &middot; 3 workshops';
   }
 }
 
-filterBySlot();
-// If no hash, show all with first active
-if (!location.hash || (location.hash !== '#morning' && location.hash !== '#afternoon')) {
+// Direct-link hooks: e.g. workshops.html#obe opens the W8 tab, same as clicking it.
+var WORKSHOP_HASH = {
+  'psi': 's1', 'indian-knowledge': 's2', 'women': 's3', 'education': 's3',
+  'emf': 's4', 'em-fields': 's4', 'obe': 's5', 'nde': 's5', 'non-human': 's6'
+};
+
+// Reverse map: clicking a workshop writes its hook into the URL.
+var PANEL_HASH = {
+  's1': 'psi', 's2': 'indian-knowledge', 's3': 'women',
+  's4': 'emf', 's5': 'obe', 's6': 'non-human'
+};
+
+function showByPanel(panelId) {
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.style.display = ''; b.classList.remove('active'); });
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  var btn = document.querySelector('.menu-btn[data-panel="' + panelId + '"]');
+  var panel = document.getElementById(panelId);
+  if (btn) btn.classList.add('active');
+  if (panel) panel.classList.add('active');
+}
+
+// Apply the current hash. Returns true if it matched a known hook.
+function applyHash() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  if (h === 'morning' || h === 'afternoon') { filterBySlot(); return true; }
+  if (WORKSHOP_HASH[h]) { showByPanel(WORKSHOP_HASH[h]); return true; }
+  return false;
+}
+
+if (!applyHash()) {
+  // No recognized hash — show all workshops, first one active.
   var firstBtn = document.querySelector('.menu-btn');
   if (firstBtn) {
     firstBtn.classList.add('active');
     document.getElementById(firstBtn.getAttribute('data-panel')).classList.add('active');
   }
 }
+
+// React to hash changes without a reload.
+window.addEventListener('hashchange', applyHash);
 
 </script>
 </body>
