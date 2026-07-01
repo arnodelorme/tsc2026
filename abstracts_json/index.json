@@ -60,6 +60,18 @@
     "photo": "img/dean-radin.jpg"
   },
   {
+    "file": "diane_hennacy_powell.json",
+    "speaker": "Diane Hennacy Powell",
+    "affiliation": "Independent (Psychiatrist & Author)",
+    "title": null,
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
+    "photo": "img/diane-hennacy-powell.png"
+  },
+  {
     "file": "edward_boyden.json",
     "speaker": "Edward Boyden",
     "affiliation": "MIT & HHMI",
@@ -96,6 +108,18 @@
     "photo": "img/eric-halgren.png"
   },
   {
+    "file": "fadel_zeidan.json",
+    "speaker": "Fadel Zeidan",
+    "affiliation": "UC San Diego",
+    "title": null,
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
+    "photo": "img/fadel-zeidan.png"
+  },
+  {
     "file": "farhan_lakhany.json",
     "speaker": "Farhan Lakhany",
     "affiliation": "San José State University",
@@ -106,6 +130,18 @@
     "decision": "Accepted: Plenary",
     "submission_id": 553,
     "photo": "img/farhan-lakhany.png"
+  },
+  {
+    "file": "garry_nolan.json",
+    "speaker": "Garry Nolan",
+    "affiliation": "Stanford University",
+    "title": null,
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
+    "photo": "img/garry-nolan.jpg"
   },
   {
     "file": "hartmut_neven.json",
@@ -228,6 +264,18 @@
     "photo": "img/mike-wiest.jpg"
   },
   {
+    "file": "nick_lane.json",
+    "speaker": "Nick Lane",
+    "affiliation": "University College London",
+    "title": null,
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
+    "photo": "img/nick-lane.jpg"
+  },
+  {
     "file": "nirosha_murugan.json",
     "speaker": "Nirosha Murugan",
     "affiliation": "Wilfrid Laurier University",
@@ -346,5 +394,17 @@
     "decision": null,
     "submission_id": null,
     "photo": "img/tracy-brandmeyer.jpg"
+  },
+  {
+    "file": "travis_craddock.json",
+    "speaker": "Travis Craddock",
+    "affiliation": "University of Waterloo",
+    "title": null,
+    "type": "plenary",
+    "remote": false,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
+    "photo": "img/travis-craddock.png"
   }
 ]
