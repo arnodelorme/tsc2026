@@ -1,0 +1,69 @@
+name: Add abstract from issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: add-abstract
+  cancel-in-progress: false
+
+jobs:
+  add-abstract:
+    if: >
+      contains(github.event.issue.labels.*.name, 'add-abstract') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync staging branch with main
+        run: |
+          git fetch origin
+          git checkout -B abstracts-staging origin/abstracts-staging
+          git merge --no-edit origin/main
+
+      - name: Fill abstract and rebuild pages
+        id: build
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python3 pipeline/add_abstract.py
+
+      - name: Comment on failure
+        if: steps.build.outputs.matched == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          MESSAGE: ${{ steps.build.outputs.message }}
+        run: gh issue comment "$ISSUE" --body "❌ $MESSAGE"
+
+      - name: Commit and update batch PR
+        if: steps.build.outputs.matched == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          SPEAKER: ${{ steps.build.outputs.speaker }}
+          MESSAGE: ${{ steps.build.outputs.message }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add abstracts_json/*.json abstracts_html/*.html
+          git commit -m "Add abstract: $SPEAKER (#$ISSUE)"
+          git push origin abstracts-staging
+          gh pr view abstracts-staging --json state --jq .state 2>/dev/null | grep -q OPEN || \
+            gh pr create --base main --head abstracts-staging \
+              --title "Pending abstracts" \
+              --body "Speaker abstracts submitted via issues. Review and merge to publish; a new PR starts automatically after merge."
+          gh issue comment "$ISSUE" --body "✅ $MESSAGE It will go live when the pending-abstracts PR is merged."
+          gh issue close "$ISSUE"
