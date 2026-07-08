@@ -1,0 +1,20 @@
+name: Add speaker abstract
+description: Provide an abstract for an existing plenary speaker page
+title: "Add abstract for "
+labels: ["add-abstract"]
+body:
+  - type: input
+    id: speaker
+    attributes:
+      label: Speaker name
+      description: Exactly as it appears on the speaker's page (e.g. Robin Carhart-Harris)
+      placeholder: John Smith
+    validations:
+      required: true
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: Paste the full abstract text
+    validations:
+      required: true
