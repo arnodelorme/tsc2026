@@ -78,7 +78,7 @@
     "title": null,
     "type": "plenary",
     "remote": false,
-    "has_abstract": false,
+    "has_abstract": true,
     "decision": null,
     "submission_id": null,
     "photo": "img/edward-boyden.jpg"
