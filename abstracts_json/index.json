@@ -51,12 +51,12 @@
     "file": "dean_radin.json",
     "speaker": "Dean Radin",
     "affiliation": "Institute of Noetic Sciences",
-    "title": "Psychological Correlates of Psychic Performance",
+    "title": null,
     "type": "plenary",
     "remote": false,
-    "has_abstract": true,
-    "decision": "Accepted: Plenary",
-    "submission_id": 456,
+    "has_abstract": false,
+    "decision": null,
+    "submission_id": null,
     "photo": "img/dean-radin.jpg"
   },
   {
