@@ -110,7 +110,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <header class="page-header">
   <h1 id="pageTitle">Workshops</h1>
-  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 7 workshops</p>
+  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 8 workshops</p>
 </header>
 
 <div class="back-bar">
@@ -127,6 +127,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W5: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;9:00</span></button>
     <button class="menu-btn" data-slot="morning" data-panel="s7" onclick="showSession(this,'s7')">W6: Psychedelics <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
     <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W7: Extraocular Perception <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
+    <button class="menu-btn" data-slot="morning" data-panel="s9" onclick="showSession(this,'s9')">W8: MAHP Yoga &amp; Mindfulness <span class="btn-time">Morning 8:30&ndash;10:30</span></button>
   </div>
 </div>
 
@@ -244,6 +245,16 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Marina Weiler</strong> (neuroscientist, Division of Perceptual Studies, University of Virginia) opens by reviewing what extraocular perception is, the existing scientific literature, and videos of current claims &mdash; then introduces the MindSwan research protocol, the challenges it raises, and how they can be met with scientific rigour. <strong>David Chartrand</strong> (Executive Director, CUSAC) explains the vision behind the MindSwan Prize and how open scientific challenges can advance consciousness research through collaboration and public participation. The session closes with a <strong>live protocol demonstration and open discussion</strong> (invited: Martin Monti), considering what successful results would actually represent and how future studies could distinguish between competing explanations.</p>
 </div>
 
+<div class="session-panel" data-slot="morning" id="s9">
+  <h3>W8: MAHP &mdash; Mindful Awareness Healing Practice</h3>
+  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 10:30 am &middot; Facilitator: Kai Silva</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/kelli-silva.png" alt="Kai Silva"><span class="nm">Kai Silva</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">An interdisciplinary contemplative session created by Kai Silva (PhD, Philosophy/Metaphysics) and developed in collaboration with the UC San Diego Stein Institute for Research on Aging. MAHP integrates breathwork, gentle mindful movement, meditation, and heart-centered awareness into a single guided sequence, inviting participants to approach consciousness not through theoretical discussion but as a direct, embodied experience. Open to all experience levels &mdash; no prior yoga or meditation background required. Sessions held Monday through Friday, before the official program.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><a href="https://kaisilva.com/" target="_blank" rel="noopener">kaisilva.com</a> &middot; <a href="animation/yoga_Kai%20Silva%20Experiential%20session%20MAHP%202026.pdf" target="_blank" rel="noopener">Session outline (PDF)</a></p>
+</div>
+
 </div>
 
 <footer></footer>
@@ -285,7 +296,7 @@ function filterBySlot() {
   // Update title and subtitle
   if (slot === 'morning') {
     document.getElementById('pageTitle').textContent = 'Morning Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 4 workshops';
+    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 5 workshops';
   } else {
     document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
     document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u20139:00 pm &middot; 3 workshops';
@@ -296,13 +307,15 @@ function filterBySlot() {
 var WORKSHOP_HASH = {
   'psi': 's1', 'quantum-biology': 's2', 'quantum': 's2',
   'emf': 's4', 'em-fields': 's4', 'obe': 's5', 'nde': 's5', 'non-human': 's6',
-  'psychedelics': 's7', 'extraocular': 's8', 'mindswan': 's8'
+  'psychedelics': 's7', 'extraocular': 's8', 'mindswan': 's8',
+  'yoga': 's9', 'mahp': 's9'
 };
 
 // Reverse map: clicking a workshop writes its hook into the URL.
 var PANEL_HASH = {
   's1': 'psi', 's2': 'quantum-biology',
-  's4': 'emf', 's5': 'obe', 's6': 'non-human', 's7': 'psychedelics', 's8': 'extraocular'
+  's4': 'emf', 's5': 'obe', 's6': 'non-human', 's7': 'psychedelics', 's8': 'extraocular',
+  's9': 'yoga'
 };
 
 function showByPanel(panelId) {
