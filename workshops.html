@@ -50,6 +50,12 @@ a:hover { text-decoration: underline; }
 
 .session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
 .session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.menu-section { margin-bottom: 1.1rem; }
+.menu-section-title {
+  font-size: .95rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #0a2440; background: #eef5f9; border-left: 4px solid #1a96b8;
+  padding: .4rem .7rem; border-radius: 4px; margin-bottom: .55rem;
+}
 .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
 .menu-btn {
   display: block; padding: .6rem .8rem;
@@ -119,15 +125,40 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <div class="session-menu">
   <h2>Select a workshop:</h2>
-  <div class="menu-grid">
-    <button class="menu-btn" data-slot="morning" data-panel="s1" onclick="showSession(this,'s1')">W1: Psi &amp; Consciousness <span class="btn-time">11:10&ndash;12:30 &amp; 2:00&ndash;4:10</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s2" onclick="showSession(this,'s2')">W2: Quantum Biology <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s4" onclick="showSession(this,'s4')">W3: Brain EM Field <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s5" onclick="showSession(this,'s5')">W4: NDEs &amp; OBEs <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s6" onclick="showSession(this,'s6')">W5: Non-Human Consciousness <span class="btn-time">Evening 7:00&ndash;9:00</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s7" onclick="showSession(this,'s7')">W6: Psychedelics <span class="btn-time">Morning 8:30&ndash;12:30</span></button>
-    <button class="menu-btn" data-slot="afternoon" data-panel="s8" onclick="showSession(this,'s8')">W7: Extraocular Perception <span class="btn-time">Afternoon 2:00&ndash;4:00</span></button>
-    <button class="menu-btn" data-slot="morning" data-panel="s9" onclick="showSession(this,'s9')">W8: MAHP Yoga &amp; Mindfulness <span class="btn-time">Morning 8:30&ndash;10:30</span></button>
+  <div class="menu-section">
+    <h3 class="menu-section-title">Morning &middot; 8:30 am</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s2" onclick="showSession(this,'s2')">W2: Quantum Biology (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s5" onclick="showSession(this,'s5')">W4: OBEs &amp; Past Life Memories (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s7" onclick="showSession(this,'s7')">W6: Psychedelics (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s9" onclick="showSession(this,'s9')">W8: MAHP Yoga &amp; Mindfulness <span class="btn-time">8:30&ndash;10:30</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Mid-Morning &middot; 11:10 am</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s1" onclick="showSession(this,'s1')">W1: Psi &amp; Consciousness (Part 1) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s2" onclick="showSession(this,'s2')">W2: Quantum Biology (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s5" onclick="showSession(this,'s5')">W4: OBEs &amp; Past Life Memories (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s7" onclick="showSession(this,'s7')">W6: Psychedelics (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Afternoon &middot; 2:00 pm</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s1" onclick="showSession(this,'s1')">W1: Psi &amp; Consciousness (Part 2) <span class="btn-time">2:00&ndash;4:10</span></button>
+      <button class="menu-btn" data-panel="s4" onclick="showSession(this,'s4')">W3: Brain EM Field <span class="btn-time">2:00&ndash;4:00</span></button>
+      <button class="menu-btn" data-panel="s8" onclick="showSession(this,'s8')">W7: Extraocular Perception <span class="btn-time">2:00&ndash;4:00</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Evening &middot; 7:00 pm</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s6" onclick="showSession(this,'s6')">W5: Non-Human Consciousness <span class="btn-time">7:00&ndash;9:00</span></button>
+    </div>
   </div>
 </div>
 
@@ -135,7 +166,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <div class="session-panel" data-slot="morning" id="s2">
   <h3>W2: Quantum Biology and the Brain</h3>
-  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 12:30 pm &middot; Chair: Travis Craddock</div>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Chair: Travis Craddock</div>
   <div class="spk-grid">
     <div class="spk"><img class="av" src="img/travis-craddock.png" alt="Travis Craddock"><span class="nm">Travis Craddock <em>(Chair)</em></span></div>
     <div class="spk"><img class="av" src="img/joseph-jacks.jpg" alt="Joseph Jacks"><span class="nm">Joseph Jacks</span></div>
@@ -145,10 +176,11 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <div class="spk"><img class="av" src="img/mark-bailey.jpg" alt="Mark Bailey"><span class="nm">Mark Bailey</span></div>
   </div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Led by Travis Craddock (Tier 1 Canada Research Chair in Quantum Neurobiology, University of Waterloo), this workshop explores emerging evidence and theoretical frameworks at the intersection of quantum physics, biology, and consciousness research. Together, the talks examine how quantum-scale processes may contribute to biological organization, neural information processing, and new scientific approaches to understanding mind and brain.</p>
-  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Presenters:</strong></p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presenters:</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Joseph Jacks</strong> &mdash; <em>The current state of quantum biology research.</em> Founder and General Partner of OSS Capital, San Francisco, California, USA.</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Jack Tuszynski</strong> &mdash; <em>Quantum metabolism and the biological Planck constant.</em> Professor of Biomedical Engineering at the Polytechnic University of Turin, Italy; Professor Emeritus at the University of Alberta, Edmonton, Canada; and Senior Scientific Advisor at NexiVerify, Vancouver, Canada.</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Nirosha Murugan</strong> &mdash; <em>Photo-encephalography.</em> Tier 2 Canada Research Chair in Biophysics and Assistant Professor, Department of Health Sciences, Wilfrid Laurier University, Waterloo, Ontario, Canada.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presenters:</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Lea Gassab</strong> &mdash; <em>Microtubules as quantum-optical systems in biology.</em> Provost&rsquo;s Interdisciplinary Postdoctoral Scholar in the Departments of Biology, Physics &amp; Astronomy, and Chemistry, and the Waterloo Institute for Nanotechnology, University of Waterloo, Waterloo, Ontario, Canada.</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Mark Bailey</strong> &mdash; <em>Superpsychism.</em> Founder of DataField Intelligence LLC; Associate Director of the Center for the Future of AI, Mind, and Society; and Research Affiliate Professor, Department of Electrical Engineering and Computer Science, Florida Atlantic University, Boca Raton, Florida, USA.</p>
 </div>
@@ -195,14 +227,23 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 </div>
 
 <div class="session-panel" data-slot="morning" id="s5">
-  <h3>W4: Research at the Edge of Consciousness: NDEs, OBEs and Past Life Memories</h3>
-  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 12:30 pm &middot; Chair: Kunal Mooley</div>
+  <h3>W4: Research at the Edge of Consciousness: OBEs, Past Life Memories and Altered States of Consciousness</h3>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Chair: Kunal Mooley</div>
   <div class="spk-grid">
     <div class="spk"><img class="av" src="img/kunal-mooley.png" alt="Kunal Mooley"><span class="nm">Kunal Mooley <em>(Chair)</em></span></div>
     <div class="spk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler"><span class="nm">Marina Weiler</span></div>
-    <div class="spk"><div class="ini">+</div><span class="nm">More speakers coming soon</span></div>
+    <div class="spk"><img class="av" src="img/kim-penberthy.png" alt="Kim Penberthy"><span class="nm">Kim Penberthy</span></div>
+    <div class="spk"><img class="av" src="img/saeedeh-sadeghi.png" alt="Saeedeh Sadeghi"><span class="nm">Saeedeh Sadeghi</span></div>
+    <div class="spk"><img class="av" src="img/martin-fleming.png" alt="Martin Fleming"><span class="nm">Martin Fleming</span></div>
   </div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">At the borderlands of consciousness, near-death experiences (NDEs), out-of-body experiences (OBEs), and reports of past-life memories raise pointed questions about whether consciousness depends entirely on the brain. This workshop reviews the scientific study of these phenomena &mdash; from prospective hospital NDE research and tests of perception during OBEs to systematically investigated cases of children who report past-life memories &mdash; and what they may imply for theories of mind.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Marina Weiler</strong> (UVA/DOPS) &mdash; <em>Veridical out-of-body experiences.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kim Penberthy</strong> (UVA/DOPS) &mdash; <em>Title TBD.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Saeedeh Sadeghi</strong> (UVA/DOPS) &mdash; <em>Past-Life Memories in Children: Common Patterns Across Many Cases.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Martin Fleming</strong> (SPi, BIHS) &mdash; <em>Quantitative Experimentation with Remote Perception.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kunal Mooley</strong> (IMICS, IITK, Caltech; Chair) &mdash; <em>Exploring the Mind Body problem through Neurobiological Studies of children claiming past life memories.</em></p>
 </div>
 
 <div class="session-panel" data-slot="afternoon" id="s6">
@@ -220,15 +261,17 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <div class="session-panel" data-slot="morning" id="s7">
   <h3>W6: Consciousness and Psychedelics</h3>
-  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 12:30 pm &middot; Chair: Rael Cahn</div>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Chair: Rael Cahn</div>
   <div class="spk-grid">
     <div class="spk"><img class="av" src="img/rael-cahn.jpg" alt="Rael Cahn"><span class="nm">Rael Cahn<br><em>(Chair)</em></span></div>
     <div class="spk"><img class="av" src="img/joe-tafur.png" alt="Joe Tafur"><span class="nm">Joe Tafur</span></div>
     <div class="spk"><img class="av" src="img/kieran-fox.png" alt="Kieran Fox"><span class="nm">Kieran Fox</span></div>
   </div>
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">The deepest forms of healing have long been understood as inseparable from spiritual transformation &mdash; a reorientation of the self toward connection, wholeness, and unity beyond ordinary egoic experience. This workshop brings together three physician-scientists to examine spiritual healing as both lived reality and emerging science. Rael Cahn (USC) presents two decades of EEG, ERP, and neuroimaging research comparing meditative and psychedelic states and current work on mindfulness-assisted psilocybin therapy grounded in non-dual awareness. Joe Tafur (Modern Spirit) explores the role of spiritual healing in psychedelic-assisted therapies, drawing on his new book <em>Medicine Song: Spiritual Healing and the Psychedelic Renaissance</em>, his work with psychedelic therapies, and his training in South American curanderismo. Kieran Fox (UCSF) situates these findings within contemplative and psychedelic neuroscience and the lineage of scientific seekers, Einstein among them, who found in oneness the deepest motivation for inquiry. Together they ask how a science of consciousness might take spiritual healing seriously without reducing it.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presenters:</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>B. Rael Cahn, MD, PhD</strong> &mdash; <em>The Dissolving Self: Neurophysiology of Meditative and Psychedelic States and Their Healing Potential.</em><span style="display:block;height:.35rem"></span>Cahn is Clinical Associate Professor of Psychiatry at the Keck School of Medicine of USC and Director of the USC Center for Mindfulness Science, where he leads the Meditation and Psychedelic Therapy Lab. Drawing on more than twenty years of EEG, ERP, and neuroimaging research, he compares how long-term meditation and psilocybin reshape sensory and cognitive processing, narrative self-referencing, and the felt sense of selfhood. He examines where contemplative and psychedelic states converge and diverge at the neural level, and how self-dissolution and non-dual awareness may serve as active ingredients in psychological healing &mdash; drawing on current work in mindfulness-assisted psilocybin therapy for depression to consider how rigorous neuroscience can illuminate, rather than explain away, the therapeutic power of self-transcendence.</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Joe Tafur, MD</strong> &mdash; <em>Medicine Song: Spiritual Healing and the Psychedelic Renaissance.</em><span style="display:block;height:.35rem"></span>Tafur is a Colombian-American integrative physician, curandero, and author who trained for years in Traditional Amazonian Plant Medicine and South American curanderismo at Nihue Rao Centro Espiritual in Peru, and co-founded the nonprofit Modern Spirit and the Church of the Eagle and the Condor. Drawing on his most recent book, he explores spiritual healing as the heart of both Indigenous plant medicine and the contemporary psychedelic renaissance. Taking the prophecy of the Eagle and the Condor &mdash; the re-harmonizing of science and spirit, mind and heart &mdash; as a guiding frame, he examines the role of spiritual healing in modern medicine, arguing that sacred plants and psychedelic medicines, offered responsibly, can catalyze profound emotional healing through spiritual awakening &mdash; associated improvement in emotional and spiritual well-being are increasingly legible through modern advances in psychoneuroimmunology, epigenetics, and consciousness research.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presentation and closing panel:</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kieran C. R. Fox, MD, PhD</strong> &mdash; <em>Cosmic Religion: Oneness, Self-Transcendence, and the Scientific Pursuit of the Sacred.</em><span style="display:block;height:.35rem"></span>Fox is a physician-scientist at UCSF whose research centers on the neural mechanisms and therapeutic potential of meditation and psychedelics; he holds a doctorate in cognitive neuroscience from UBC and is the author of <em>I Am a Part of Infinity: The Spiritual Journey of Albert Einstein.</em> He situates contemplative and psychedelic experience within the history of science itself &mdash; the lineage of seekers, Einstein foremost among them, for whom a &ldquo;cosmic religious sense&rdquo; of unity and interconnectedness was not opposed to rigorous inquiry but its deepest source. Connecting the neuroscience of self-transcendence and the dissolution of ordinary self-other boundaries to enduring philosophical and spiritual frameworks of oneness, he argues that taking the experience of the sacred seriously may be essential both to a complete science of consciousness and to understanding why such experiences so reliably heal.</p>
   <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Closing panel</strong> &mdash; <em>Taking Spiritual Healing Seriously: Toward a Non-Reductive Science of Consciousness.</em><span style="display:block;height:.35rem"></span>All three presenters join a moderated discussion on how a science of consciousness might engage spiritual healing on its own terms &mdash; honoring the relational, cultural, and ethical contexts of contemplative and Indigenous practices while subjecting their mechanisms and outcomes to rigorous study. Audience Q&amp;A.</p>
 </div>
@@ -267,41 +310,11 @@ function showSession(btn, id) {
   document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
   document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
+  // A workshop spanning several time sections has one button per section — highlight them all.
+  document.querySelectorAll('.menu-btn[data-panel="' + id + '"]').forEach(function(b) { b.classList.add('active'); });
   // Reflect the choice in the URL bar (no reload/scroll) so the link can be copied & shared.
   if (PANEL_HASH[id] && window.history && history.replaceState) {
     history.replaceState(null, '', '#' + PANEL_HASH[id]);
-  }
-}
-
-// Filter by hash: #morning / #afternoon show only that time slot.
-function filterBySlot() {
-  var slot = location.hash.replace('#', '');
-  if (slot !== 'morning' && slot !== 'afternoon') return;
-
-  // Hide buttons and panels that don't match
-  document.querySelectorAll('.menu-btn').forEach(function(b) {
-    b.style.display = b.getAttribute('data-slot') === slot ? '' : 'none';
-    b.classList.remove('active');
-  });
-  document.querySelectorAll('.session-panel').forEach(function(p) {
-    p.classList.remove('active');
-  });
-
-  // Activate first visible button and its panel
-  var first = document.querySelector('.menu-btn[data-slot="' + slot + '"]');
-  if (first) {
-    first.classList.add('active');
-    document.getElementById(first.getAttribute('data-panel')).classList.add('active');
-  }
-
-  // Update title and subtitle
-  if (slot === 'morning') {
-    document.getElementById('pageTitle').textContent = 'Morning Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 8:30 am\u20131:00 pm &middot; 5 workshops';
-  } else {
-    document.getElementById('pageTitle').textContent = 'Afternoon & Evening Workshops';
-    document.getElementById('pageSubtitle').innerHTML = 'Sunday, October 11 &middot; 2:00\u20139:00 pm &middot; 3 workshops';
   }
 }
 
@@ -323,16 +336,14 @@ var PANEL_HASH = {
 function showByPanel(panelId) {
   document.querySelectorAll('.menu-btn').forEach(function(b) { b.style.display = ''; b.classList.remove('active'); });
   document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
-  var btn = document.querySelector('.menu-btn[data-panel="' + panelId + '"]');
+  document.querySelectorAll('.menu-btn[data-panel="' + panelId + '"]').forEach(function(b) { b.classList.add('active'); });
   var panel = document.getElementById(panelId);
-  if (btn) btn.classList.add('active');
   if (panel) panel.classList.add('active');
 }
 
 // Apply the current hash. Returns true if it matched a known hook.
 function applyHash() {
   var h = location.hash.replace('#', '').toLowerCase();
-  if (h === 'morning' || h === 'afternoon') { filterBySlot(); return true; }
   if (WORKSHOP_HASH[h]) { showByPanel(WORKSHOP_HASH[h]); return true; }
   return false;
 }
