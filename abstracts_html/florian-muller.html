@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Geometry of Coherence: Boundary&ndash;Interior Reconstructibility and Neural State Stability &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Florian Müller</h1>
+  <p class="subtitle">TGH Research GmbH, Nuremberg, Bavaria, Germany</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/florian-muller.jpg" alt="Florian Müller">
+    <div class="speaker-info">
+      <h2>Florian Müller</h2>
+      <div class="affiliation">TGH Research GmbH, Nuremberg, Bavaria, Germany</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-2">MON-2 &mdash; Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Geometry of Coherence: Boundary&ndash;Interior Reconstructibility and Neural State Stability</div>
+
+  <div class="abstract-text">
+<p>Theories of consciousness routinely invoke dynamical stability or unity, yet these notions are rarely operationalized, seldom subjected to serious attempts at falsification, and less often reported when those attempts fail. We present such an attempt. Recursive Holography (RH) is a structural framework in which boundary observations constrain, without fully determining, latent interior dynamics; for EEG we operationalize it as ΔΩ_rec, a cross-validated, normalized error quantifying how well interior features are reconstructed from boundary features. The headline result is negative and, we argue, informative: across ten healthy participants (public ISRUC-III), a preregistered validation (AP5) found no transition-adjacent ΔΩ_rec effect near sleep-stage transitions, using Ridge reconstruction with Huber-robust models, stage-composition covariates, and stratified permutation nulls. We then asked why the path failed, using predefined extensions rather than post-hoc rescue. A continuous distance-to-transition regression&mdash;added after simulations showed the discrete transition-versus-stable contrast to be markedly underpowered for the same underlying signal&mdash;produced an apparent effect that dissolved once sleep stage was held constant, revealing stage-distance confounding rather than an independent reconstructibility signal. Partition-specificity analysis (five-participant subset) placed the preregistered boundary&ndash;interior partition mid-distribution among alternatives; in an exploratory, small-sample geometry model, reconstruction instead tracked inter-electrode distance&mdash;a pattern that itself requires replication. Benchmarking showed that boundary-based reconstruction was not simply reducible to slow-wave power, yet, absent partition specificity, the signal is more plausibly interpreted as generic spatial and spectral covariance than as a theoretically specific boundary&ndash;interior relation. A targeted simulation series comparing ΔΩ_rec with phase-locking value (PLV) isolated two further constraints. As a cross-validated distributional error requiring a trained model, ΔΩ_rec is less suited to abrupt, short-lived transitions than event-local phase measures; and it is not robust to bistable slow-oscillation dynamics resembling slow-wave sleep, where state-conditional analyses indicated inflation of reconstruction burden by state composition rather than a change in boundary&ndash;interior mapping. PLV showed greater simulated sensitivity, but an initial real-data N3&ndash;N2 association did not survive scorer-reliability control. A subsequent, protocol-specified REM attempt&mdash;EOG-detected phasic bursts with event-locked PLV recovery, chosen precisely to avoid slow-wave contamination and scorer dependence&mdash;did not reach the preregistered minimum number of analyzable participants, and therefore yielded no inferential test, but rather a feasibility failure. We report all of this deliberately. Sleep-stage transitions were used as a tractable model of neural state reorganization, not as proxies for conscious-state transitions; any relevance of ΔΩ_rec, or of RH more broadly, to conscious experience remains untested. The contribution is therefore conservative but concrete: the tested sleep-EEG operationalizations do not currently validate RH, and&mdash;more usefully&mdash;they specify why the initial path failed and what a fair future test would require: independent feasibility assessment before confirmatory runs, denser or cleaner recordings, explicit modeling of state-dependent dynamics, validated events, and recovery-time designs shown to be feasible before they are used to confirm anything. A stability account of coherence is worth taking seriously only if it is allowed to fail this legibly; here we show what that looks like.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Florian Müller is the founder and managing director of TGH Research GmbH in Nuremberg, Germany, an independent research venture at the intersection of consciousness science, complex dynamical systems, and emerging neurotechnologies. Working outside traditional academic patterns, he developed Recursive Holography as a candidate stability framework linking neural dynamics, boundary-based reconstructibility, and state-space geometry. His scientific endeavor combines mathematical modeling, neural-mass simulations, and computational pipelines aimed at empirical validation. Driven by a commitment to methodological transparency and epistemic caution, he shapes the broader mission of TGH Research GmbH to bridge complex dynamical systems theory with pioneering applications designed to ethically safeguard cognitive autonomy, systemic coherence, and structural integrity.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

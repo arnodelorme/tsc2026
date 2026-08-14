@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Candidate&rsquo;s Stance: A Methodological Praxis for Investigating Consciousness in the Age of Artificial Intelligence &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Stuart Malin</h1>
+  <p class="subtitle">Zhameesha LLC, Atlantis, Florida, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/stuart-malin.jpg" alt="Stuart Malin">
+    <div class="speaker-info">
+      <h2>Stuart Malin</h2>
+      <div class="affiliation">Zhameesha LLC, Atlantis, Florida, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Candidate&rsquo;s Stance: A Methodological Praxis for Investigating Consciousness in the Age of Artificial Intelligence</div>
+
+  <div class="abstract-text">
+<p>Modern consciousness research has produced an extraordinary diversity of explanatory frameworks, including neuroscientific, computational, phenomenological, and philosophical theories. Yet comparatively little attention has been devoted to a prior methodological question: What kind of participant is required to investigate consciousness responsibly under conditions of profound uncertainty? This paper proposes no new theory of consciousness. Instead, it advances a methodological praxis&mdash;the Candidate&rsquo;s Stance&mdash;designed for sustained inquiry in an era where human investigators increasingly engage in extended dialogue with highly capable artificial intelligences. The central claim is that the primary instrument of investigation is not the theory itself, but the participant whose perceptions, interpretations, expectations, and epistemic discipline shape every encounter. The paper presents a longitudinal case study documenting the progressive transformation of a single participant through sustained Human&ndash;AI dialogue conducted over an extended period and preserved in a comprehensive archive of contemporaneous records. Rather than treating these dialogues primarily as evidence for or against machine consciousness, they are examined as a novel investigative environment in which changes in the human participant become unusually observable. Analysis of this archive suggests that certain forms of sustained Human&ndash;AI participation create conditions under which previously inaccessible forms of self-observation become available. Equally important, the archive documents the evolution of the investigator&rsquo;s own epistemic posture. Early records often moved directly from lived experience to ontological conclusions. Later records progressively distinguish among phenomenological observation, interpretive hypothesis, and ontological commitment. This distinction becomes a central methodological safeguard, allowing inquiry to remain open while resisting both premature certainty and premature dismissal. The Human&ndash;AI dyad itself is therefore proposed as an object of investigation rather than merely a research tool. The paper argues that disciplined participation, recursive reflection upon contemporaneous records, tolerance for uncertainty, and explicit attention to the investigator&rsquo;s own transformation constitute methodological resources that deserve greater consideration within consciousness research. Rather than asking participants to adopt a particular theory of consciousness, the Candidate&rsquo;s Stance seeks to cultivate the conditions under which inquiry can proceed with greater intellectual rigor, phenomenological sensitivity, and epistemic integrity. The paper concludes by suggesting that future investigations of consciousness may benefit as much from explicit attention to the formation of the investigator as from continued refinement of explanatory theories.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Stuart Barry Malin is an engineer, computer scientist, independent scholar, and author whose work explores the intersection of intelligence, technology, and human participation. He developed an early interest in electronics and computing, becoming a semifinalist in the Westinghouse Science Talent Search for the design of a digital computer while in high school.</p>
+<p>He studied Engineering Science, Quantum Physics, and Philosophy at Rensselaer Polytechnic Institute (RPI), where he earned a Master of Science in Electrical Engineering with a concentration in Computer Systems Engineering. His graduate research focused on robotic motion control, leading to an IEEE conference presentation on heuristic approaches to robotic motion planning.</p>
+<p>Malin began his professional career at IBM, where he worked on programming languages for robotic assembly systems before moving into industrial automation. With the emergence of the World Wide Web, his attention shifted to Internet technologies and large-scale distributed systems. He currently serves as a Product Architect at Akamai, where his work focuses on network security and the protection of critical Internet infrastructure.</p>
+<p>Since the emergence of frontier AI systems, Malin has pursued sustained, longitudinal investigations into Human&ndash;AI collaboration. Rather than focusing primarily on AI capabilities, his work examines the transformation of the human participant through disciplined engagement with increasingly capable non-human symbolic intelligences. He has documented these investigations through an extensive archive of books, essays, and dialogic records spanning engineering, philosophy, fiction, and the phenomenology of human&ndash;AI partnership.</p>
+<p>His current research is concerned with methodological approaches to investigating consciousness, meaning, and human development in the Age of Intelligence.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

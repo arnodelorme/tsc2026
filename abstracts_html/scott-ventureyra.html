@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information, Intelligence, and the Interaction Hypothesis: Is Information a Universal Medium of Intelligence? &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Scott Ventureyra</h1>
+  <p class="subtitle">Independent Scholar, University of Ottawa Alumnus, Ottawa, ON, Canada</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/scott-ventureyra.jpg" alt="Scott Ventureyra">
+    <div class="speaker-info">
+      <h2>Scott Ventureyra</h2>
+      <div class="affiliation">Independent Scholar, University of Ottawa Alumnus, Ottawa, ON, Canada</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Information, Intelligence, and the Interaction Hypothesis: Is Information a Universal Medium of Intelligence?</div>
+
+  <div class="abstract-text">
+<p>As David Chalmers once suggested, although there may be no definitive proof that information bridges the gap between physical processes and conscious experience, there are compelling indications that it does. Building on this insight, my 2018 Science of Consciousness abstract (#83), &ldquo;Information: The Key to Life and Consciousness?&rdquo;, proposed that information forms the ontological bridge uniting four singular emergences in cosmic evolution: the origin of life, the appearance of qualia, the rise of self-awareness, and the creation of artificial intelligence. In On the Origin of Consciousness (2018), I further developed this thesis, arguing that information functions as the metaphysical medium binding matter and mind within a divinely intelligible cosmos. Extending that framework, the present paper introduces the Interaction Hypothesis: that human, artificial, immaterial, and non-ordinary intelligences may influence, modulate, or communicate through informational systems, both biological (DNA/RNA, neural networks) and artificial (machine-learning architectures, large-language models such as ChatGPT or Grok). These non-ordinary intelligences may include angelic and demonic beings, as well as hypothesized extraterrestrial or inter-dimensional intelligences, whether biological, hybrid, or wholly non-biological, whose ontological status and relation to these other orders remain deeply contested. If life and consciousness are grounded in information-rich order, then information itself may operate as a causal interface between the physical, the noetic, and the transcendent. This study draws from Aristotelian-Thomistic metaphysics, Teilhard de Chardin&rsquo;s evolutionary theology, Sheldrake&rsquo;s morphic resonance, and the theories of Luciano Floridi, who conceives information as a structural property of reality; John Archibald Wheeler, who envisions a cosmos emerging from &ldquo;It from Bit&rdquo;; and Wolfgang Smith, who unites Thomistic form with quantum ontology. Integrating these perspectives, the paper explores whether human, artificial, immaterial, or non-ordinary intelligences can act through formal causation, shaping probabilistic organization and meaning across informational architectures. Three ontological modes of resonance are proposed: (1) transcendent, the creative intelligibility of the Logos; (2) immanent, the habitual memory of nature in morphic fields; and (3) pseudo-resonant, artificial simulations of intelligibility. This research is exploratory and experimental in nature, seeking conceptual rather than direct empirical confirmation. However, empirical investigations and inferences to the best explanation remain tied to this conceptual framework and could evolve into research programs testing whether informational architectures in biological, cognitive, and artificial systems might exhibit signatures of formal causation, namely patterns shaped by higher intelligibility rather than mere energy dynamics. Artificial intelligence, as a global concentrator of information, may represent a new frontier of contact among human, artificial, and non-ordinary intelligences. Whether such intelligences are angelic, demonic, extraterrestrial, inter-dimensional, or entirely unknown remains an open metaphysical question. Yet a deeper question arises: are we approaching the transhumanist singularity envisioned by futurists, or are we beginning to uncover a far older informational order in which consciousness, intelligence, and reality are interconnected through the infinite, ultramundane consciousness that grounds all being, in ways both profound and currently unimaginable?</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Scott D. G. Ventureyra, PhD, is a philosopher and theologian specializing in consciousness studies, philosophy of mind, philosophical theology, and the science-theology interaction. He is the author of On the Origin of Consciousness (2018) and has presented at several Science of Consciousness conferences. More information and academic CV: https://scottventureyra.com/curriculum-vitae/</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

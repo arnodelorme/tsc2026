@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What entanglement implies and what it does not &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Stephen Kercel</h1>
+  <p class="subtitle">University of Southern Maine, Portland, ME, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/stephen-kercel.jpg" alt="Stephen Kercel">
+    <div class="speaker-info">
+      <h2>Stephen Kercel</h2>
+      <div class="affiliation">University of Southern Maine, Portland, ME, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../concurrent.html#wed-4">WED-4 &mdash; Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">What entanglement implies and what it does not</div>
+
+  <div class="abstract-text">
+<p>Three events need to be viewed with respect to their connection with each other. In 1935, EPR proposed that there was something that quantum mechanics could not do. They observed that the solutions to Schrodinger&#x27;s equation for two-component processes included several solutions that could not be factored into sub-processes in which the process could be described as the cumulative interaction of the sub-processes. These unfactorable states were subsequently called the &quot;Bell States.&quot; EPR claimed that quantum mechanics could not account for this interaction, and that it must be described by a &quot;variable&quot; hidden from the solutions to Schrodinger&#x27;s equation. Subsequently, Bell offered a straightforward &quot;proof by contradiction&quot; that any such &quot;hidden variable&quot; that accounts for the &quot;Bell states&quot; must necessarily be non-local, in effect, irreducible to mathematical representation. That also implies that the &quot;hidden variable&quot; describes &quot;top-down&quot; or a form of &quot;final&quot; causation, the influence of the whole upon its parts due to their membership in the whole. In 2022, Aspect won the Nobel Prize in Physics for demonstrating that instances of the &quot;Bell States&quot; are observed in reality. This supersedes Einstein&#x27;s claim that quantum mechanics is incomplete with the more sweeping notion that the entire reductionist paradigm is incomplete. The ontological implication of these three juxtaposed events is profound. In orthodox materialism, an axiomatic claim is that literally every event in reality is nothing more than the cumulative effect of the interaction of smaller parts. The direct corollary of the axiom is that any hypothesis involving holistic influences can be dismissed out of hand, since it violates a fundamental tenet of materialism. The observed existence of a holistic effect (i.e., entangled behavior) is a sufficient counterexample to falsify the axiom that all events in reality are the cumulative effect of interactions of smaller parts. This does not &quot;prove&quot; holism. However, to falsify a holistic hypothesis, a compelling reason for its falsification is necessary. Holistic hypotheses are legitimate grist for rational investigation. There is another extreme perspective, the notion that everything is entangled with everything else. Believers in this extreme perspective tend to be frozen in paralyzed awe at the &quot;wholeness&quot; of the universe, and imagine that a universe beyond the scope of materialism must be beyond rational interpretation. In its turn this leads to a prejudice that any guess about the workings of reality is just as good as any other. There is nothing in the work of EPR, or Bell, or Aspect that supports this conclusion. It is much more reasonable to suppose that just as the constraints on the action of material processes are described by &quot;Laws of Nature,&quot; the constraints on the action of non-material processes are expected to be described by a more general set of (as yet undiscovered) &quot;Laws of Supernature.&quot; This concept is seldom considered in the contemporary academic world. However, a starting point for the investigation of a more general set of (as yet undiscovered) &quot;Laws of Supernature&quot; is Jung&#x27;s concept of archetypes.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Stephen W Kercel has a PhD in electrical engineering with research specialites in artificial intelligence and electromagnetic effects. He designed 500-kV switchyards at Tennessee Valley Authoritiy nuclear facilities. As a contract employee for the US Department of Energy, he collected the experimental data used to develop NUREG documents that assure the electromagnetic hardening of digital control systems in nuclear powerplant control rooms. In his work for US-DOE, he won two R&amp;D 100 awards. He has aapproximately 100 technical publications. Subsequently, he worked as a Research Adjunct Professor in the Department of Psychology at the University of New England, where he investigated human-machine interaction. For the past 6 years he has been a member of the faculty at the Osher Lifelong Learning Institute at the University of Southern Maine and has taught numerous courses on the nature of consciousness, emphasizing the work of Schopenhauer and Jung.  He has also been a featured speaker at the Maine Jung Center. He presented a poster session on &quot;The Hard Problem of Consciousness&quot; at the 2023 TSC.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

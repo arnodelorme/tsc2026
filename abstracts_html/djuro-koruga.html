@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRISKELION CONSCIOUSNESS: Darwin&#x27;s paradox and the phenomenon of consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Djuro Koruga</h1>
+  <p class="subtitle">Biomedical Engineering, Faculty of Mechanical Engineering ,University of Belgrade, Beograd, Serbia, Serbia</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/djuro-koruga.jpg" alt="Djuro Koruga">
+    <div class="speaker-info">
+      <h2>Djuro Koruga</h2>
+      <div class="affiliation">Biomedical Engineering, Faculty of Mechanical Engineering ,University of Belgrade, Beograd, Serbia, Serbia</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-3">MON-3 &mdash; Unified and Universal Frameworks: Consciousness Beyond the Brain</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">TRISKELION CONSCIOUSNESS: Darwin&#x27;s paradox and the phenomenon of consciousness</div>
+
+  <div class="authors-line">Djuro Koruga, Stojan Radenovic</div>
+  <div class="affiliations">Djuro Koruga &mdash; Biomedical Engineering, Faculty of Mechanical Engineering ,University of Belgrade, Beograd, Serbia, Serbia<br>Stojan Radenovic &mdash; Mathematics, Faculty of Mechanical Engineering ,University of Belgrade, Beograd, Serbia, Serbia</div>
+
+  <div class="abstract-text">
+<p>Mathematics and numbers are the universal language with which we describe the laws of nature, try to understand the world, and use them to create machines as new realities. Richard Feynman had a high opinion of numbers because &ldquo;we use them in all our theories, but we don&rsquo;t understand them &ndash; what they are or where they come from. I believe that from a fundamental point of view this is a very interesting and serious problem&rdquo; (Feynman, QED: the strange theory of light and matter, 1985). However, when it comes to mathematics and its power in understanding the world, the most extreme opposite opinion, according to an anecdote, was expressed by Charles Darwin, who said, a mathematician is a blind man in a dark room looking for a black cat that is not there (Fort, T., The American Mathematical Monthly, Volume 47, Number 9, Mathematics and the Sciences, page 605-606, 1940). This Darwin&#x27;s paradox can be solved if we start from Penrose&rsquo;s conception of reality as the &ldquo;Mystery of Three Worlds&rdquo; (Penrose, R., The Large, the Small and the Human Mind, 1997) or the triskelion of reality. Based on the information theory of mass, energy, and entropy, it is possible to show that &ldquo;The laws of Nature are information about information and outside of it there is just darkness&rdquo; (Vedral, V., Decoding Reality: the universe as quantum information, 2010) and that consciousness is a quantum-classical triskelion information entity. Consciousness is one and maps from the Primordial World to the Physical World, which then, based on &ldquo;resonance&rdquo;, builds biological systems with the properties of the Mental World. The power of resonantly connecting biological systems with the consciousness of the Primordial World and the consciousness of the Physical World is achieved through two information systems based on topological charges (gravity/quantum gravity), Curie symmetries (/ , electrical and /.m, magnetic) and perfect numbers. These can be linked to two philosophical and psychological entities, &quot;spirit&quot; (/) and &quot;soul&quot; (/.m), consciousness (quantum/classical gravity). Their information coding systems show similarities and differences between them and define human beings, in biological mental consciousness, as a dual being, which can be antagonistic and non-antagonistic. The attribute of consciousness of the Physical World (&quot;spirit&quot;, antagonistic: outside and inside biosystems) and the attribute of consciousness of the biological systems (&quot;soul&quot;, non-antagonistic) are in relation to the Primordial World something else, but not as something absolutely other but their own other. It is similar to Darwin&#x27;s paradox because the Curie symmetry group / (which does not map the information state of one mental pole to the other) produces &quot;opposite of the same as the other&quot; effects in the mind.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>In order to better understand the functioning of the human organism and the Eastern approach (China, Japan, Korea) to biological systems and the phenomenon of consciousness, Professor Đuro Koruga attended three years of Chinese language studies at the Faculty of Philology in Belgrade. He also collaborated intensively with researchers from the Faculty of Medicine and the Institute of Biology who deal with molecular biology. He defended his doctoral dissertation on the structural-energy-informational basis of microtubules and their significance for the mechanism of acupuncture in 1983. before the joint commission of the Faculty of Medicine and Mechanical Engineering, University of Belgrade. School year 1984/1985. received a Fulbright and IREX one-year scholarship for training in the USA in the field of biotechnologies. He conducts research in the field of quantum fundamentals of microtubules and molecular electronics for medical purposes within the Faculty of Medicine of the University of Arizona.</p>
+<p>After returning from the USA, at the end of 1985, he founded the Center for Molecular Machines at the Faculty of Mechanical Engineering in Belgrade, which deals with both classical and quantum fundamentals of biological systems. In the same year, he received an invitation to be a visiting teacher at Chuo University in Japan. After returning from Japan, he engaged in equipping the Center for Molecular Machines, which, with the acquisition of STM/AFM devices in 1990, enabled experimental research of quantum phenomena at the molecular level.   In 2007. he founded the department for biomedical engineering. He was the mentor of 32 doctoral dissertations, published 72 papers in international journals with the Impact Factor and over 150 other scientific and professional papers. He is the author of three monographs and co-author of six publications. It was cited 752 times, in the fields of biophysics, biomedical engineering  and nanotechnology. He has five international PCT / US / EU / Japan patents granted. For his innovative activity, he received numerous awards at international gatherings of innovators in Serbia, Europe, China, Russia, and was awarded the gold medal of the European Federation for Innovation as well as the WPIO (World Intellectual Property Organization) award for the best patent in 2018 (US2017035348 (A1), He was awarded the NIKOLA TESLA Gold Medal by the inventor of Belgrade.</p>
+<p>In 2024, he published the book &quot;Qi Engineering: Classical-Quantum Biophysics, Acupuncture and Chakras&quot;, which was translated into Chinese, which enabled a new quantum-classical approach to the diagnosis and therapy of the human organism.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

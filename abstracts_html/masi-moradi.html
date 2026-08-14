@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effect of T-Consciousness Fields on the Modulation of Random Number Distributions and Monte Carlo Simulations &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Masi Moradi</h1>
+  <p class="subtitle">Cosmointel, Vaughan, Ontario, Canada</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/masi-moradi.jpg" alt="Masi Moradi">
+    <div class="speaker-info">
+      <h2>Masi Moradi</h2>
+      <div class="affiliation">Cosmointel, Vaughan, Ontario, Canada</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Effect of T-Consciousness Fields on the Modulation of Random Number Distributions and Monte Carlo Simulations</div>
+
+  <div class="authors-line">Masi Moradi, Mohammad Ali Taheri, Reyhaneh Mahlouji, Farzad Ahmadkhanlou</div>
+  <div class="affiliations">Masi Moradi &mdash; Cosmointel, Vaughan, Ontario, Canada<br>Mohammad Ali Taheri &mdash; Cosmointel, Vaughan, Ontario, Canada<br>Reyhaneh Mahlouji &mdash; Cosmointel, Vaughan, Ontario, Canada<br>Farzad Ahmadkhanlou &mdash; University of California at Irvine, Irvine, CA, USA</div>
+
+  <div class="abstract-text">
+<p>Over the past decade, interest has grown in investigating the effects of T-Consciousness Fields (TCFs) on physical, chemical, and biological systems. Introduced by Mohammad Ali Taheri nearly four decades ago, TCFs are theorized as non-energetic, non-material subsets of the Cosmic Consciousness Network (CCN). They are posited to exert informational influences capable of modulating system behavior in measurable and statistically reproducible ways. Despite prior research in the natural sciences, no study has examined the potential impact of TCFs on computational software systems, particularly those simulating stochastic processes, such as Monte Carlo simulations and Random Number Generators (RNGs). Building on Taheri&rsquo;s postulate that computational programs may exhibit informational responsiveness, this study hypothesized that TCF exposure could meaningfully influence computational outputs. Two T-Consciousness Fields, designated TCF1 (Faradarmani®) and TCF2, were selected for this investigation. TCF1 is hypothesized to optimize system efficiency and stability in accordance with natural laws, whereas TCF2 is intended to direct system performance toward a specific informational objective, namely, the reduction of statistical noise. The research was conducted in two phases. Phase I involved generating ten sets of 1,000 random numbers using eight computational configurations, each independently exposed to TCF1 and to the combined TCF1+TCF2. Configurations varied by hardware (desktop or laptop), operating system (Windows or Linux), and programming language (C++ or Fortran). The resulting datasets were evaluated by calculating the mean, median, and Shannon entropy to assess differences between control and treatment outputs. Phase II employed the most responsive configuration identified in Phase I, C++ on a Linux desktop, to examine the effects of TCF on Monte Carlo simulations of one-dimensional (1D) integrals, two-dimensional (2D) areas, and three-dimensional (3D) volumes. For each dimension, 1,000 samplings with 100 iterations were performed under three conditions: control, TCF1, and combined TCF1+TCF2. The resulting data were analyzed for variance, entropy, and deviation from analytical solutions. Phase I revealed that RNGs in C++ on Linux were the most sensitive to TCF exposure. Both TCF1 and the combined TCF1+TCF2 conditions produced consistent modulations in output distributions, characterized by decreased Shannon entropy and systematic shifts in mean and median values compared with controls. In Phase II, as simulation dimensionality increased from 1D to 3D, computational uncertainty also increased, amplifying the system&rsquo;s susceptibility to TCF influence. Under combined TCF1+TCF2 exposure, 3D Monte Carlo simulations exhibited statistically significant changes (p &lt; 0.05), reduced entropy, and improved convergence toward analytical solutions, indicating enhanced computational coherence. These findings provide preliminary evidence that T-Consciousness Fields can measurably influence computational systems, particularly those involving stochastic or probabilistic processes. The observed reductions in entropy and improved convergence toward analytical solutions under TCF exposure support the hypothesis that these non-physical informational fields may modulate both biological and artificial systems. This study introduces a novel interdisciplinary research domain at the intersection of consciousness studies, computational science, and information theory, underscoring the need for further investigation into the mechanisms, reproducibility, and broader implications of TCF-induced effects.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Masi Moradi holds a bachelor&rsquo;s degree in Engineering and a master&rsquo;s degree in Business, with more than 20 years of experience in industrial sales and automation. She currently serves as a District Sales Manager at THK America, providing technical sales and support for automation, linear motion, and motion control applications throughout the Western United States. She is passionate about technology, innovation, and the exploration of consciousness.</p>
+<p>LinkedIn: https://www.linkedin.com/in/masimoradi</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

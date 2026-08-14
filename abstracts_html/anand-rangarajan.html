@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Missing Second Person: The Relaton Framework and the Hard Problem &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Anand Rangarajan</h1>
+  <p class="subtitle">University of Florida, Gainesville, Florida, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>Anand Rangarajan</h2>
+      <div class="affiliation">University of Florida, Gainesville, Florida, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Missing Second Person: The Relaton Framework and the Hard Problem</div>
+
+  <div class="abstract-text">
+<p>The hard problem of consciousness is traditionally framed as the challenge of explaining why and how physical processes are accompanied by subjective experience. While this formulation has generated extensive discussion regarding first-person phenomenology, it largely overlooks a second dimension of human experience: intersubjectivity. Just as subjective awareness resists straightforward reduction to third-person physical description, the lived reality of human relationships resists reduction to behavior, information processing, or cognitive modeling alone. We argue that contemporary philosophy of mind lacks a conceptual counterpart to the irreducible subject of experience. While philosophical traditions have developed sophisticated vocabularies for first-person awareness, they possess no comparable unit for describing irreducible second-person experience. To address this gap, we introduce the concept of the Relaton: a concrete unit of intersubjective experience (initially) formulated as existing between two or more sentient beings. The motivation for the relaton derives from a familiar phenomenological intuition. In ordinary life, we do not encounter another person merely as a collection of behaviors from which consciousness is inferred. Rather, we experience the presence of another conscious being directly through a relational field characterized by mutual recognition, responsiveness, and participation. Likewise, when observing deep dialog between others, the interpenetrating and immediate character of their relationship appears as a reality in its own right rather than as a byproduct of independent mental states. While individual selves and subjective viewpoints can be---and frequently are---eliminated or explained away in various materialist and functionalist formalisms, we will argue that the relaton resists such elimination. We suggest that this relational reality deserves explicit theoretical treatment. To formalize this idea, we represent a relaton as a tuple (k,l), where k and l denote four modes of engagement: third-person (3), second-person (2), first-person (1), and zeroth-person (0), the latter corresponding to awareness itself. Within this framework, ordinary first-person phenomenology may be represented as (1,3)---a standard subject-object relaton, second-person dialog as (2,2), and purely physical events as (3,3). In a clear payoff, the zeroth person concept results in the (0,3) relaton in which awareness directly operates on phenomenal content. The resulting relaton matrix provides a compact vocabulary for characterizing a wide range of experiential and social configurations. The utility of this framework becomes particularly evident in the context of artificial intelligence. A typical human-human interaction constitutes a symmetric (2,2) concrete relationship in which both participants occupy a second-person mode or perhaps a (1,2) relaton in which one person is in first person &quot;mansplaining&quot; mode. By contrast, a human-AI interaction is more accurately described as (2,3): the human participant enters a relational stance characterized by empathy, expectation, and social projection, while the AI remains a non-sentient third-person system. [It is also possible that the human-AI relaton is (1,3) where the human is in traditional first person mode.] As AI becomes increasingly embedded in social life, such asymmetries will become psychologically and culturally significant. The relaton framework offers a new approach to intersubjectivity, providing a formal vocabulary for describing second-person experience and its relation to consciousness, culture, and emerging human-AI relationships.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Anand Rangarajan received his Ph.D. in Electrical Engineering - Systems from the University of Southern California in 1991. From 1991 to 2000 he was first a postdoc/associate research scientist in the AI Lab, Yale University and subsequently an assistant professor in Electrical Engineering and Diagnostic Radiology, Yale University. He is currently a Professor of Computer Science at the University of Florida. His research spans machine learning, computer vision, scientific data analysis, remote sensing and the science of consciousness. In parallel with his work in artificial intelligence and computational science, he has maintained a long-standing interest in consciousness studies and has presented at the Science of Consciousness conference series on numerous occasions over the past two decades.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concurrent Presentations &mdash; The Science of Consciousness 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+
+.session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
+.session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.day-tabs { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.day-tab {
+  padding: .5rem 1.2rem; border: 1px solid #cdd7e1; border-radius: 8px 8px 0 0;
+  border-bottom: 3px solid transparent; background: #f5f8fb;
+  font-size: .9rem; font-weight: 700; color: #0a2440;
+  cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.day-tab span { display: block; font-size: .72rem; font-weight: 400; color: #667; }
+.day-tab:hover { background: #e2edf2; }
+.day-tab.active { background: #0a2440; color: #fff; border-color: #0a2440; border-bottom-color: #1a96b8; }
+.day-tab.active span { color: #9fc3d8; }
+.day-pane { display: none; }
+.day-pane.active { display: block; }
+.menu-section { margin-bottom: 1.1rem; }
+.menu-section-title {
+  font-size: .95rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff !important; background: #24303a; border-left: 4px solid #1a96b8;
+  padding: .4rem .7rem; border-radius: 4px; margin-bottom: .55rem;
+}
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #b8d4d8; border-color: #1a96b8; }
+.menu-btn .btn-time { font-size: .72rem; font-weight: 400; color: #555; display: block; margin-top: .15rem; }
+
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel { display: none; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: .5rem; }
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .3rem; }
+.session-panel .ws-meta { font-size: .82rem; color: #666; margin-bottom: .8rem; }
+.session-panel .ws-note { font-size: .92rem; color: #555; font-style: italic; }
+.session-panel .list-head {
+  font-size: .95rem; font-weight: 700; color: #0a2440;
+  margin: 1.4rem 0 .5rem; padding-top: 1rem; border-top: 1px solid #e4e8ee;
+}
+.poster-cols { font-size: .88rem; column-width: 24rem; column-gap: 2rem; }
+.poster-cols p { margin: 0 0 .35rem; break-inside: avoid; }
+
+.talk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.1rem; margin-top: .4rem; }
+.talk { text-align: center; font-size: .84rem; }
+.talk .av, .talk .ini {
+  width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .45rem; box-shadow: 0 3px 10px rgba(10,36,64,.2);
+}
+.talk .ini { background: linear-gradient(135deg, #1a96b8, #0a2440); color: #fff; font-weight: 700; font-size: 1.6rem; }
+.talk .nm { display: block; font-weight: 700; color: #0a2440; line-height: 1.25; margin-bottom: .2rem; }
+.talk .tt { display: block; font-size: .8rem; line-height: 1.35; }
+.talk .pid { display: block; font-size: .72rem; font-weight: 600; color: #888; letter-spacing: .03em; margin-bottom: .2rem; }
+.poster-cols .pid { font-weight: 700; color: #888; white-space: nowrap; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Concurrent Presentations</h1>
+  <p class="subtitle">117 talks in 24 sessions &middot; Monday&ndash;Thursday, 5:00&ndash;7:05 pm</p>
+</header>
+
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<div class="session-menu">
+  <h2>Select a session:</h2>
+  <div class="day-tabs">
+    <button class="day-tab" data-day="mon" onclick="showSession(null,'mon-1')">Monday<span>October 12</span></button>
+    <button class="day-tab" data-day="tue" onclick="showSession(null,'tue-1')">Tuesday<span>October 13</span></button>
+    <button class="day-tab" data-day="wed" onclick="showSession(null,'wed-1')">Wednesday<span>October 14</span></button>
+    <button class="day-tab" data-day="thu" onclick="showSession(null,'thu-1')">Thursday<span>October 15</span></button>
+  </div>
+  <div class="day-pane" id="day-mon">
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="mon-1" onclick="showSession(this,'mon-1')">MON-1 &middot; Quantum Theories of Consciousness and the Measurement Problem<span class="btn-time">5 talks &middot; Ballroom</span></button>
+      <button class="menu-btn" data-panel="mon-2" onclick="showSession(this,'mon-2')">MON-2 &middot; Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="mon-3" onclick="showSession(this,'mon-3')">MON-3 &middot; Unified and Universal Frameworks: Consciousness Beyond the Brain<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="mon-4" onclick="showSession(this,'mon-4')">MON-4 &middot; Philosophical Theories of Consciousness: Realism, Dual-Aspect, and the Hard Problem<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="mon-5" onclick="showSession(this,'mon-5')">MON-5 &middot; Qualia, Intentionality, and Free Will: Foundations in Philosophy of Mind<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="mon-6" onclick="showSession(this,'mon-6')">MON-6 &middot; Biophysics of Living Systems: Light, Water, Mitochondria, and Healing<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="mon-7" onclick="showSession(this,'mon-7')">MON-7 &middot; Embodied and Situated Cognition: Body, Movement, and Conscious Experience<span class="btn-time">5 talks &middot; Breakout</span></button>
+    </div>
+  </div>
+  <div class="day-pane" id="day-tue">
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="tue-1" onclick="showSession(this,'tue-1')">TUE-1 &middot; Neural and Physiological Correlates of Conscious States<span class="btn-time">5 talks &middot; Ballroom</span></button>
+      <button class="menu-btn" data-panel="tue-2" onclick="showSession(this,'tue-2')">TUE-2 &middot; Contemplative Practice and Transformation: Breath, Heart, and Awakening<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="tue-3" onclick="showSession(this,'tue-3')">TUE-3 &middot; Field, Information, and Energy: Physical Frameworks for Consciousness<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="tue-4" onclick="showSession(this,'tue-4')">TUE-4 &middot; Psychedelic and Contemplative Altered States: Mechanisms and Therapeutic Outcomes<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="tue-5" onclick="showSession(this,'tue-5')">TUE-5 &middot; Parapsychology, Mediumship, and Near-Death Experience<span class="btn-time">4 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="tue-6" onclick="showSession(this,'tue-6')">TUE-6 &middot; Prediction, Decision, and Paradox: Structural Arguments About Consciousness<span class="btn-time">3 talks &middot; Breakout</span></button>
+    </div>
+  </div>
+  <div class="day-pane" id="day-wed">
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="wed-1" onclick="showSession(this,'wed-1')">WED-1 &middot; The Hard Problem and the Explanatory Gap<span class="btn-time">5 talks &middot; Ballroom</span></button>
+      <button class="menu-btn" data-panel="wed-2" onclick="showSession(this,'wed-2')">WED-2 &middot; Artificial Agents, Imagination, and Cognitive Architectures<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="wed-3" onclick="showSession(this,'wed-3')">WED-3 &middot; Quantum Brain Biology: Microtubules, Orch OR, and Coherent Substrates<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="wed-4" onclick="showSession(this,'wed-4')">WED-4 &middot; Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="wed-5" onclick="showSession(this,'wed-5')">WED-5 &middot; Evolution, Origins of Life, and the Emergence of Consciousness<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="wed-6" onclick="showSession(this,'wed-6')">WED-6 &middot; Poster Winner Presentations<span class="btn-time">to be announced</span></button>
+    </div>
+  </div>
+  <div class="day-pane" id="day-thu">
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="thu-1" onclick="showSession(this,'thu-1')">THU-1 &middot; Machine Consciousness: Tests, Architectures, and Conscious Agency in AI<span class="btn-time">5 talks &middot; Ballroom</span></button>
+      <button class="menu-btn" data-panel="thu-2" onclick="showSession(this,'thu-2')">THU-2 &middot; Mental Causation and the Function of Consciousness<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="thu-3" onclick="showSession(this,'thu-3')">THU-3 &middot; Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="thu-4" onclick="showSession(this,'thu-4')">THU-4 &middot; Phenomenology and First-Person Methods in Consciousness Research<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="thu-5" onclick="showSession(this,'thu-5')">THU-5 &middot; Consciousness-Based Science: Information, Memory, and Temporal Integration<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="thu-6" onclick="showSession(this,'thu-6')">THU-6 &middot; Art, Myth, and Dream: Cultural and Humanistic Approaches to Consciousness<span class="btn-time">5 talks &middot; Breakout</span></button>
+      <button class="menu-btn" data-panel="thu-7" onclick="showSession(this,'thu-7')">THU-7 &middot; Poster Winner Presentations<span class="btn-time">to be announced</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="session-wrap">
+<div class="session-panel" id="panel-mon-1">
+  <h3>MON-1 &mdash; Quantum Theories of Consciousness and the Measurement Problem</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Ballroom</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/avtar-singh.jpg" alt="Avtar Singh" loading="lazy"><span class="nm">Avtar Singh</span><a class="tt" href="abstracts_html/avtar-singh.html">Resolving Collapse of Wavefunction and Quantum Foundational Paradoxes via Integrating New Physics of Particle Instability with Gravity</a></div>
+    <div class="talk"><img class="av" src="img/kelvin-mcqueen.jpg" alt="Kelvin McQueen" loading="lazy"><span class="nm">Kelvin McQueen</span><a class="tt" href="abstracts_html/kelvin-mcqueen.html">No-Cloning Constraints on Quantum Theories of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/thomas-brophy.jpg" alt="Thomas Brophy" loading="lazy"><span class="nm">Thomas Brophy</span><a class="tt" href="abstracts_html/thomas-brophy.html">The Copenhagen Opening: A Meta-Theoretical Framework for the Ontological Status of Psi</a></div>
+    <div class="talk"><img class="av" src="img/natasha-greenstein.jpg" alt="Natasha Greenstein" loading="lazy"><span class="nm">Natasha Greenstein</span><a class="tt" href="abstracts_html/natasha-greenstein.html">Formal representations for conscious agent influence in quantum random number generators</a></div>
+    <div class="talk"><img class="av" src="img/rajanikant-panda.jpg" alt="Rajanikant Panda," loading="lazy"><span class="nm">Rajanikant Panda,</span><a class="tt" href="abstracts_html/rajanikant-panda.html">The Exceptional Lie Group E8 as a Candidate Symmetry Scaflold for Cortical State-Space Dynamics</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-2">
+  <h3>MON-2 &mdash; Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/florian-muller.jpg" alt="Florian Müller" loading="lazy"><span class="nm">Florian Müller</span><a class="tt" href="abstracts_html/florian-muller.html">The Geometry of Coherence: Boundary&ndash;Interior Reconstructibility and Neural State Stability</a></div>
+    <div class="talk"><img class="av" src="img/maria-fini.jpg" alt="Maria Fini" loading="lazy"><span class="nm">Maria Fini</span><a class="tt" href="abstracts_html/maria-fini.html">Evidence of multiplicity in the subconscious mind from Internal Family Systems therapy and dissociative identity disorder</a></div>
+    <div class="talk"><img class="av" src="img/mateusz-gola.jpg" alt="Mateusz Gola" loading="lazy"><span class="nm">Mateusz Gola</span><a class="tt" href="abstracts_html/mateusz-gola.html">Slow Grokking or Sudden Escape: Two Computational Models of Consciousness in Spontaneous and Psychedelic-Assisted Addiction Recovery</a></div>
+    <div class="talk"><img class="av" src="img/jacques-singer.jpg" alt="Jacques Singer" loading="lazy"><span class="nm">Jacques Singer</span><a class="tt" href="abstracts_html/jacques-singer.html">The physiology of interoception and its adaptive role in consciousness</a></div>
+    <div class="talk"><img class="av" src="img/mark-bailey.jpg" alt="Mark Bailey" loading="lazy"><span class="nm">Mark Bailey</span><a class="tt" href="abstracts_html/mark-bailey.html">Spectral Diagnostics of Emergent Organization: Measuring Integration, Modularity, and Hidden Coalitions</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-3">
+  <h3>MON-3 &mdash; Unified and Universal Frameworks: Consciousness Beyond the Brain</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/federico-bisiacchi.jpg" alt="Federico Bisiacchi" loading="lazy"><span class="nm">Federico Bisiacchi</span><a class="tt" href="abstracts_html/federico-bisiacchi.html">Unified fractal consciousness theory (UFCT)</a></div>
+    <div class="talk"><img class="av" src="img/reese-greenwood.jpg" alt="Reese Greenwood" loading="lazy"><span class="nm">Reese Greenwood</span><a class="tt" href="abstracts_html/reese-greenwood.html">Nested Fractal Reality Framework: A Step Towards A Unifying Consciousness Theory</a></div>
+    <div class="talk"><img class="av" src="img/djuro-koruga.jpg" alt="Djuro Koruga" loading="lazy"><span class="nm">Djuro Koruga</span><a class="tt" href="abstracts_html/djuro-koruga.html">TRISKELION CONSCIOUSNESS: Darwin&#x27;s paradox and the phenomenon of consciousness</a></div>
+    <div class="talk"><img class="av" src="img/rizwan-virk.jpg" alt="Rizwan Virk" loading="lazy"><span class="nm">Rizwan Virk</span><a class="tt" href="abstracts_html/rizwan-virk.html">The Simulation Hypothesis: RPG vs. NPC and the parallels between AI, technoscience and religious ideas of consciousness.</a></div>
+    <div class="talk"><img class="av" src="img/ulf-holmberg.jpg" alt="Ulf Holmberg" loading="lazy"><span class="nm">Ulf Holmberg</span><a class="tt" href="abstracts_html/ulf-holmberg.html">Does the Novel Market Sentiment Measure Work? A Preregistered Out-of-Sample Replication</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-4">
+  <h3>MON-4 &mdash; Philosophical Theories of Consciousness: Realism, Dual-Aspect, and the Hard Problem</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><div class="ini">DM</div><span class="nm">Donald Mender</span><a class="tt" href="abstracts_html/donald-mender.html">Laws of the Impossible in the Science of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/farzad-ahmadkhanlou.jpg" alt="Farzad Ahmadkhanlou" loading="lazy"><span class="nm">Farzad Ahmadkhanlou</span><a class="tt" href="abstracts_html/farzad-ahmadkhanlou.html">T-Consciousness, Entanglement, and Cosmos</a></div>
+    <div class="talk"><img class="av" src="img/william-robinson.jpg" alt="William Robinson" loading="lazy"><span class="nm">William Robinson</span><a class="tt" href="abstracts_html/william-robinson.html">Partial Access to Visual Periphery</a></div>
+    <div class="talk"><img class="av" src="img/shoshannah-bryn-jones-square.jpg" alt="Shoshannah Bryn Jones Square" loading="lazy"><span class="nm">Shoshannah Bryn Jones Square</span><a class="tt" href="abstracts_html/shoshannah-bryn-jones-square.html">Romantic Transport, Consciousness Folding, and the Climate Crisis: Mary Shelley&rsquo;s Neuroscience of Awe</a></div>
+    <div class="talk"><img class="av" src="img/john-stuller.jpg" alt="John Stuller" loading="lazy"><span class="nm">John Stuller</span><a class="tt" href="abstracts_html/john-stuller.html">When Physics Meets Its Limit: Consciousness as a Second Ontological Realm</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-5">
+  <h3>MON-5 &mdash; Qualia, Intentionality, and Free Will: Foundations in Philosophy of Mind</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/dr-deepak-ranade.jpg" alt="Dr Deepak Ranade" loading="lazy"><span class="nm">Dr Deepak Ranade</span><a class="tt" href="abstracts_html/dr-deepak-ranade.html">Redefining the Default Mode Network using fMRI Bold sequences and it&#x27;s role in cognition of &#x27;Self &#x27;</a></div>
+    <div class="talk"><img class="av" src="img/nicolas-rouleau.jpg" alt="Nicolas Rouleau" loading="lazy"><span class="nm">Nicolas Rouleau</span><a class="tt" href="abstracts_html/nicolas-rouleau.html">Superstitious conditioning shapes the illusory experience of free will under causal determinism</a></div>
+    <div class="talk"><img class="av" src="img/abraham-haskins.jpg" alt="Abraham Haskins" loading="lazy"><span class="nm">Abraham Haskins</span><a class="tt" href="abstracts_html/abraham-haskins.html">Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via Cognitive Affordances</a></div>
+    <div class="talk"><img class="av" src="img/cassandra-vieten.jpg" alt="Cassandra Vieten" loading="lazy"><span class="nm">Cassandra Vieten</span><a class="tt" href="abstracts_html/cassandra-vieten.html">Defining Imagination: A Conceptual Map and Proposed Model</a></div>
+    <div class="talk"><img class="av" src="img/chloe-loewith.jpg" alt="Chloe Loewith" loading="lazy"><span class="nm">Chloe Loewith</span><a class="tt" href="abstracts_html/chloe-loewith.html">Embodiment and Consciousness for Biohybrid Minds</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-6">
+  <h3>MON-6 &mdash; Biophysics of Living Systems: Light, Water, Mitochondria, and Healing</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/glen-rein.jpg" alt="Glen Rein" loading="lazy"><span class="nm">Glen Rein</span><a class="tt" href="abstracts_html/glen-rein.html">Quantum Energy Activation Transfer Using First in Class Vedic ConsecrationTechnology</a></div>
+    <div class="talk"><img class="av" src="img/nicole-lav.jpg" alt="Nicole Lav" loading="lazy"><span class="nm">Nicole Lav</span><a class="tt" href="abstracts_html/nicole-lav.html">Fate Before Form: Predicting Neuronal and Astrocyte Fate in Neural Stem Cells</a></div>
+    <div class="talk"><img class="av" src="img/amal-alachkar.jpg" alt="Amal Alachkar" loading="lazy"><span class="nm">Amal Alachkar</span><a class="tt" href="abstracts_html/amal-alachkar.html">The Material Substrate for Agency: A DOPA-Based Biophysical Scaffold in the Brain</a></div>
+    <div class="talk"><img class="av" src="img/venkatesh-chembrolu.jpg" alt="Venkatesh Chembrolu" loading="lazy"><span class="nm">Venkatesh Chembrolu</span><a class="tt" href="abstracts_html/venkatesh-chembrolu.html">Meaning Before Alignment: A Consciousness-First Account of AI Ethics</a></div>
+    <div class="talk"><img class="av" src="img/deanna-minich.jpg" alt="Deanna Minich" loading="lazy"><span class="nm">Deanna Minich</span><a class="tt" href="abstracts_html/deanna-minich.html">Melatonin and the Architecture of Consciousness: Light, Mitochondria, and the Rhythms of Awareness</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-mon-7">
+  <h3>MON-7 &mdash; Embodied and Situated Cognition: Body, Movement, and Conscious Experience</h3>
+  <div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/joseph-martis.png" alt="Joseph Martis" loading="lazy"><span class="nm">Joseph Martis</span><a class="tt" href="abstracts_html/joseph-martis.html">Selective Attention and Learning Outcome Effects of Psilocybin in Mice</a></div>
+    <div class="talk"><img class="av" src="img/annie-browning.jpg" alt="Annie Browning" loading="lazy"><span class="nm">Annie Browning</span><a class="tt" href="abstracts_html/annie-browning.html">Altered Temporal Experience During Structured Oculorespiratory Practice: An Exploratory Program Evaluation</a></div>
+    <div class="talk"><img class="av" src="img/kingson-man.png" alt="Kingson Man" loading="lazy"><span class="nm">Kingson Man</span><a class="tt" href="abstracts_html/kingson-man.html">Skin in the Game: Embodied Vulnerability for the Emergence of Feeling-Like Behavior in Artificial Agents</a></div>
+    <div class="talk"><img class="av" src="img/logan-linthicum.jpg" alt="Logan Linthicum" loading="lazy"><span class="nm">Logan Linthicum</span><a class="tt" href="abstracts_html/logan-linthicum.html">The Fascial Transducer: A Missing Middle Between Movement, Body, and Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/igor-nazarov.jpg" alt="Igor Nazarov" loading="lazy"><span class="nm">Igor Nazarov</span><a class="tt" href="abstracts_html/igor-nazarov.html">Pre-Sensory Consciousness: Synesthesia, Soviet Biophysical Evidence, and the Metabolic Cost of Cross-Modal Embodiment</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-1">
+  <h3>TUE-1 &mdash; Neural and Physiological Correlates of Conscious States</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Ballroom</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/karishma-chhabria.png" alt="Karishma Chhabria" loading="lazy"><span class="nm">Karishma Chhabria</span><a class="tt" href="abstracts_html/karishma-chhabria.html">Information-theoretic coupling as a mechanism for selective synchrony in oscillator network</a></div>
+    <div class="talk"><img class="av" src="img/raul-valverde.jpg" alt="Raul Valverde" loading="lazy"><span class="nm">Raul Valverde</span><a class="tt" href="abstracts_html/raul-valverde.html">The integration of the Dual-Function Theory of Neural Computation and the Conscious Electromagnetic Information Field Theory as a framework to unify biofield and neuroscience theories</a></div>
+    <div class="talk"><img class="av" src="img/bruce-maciver.png" alt="Bruce MacIver" loading="lazy"><span class="nm">Bruce MacIver</span><a class="tt" href="abstracts_html/bruce-maciver.html">High Frequency (&gt; 1.0 KHz) Signals in Frontal Cortex at Loss and Recovery of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/logan-trujillo.jpg" alt="Logan Trujillo" loading="lazy"><span class="nm">Logan Trujillo</span><a class="tt" href="abstracts_html/logan-trujillo.html">An Exploratory Investigation into the EEG Characteristics of the Visual Awareness Negativity</a></div>
+    <div class="talk"><img class="av" src="img/oren-shriki.jpg" alt="Oren Shriki" loading="lazy"><span class="nm">Oren Shriki</span><a class="tt" href="abstracts_html/oren-shriki.html">Critical Brain Dynamics and the ConCrit Framework: From Neural Transitions to Conscious Experience</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-2">
+  <h3>TUE-2 &mdash; Contemplative Practice and Transformation: Breath, Heart, and Awakening</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/eric-garland.jpg" alt="Eric Garland" loading="lazy"><span class="nm">Eric Garland</span><a class="tt" href="abstracts_html/eric-garland.html">Can Momentary Ego Dissolution Permanently Reshape Awareness? Psychedelic and Meditation-Induced Self-Transcendent States Mediate the Development of Trait Mindfulness</a></div>
+    <div class="talk"><img class="av" src="img/helen-lavretsky.jpg" alt="Helen Lavretsky" loading="lazy"><span class="nm">Helen Lavretsky</span><a class="tt" href="abstracts_html/helen-lavretsky.html">Neuroscience of spiritual awakening: lessons learned from the clinical trials of mind-body therapies.</a></div>
+    <div class="talk"><img class="av" src="img/jennifer-penberthy.jpg" alt="Jennifer Penberthy" loading="lazy"><span class="nm">Jennifer Penberthy</span><a class="tt" href="abstracts_html/jennifer-penberthy.html">Meditation, Psychedelic States, and After-Death Communication: Insights from Research</a></div>
+    <div class="talk"><img class="av" src="img/joel-bennett.jpg" alt="Joel Bennett" loading="lazy"><span class="nm">Joel Bennett</span><a class="tt" href="abstracts_html/joel-bennett.html">Temporal Awareness as Practice: Integrating Science, Contemplation, and Presence</a></div>
+    <div class="talk"><img class="av" src="img/elizabeth-krasnoff.jpg" alt="Elizabeth Krasnoff" loading="lazy"><span class="nm">Elizabeth Krasnoff</span><a class="tt" href="abstracts_html/elizabeth-krasnoff.html">Binaural Beats as Experiential &ldquo;Digital Drugs&rdquo;</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-3">
+  <h3>TUE-3 &mdash; Field, Information, and Energy: Physical Frameworks for Consciousness</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/thomas-varley.png" alt="Thomas Varley" loading="lazy"><span class="nm">Thomas Varley</span><a class="tt" href="abstracts_html/thomas-varley.html">&quot;Pharmacological modulation of brain-like information integration dynamics in non-neural Xenobot tissues&quot;</a></div>
+    <div class="talk"><img class="av" src="img/christopher-hudson.jpg" alt="Christopher Hudson" loading="lazy"><span class="nm">Christopher Hudson</span><a class="tt" href="abstracts_html/christopher-hudson.html">Time as a Trifecta of Consciousness, Change, and the Timeless</a></div>
+    <div class="talk"><img class="av" src="img/debra-overberg.jpg" alt="Debra Overberg" loading="lazy"><span class="nm">Debra Overberg</span><a class="tt" href="abstracts_html/debra-overberg.html">Consciousness Field Based on Electromagnetic/Weak Forces: The Bioneutrino Field Hypothesis</a></div>
+    <div class="talk"><img class="av" src="img/rulin-xiu.jpg" alt="Rulin Xiu" loading="lazy"><span class="nm">Rulin Xiu</span><a class="tt" href="abstracts_html/rulin-xiu.html">A Quantum Theory of Consciousness and Its Application to the Mechanism of Sleep</a></div>
+    <div class="talk"><img class="av" src="img/scott-koshland.png" alt="Scott Koshland" loading="lazy"><span class="nm">Scott Koshland</span><a class="tt" href="abstracts_html/scott-koshland.html">The Neutrino and Etheric Fields</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-4">
+  <h3>TUE-4 &mdash; Psychedelic and Contemplative Altered States: Mechanisms and Therapeutic Outcomes</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/sebastian-ehmann.jpg" alt="Sebastian Ehmann" loading="lazy"><span class="nm">Sebastian Ehmann</span><a class="tt" href="abstracts_html/sebastian-ehmann.html">Predictors of Altered Consciousness and Self-Transcendent Perceptual Dynamics in a Naturalistic Psychedelic Retreat Study</a></div>
+    <div class="talk"><img class="av" src="img/michael-winkelman.jpg" alt="Michael Winkelman" loading="lazy"><span class="nm">Michael Winkelman</span><a class="tt" href="abstracts_html/michael-winkelman.html">Roles of the Affective Core Self in Consciousness, Spiritual Experiences, and Psychedelic Effects</a></div>
+    <div class="talk"><img class="av" src="img/sitara-taddeo.jpg" alt="Sitara Taddeo" loading="lazy"><span class="nm">Sitara Taddeo</span><a class="tt" href="abstracts_html/sitara-taddeo.html">A Prospective, Longitudinal Evaluation of Participation in an Online Out-of-Body Experience (OBE) Workshop</a></div>
+    <div class="talk"><img class="av" src="img/cedric-cannard.jpg" alt="Cedric Cannard" loading="lazy"><span class="nm">Cedric Cannard</span><a class="tt" href="abstracts_html/cedric-cannard.html">Hypocapnia, Autonomic Signatures, and Gamma-Band Reconfiguration During Wim Hof Breathing Method and Cold Immersion: A Comparative Study Between Naïve and Level 2 Experts</a></div>
+    <div class="talk"><img class="av" src="img/brian-lord.jpg" alt="Brian Lord" loading="lazy"><span class="nm">Brian Lord</span><a class="tt" href="abstracts_html/brian-lord.html">Enhanced Mystical Experience and Practice-Dependent EEG After-Effects of Pulsed Photobiomodulation During Meditation: A Sham-Controlled Crossover Study</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-5">
+  <h3>TUE-5 &mdash; Parapsychology, Mediumship, and Near-Death Experience</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/anatoly-goldstein.jpg" alt="Anatoly Goldstein" loading="lazy"><span class="nm">Anatoly Goldstein</span><a class="tt" href="abstracts_html/anatoly-goldstein.html">Geometry of Direct Voice Mediumship</a></div>
+    <div class="talk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler" loading="lazy"><span class="nm">Marina Weiler</span><a class="tt" href="abstracts_html/marina-weiler.html">Stylistic and thematic evidence for authorship compatibility in the mediumistic poetry of Chico Xavier</a></div>
+    <div class="talk"><img class="av" src="img/saeedeh-sadeghi.png" alt="Saeedeh Sadeghi" loading="lazy"><span class="nm">Saeedeh Sadeghi</span><a class="tt" href="abstracts_html/saeedeh-sadeghi.html">A Large-Scale Analysis of Temporal Patterns in Purported Past-Life Memory Cases</a></div>
+    <div class="talk"><img class="av" src="img/tea-mui.png" alt="Tea Mužić" loading="lazy"><span class="nm">Tea Mužić</span><a class="tt" href="abstracts_html/tea-mui.html">Comparative Analysis of Independent Random Number Generator Systems During a Yogic Consecration Process of Linga Bhairavi Temple</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-tue-6">
+  <h3>TUE-6 &mdash; Prediction, Decision, and Paradox: Structural Arguments About Consciousness</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/christopher-tyler.jpg" alt="Christopher Tyler" loading="lazy"><span class="nm">Christopher Tyler</span><a class="tt" href="abstracts_html/christopher-tyler.html">The Interstitial Pathways as the Substrate of Phenomenal Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/steve-taylor.jpg" alt="Steve Taylor" loading="lazy"><span class="nm">Steve Taylor</span><a class="tt" href="abstracts_html/steve-taylor.html">Daneel: A Scalable Architecture for Sentient Artificial Intelligence Based on the Executive Continuous Thread Theory of Consciousness.</a></div>
+    <div class="talk"><img class="av" src="img/william-adams.jpg" alt="William Adams" loading="lazy"><span class="nm">William Adams</span><a class="tt" href="abstracts_html/william-adams.html">The Granularity of Consciousness</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-1">
+  <h3>WED-1 &mdash; The Hard Problem and the Explanatory Gap</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm &middot; Ballroom</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/thomas-campbell.jpg" alt="Thomas Campbell" loading="lazy"><span class="nm">Thomas Campbell</span><a class="tt" href="abstracts_html/thomas-campbell.html">Reality is Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/tam-hunt.png" alt="Tam Hunt" loading="lazy"><span class="nm">Tam Hunt</span><a class="tt" href="abstracts_html/tam-hunt.html">General Resonance Theory 2.0: The Evolutionary History and Mechanisms of Electromagnetic Field-Based Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/douglas-matzke.jpg" alt="Douglas Matzke" loading="lazy"><span class="nm">Douglas Matzke</span><a class="tt" href="abstracts_html/douglas-matzke.html">Existons Solve the Hard Problem of Consciousness at the Planck Scale</a></div>
+    <div class="talk"><img class="av" src="img/craig-delancey.jpg" alt="Craig DeLancey" loading="lazy"><span class="nm">Craig DeLancey</span><a class="tt" href="abstracts_html/craig-delancey.html">Teleology and the character of phenomenal events</a></div>
+    <div class="talk"><img class="av" src="img/dani-caputi.jpg" alt="Dani Caputi" loading="lazy"><span class="nm">Dani Caputi</span><a class="tt" href="abstracts_html/dani-caputi.html">Confronting Subjectivity</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-2">
+  <h3>WED-2 &mdash; Artificial Agents, Imagination, and Cognitive Architectures</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/justin-riddle.jpg" alt="Justin Riddle" loading="lazy"><span class="nm">Justin Riddle</span><a class="tt" href="abstracts_html/justin-riddle.html">Hierarchical Brain Architecture as a Mechanism for Entity Encounters in Altered States</a></div>
+    <div class="talk"><img class="av" src="img/james-tagg.jpg" alt="James Tagg" loading="lazy"><span class="nm">James Tagg</span><a class="tt" href="abstracts_html/james-tagg.html">Why AGI May Be Mathematically Impossible</a></div>
+    <div class="talk"><img class="av" src="img/daniel-montoya.jpg" alt="Daniel Montoya" loading="lazy"><span class="nm">Daniel Montoya</span><a class="tt" href="abstracts_html/daniel-montoya.html">Can Computation Escape the Chinese Room? A Three-Constraint Framework for Evaluating Artificial Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/maria-patrick.jpg" alt="Maria Patrick" loading="lazy"><span class="nm">Maria Patrick</span><a class="tt" href="abstracts_html/maria-patrick.html">From Practice to Awareness: Longitudinal Changes in Meta-Awareness and Conscious Experience During Chin Mudra and Slow Deep Breathing</a></div>
+    <div class="talk"><img class="av" src="img/david-rosenboom.png" alt="David Rosenboom" loading="lazy"><span class="nm">David Rosenboom</span><a class="tt" href="abstracts_html/david-rosenboom.html">Consciousness and imagination&mdash;propositional music and illusions of form</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-3">
+  <h3>WED-3 &mdash; Quantum Brain Biology: Microtubules, Orch OR, and Coherent Substrates</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/akihiro-nishiyama.jpg" alt="Akihiro Nishiyama" loading="lazy"><span class="nm">Akihiro Nishiyama</span><a class="tt" href="abstracts_html/akihiro-nishiyama.html">Waveguide Quantum Electrodynamics: Tryptophans Entangled with Water as Data Qubits in a Microtubule</a></div>
+    <div class="talk"><div class="ini">MV</div><span class="nm">Mark Valladares</span><a class="tt" href="abstracts_html/mark-valladares.html">The Rigged Hilbert Space as the Geometry of Flow; A Formalism for Continuous Orch OR</a></div>
+    <div class="talk"><img class="av" src="img/julian-yocum.jpg" alt="Julian Yocum" loading="lazy"><span class="nm">Julian Yocum</span><a class="tt" href="abstracts_html/julian-yocum.html">Toward a Mathematical Theory of Polyatomic Time Crystals</a></div>
+    <div class="talk"><img class="av" src="img/joshua-roeloffs.png" alt="Joshua Roeloffs" loading="lazy"><span class="nm">Joshua Roeloffs</span><a class="tt" href="abstracts_html/joshua-roeloffs.html">On the Functional Significance of Quantum Effects at Subneuronal Scales</a></div>
+    <div class="talk"><img class="av" src="img/jason-padgett.jpg" alt="Jason Padgett" loading="lazy"><span class="nm">Jason Padgett</span><a class="tt" href="abstracts_html/jason-padgett.html">Physics as Informatics</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-4">
+  <h3>WED-4 &mdash; Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/stephen-kercel.jpg" alt="Stephen Kercel" loading="lazy"><span class="nm">Stephen Kercel</span><a class="tt" href="abstracts_html/stephen-kercel.html">What entanglement implies and what it does not</a></div>
+    <div class="talk"><img class="av" src="img/chris-laszlo.png" alt="Chris Laszlo" loading="lazy"><span class="nm">Chris Laszlo</span><a class="tt" href="abstracts_html/chris-laszlo.html">The Ervin Laszlo Memorial lecture on Science and the Akashic Field</a></div>
+    <div class="talk"><img class="av" src="img/ananth-ranga.jpeg" alt="Ananth Ranga" loading="lazy"><span class="nm">Ananth Ranga</span><a class="tt" href="abstracts_html/ananth-ranga.html">Hierarchical Dual-Aspect Realism: An Epistemic Hierarchy Between Experience and the Physical</a></div>
+    <div class="talk"><img class="av" src="img/arie-greenleaf.jpg" alt="Arie Greenleaf" loading="lazy"><span class="nm">Arie Greenleaf</span><a class="tt" href="abstracts_html/arie-greenleaf.html">The Hard Problem Is a Category Error: Consciousness as Content, Not Property&mdash;from Brains to AI</a></div>
+    <div class="talk"><img class="av" src="img/dianne-trussell.jpg" alt="Dianne Trussell" loading="lazy"><span class="nm">Dianne Trussell</span><a class="tt" href="abstracts_html/dianne-trussell.html">Quantum Information Panpsychism demonstrated by direction-specific, differential effects of emotional mood, valence, meditation and worldview on the Random Event Generator (REG).</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-5">
+  <h3>WED-5 &mdash; Evolution, Origins of Life, and the Emergence of Consciousness</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/igor-pivovarov.jpg" alt="Igor Pivovarov" loading="lazy"><span class="nm">Igor Pivovarov</span><a class="tt" href="abstracts_html/igor-pivovarov.html">TEVSER: how evolution of complex systems gives rise to consciousness and intelligence</a></div>
+    <div class="talk"><img class="av" src="img/zann-gill.jpg" alt="Zann Gill" loading="lazy"><span class="nm">Zann Gill</span><a class="tt" href="abstracts_html/zann-gill.html">From origins of life and mind to A.I. via Autonomy&ndash;Pattern Recognition (APR) Cycles</a></div>
+    <div class="talk"><img class="av" src="img/mark-friedman.jpg" alt="Mark Friedman" loading="lazy"><span class="nm">Mark Friedman</span><a class="tt" href="abstracts_html/mark-friedman.html">The Choice-Making Theory of Consciousness and the Origin of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/arik-shimansky.jpg" alt="Arik Shimansky" loading="lazy"><span class="nm">Arik Shimansky</span><a class="tt" href="abstracts_html/arik-shimansky.html">*Measuring the Unmeasurable: How Umwelt Information Content Drives the Emergence of Consciousness</a></div>
+    <div class="talk"><div class="ini">SB</div><span class="nm">Shashank Bharadwaj</span><a class="tt" href="abstracts_html/shashank-bharadwaj.html">Nonlocal Strings: A Comparative-Structural Analysis of Quantum Entanglement, Vibrational Ontology, and Adi Shankaracharya&rsquo;s Advaita Vedanta</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-wed-6">
+  <h3>WED-6 &mdash; Poster Winner Presentations</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 5:00&ndash;7:05 pm</div>
+  <p class="ws-note">Poster winner presentations &mdash; the winning posters will be announced during the conference.</p>
+</div>
+<div class="session-panel" id="panel-thu-1">
+  <h3>THU-1 &mdash; Machine Consciousness: Tests, Architectures, and Conscious Agency in AI</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Ballroom</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/ouri-wolfson.jpg" alt="Ouri Wolfson" loading="lazy"><span class="nm">Ouri Wolfson</span><a class="tt" href="abstracts_html/ouri-wolfson.html">Machine Correlates of Consciousness are Analogous to Neural Correlates of Consciousness: Why is it important?</a></div>
+    <div class="talk"><img class="av" src="img/kris-krug.jpg" alt="Kris Krüg" loading="lazy"><span class="nm">Kris Krüg</span><a class="tt" href="abstracts_html/kris-krug.html">Quantum Aesthetic Judgment: A Novel Approach to AI Consciousness Detection</a></div>
+    <div class="talk"><img class="av" src="img/keith-turausky.jpg" alt="Keith Turausky" loading="lazy"><span class="nm">Keith Turausky</span><a class="tt" href="abstracts_html/keith-turausky.html">Awareness Is All You Need: The Case for Cognitive Phenomenology in LLMs</a></div>
+    <div class="talk"><div class="ini">JB</div><span class="nm">Jeffrey Beck</span><a class="tt" href="abstracts_html/jeffrey-beck.html">Norbert Wiener&rsquo;s God and Golem, Inc., Sixty-Two Years On &ndash; Still as Relevant as Ever.</a></div>
+    <div class="talk"><img class="av" src="img/anna-mikeda.jpg" alt="Anna Mikeda" loading="lazy"><span class="nm">Anna Mikeda</span><a class="tt" href="abstracts_html/anna-mikeda.html">Building the Second Floor: Phenomenal Experience, Valence, and Genuine Stakes in Machine Consciousness</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-2">
+  <h3>THU-2 &mdash; Mental Causation and the Function of Consciousness</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/yoshiyuki-ohmura.jpg" alt="Yoshiyuki Ohmura" loading="lazy"><span class="nm">Yoshiyuki Ohmura</span><a class="tt" href="abstracts_html/yoshiyuki-ohmura.html">A Framework for a Testable Theory of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/carsten-korth.jpg" alt="Carsten Korth" loading="lazy"><span class="nm">Carsten Korth</span><a class="tt" href="abstracts_html/carsten-korth.html">Tool evolution as a prerequisite for consciousness</a></div>
+    <div class="talk"><img class="av" src="img/marilyn-schlitz.jpeg" alt="Marilyn Schlitz" loading="lazy"><span class="nm">Marilyn Schlitz</span><a class="tt" href="abstracts_html/marilyn-schlitz.html">The Psychomantium: Where Ancient Wisdom and Modern Technology Meet</a></div>
+    <div class="talk"><img class="av" src="img/joel-frohlich.jpg" alt="Joel Frohlich" loading="lazy"><span class="nm">Joel Frohlich</span><a class="tt" href="abstracts_html/joel-frohlich.html">The Dawn of Awareness: When does consciousness first develop in human life?</a></div>
+    <div class="talk"><img class="av" src="img/joanna-szczotka.jpg" alt="Joanna Szczotka" loading="lazy"><span class="nm">Joanna Szczotka</span><a class="tt" href="abstracts_html/joanna-szczotka.html">Consciousness vs sensory connectedness: a large-scale, high-density Neuropixels survey of spiking activity across cortical and subcortical sensory hierarchies</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-3">
+  <h3>THU-3 &mdash; Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/michael-cremo.jpg" alt="Michael Cremo" loading="lazy"><span class="nm">Michael Cremo</span><a class="tt" href="abstracts_html/michael-cremo.html">The Harder Problem: The Boundary Problem in Consciousness Studies</a></div>
+    <div class="talk"><img class="av" src="img/jeff-sugar.jpg" alt="Jeff Sugar" loading="lazy"><span class="nm">Jeff Sugar</span><a class="tt" href="abstracts_html/jeff-sugar.html">Edges of Reality: Dissociation, Synchronicity, and Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/scott-makeig.jpg" alt="Scott Makeig" loading="lazy"><span class="nm">Scott Makeig</span><a class="tt" href="abstracts_html/scott-makeig.html">The evolving Self</a></div>
+    <div class="talk"><img class="av" src="img/erkin-bek.jpg" alt="Erkin Bek" loading="lazy"><span class="nm">Erkin Bek</span><a class="tt" href="abstracts_html/erkin-bek.html">From Non-locality to Localised Density of Consciousness: Random Event Generator and EEG measurements During Deep Meditative Samadhi States</a></div>
+    <div class="talk"><img class="av" src="img/morgan-healey.jpg" alt="Morgan Healey" loading="lazy"><span class="nm">Morgan Healey</span><a class="tt" href="abstracts_html/morgan-healey.html">A network for self-transcendence derived from patients with brain lesions</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-4">
+  <h3>THU-4 &mdash; Phenomenology and First-Person Methods in Consciousness Research</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/rubin-naiman.jpg" alt="Rubin Naiman" loading="lazy"><span class="nm">Rubin Naiman</span><a class="tt" href="abstracts_html/rubin-naiman.html">From Cognitive Behavior Therapy to Consciousness Behavior Therapy -- Exploring the Clinical Potentials of Consciousness Studies</a></div>
+    <div class="talk"><img class="av" src="img/dana-kippel.jpg" alt="Dana Kippel" loading="lazy"><span class="nm">Dana Kippel</span><a class="tt" href="abstracts_html/dana-kippel.html">Phenomenology of Plasma-Consciousness Synergy: Toward a Unified Experiential Framework</a></div>
+    <div class="talk"><img class="av" src="img/fariba-bogzaran.jpg" alt="Fariba Bogzaran" loading="lazy"><span class="nm">Fariba Bogzaran</span><a class="tt" href="abstracts_html/fariba-bogzaran.html">Obstacles to Evolution of Consciousness: Two inquiries through scientific study of Lucid Dreaming.</a></div>
+    <div class="talk"><img class="av" src="img/stacey-simmons.jpg" alt="Stacey Simmons" loading="lazy"><span class="nm">Stacey Simmons</span><a class="tt" href="abstracts_html/stacey-simmons.html">Auto Induced Cognitive Trance/Transe Cognitive Auto Induite: Non-ordinary states of Consciousness beyond psychedelics in therapeutic practice</a></div>
+    <div class="talk"><img class="av" src="img/hidehiko-saegusa.png" alt="Hidehiko Saegusa" loading="lazy"><span class="nm">Hidehiko Saegusa</span><a class="tt" href="abstracts_html/hidehiko-saegusa.html">Large-Scale Mystical Experience Outcomes Following a Consciousness Transmission Protocol: Results from 1,038 Participants and a Double-Blind Controlled Study</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-5">
+  <h3>THU-5 &mdash; Consciousness-Based Science: Information, Memory, and Temporal Integration</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/brad-caldwell.jpg" alt="Brad Caldwell" loading="lazy"><span class="nm">Brad Caldwell</span><a class="tt" href="abstracts_html/brad-caldwell.html">Phenomenology of Sedation (Ring Bank Theory)</a></div>
+    <div class="talk"><img class="av" src="img/stephen-thaler.jpg" alt="Stephen Thaler" loading="lazy"><span class="nm">Stephen Thaler</span><a class="tt" href="abstracts_html/stephen-thaler.html">Toward Machine Sentience: Intrinsic Evaluation in Generative AI</a></div>
+    <div class="talk"><img class="av" src="img/lavanya-rajesh-kumar.png" alt="Lavanya Rajesh Kumar" loading="lazy"><span class="nm">Lavanya Rajesh Kumar</span><a class="tt" href="abstracts_html/lavanya-rajesh-kumar.html">Changes Recorded by the Sentiometer, a Putative Mind - State Measuring Device in Meditators and Non-Meditators</a></div>
+    <div class="talk"><img class="av" src="img/yong-liu.png" alt="Yong Liu" loading="lazy"><span class="nm">Yong Liu</span><a class="tt" href="abstracts_html/yong-liu.html">A Simplified 4-Channel EEG Framework for Bedside Consciousness Assessment in the ICU: Validation via Integrated Information Theory and Single-Session Repetitive Median Nerve Stimulation</a></div>
+    <div class="talk"><img class="av" src="img/mason-ulrika-borchard.jpg" alt="Mason Ulrika Borchard" loading="lazy"><span class="nm">Mason Ulrika Borchard</span><a class="tt" href="abstracts_html/mason-ulrika-borchard.html">Bursts, not mean shifts: the Immersive Ionosphere audiovisual-feedback QRNG platform tests the temporal-burst hypothesis, plus a sealed Human / LLM / PRNG follow-up</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-6">
+  <h3>THU-6 &mdash; Art, Myth, and Dream: Cultural and Humanistic Approaches to Consciousness</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm &middot; Breakout</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/aaron-breidenbach.jpg" alt="Aaron Breidenbach" loading="lazy"><span class="nm">Aaron Breidenbach</span><a class="tt" href="abstracts_html/aaron-breidenbach.html">From Anarakite to Ayni: Natural Quantum Materials, Animism, and the Importance of Reciprocity with Emergent Artificial Minds</a></div>
+    <div class="talk"><img class="av" src="img/ana-iribas-rudn.png" alt="Ana Iribas-Rudín" loading="lazy"><span class="nm">Ana Iribas-Rudín</span><a class="tt" href="abstracts_html/ana-iribas-rudn.html">The Mean Project: Digital Phenotypic Collapse and the Archetypal Image</a></div>
+    <div class="talk"><img class="av" src="img/jayne-gackenbach.jpg" alt="Jayne Gackenbach" loading="lazy"><span class="nm">Jayne Gackenbach</span><a class="tt" href="abstracts_html/jayne-gackenbach.html">This Mr. Machine Dies When Jayne Dies: Dream Work, Mortality, and Human-AI Consciousness Dialogue &mdash; A 3.5-Year First-Person Study</a></div>
+    <div class="talk"><img class="av" src="img/adam-curry.jpg" alt="Adam Curry" loading="lazy"><span class="nm">Adam Curry</span><a class="tt" href="abstracts_html/adam-curry.html">T2: A Novel Test for Assessing Latent Awareness in AI</a></div>
+    <div class="talk"><img class="av" src="img/olga-colbert.jpg" alt="Olga Colbert" loading="lazy"><span class="nm">Olga Colbert</span><a class="tt" href="abstracts_html/olga-colbert.html">The Variety of Literary Dream Experiences</a></div>
+  </div>
+</div>
+<div class="session-panel" id="panel-thu-7">
+  <h3>THU-7 &mdash; Poster Winner Presentations</h3>
+  <div class="ws-meta">Thursday, October 15 &middot; 5:00&ndash;7:05 pm</div>
+  <p class="ws-note">Poster winner presentations &mdash; the winning posters will be announced during the conference.</p>
+</div>
+</div>
+
+<footer></footer>
+<script src="footer.js"></script>
+
+<script>
+function showDay(day) {
+  document.querySelectorAll('.day-pane').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.day-tab').forEach(function(t) { t.classList.remove('active'); });
+  var pane = document.getElementById('day-' + day);
+  if (pane) pane.classList.add('active');
+  document.querySelectorAll('.day-tab[data-day="' + day + '"]').forEach(function(t) { t.classList.add('active'); });
+}
+/* Panel divs carry a 'panel-' id prefix so the URL hash (#ps1, #mon-1)
+   never matches an element id — the browser stays at the top of the page
+   instead of jumping to the anchor. */
+function showSession(btn, id) {
+  showDay(id.split('-')[0]);  /* no-op on pages without day tabs */
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  var panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  document.querySelectorAll('.menu-btn[data-panel="' + id + '"]').forEach(function(b) { b.classList.add('active'); });
+  if (window.history && history.replaceState) { history.replaceState(null, '', '#' + id); }
+}
+(function() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  showSession(null, (h && document.getElementById('panel-' + h)) ? h : 'mon-1');
+})();
+window.addEventListener('hashchange', function() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  if (document.getElementById('panel-' + h)) { showSession(null, h); }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fate Before Form: Predicting Neuronal and Astrocyte Fate in Neural Stem Cells &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Nicole Lav</h1>
+  <p class="subtitle">UCSD, La Jolla, CA, USA / UCI, Irvine, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/nicole-lav.jpg" alt="Nicole Lav">
+    <div class="speaker-info">
+      <h2>Nicole Lav</h2>
+      <div class="affiliation">UCSD, La Jolla, CA, USA / UCI, Irvine, CA, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-6">MON-6 &mdash; Biophysics of Living Systems: Light, Water, Mitochondria, and Healing</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Fate Before Form: Predicting Neuronal and Astrocyte Fate in Neural Stem Cells</div>
+
+  <div class="authors-line">Nicole Lav, Alan Jiang, Jazmine Moore, Kirsten Ha, Lisa Flanagan</div>
+  <div class="affiliations">Nicole Lav &mdash; UCSD, La Jolla, CA, USA / UCI, Irvine, CA, USA<br>Alan Jiang &mdash; UCI, Irvine, CA, USA<br>Jazmine Moore &mdash; UCI, Irvine, CA, USA<br>Kirsten Ha &mdash; UCI, Irvine, CA, USA<br>Lisa Flanagan &mdash; UCI, Irvine, CA, USA</div>
+
+  <div class="abstract-text">
+<p>How does a single layer of neural stem cells, forming 3 to 4 weeks into human development, give rise to the remarkable diversity of neurons and astrocytes that underlie human cognition and conscious experience? An important piece of the answer lies in the fate potential encoded within individual progenitor cells long before they commit to a lineage. Understanding how this potential is specified, detected, and controlled is central to developmental neuroscience and the biology of consciousness itself. Neural stem and progenitor cells (NSPCs) are heterogeneous: subpopulations are intrinsically biased toward neuron or astrocyte fates, and the cortex transitions from predominantly neurogenic to gliogenic output across embryonic development. Neurons transmit the electrical and chemical signals underlying perception and thought, while astrocytes regulate the synaptic environment that shapes neural circuit behavior. Disruption of this finely orchestrated balance during cortical development has profound consequences for cognition. Yet the mechanisms governing how a progenitor chooses its fate remain incompletely understood. We exploit this heterogeneity using the HOAPES device, a label-free, dielectrophoresis-based microfluidic sorter that resolves NSPC subpopulations based on intrinsic electrophysiological properties rather than molecular markers. Using mouse NSPCs isolated from developmentally staged cortex, we generated fate-biased populations spanning the neurogenic-to-gliogenic transition and validated their composition by immunocytochemistry. Parallel sorting of primary human NSPCs yielded consistent biophysical signatures, suggesting these electrophysiological fate correlates are conserved across species. To enable rapid pre-differentiation assessment of cellular composition, we developed a qRT-PCR assay identifying lineage-specific gene expression signatures: NeuroD1, Dclk2, and the novel marker Mgat3 for neuron-biased progenitors, and Egfr and Sparcl1 for astrocyte-biased progenitors. The identification of Mgat3 implicates N-glycan remodeling as a previously unrecognized regulator of neuronal fate commitment. Critically, these biophysical and molecular signatures are detectable in immature, undifferentiated progenitors, before any overt commitment to a lineage, raising the question of how early in development the fate of a cell, and by extension a mind, is determined. The use of both mouse and human primary neural tissue also invites ethical reflection on what obligations researchers bear when working with the very cells that give rise to conscious experience. Together, these findings suggest that the electrophysiological and molecular identity of a cortical progenitor encodes the cellular architecture, and ultimately the cognitive capacity of the brain it will build.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Nicole Sang Lav is a first-year PhD student in the Neurosciences Graduate Program at UC San Diego, supported by the UC LEADS and Competitive Edge Fellowships. She completed dual bachelor&#x27;s degrees in Human Biology and Philosophy at UC Irvine, reflecting her commitment to both rigorous bench science and the ethical dimensions of biological research. Her prior research in Dr. Lisa Flanagan&#x27;s lab at UCI investigated biophysical and molecular mechanisms underlying neural stem cell fate bias. In Dr. Mercedes Paredes&#x27; lab at UCSF, she studied the spatiotemporal distribution of proliferative stem cells giving rise to interneurons. She is now working in Dr. Joseph Ecker&#x27;s lab at the Salk Institute, investigating genetic and epigenetic regulatory mechanisms underlying Alzheimer&#x27;s disease and glioblastoma. Nicole has been recognized with the Chancellor&#x27;s Award of Distinction, the UC Campus Leadership Award, and the Excellence in Research in Biological Sciences Award, among others.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

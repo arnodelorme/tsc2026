@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness Science is Incomplete: It is Time for a New Paradigm &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>James Arnette</h1>
+  <p class="subtitle">TISSP, Memphis, TN, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/james-arnette.jpg" alt="James Arnette">
+    <div class="speaker-info">
+      <h2>James Arnette</h2>
+      <div class="affiliation">TISSP, Memphis, TN, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Consciousness Science is Incomplete: It is Time for a New Paradigm</div>
+
+  <div class="abstract-text">
+<p>Early in the twentieth century, psychotherapy began to turn from psychoanalysis, towards a new idea: behaviorism (Viney, 1993), which emphasized observable and measurable behavior, not cognitions and emotions. Many found this to be repulsive and abhorrent for several reasons. However, behaviorism maintained its grip on psychology for decades before other methods could be developed. Plaudits went to those who could do relevant lab studies and get statistically significant results. Psychologists tried as much as possible to run lab studies in a scientific way, but ignored a huge amount of data: subjective experience. Such experience, in natural and uncontrolled conditions (a.k.a. real life), is key to understanding the human condition and human nature. Science is clearly unprepared to address such data. I argue that (1) this incompleteness has delayed progress in humanity&rsquo;s understanding of itself. In particular, consciousness has become a hot topic since the early1990&rsquo;s, but the understanding of consciousness remains elusive; (2) Subjective experience, the currency of consciousness, is the most direct and relevant method of studying and understanding consciousness; (3) The most fruitful data regarding consciousness are to be found in connection with death-related phenomena and anomalies thereof, e.g., near-death experiences (NDEs), after-death communications (ADCs), reincarnation, and mediumship. These four death-related anomalous experiences (DRAEs) have large data sets in the literature, but are forbidden subjects for standard researchers. I will describe a way of merging DRAEs and standard experimental science. I will cite three sources that render subjectivity a valid scientific source of data, using NDE data to illustrate my model. The model consists of three principles: (1) intersubjective agreement&mdash;independent experiencers of a subjective phenomenon consistently report certain aspects of the experience, the frequency of which can be measured; this allows, in the case of NDEs, a method of taking an experiencer&rsquo;s testimony and subjecting it to a rigorous pattern of investigation; (2) Agreement with classical and/or new science&mdash;if the DRAE can be described by using standard physics (e.g., electromagnetism and general relativity; Arnette 1992, 1995) and/or new, speculative physics (e.g., string theory and multiverse theory), this provides a strong case to be made for the objective reality of the subjective experience; and (3) veridical evidence&mdash;perceptions by the experiencer that can be independently verified by independent records or the perceptions of others (Rivas, Dirven &amp; Smit, 2016). Such cases make a nearly impenetrable defense against skeptics. This extends science to human experience and unlocks the experiential world for investigation. In social science, such research already exists in the form of qualitative research methodology (Taylor, Bogdan &amp;DeVault, 2015). Phenomena such as the NDE can be explored with the model I propose. No longer will people dismiss problematic events as &lsquo;anecdotal&rsquo;, a term which has become an insult when used to describe research of the type I propose. It has been said that the plural of anecdote is not data. I argue that, under the conditions I describe, they are indeed data, of a type otherwise unavailable to us and supported by my three points above.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Kenny Arnette is an academic wanderer, having had careers in chemistry and psychology, followed by a &ldquo;career&rdquo; (going to school) in philosophy. His interests since early in his psychology days are consciousness, the mind-body problem, and the true nature of living beings. Now retired, his focus is on expanding his theory of mind-body interaction as well as developing ideas from his time in philosophy for submission to journals. He works with two researchers in North Carolina (TISSP), examining the above topics and other associated ideas. He also is a referee for JSE and the Journal of Near-Death Studies.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

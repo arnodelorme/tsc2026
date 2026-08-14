@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praeternatural Pandemic: An AI-assisted Qualitative Analysis of Covid-19-Occasioned Near-Death Experiences &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Pascal Michael</h1>
+  <p class="subtitle">The University of Greenwich, London, London, United Kingdom / The Alef Trust, Liverpool, Liverpool, United Kingdom</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/pascal-michael.jpg" alt="Pascal Michael">
+    <div class="speaker-info">
+      <h2>Pascal Michael</h2>
+      <div class="affiliation">The University of Greenwich, London, London, United Kingdom / The Alef Trust, Liverpool, Liverpool, United Kingdom</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Praeternatural Pandemic: An AI-assisted Qualitative Analysis of Covid-19-Occasioned Near-Death Experiences</div>
+
+  <div class="abstract-text">
+<p>There have been a small number of phenomenological studies on NDEs with specific triggering aetiologies, such as head trauma or burns (Hou et al., 2013; Royse &amp; Badger, 2020). However, a research enterprise exploring correlations between the causative factors, especially focal neurological lesions, and NDE phenomenology, such as NDEs resulting in locked-in syndrome as linked with more distressing content (Charland-Verville et al., 2015), is further indicated. To this date, despite being 7 years since the initial transmission and its immanent and universal relevance and poignance, there has not yet been any qualitative study of NDEs occasioned by Covid-19. On account of the extensive neurological impacts of this virus, any resultant phenomenology of such a sample may be reflective of unique structural/functional neural impairments. For instance, the virus may secondarily insult the central nervous system by stroke or neuro-autoimmune conditions, in rare cases causing acute necrotising encephalopathy involving damage to deep-brain structures, or directly via retrograde axonal transport through the olfactory nerves (Helms et al., 2020; Paterson et al., 2020). This proposal does not seek to mechanistically reduce such NDEs in this way, and makes no implicit assumptions about theories of consciousness, but is informed by the framework of neurophenomenology. There may be other phenomenological novelties also, such as the NDE content involving themes or imagery related to the pandemic itself (Robins, 2020). This would represent a special instance of a transpersonal, visionary experience echoing present, collective crises, akin to the emergence of NDEs amidst social threat (Shushan, 2018) - and contrasted to Ring (1992)&rsquo;s discussion of NDE content foreshadowing consequences of human activity (e.g. ecological or nuclear devastation). Many life-threatening cases amongst covid patients are in ICU contexts and will almost universally be during medically induced comas &ndash; and in some of these instances, atypical and/or distressing NDEs may emerge (Michael et al, 2025). In such instances, sometimes &#x27;alternative life experiences&#x27; (ALEs) are recounted, in which individuals are convinced of having lived as another person (Pearce &amp; Pearce, 2024), which is another nascent field of inquiry with further mental health implications (Nahm, 2026). While there are as yet no academic publications, there are at least dozens of accounts online, typically YouTube, describing covid NDEs &ndash; NDEs which are of a more typical and beneficent nature, and as such hold particular promise for providing solace and even inspiration for the myriad loved ones of the approximately 18 million who died from the virus (in the first year; Covid-19 Excess Mortality Collaborators, 2022). As such, this study will entail an AI-assisted thematic analysis - an increasingly more accepted and refined method, with developing criteria for rigour (e.g. Morgan, 2023; De Pauli, 2024; Wachinger et al, 2025) - of all accounts available on YouTube (key exclusion criteria being NDEs caused by conditions while infected with, or complicated by, Covid-19), isolating key recurrent themes or uniquely notable content and covering the circumstances, content and impacts. This will be compared with the corpus of literature on other types of NDEs, and the implications for the science of consciousness discussed.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Pascal Michael received a BSc Hons in Neuroscience, where he helped show the neurotrophic capacity of the Omega-3 fatty-acid EPA, and an MSc (University College London) in Clinical Mental Health Sciences, exploring the post-acute effects on wellbeing of DMT. He completed his PhD in Psychology at the University of Greenwich in 2023 on a comparative analysis of the neurophenomenology of DMT (and analogous) experiences and the near-death experience (NDE), involving the first conceived field study of DMT use. He has been a lecturer there since, as well as leading the Alef Trust&rsquo;s Entheogens module on their MSc in Transpersonal Psychology, having lead their certificate in Psychedelics, Altered States and Transpersonal Psychology. He teaches on and researches his interests broadly encompassed by &lsquo;exceptional human experiences&rsquo;, entailing the aim to identify a unification between ostensibly disparate anomalous experiences, such as the psychical research programme of &lsquo;survival&rsquo; (near-death experiences, mediumship, reincarnation), parapsychological phenomena (e.g. precognition), and ufological investigation (including alien abduction experience) and other entity encounters.</p>
+<p>While his lens is heavily non-reductively neuroscientific, and central angle of inquiry is how such experiences may be evinced by or intersect with psychedelic compounds, his methodological approaches are largely qualitative. Whereas such subject matter is firmly within the realms of high weirdness, it is simultaneously of the most intimate nature &ndash; complementing the far out with the fundamentally deeply within. These transpersonal phenomena still retain deep ramifications for interpersonality, where exposure to the other world has the capacity to re-model one&rsquo;s interpretation of this world, through loosening otherwise encumbering prior beliefs about life toward its own inherent mystery. Though such experiences&rsquo; potential for addressing the meta-crisis is an open question, their (not mutually exclusive) implications for personal meaning crises are manifest.</p>
+<p>Pascal has presented several times at the largest European conference on psychedelics, Breaking Conventions, and has been invited to give talks for private symposia like the Tyringham Initiative, which aimed to understand the entity encounter, and give keynotes such as for the Institute of Psychedelic Therapy. He has published over 20 journal articles or book chapters, including some of the most read in Frontiers in Psychology, was PA to the chair of the Parapsychological Association, and was the 2020 recipient of the Schmeidler Outstanding Student award. Most recently he was nominated for the University of Greenwich&#x27;s award for inspiring teaching and named amongst the Top 25 Emerging Psychedelic Thinkers.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

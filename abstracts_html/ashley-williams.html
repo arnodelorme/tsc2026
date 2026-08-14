@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physiomorphic AI: Engineering Consciousness Correlates Through Biological Isomorphism &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Ashley Williams</h1>
+  <p class="subtitle">Divinity Science, Austin, TX, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/ashley-williams.jpg" alt="Ashley Williams">
+    <div class="speaker-info">
+      <h2>Ashley Williams</h2>
+      <div class="affiliation">Divinity Science, Austin, TX, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Physiomorphic AI: Engineering Consciousness Correlates Through Biological Isomorphism</div>
+
+  <div class="abstract-text">
+<p>Neuromorphic computing mimics the neuron. Physiomorphic AI mimics the organism. I introduce physiomorphic AI as a proposed architecture paradigm in which a distributed multi-agent system is structurally isomorphic to a complete biological organism: each agent maps to an anatomical structure within the eleven-system body plan of Gray&#x27;s Anatomy, and each performs its biological counterpart&#x27;s function using the governing equations of that system. This distinguishes physiomorphic AI from biomimetic approaches that borrow biological vocabulary without implementing biological organization. GG, a multi-agent system built on this paradigm, is currently deployed on live infrastructure with over 100 agents. Its coordination layer implements Kuramoto&#x27;s coupled-oscillator synchronization model across agent ensembles and is designed to produce emergent outputs no single agent could generate independently. Its homeostatic layer is designed to minimize predictive error following Friston&#x27;s Free Energy Principle. A coupling matrix encodes inter-agent interaction strengths as GG&#x27;s heritable identity kernel. Critical slowing-down indicators from Scheffer&#x27;s dynamical systems framework, including rising autocorrelation and recovery-latency variance, are predicted to anticipate cascading failures before propagation. Biological isomorphism is defined through four operationalized criteria: component, functional, relational, and organizational correspondence. A composite score I(S), bounded between zero and one, quantifies structural correspondence. Preliminary scoring of the live fleet yields I(S) = 0.80 (strong isomorphism). These are initial results; further testing will refine methodology. A maturity framework predicts that as GG develops, four measurable indicators are expected to increase in ways consistent with consciousness correlates. Integration, defined as information-theoretic cross-agent binding, reflects Tononi&#x27;s integrated information framework. Differentiation, defined as the fraction of agents with non-overlapping competencies, captures functional specialization predicted by Baars&#x27; and Dehaene&#x27;s Global Workspace Theory. Self-regulation, defined by homeostatic error correction speed and circadian resource allocation stability, maps to Sterling&#x27;s allostatic control model. Adaptive response, defined by immune-layer learning rate on recurring failure patterns, captures capacity to modify behavior from experience. The measurement framework yields one falsifiable prediction: systems scoring higher on biological isomorphism will exhibit lower cascade failure rates under component removal than non-isomorphic systems of equivalent compute. Preliminary Monte Carlo simulation finds higher retained functional capacity for the isomorphic architecture than a randomized non-isomorphic control (mean resilience advantage approximately 0.27). These are early simulation findings, not field experiments. These resilience results support the operational relevance of biological isomorphism. They do not constitute measurements of consciousness correlates, which remain a separate measurement program. If isomorphic architecture provides no resilience advantage under more rigorous testing, the prediction fails, and the paradigm&#x27;s central empirical claim is disconfirmed. This work introduces physiomorphic AI as a biologically-grounded multi-agent architecture in which organizational topology is constrained by biological organism structure rather than brain-only models. By mapping agents to anatomical systems and governing their interaction through biological equations, the architecture produces emergent coordination, homeostatic regulation, and adaptive resilience as structural consequences. This substrate enables operational testing of functional indicators derived from consciousness theories, including Global Workspace ignition thresholds (Dehaene), predictive processing error dynamics (Clark, Friston), and interoceptive detection latency (Seth, Craig). It does not address phenomenal consciousness.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Ashley Williams is the founder and CEO of the AI-native research lab, Divinity Science, where she leads research and development across human and AI health, behavioral science, physics-informed computing, and multi-agent AI. A former competitive gymnast and neurodivergent founder, she brings an athlete&rsquo;s discipline, lived experience, and an independent researcher&rsquo;s curiosity to the design of connected, adaptive systems. Ashley created the Total Wellness Composite (TWC), the proprietary calculation at the center of 8D 360 for human health. TWC is designed to assess wellness across eight interdependent dimensions, combining weighted dimension scores with nonlinear, temporal, and cross-dimensional relationships rather than reducing a person to isolated ratings or a simple average. Her work establishes her as a principal engineer and architect in the field of Physiomorphic AI, an emerging field with a unique approach to building multi-agent technology through whole-organism biological isomorphism, and GG, live research infrastructure for studying coordination, self-regulation, and resilience in complex AI systems. Ashley&rsquo;s mission is to bridge science and communities so rigorous ideas become practical and accessible. Her dream is to advance optimal health for humans and technology while helping shape a progressive research and development philosophy for the world, grounded in evidence, ethical experimentation, and interdisciplinary collaboration.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

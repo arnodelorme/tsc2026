@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Pilot fMRI Clinical Trial examining the effects of Psilocybin as compared to Placebo-Niacin for Phantom Limb Pain &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Morgan Gianola</h1>
+  <p class="subtitle">University of California San Diego, La Jolla, California, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>Morgan Gianola</h2>
+      <div class="affiliation">University of California San Diego, La Jolla, California, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">A Pilot fMRI Clinical Trial examining the effects of Psilocybin as compared to Placebo-Niacin for Phantom Limb Pain</div>
+
+  <div class="authors-line">Morgan Gianola, Jon Dean, Tim Furnish, Joel Castellanos, Alexandra Kremer, Adam Halberstadt, Fadel Zeidan</div>
+  <div class="affiliations">Morgan Gianola &mdash; University of California San Diego, La Jolla, California, USA<br>Jon Dean &mdash; University of California San Diego, La Jolla, California, USA<br>Tim Furnish &mdash; University of California San Diego, La Jolla, California, USA<br>Joel Castellanos &mdash; University of California San Diego, La Jolla, California, USA<br>Alexandra Kremer &mdash; University of California San Diego, La Jolla, California, USA<br>Adam Halberstadt &mdash; University of California San Diego, La Jolla, California, USA<br>Fadel Zeidan &mdash; University of California San Diego, La Jolla, California, USA</div>
+
+  <div class="abstract-text">
+<p>Phantom limb pain (PLP), reported by 80% of amputated patients, is characterized by the perceptual experience of pain localized to a physically absent limb, a complex phenomenon in which the felt body diverges from the physical body it represents[1,2]. Distinct from PLP, patients with amputations also commonly report residual limb pain (RLP), localized to the residual anatomical structure (&quot;stump&quot;) at the amputation site. The enigmatic and multifactorial nature of PLP and RLP likely contributes to their resistance to most interventions[3]. PLP is hypothesized to reflect a mismatch between the absence of peripheral sensory input from the limb and a persistent, centrally generated sense of the limb as bodily self[2]. These unique nociceptive processes are thought to involve significant contributions from the default mode network (DMN), a set of brain regions (medial prefrontal, posterior cingulate/precuneus) implicated in self-referential processing[4]. To this extent, psilocybin (4-phosphoryloxy-N,N-dimethyltryptamine), a classical psychedelic found in &ldquo;magic mushrooms&rdquo;, attenuates ego-centric appraisals and corresponding DMN resting state functional connectivity (rsFC)[5,6]. Thus, psilocybin could represent a potential PLP treatment. The present pilot study examined if psilocybin can modulate PLP and alter DMN rsFC. This placebo-controlled, longitudinal fMRI clinical trial examined the effects of psilocybin, compared to placebo-niacin, on PLP, RLP, and DMN-to-whole-brain rsFC (NCT05224336). Fourteen PLP patients with one amputated limb or finger (mean age 42±16 years; 7 female) completed baseline MRI (MRI1), three therapist-supported preparatory sessions, one monitored dosing session, follow-up MRI one-day post-dosing (MRI2), and pain assessments 2-weeks and 4-weeks post-dosing. During the dosing session, participants were randomly administered 25mg psilocybin (n=8) or 100mg non-psychoactive niacin (n=6) under therapist monitoring. Average past-week intensity of PLP and RLP (visual analogue scale: 0, &ldquo;no pain&rdquo; &ndash; 10, &ldquo;most intense pain imaginable&rdquo;) was measured at MRI1, 2-weeks, and 4-weeks post-dosing. DMN-whole brain rsFC was measured via ten-minute resting state fMRI at MRI1 and MRI2. Linear mixed effects models assessed changes from MRI1 in PLP and RLP across groups (participant as random effect). Changes in DMN rsFC from MRI1 to MRI2 were measured and compared across psilocybin and niacin groups with mixed effects modeling (FSL FEAT v6.0.7.13; cluster-corrected Z&gt;2.3, p&lt;.05). At MRI1, participants reported average past-week PLP intensity as 5.3±3.1 (M±SD) and RLP as 4.3±3.2. Participants administered psilocybin exhibited 66% reduced RLP intensity at 2-weeks (2.0±1.9; Cohen&rsquo;s d=-0.87) and 49% reductions at 4-weeks (2.9±2.6; d=-0.48) post-dosing compared to niacin (2-week:+6.8%; 4-week:+21.3%). Psilocybin was associated with a 61% reduction in PLP at 2-weeks (2.1±2.5; d=-1.1) and a 24% reduction at 4-weeks (3.4±2.9; d=-0.63) post-dosing compared to niacin (2-week:+1.1%; 4-week:-12.1%). Compared to niacin, psilocybin was associated with greater reductions in DMN rsFC with the left posterior insula, middle temporal, and temporal fusiform cortex. Although speculative, this pilot study suggests that psilocybin can reduce patients&rsquo; PLP and RLP and decouple self-referential (DMN) and nociceptive (posterior insula[7,8]) processing as compared to niacin. These findings offer preliminary support for targeting mechanisms underlying ego-centric appraisals as a therapeutic strategy for treatment resistant PLP.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>I received my PhD in Cognitive and Behavioral Neuroscience from the Department of Psychology of the University of Miami following three merit-based fellowship awards. Currently, I am a postdoctoral research fellow in Dr. Fadel Zeidan&rsquo;s Brain Mechanisms of Pain and Health Laboratory at the University of California San Diego (UCSD) Department of Anesthesiology.  My research is focused on employing mechanistically focused randomized clinical trials to investigate the effects of and brain mechanisms supporting mindfulness meditation and psychedelic assisted therapies for treatment resistant chronic pain. I have presented my work at several internationally recognized conferences including but not limited to the Organization for Human Brain Mapping, the American Psychosomatic Society, and the Social and Affective Neuroscience Society.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

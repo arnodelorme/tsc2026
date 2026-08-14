@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AT RISK: Neurodivergence, Consciousness, and the Edge of Chaos &mdash; An Ethnoautobiographical Study &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Bonnie Ihme</h1>
+  <p class="subtitle">Independent, Honor, MI, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/bonnie-ihme.jpg" alt="Bonnie Ihme">
+    <div class="speaker-info">
+      <h2>Bonnie Ihme</h2>
+      <div class="affiliation">Independent, Honor, MI, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">AT RISK: Neurodivergence, Consciousness, and the Edge of Chaos &mdash; An Ethnoautobiographical Study</div>
+
+  <div class="abstract-text">
+<p>This ethnoautobiographical study investigates neurodivergence as an evolved expression of consciousness operating at the edge of chaos&mdash;the generative threshold where order and disorder interact to produce adaptive complexity. Drawing from lived experience, neuroscience, and systems theory, it explores how sensory-processing sensitivity, synesthetic perception, and cortical hyperconnectivity function as advanced integrative mechanisms within the human brain, linking heightened perception to creative and ethical intelligence. Anchored in newly recovered 1970s educational correspondence and the Marland Report (1972), the study situates one child&rsquo;s trajectory within the behaviorist paradigms and misapplied &ldquo;special-education&rdquo; models of the era. These documents reveal how standardization, rooted in post-war behaviorism and early psychometrics, replaced curiosity with compliance and mislabeled sensitivity as pathology. The author&rsquo;s childhood experiences&mdash;including an episode of near-death&ndash;like altered awareness at age eight&mdash;serve as a case study in how institutional misunderstanding can disrupt, yet ultimately catalyze, consciousness development. Integrating affective neuroscience, quantum biology, and complexity theory, At Risk reframes &ldquo;disorder&rdquo; as design: a natural architecture through which the nervous system self-organizes under tension. The edge of chaos becomes not a deficit but a developmental crucible in which divergent minds learn to stabilize paradox, transmute adversity into coherence, and contribute new patterns of understanding. This framework challenges reductionist models of cognition and aligns with emerging evidence that higher-order creativity and empathy correlate with network flexibility and large-scale synchrony. Beyond analysis, the study carries an ethical imperative. It argues that the continued medicalization of difference constitutes epistemic injustice&mdash;silencing forms of knowing essential to human evolution. Educational systems built on uniformity produce affective deprivation; those grounded in psychological safety and autonomy restore natural learning. Recognizing heterogeneity as a principle of both nature and mind invites a redesign of education and research around plural modes of consciousness. Ultimately, At Risk positions sensitive, integrative individuals not as anomalies to be corrected but as agents of emergence&mdash;bridges between science and soul, structure and spontaneity, past harm and future coherence. Their stories, long suppressed, illuminate consciousness itself as a living system seeking wholeness through diversity.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Bonnie C. Ihme is an independent researcher, author, and neurodivergent advocate exploring the intersection of consciousness, complexity, and creative intelligence. Her work bridges personal experience, neuroscience, and systems theory to illuminate how sensitivity, synesthesia, and anomalous perception reflect advanced integrative functions within the human brain and the broader architecture of consciousness. Through her forthcoming ethnoautobiographical book At Risk: Neurodivergence, Consciousness, and the Edge of Chaos, Ihme examines the ethical and developmental implications of behaviorist education, institutional trauma, and the medicalization of difference.</p>
+<p>A lifelong autodidact, Ihme has presented nationally on neurodivergence, sensory processing sensitivity, and educational reform. Her presentations include the ADDA International Conference (Detroit, 2013), the Midwest ADHD Conference (2018), and other large-scale mental health and neurodiversity events. She was also featured on NBC&rsquo;s Rock Center with Kate Snow (2013), where her lived experience helped bring public awareness to the overlooked realities of women and cognitive diversity.</p>
+<p>Bonnie&rsquo;s journey began in early childhood, when her heightened sensory awareness, synesthetic cognition, and precognitive experiences were misinterpreted through a pathologizing educational lens. Her research now recontextualizes those experiences within the science of consciousness and complexity, reframing neurodivergence as an evolved architecture of mind operating at the edge of chaos &mdash; where order and innovation meet.</p>
+<p>Drawing from affective neuroscience, quantum biology, and humanistic psychology, Ihme advocates for a paradigm shift from deficit-based labeling to design-based understanding. Her work calls for psychologically safe, curiosity-driven learning environments that honor heterogeneity as a fundamental principle of both nature and mind.</p>
+<p>Her mission is to transform the cultural narrative surrounding neurodivergence&mdash;from one of deficit to one of emergence&mdash;and to demonstrate that sensitive, integrative minds are not anomalies to be corrected but essential agents of human evolution and collective awakening.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

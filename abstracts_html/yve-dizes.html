@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relational Phenomena Require Relational Conditions: Telepathy, Unconscious Mythology, and the Methodology of the Between &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Yvé Dizes</h1>
+  <p class="subtitle">Barrett Honors College, Phoenix, AZ, USA / ASU, Phoenix, AZ, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>Yvé Dizes</h2>
+      <div class="affiliation">Barrett Honors College, Phoenix, AZ, USA / ASU, Phoenix, AZ, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Relational Phenomena Require Relational Conditions: Telepathy, Unconscious Mythology, and the Methodology of the Between</div>
+
+  <div class="abstract-text">
+<p>Contemporary meaning-making is increasingly organized around fixed frameworks, whether religious, spiritual, or ideological, it is highly individualized, and resists genuine encounter with difference. This study draws on Karen Barad&#x27;s agential realism, Eduardo Kohn&#x27;s biosemiotics, and my concept of unconscious mythologies to explore a specific methodology for learning telepathy that allows meaning to arise between participants rather than within them. The methodology posits that telepathic exchange occurs when individual symbolic structures become mutually legible within a shared relational field, rather than as anomalous signal transmission. This reframes telepathy as an intrinsic relational capacity that becomes accessible when the conditions for genuine intersubjective encounters are created. The central theoretical claim is that the methodology itself must enact the epistemology: a fixed, prescriptive apparatus forecloses the relational phenomenon it is attempting to study. Two formal five-session cohorts (N=9, N=10), conducted through the Barrett Honors College at Arizona State University, used qualitative pre- and post-measures, including the Meaning in Life Questionnaire, the Interpersonal Reactivity Index, and a novel Personal Reflection Protocol, to assess the methodology&#x27;s success within a more fixed container. Concurrent data from three independent cohorts (N=7, N=6, N=3) operating with the same methodology but under a more flexible facilitation framework provided informal comparative data. Findings from the formal and informal cohorts are striking. Participants reported phenomenologically unusual experiences that renewed their sense of belonging across all groups. In one exercise, participants were each randomly assigned a specific object to place in a shared imaginal space without disclosing their assignment. During independent reports, every object was correctly identified by at least one other participant, with one object perceived by all members, suggesting structured intersubjective access rather than coincidence. Paradoxically, this re-enchantment correlated with heightened critical thinking and a shift from &quot;convince mode&quot; to &quot;curious mode&quot;: participants became more articulate about their own beliefs while simultaneously more genuinely curious about others. The most significant finding, however, was methodological. The strongest convergent experiences arose not during scheduled exercises but when Socratic dialogue between participants reached a natural relational peak, and the facilitator transitioned immediately into practice. To further this point, concurrent cohorts operating with more flexibility produced convergent results more quickly and consistently than the formal cohorts. Relational phenomena require relational conditions to emerge. These findings suggest that structured symbolic practice, when facilitated responsively rather than prescriptively, can function as a consciousness technology for collective meaning-making, activating participatory awareness of meaning as something that arises between rather than within. This has implications not only for consciousness research methodology but for understanding the conditions necessary for genuine dialogue across differences.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Yvé Dizes is a Religious Studies student at Barrett Honors College at ASU. Her work sits at the intersection of consciousness studies, contemplative pedagogy, and the ontology of meaning, investigating whether structured esoteric practice can recover collective meaning-making without reinstating doctrinal authority. She has participated in interdisciplinary seminars on the nature of time with physicist Paul Davies, has spoken on the nature of relational meaning-making in professional and academic contexts, and has conducted five telepathy research cohorts, two formal and three informal, generating the empirical basis for her original theoretical framework of unconscious mythologies, which proposes that telepathic exchange occurs through shared symbolic fields rather than as anomalous signal transmission.</p>
+<p>In 2017, Yvé founded HUM SoM (Humans Understanding Meaning School of Mysticism), an independent contemplative education organization offering courses in esoteric skills including telepathy and channeling as laboratories for understanding the relational nature of reality. HUM SoM operates from the conviction that re-enchantment is possible without guruism or dogma, and that genuine collective meaning-making arises not from shared belief but from shared inquiry. This is her first presentation at the Science of Consciousness conference.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edges of Reality: Dissociation, Synchronicity, and Consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Jeff Sugar</h1>
+  <p class="subtitle">USC, Los Angeles, CA, USA / Cal State Longbeach, Trauma Recovery Center, Longbeach, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/jeff-sugar.jpg" alt="Jeff Sugar">
+    <div class="speaker-info">
+      <h2>Jeff Sugar</h2>
+      <div class="affiliation">USC, Los Angeles, CA, USA / Cal State Longbeach, Trauma Recovery Center, Longbeach, CA, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-3">THU-3 &mdash; Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Edges of Reality: Dissociation, Synchronicity, and Consciousness</div>
+
+  <div class="abstract-text">
+<p>In early adolescence, I experienced recurrent troubling episodes of derealization and dissociation. Experiences of synchronicity&mdash;moments of startling confirmation&mdash;occurred later. For many years I did not connect these seemingly disparate states: one terrifying and disorganizing, the other meaningful and affirming. In junior high, when sleep-deprived, I sometimes entered school sensing that I and everyone around me moved in choreographed rhythm. Unnerved, I would blink repeatedly until the rhythm dissolved. Later, after a traumatic sexual assault by an older boy, I kept the experience secret. While visiting my sister in New York, I smoked potent marijuana, took an over-the-counter antihistamine/decongestant, and remained awake for several days. I became immersed in altered reality, feeling that the present had already happened. During psychiatric evaluation, the entire encounter felt like reenactment. Cannabis can intensify derealization and depersonalization, although links among cannabis, déjà vu, and synchronicity remain clinically and theoretically complex (Hürlimann et al., 2012; Zullino; Khazaal et al, 2008). Dissociation enables mental escape from the unbearable&mdash;threats to life, overwhelming fear, or sexual trauma. It may involve altered awareness, detachment from affect, discontinuities in memory, and disruptions in the sense of self (Frewen &amp; Lanius, 2014; Lanius et al., 2015). Derealization&mdash;the world felt as unreal, dreamlike, distant, or mechanical&mdash;can precede or accompany dissociation, dramatizing the fragility of ordinary reality (Sierra &amp; Berrios, 1998). Neurobiological studies link dissociative phenomena to altered frontal-limbic, temporoparietal, and integrative networks, yet lived experience cannot be reduced to brain activity alone (Bækkelund et al., 2018; Krause-Utz et al., 2017). In contrast, synchronicity&mdash;meaningful coincidence of inner and outer experience&mdash;felt affirming: order emerges without physical connection. At age twenty-eight, observing psychiatry in Bangalore, India, I scheduled a call to a friend in Mumbai, then went to a nearby park. Suddenly, sitting across from me was that friend&mdash;at precisely the time of the scheduled call. Jung described synchronicity as an acausal connecting principle; Pauli&rsquo;s correspondence with Jung explored possible psychophysical correspondences between psyche and matter (Jung, 1952/1973; Meier, 2001). These ideas do not prove paranormal reality, but they ask whether meaning, timing, and experience may exceed ordinary causal explanation. This presentation places derealization, dissociation, déjà vu, and synchronicity within a phenomenological frame that holds brain, trauma, relationship, and meaning together. Schrödinger&rsquo;s reflections on consciousness, Rovelli&rsquo;s relational account of physical reality, and Bohm&rsquo;s implicate order offer analogical&mdash;not evidentiary&mdash;bridges to a broader view of reality: relational, participatory, and not fully captured by isolated objects or minds (Bohm, 1980; Rovelli, 2014; Schrödinger, 1967). Both dissociation and synchronicity reveal the fluidity of consciousness. Dissociation may fracture experience to protect the self; synchronicity may reconnect self and world through meaning. One is often experienced as curse, the other as blessing, yet both reveal that perceived reality is not a static given. These altered states are lived realities, often accompanied by intense emotion and fear when misunderstood. Psychiatry helped me recognize their structure, while the experiences themselves deepened my empathy for patients whose sensed of reality had become fractured.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Jeff Sugar, MD, Distinguished Life Fellow APA, Adjunct Professor of Clinical Psychiatry at University of Southern California,  directed the Child Psychiatry Trauma Program for 16 years. Currently: consulting clinical psychiatrist at Cal State University, Long Beach and Psychiatric Expert Witness.  Supervised medical students and psychiatry trainees in outpatient clinics, and consult, emergency and inpatient services.</p>
+<p>Previously, Medical Director, Research Director for 120-bed nonprofit child and family agency for 17 years, clinical faculty position at UCLA.</p>
+<p>Research interests include Child and Adult Trauma and Adversity, Consciousness, Hypnosis, Dreams, Dissociation, Somatization, Unconscious individual and group processes, Psychotherapy, Evolutionary Psychiatry,</p>
+<p>Publications:  Pendi A, ...Sugar J, et al. (2016) &ldquo;The Association between Depression Severity and Stigmatized Beliefs...&rdquo; J Psychiatry Ment Health 1(2)</p>
+<p>Sugar, J, (2015), &ldquo;How Adversity Becomes Disease: The Biological Embedding of Experience,&rdquo; Proceedings of the National Crime Victim conference</p>
+<p>Sugar, J, and Ford, J, (2012) &ldquo;Peritraumatic Dissociation and Posttraumatic Stress Disorder in Psychiatrically Impaired Youth,&rdquo; Journal of Traumatic Stress</p>
+<p>Chien, J, Sugar, J, Shoemaker, E, Pataki, C, (2012), &ldquo;Reflective Team Supervision After a Frightening Event on a Psychiatric Crisis Service: A Case Study,&rdquo; Academic Psychiatry</p>
+<p>Pataki, C, Pato, M, Sugar, J (Mentor), Rizzo, A, St. George, C, Kenny P, Parsons, T, (2012) &ldquo;Virtual patients as a novel teaching tool in psychiatry,&rdquo; Academic Psychiatry</p>
+<p>Kenny, P, Parsons, T, Pataki, C, Pato, M, St-George, C, Sugar, J, Rizzo, A (2008) &ldquo;Virtual Justina: A PTSD Virtual Patient for Clinical Classroom Training,&rdquo; Annual Review of CyberTherapy and Telemedicine</p>
+<p>Kenny, P..., Sugar, J,... (2008) &ldquo;Virtual Patients for Future Leaders,&rdquo; Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC)</p>
+<p>Presentions include</p>
+<p>Sugar, J, &ldquo;Metaphors for Resilience: Using Guided Imagery to Evoke Strength, Hope and Confidence in Caregivers, Parents and Children,&rdquo;  APSAC, New Orleans, LA, June  2025</p>
+<p>Sugar, J, &ldquo;Is Psychiatry Afraid of Consciousness?&rdquo; Symposium for Science of Consciousness Conference, concurrent, Barcelona,  July 2025</p>
+<p>Sugar, J, &ldquo;Night Dreams, Lucid Dreams, and Hypnotic Daydreams,&rdquo;  Anaheim, CA, October 2024</p>
+<p>Sugar, J, &ldquo;Metaphors  for Resilience, an Overview and Guided Imagery Experience,&rdquo; LA, June  2024</p>
+<p>Sugar, J, &ldquo;Interpersonal Consciousness: A view from the other end of the telescope,&rdquo;   Science of Consciousness Conference, Tucson, AZ, April 2024</p>
+<p>Sugar, J, &ldquo;Trauma, Attachment, Adversity, Impairment &amp; Resilience Meet Black Lives Matter: The Curse of Intersectionality,&rdquo;   APSAC  New Orleans, June 2022</p>
+<p>Sugar, J, &ldquo;Learn How and Why to use the Screener for Child Attachment, Adversity, Trauma, Impairment &amp; Resilience (SCAATIR).&rdquo;  APSAC Annual Colloquium, Salt Lake City, June 2019</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

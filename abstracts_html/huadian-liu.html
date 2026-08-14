@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intentionality and Presentational Qualities &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Huadian Liu</h1>
+  <p class="subtitle">UC San Diego, La Jolla, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/huadian-liu.jpg" alt="Huadian Liu">
+    <div class="speaker-info">
+      <h2>Huadian Liu</h2>
+      <div class="affiliation">UC San Diego, La Jolla, CA, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Intentionality and Presentational Qualities</div>
+
+  <div class="abstract-text">
+<p>Perceptual experience presents to us ordinary objects and events. This statement gives what I call a topic-fixing characterization of the intentionality of perceptual experience (henceforth &lsquo;IPE&rsquo;). Despite more than 100 years of intense debate, we still don&rsquo;t have a clear and distinct grasp of IPE as a phenomenon. In other words, we still don&rsquo;t have a satisfactory account of IPE as a philosophical and scientific explanandum. What is IPE, really? And what needs to be explained? I propose that IPE is the phenomenon that perceptual experience has presentational qualities. Presentational qualities are phenomenal qualities in virtue of which experiences appear meaningful, significant, and disclosing an objective world. Seeing a familiar face, hearing helicopters fly by, touching a cold, smooth, and metallic surface, etc. appear to present objects and events (and their properties) because these experiences instantiate presentational qualities. An important feature of this account is that what distinguishes an intentional experience from an experience that does not have intentionality is the different kinds of phenomenal properties they have. To characterize presentational qualities, I give a taxonomy of phenomenal properties. Presentational qualities are contrasted with purely sensational qualities (corresponding, roughly, to &ldquo;raw&rdquo; phenomenal differences alongside sets of quality dimensions each determined by a sensory modality) and organizational qualities (corresponding, roughly, to phenomenal differences caused by different manners of perceptual organization). I give an empirically informed argument for the claim that perceptual experiences have presentational qualities. Studies have shown that humans make dissimilarity judgments, in a way that is consistent and stable intra- and intersubjectively, about a wide range of perceptual qualities that go beyond low-level sensory features. Well-known examples include the visual perception of faces, natural kinds, biological motion, and causation. Equally interesting but much less discussed are the visual and auditory perceptual experiences of (broadly construed) material qualities. For example, the experience of hearing a splash can be described as having a quality that gives us a sense of liquidity, and seeing a body of liquid flow sometimes gives a sense of its viscosity. I propose that the best way to understand this body of empirical results is to take them at face value: perceptual experiences have presentational qualities, qualities that are no less phenomenologically real than color and pitch. For an account of IPE to be successful, it must satisfy two (overlapping) constraints: (1) it must be an adequate explication of the concept of intentionality, and (2) it must capture the target mental phenomenon with clarity and specificity. I defend the presentational-qualities account by arguing that it satisfies both constraints. Importantly, I argue that the semantic conception of intentionality (Crane 2024), which is the dominant view, is not required as an explication of the concept of intentionality. Nor does it capture the target phenomenon with sufficient clarity and specificity. A key objection is that truth or accuracy conditions do not capture what is distinctive about the phenomenal character of intentional experience, but merely refer to the phenomenal properties of interest indirectly.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Ph.D. in Philosophy, UC San Diego, 2020-present</p>
+<p>M.A. in Philosophy, Tufts University, 2020</p>
+<p>MSc in Mind, Language and Embodied Cognition (with Distinction), the University of Edinburgh, 2017</p>
+<p>B.S. in Electrical and Computer Engineering, Shanghai Jiao Tong University, 2016</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

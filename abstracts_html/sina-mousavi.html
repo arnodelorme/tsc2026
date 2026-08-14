@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experimental Evidence of T-Consciousness Fields Reducing Randomness in Quantum Systems &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Sina Mousavi</h1>
+  <p class="subtitle">Cosmointel, Vaughan, Ontario, Canada</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/sina-mousavi.jpg" alt="Sina Mousavi">
+    <div class="speaker-info">
+      <h2>Sina Mousavi</h2>
+      <div class="affiliation">Cosmointel, Vaughan, Ontario, Canada</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Experimental Evidence of T-Consciousness Fields Reducing Randomness in Quantum Systems</div>
+
+  <div class="authors-line">Sina Mousavi, Mohammad Ali Taheri, Farzad Ahmadkhanlou</div>
+  <div class="affiliations">Sina Mousavi &mdash; Cosmointel, Vaughan, Ontario, Canada<br>Mohammad Ali Taheri &mdash; Cosmointel, Vaughan, Ontario, Canada<br>Farzad Ahmadkhanlou &mdash; University of California at Irvine, Irvine, CA, USA</div>
+
+  <div class="abstract-text">
+<p>In the 1980s, Mohammad Ali Taheri introduced a set of non-material and non-energetic phenomena termed T-Consciousness Fields (TCFs), each characterized by distinct functions. According to T-Consciousness theory, the universe comprises three fundamental components: matter, energy, and T-Consciousness. This framework posits that this non-physical, non-energetic consciousness is the origin of information that governs the &quot;software&quot; of the universe, distinct from its material &quot;hardware&quot;. Within this framework, TCFs are diverse, each possesses specific functions, and serve as subsets of the Cosmic Consciousness Network, which underpins the informational domain of the universe. Although TCFs cannot be directly measured by conventional scientific instruments, their effects on various physical systems can be reliably investigated through repeatable and controlled experiments. Earlier studies examined pseudo-random generators, Monte Carlo models, and a wide range of biological and physical systems, which reported measurable changes after the application of TCFs. The present work extends the research to true random number generation based on quantum processes. Two devices were used: a gain-switched laser system paired with an interferometric phase-conversion stage, and an LED-based physical random number generator. Each device was tested under control conditions and under exposure to several types of TCFs, using identical acquisition protocols. All datasets were recorded sequentially and analyzed both as full populations and in segmented temporal intervals. The results showed clear and repeatable changes in the distributional properties of the generated values, with strong statistical support. Mean values in the laser-based system decreased by approximately 2-10 percent relative to controls, and median values decreased more substantially, in some cases by more than 60 percent. Shannon entropy declined by roughly 2-8 percent, and Min-entropy by 5-19 percent, depending on field type. These changes were confirmed using two-way ANOVA and Tukey post hoc comparisons, which showed statistically significant differences for nearly all field conditions, with adjusted p-values &lt; 0.001. Frequency distributions shifted away from intermediate bins and toward the extreme ends, with total probability changes reaching up to about 12 percent for the strongest condition. The LED-based study independently corroborated these findings, which demonstrates a consistent and significant reduction in mean, median, and entropy values across all TCF-treated samples. These outcomes indicate reduced phase dispersion during spontaneous emission and a higher likelihood of coherent pulse formation, even when the laser operated below threshold. The absence of any material or energetic intervention, and with consistent statistical significance across independent runs, excludes conventional physical explanations. The overall pattern suggests that the introduction of TCFs alters the system&rsquo;s internal information state and produces measurable changes in probability distributions at the hardware level. Temporal segmentation shows distinct signatures in different field types, including immediate shifts, progressive directional changes, and stabilization patterns that differ from control behavior. The convergence of distributional changes, entropy reductions, and statistically significant differences across multiple analytical methods demonstrates that TCFs can affect quantum-level stochastic processes in controlled physical systems.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Sina Mousavi is a geotechnical and geoenvironmental engineer. He earned his Ph.D. in Civil Engineering with a specialization in Geotechnical Engineering from the University of Nebraska-Lincoln, where he also served as a postdoctoral research associate. His areas of interest and expertise include geotechnical engineering, environmental engineering, instrumentation, and statistical data analysis. Additionally, he has more than 12 years of research experience in the T-Consciousness Fields (TCFs) area. He is a licensed Professional Engineer (P.E.) in the state of Wisconsin.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

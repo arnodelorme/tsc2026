@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time as a Trifecta of Consciousness, Change, and the Timeless &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Christopher Hudson</h1>
+  <p class="subtitle">Salem State University, Salem, MA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/christopher-hudson.jpg" alt="Christopher Hudson">
+    <div class="speaker-info">
+      <h2>Christopher Hudson</h2>
+      <div class="affiliation">Salem State University, Salem, MA, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../concurrent.html#tue-3">TUE-3 &mdash; Field, Information, and Energy: Physical Frameworks for Consciousness</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Time as a Trifecta of Consciousness, Change, and the Timeless</div>
+
+  <div class="abstract-text">
+<p>Resolution of the hard problem of consciousness has, in part, been stymied by insufficient progress with fundamental questions regarding the existence and nature of time. These involve diverse philosophical theories ranging from presentism to eternalism and the block universe theory of spacetime, including the growing universe, moving spotlight, and multidimensional models. This paper builds on an overview of the extensive theory and research involving such perspectives, to conjecture a resolution of several of the most important conflicts between them. The approach taken begins with the primacy and phenomenology of the consciousness of the present moment, sometimes involving sentience and concrete sensory awareness, sometimes transcendental or timeless versions, or a combination. The framework adopted builds on Plato&rsquo;s idea of time as a &ldquo;moving image of eternity&rdquo; which points toward a trifecta of three elements essential to temporal experience: (i) consciousness, (ii) change, and (iii) timelessness (or, the eternal and changeless) which have informed the history of debate on the subject of time. Time is conceived of as the consciousness of change within the context of the seemingly unchanging -- even timeless -- points of comparison, and also among humans, the quantification, measurement, and reification of such change. Time is variously manifested throughout evolution and is conjectured to begin with its emergence out of a partial symmetry breaking of a primordial spatial field in the earliest instants of the big bang. As this temporal trifecta evolves, time transforms from an underlying field (the &lsquo;fabric of spacetime&rsquo;) eventually into the diverse temporalities of intelligent life, symbolized by the ancient metaphor of the loom of time, through multiple processes in which the threads of virtual superposed future time lines are selected, woven, and integrated into the experience of the present. These moments no doubt involve the recurrent decoherence of the Schrödinger wavefunction and information processing within sub-cellular microtubular structures (as proposed by the Orch-OR theory), the resulting information of which is then amplified and further processed and orchestrated through complex systems of synapses, neurons, brains, and even social structures. This perspective rejects the idea from the block universe model that the past and future physically exist, but that they instead exist on a semi-physical virtual or informational level, with such information imprinted on fundamental 4D+ quantum fields, perhaps the spacetime field itself. In this approach, human agency involves the selection, integration, and energization of alternative future time lines, some of which become the informational stuff of the present moment. This review and its proposed conjectures have recently been published in book form, Hudson, C.G. (Jan. 2026). Navigating Time: Toward an Interdisciplinary Theory, Edward Elgar Publisher. Among the key applications of this theory are the clarification and development of the notion of time competence, which is central to the dual tasks of effectively navigating and managing time among individuals and groups. The approach taken is premised on a version of proto-panpsychism, similar to cosmopsychism, one rooted in a particular form of monistic idealism in which consciousness is conceived of as emergent from a fundamental and universal reality.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Christopher G. Hudson is Professor Emeritus from Salem State University, Salem, MA. After completing his bachelors [1972] and masters degrees [1974] at the University of Chicago, he worked as a clinical social worker and psychotherapist during the remainder of the 1970s. Since earning his Ph.D. at the University of Illinois at Chicago [1983], he has taught in MSW programs in Illinois, North Carolina, and from 1987 to 2019 at Salem State University&rsquo;s School of Social Work where he served as full professor, and as department chairperson and MSW Coordinator, until his retirement in 2019. During these years he taught courses on human behavior, mental health policy and services, research methods, spirituality and social work, among other subjects, and conducted a variety of funded studies, including ones on mental health policy and services, homelessness, psychiatric hospitalization and managed care, socioeconomic dimensions of mental illness and health, complex systems theory, and psychiatric epidemiology. He also had academic appointments at the London School of Economics, in London; Smith College in Northampton, MA; Hebrew University in Jerusalem, Israel; the City University of Hong Kong; and Charles University, in Prague, CZ; the last two of which were supported by William J. Fulbright Fellowships. Other awards include Researcher of the Year, awarded by the Alliance for the Mentally Ill (MA). His books include Dimensions of State Mental Health Policy (Praeger, 1991), An Interdependency Model of Homelessness (Edwin Mellen, 1999), Complex Systems and Human Behavior (Oxford Books, 2010), Research Handbook of Mental Health Policy (Edward Elgar, 2022), and other publications include extensive articles in leading social service and mental health journals. Dr. Hudson was raised in Yellow Springs, Ohio, as well as in Saudi Arabia, Bolivia, Ecuador, Jordan, Taiwan, and Switzerland.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

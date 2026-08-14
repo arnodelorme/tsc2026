@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness as the Ability to Know: How a Definitional Reorientation Dissolves the Hard Problem and Opens New Research &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Kaushik Ashodiya</h1>
+  <p class="subtitle">Independent Researcher, Fremont, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/kaushik-ashodiya.jpg" alt="Kaushik Ashodiya">
+    <div class="speaker-info">
+      <h2>Kaushik Ashodiya</h2>
+      <div class="affiliation">Independent Researcher, Fremont, CA, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Consciousness as the Ability to Know: How a Definitional Reorientation Dissolves the Hard Problem and Opens New Research</div>
+
+  <div class="abstract-text">
+<p>The hard problem of consciousness persists because its standard formulation contains a false premise: that consciousness must be produced by physical processes. This paper introduces a framework that dissolves the hard problem through a single definitional move, constructed in deliberate analogy with one of the most successful definitions in physics. Energy is not defined as a thing &mdash; it is defined as a capacity: the ability to do work. It is omnipresent, conserved across all transformations, and manifests differently depending on the systems through which it operates. Despite being the most fundamental concept in physics, its ultimate nature remains undefined &mdash; as Feynman and Heisenberg both openly acknowledged &mdash; yet physics proceeds with extraordinary success. Consciousness, this framework proposes, has the same structure: it is the ability to know &mdash; a foundational capacity, not located in any particular being or organ, not produced by any physical process, omnipresent and unchanging, never on the side of what is known but always the ground of knowing itself. If consciousness is omnipresent, why does experience vary so vastly across beings? The answer lies in what the framework terms instruments of knowledge &mdash; the means through which the ever-present ability to know becomes actual experience. External instruments (sensory organs) receive input from the world; internal instruments (mind and intellect) are where experience actually happens &mdash; demonstrated directly by dreams, where rich experience occurs with sensory organs entirely inactive. The governing principle is that the richness, complexity, and depth of any being&#x27;s experience is determined entirely by the sophistication of its instruments, not by any variation in consciousness itself. The hard problem dissolves because the framework rejects the assumption that all physical substance is non-experiential. The instruments of knowledge are physical entities whose nature includes the capacity for experience. The intractable question &mdash; &quot;how does non-experiential matter produce experience?&quot; &mdash; is replaced by a tractable one: what conditions allow the foundational ability to know to express itself as experience of a particular quality? This is a question science can pursue. Consciousness functions as an enabling condition rather than a cause &mdash; analogous to time and space. Time does not cause events; it is the condition within which events occur. Similarly, consciousness does not cause experience; it is the condition that makes the difference between mere information processing and actual felt experience. This explains why neuroscience can map every causal step of perception without encountering consciousness &mdash; it is not a cause within the chain but the ground that makes the entire chain experienceable. This reinterpretation preserves all neuroscience findings while reframing their significance: neural correlates map instrument-function relationships, not consciousness-production mechanisms. The framework generates tractable research questions: what are the precise properties of mind and intellect as instruments distinct from neural substrate? What is the minimum instrument complexity for experience to arise? How do altered states correspond to specific instrument configurations? Rather than closing inquiry, this definitional reorientation opens empirical questions inaccessible under current paradigms. The framework is developed fully in a book and supporting essays available at https://kashodiya.github.io/consciousness-as-ability</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Full essay &mdash; The Ability to Know:</p>
+<p>https://kashodiya.github.io/consciousness-as-ability/essay-long.html</p>
+<p>Short essay (accessible overview, ~850 words):</p>
+<p>https://kashodiya.github.io/consciousness-as-ability/essay-short.html</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

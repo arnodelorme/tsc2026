@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Pathology to Ecology: Rethinking Student Wellbeing Through Consciousness-Centered Education &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Molly Beauregard</h1>
+  <p class="subtitle">University of Michigan, Ann Arbor, MI, USA / College For Creative Studies, Detroit, MI, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/molly-beauregard.jpg" alt="Molly Beauregard">
+    <div class="speaker-info">
+      <h2>Molly Beauregard</h2>
+      <div class="affiliation">University of Michigan, Ann Arbor, MI, USA / College For Creative Studies, Detroit, MI, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">From Pathology to Ecology: Rethinking Student Wellbeing Through Consciousness-Centered Education</div>
+
+  <div class="abstract-text">
+<p>This presentation revisits a five-year mixed-methods study (2012&ndash;2018; n=207) of an undergraduate sociology course&mdash;Consciousness, Creativity, and Identity&mdash;that integrated group meditation and mindfulness into a standard curriculum. Early analyses framed consciousness-centered education as a response to the student mental health crisis: the course &ldquo;worked&rdquo; because it reduced stress and improved focus. I now see this framing as problematic, as it implies the dysfunction lies within students rather than in the cultural environments they inhabit. This talk reframes the findings by shifting attention from &ldquo;students in need of fixing&rdquo; to &ldquo;ecologies in need of redesign.&rdquo; Surveys, reflections, and interviews documented not only intrapsychic changes (e.g., affect, attention) but also shifts in social relatedness and collective experience. In one cohort (n=98), over half reported feeling more peaceful, and meditation frequency correlated with reduced peer disconnection (p &lt; .05); notably, 77% preferred group meditation to solitary practice. These findings suggest students were not &ldquo;treated&rdquo; individually but experienced a form of collective repair when the classroom itself became a commons structured around shared quiet, collective rhythm, and sustained attention. Within this environment, relationships&mdash;with self, others, and the broader learning community&mdash;were reorganized, and distress often receded indirectly rather than through targeted psychological intervention. This presentation contributes to a broader interdisciplinary inquiry into how collective contemplative practices shape subjectivity, social belonging, and conscious experience within institutional settings. The findings raise broader questions for consciousness studies regarding the extent to which subjective experience is shaped not only neurologically, but relationally through shared attentional environments. Rather than treating consciousness as solely individual or intrapsychic, the study considers how attention, identity, and wellbeing may be relationally and ecologically mediated through shared practices and environments. The question for higher education, then, is not how to optimize students for a broken ecology, but how to design educational commons that cultivate human flourishing and more coherent forms of collective life.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>In 2011, I launched a groundbreaking course, Consciousness, Creativity, and Identity, which was rooted in the academic literature of identity studies while offering students a unique opportunity to experience meditation firsthand. Alongside a rigorous syllabus, I integrated silence and reflection, providing students not only with an intellectual gateway to new knowledge but also a self-referential technique to explore consciousness itself. My book, Tuning the Student Mind: A Journey in Consciousness-Centered Education (SUNY, 2020), shares the transformative journey my students and I embarked on over the course of a semester.</p>
+<p>I am a graduate of the University of Michigan, Loyola University of Chicago, and the University of Pittsburgh, holding master&rsquo;s degrees in both public administration and sociology. I have been a professor of sociology for twenty-two years at the College for Creative Studies in Detroit, Michigan, a visiting instructor at Colby College in Waterville, Maine, and I currently serve as the co-director of the University of Michigan&rsquo;s Program in Creativity and Consciousness. A long-time meditator in the Vedanta tradition, I am also a certified instructor of Primordial Sound Meditation as well as a member of The Society for Consciousness Studies.</p>
+<p>I am a confident speaker, with more than twenty years of teaching experience, and over the past fifteen years, I have presented my transformative approach for learning to dozens of audiences, including at the United Nations Educational, Scientific and Cultural Organization (UNESCO), University of Southern California, Albion College, University of Michigan, University of Arkansas Medical School, Cranbrook Academy of Art, St. Francis College, Pratt Institute, Center for the Contemplative Mind in Society, National Art Education Association, C-Heart Conference, and the Higher Learning Commission Conference.</p>
+<p>My years of research and teaching experience have spawned three impactful, interconnected projects: my first book, the Before Thought podcast, a UNESCO recognized documentary (2015), directed by Chelsea Jackson and, lastly, the Tuning the Student Mind Foundation (TTSM), founded in 2014. Through these efforts, I continue to share my approach globally with academics and practitioners, and with my forthcoming book, Enlivened: Who we are, How we belong, and What we get wrong about Human Potential I aim to reach an even broader audience, empowering general readers to implement the goals, questions, and methods from my course in their own lives.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

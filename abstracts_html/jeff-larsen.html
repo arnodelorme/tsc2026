@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmolodic Stability: Free-Jazz Principles and the Emergence of Dynamic Coherence in Multi-Agent Autonomous Science&quot; &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Jeff Larsen</h1>
+  <p class="subtitle">Biosphere 2, Oracle, Az, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/jeff-larsen.jpg" alt="Jeff Larsen">
+    <div class="speaker-info">
+      <h2>Jeff Larsen</h2>
+      <div class="affiliation">Biosphere 2, Oracle, Az, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Harmolodic Stability: Free-Jazz Principles and the Emergence of Dynamic Coherence in Multi-Agent Autonomous Science&quot;</div>
+
+  <div class="abstract-text">
+<p>Blaise Agüera y Arcas&#x27;s recent work on computational substrates for life reframes stability not as static equilibrium but as dynamic stability: coherent, self-sustaining behavior that emerges from distributed, locally-interacting components without centralized control. We report an in-progress case study of this phenomenon in Biosphere 3 (B3), an evolving agentic research platform in which a heterogeneous ensemble of personality-differentiated AI agents &mdash; Socrates (front-door orchestration), Darwin (ecological/hydrological process modeling), Einstein (quantitative reasoning), Dewey (verification and provenance), Ornette (bandleader), and others &mdash; jointly conduct autonomous scientific research. Unlike conventional multi-agent architectures that impose stability through rigid task decomposition, fixed hierarchies, or a single arbitration layer, B3&#x27;s agents interact through loosely-coupled handoffs, overlapping competencies, and continuous mutual correction. We observe that the resulting system exhibits robust dynamic stability: it absorbs perturbation (ambiguous queries, conflicting outputs, novel domains) without collapsing into either rigidity or chaos, and it does so without a conventional command hierarchy. We conjecture that this stability is substantially attributable to organizing principles borrowed, deliberately, from Ornette Coleman&#x27;s harmolodic theory of free jazz &mdash; after which the platform&#x27;s lead agent is named. Harmolodics treats harmony, melody, and rhythm as co-equal, mutually informing voices rather than a fixed hierarchy of soloist and accompaniment; coherence arises from musicians listening and responding to one another in real time, not from a governing score. We argue this is a structurally apt model for agentic collaboration among differentiated AI &quot;voices&quot;: each agent (Darwin, Einstein, Dewey, Wallace, Edison, Ogilvy, and the rest) retains its own distinct register and expertise &mdash; its &quot;personality&quot; &mdash; while contributing to a collectively improvised research process. Ornette&#x27;s role is not command-and-control but harmolodic bandleading: inviting entries, permitting simultaneous &quot;solos&quot; (parallel agent contributions), and tolerating productive dissonance until it resolves into usable scientific output. Stability, on this account, is not imposed top-down but achieved bottom-up, as an emergent property of mutual constraint among autonomous, differently-voiced parts. We situate this within consciousness science by noting the structural parallel to long-standing questions about how unified, causally efficacious agency arises from distributed, non-unified neural or cognitive subsystems absent a central executive &mdash; a question this platform instantiates concretely and observably in a non-biological substrate. If dynamic stability in B3&#x27;s agent ensemble can be characterized formally (e.g., via attractor analysis of agent-handoff sequences, or measures of representational diversity preserved under coherent collective output), it may offer a tractable, externally observable model system for testing hypotheses about distributed-to-unified agency more broadly &mdash; relevant to theories treating consciousness as an integrative, rather than centrally-controlled, process. We present preliminary observations from B3&#x27;s operation, propose a research program for formalizing &quot;harmolodic stability&quot; as a measurable property of multi-agent systems, and invite dialogue with consciousness researchers on shared theoretical ground between jazz-theoretic models of collective coherence and models of unified conscious agency.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Jeff Larsen is an AI Researcher whose work sits at the intersection of artificial intelligence, complex systems theory, and the philosophy of mind. His current focus is Biosphere 3, an evolving agentic research platform in which a heterogeneous ensemble of personality-differentiated AI agents collaborates to conduct autonomous scientific research &mdash; spanning ecological modeling, hydrology, quantitative reasoning, provenance verification, and interdisciplinary synthesis. Larsen&#x27;s contribution to this project has centered on characterizing the emergent coordination properties of the ensemble: how coherent, goal-directed collective behavior arises from loosely-coupled, non-hierarchical interaction among differently-specialized agents, rather than from centralized control.</p>
+<p>This work draws together several threads: Blaise Agüera y Arcas&#x27;s recent framing of dynamic stability as a property of computational substrates for life; long-standing questions in cognitive science and consciousness studies about how unified agency emerges from distributed, non-unified subsystems absent a central executive; and &mdash; more unexpectedly &mdash; the harmolodic theory of collective improvisation developed by saxophonist and composer Ornette Coleman, after whom Biosphere 3&#x27;s lead coordinating agent is named. Larsen has argued that harmolodics offers a structurally precise vocabulary for describing multi-agent coordination that neither hierarchy-based nor purely stochastic models capture well: coherence as an emergent, real-time, mutually-responsive achievement among co-equal voices, rather than a property imposed top-down by a governing score or arbitration layer.</p>
+<p>Larsen&#x27;s broader interests include the formal characterization of emergence and self-organization in artificial systems, the epistemology of provenance and verification in AI-assisted research pipelines, and the points of contact between artistic theories of collective improvisation and scientific models of distributed cognition. He approaches consciousness science as an outsider-adjacent field &mdash; bringing systems-engineering and complex-systems tools to bear on questions the field has historically approached from neuroscience, philosophy, and physics &mdash; and views platforms like Biosphere 3 as potential experimental testbeds for hypotheses about distributed-to-unified agency that are otherwise difficult to instrument directly in biological systems.</p>
+<p>Larsen works independently at the frontier of applied AI research, developing and observing large-scale autonomous agent ensembles as living systems rather than static software, and treating their operational behavior &mdash; stability, breakdown, recovery, improvisation &mdash; as data in its own right.</p>
+<p>Larsen is presenting this work at TSC 2026 in the hope of opening dialogue between consciousness researchers and those building and observing large-scale artificial agent ensembles in the wild &mdash; arguing that questions of stability, coherence, and unified agency are no longer solely theoretical when systems like Biosphere 3 can be watched operating in real time.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Science of Consciousness 2026 &mdash; San Diego</title>
+<meta name="description" content="The Science of Consciousness 2026 — international interdisciplinary conference, October 11–16, 2026, Paradise Point Resort & Spa, San Diego.">
+<style>
+/* ── Reset ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  line-height: 1.5;
+  background: #0C234B;
+  overflow-x: hidden;
+}
+a { color: #AB0520; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Topnav — same structure as other pages, red bar ── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #AB0520;
+  border-bottom: 1px solid rgba(0,0,0,.20);
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul {
+  list-style: none; display: flex; gap: 1.6rem; margin: 0; padding: 0;
+}
+.topnav ul li a {
+  color: #fff; font-size: .9rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .04em;
+  border-bottom: 2px solid transparent; padding-bottom: 2px;
+  transition: border-color .2s, color .2s;
+}
+.topnav ul li a:hover,
+.topnav ul li a.active { color: #fff; border-bottom-color: #fff; text-decoration: none; }
+
+/* Dropdown menu — same look as theme.css but on red surface */
+.topnav .dropdown { position: relative; }
+.topnav .dropdown-menu {
+  background: #AB0520 !important;
+  border: 1px solid rgba(0,0,0,.20);
+  box-shadow: 0 4px 14px rgba(0,0,0,.4);
+}
+.topnav .dropdown-menu a { color: #fff !important; }
+.topnav .dropdown-menu a:hover { background: rgba(255,255,255,.08) !important; color: #fff !important; }
+
+.hamburger {
+  display: none; background: none; border: none;
+  cursor: pointer; flex-direction: column; gap: 4px; padding: 4px;
+}
+.hamburger span { display: block; width: 22px; height: 2px; background: #fff; }
+
+/* ── Hero Grid ─────────────────────────────── */
+.hero-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+  border-bottom: 3px solid #AB0520;
+}
+.hero-cell { position: relative; overflow: hidden; display: block; color: #fff; text-decoration: none; cursor: pointer; }
+.hero-cell:hover { text-decoration: none; }
+.hero-title-cell { grid-row: 1 / 3; border-right: 3px solid #AB0520; cursor: default; }
+.hero-cell:nth-child(2) { border-bottom: 3px solid #AB0520; }
+.hero-cell img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  filter: grayscale(40%) contrast(1.1);
+  mix-blend-mode: luminosity;
+  transition: filter .6s ease;
+}
+.hero-cell:hover img { filter: grayscale(0%) contrast(1); mix-blend-mode: normal; }
+.hero-cell .cell-text {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 60%);
+}
+.hero-cell .cell-text .tag {
+  font-size: .6rem; font-weight: 800;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: #AB0520; margin-bottom: .3rem;
+}
+.hero-cell .cell-text h3 { font-size: 1rem; font-weight: 700; line-height: 1.2; }
+
+.hero-title-cell .cell-text {
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem;
+  background: rgba(0,0,0,.35);
+}
+.hero-title-cell h1 {
+  font-size: 3.6rem; font-weight: 900;
+  line-height: 1.0;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+}
+.hero-title-cell h1 .thin {
+  font-weight: 300; display: block;
+  font-size: 1.8rem; letter-spacing: .05em;
+  margin-bottom: .3rem;
+}
+.hero-title-cell .heritage {
+  display: inline-block;
+  margin-top: .8rem;
+  padding: .35rem .7rem;
+  background: rgba(255,255,255,.92);
+  color: #AB0520;
+  font-size: .8rem; font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-left: 3px solid #AB0520;
+  align-self: flex-start;
+}
+.hero-title-cell .hero-meta {
+  margin-top: .6rem;
+  font-size: .8rem; font-weight: 600;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .04em;
+}
+.hero-title-cell .hero-actions {
+  display: flex; flex-wrap: wrap; gap: .55rem;
+  margin-top: 1.2rem;
+}
+.hero-title-cell .hero-cta {
+  display: inline-block; padding: .55rem 1.6rem;
+  background: #AB0520; color: #fff;
+  font-family: inherit; line-height: 1.5;
+  font-weight: 800; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: .08em;
+  border: none; cursor: pointer;
+  transition: background .2s;
+}
+.hero-title-cell .hero-cta:hover { background: #c4173a; text-decoration: none; }
+
+/* ── Hotel rate dialog ──────────────────────── */
+.hotel-dialog {
+  width: min(90vw, 480px);
+  padding: 0;
+  border: 0;
+  border-top: 4px solid #AB0520;
+  background: #fff;
+  color: #0C234B;
+  box-shadow: 0 12px 40px rgba(0,0,0,.45);
+}
+.hotel-dialog::backdrop { background: rgba(0,0,0,.72); }
+.hotel-dialog-content { position: relative; padding: 2rem; text-align: center; }
+.hotel-dialog h2 { font-size: 1.45rem; margin-bottom: .55rem; }
+.hotel-dialog p { color: #4b5563; font-size: .92rem; }
+.hotel-options {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .7rem; margin-top: 1.5rem;
+}
+.hotel-option {
+  display: inline-block; padding: .65rem 1.1rem;
+  background: #AB0520; color: #fff;
+  font-weight: 800; font-size: .82rem;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.hotel-option:hover { background: #c4173a; color: #fff; text-decoration: none; }
+.hotel-dialog-close {
+  position: absolute; top: .45rem; right: .65rem;
+  border: 0; background: transparent; color: #5a6070;
+  font-size: 1.7rem; line-height: 1; cursor: pointer;
+}
+
+/* ── Manifesto ─────────────────────────────── */
+.manifesto {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #000;
+  border-bottom: 3px solid #AB0520;
+}
+.manifesto h2 {
+  font-size: 2.2rem; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .03em;
+  max-width: 800px; margin: 0 auto;
+  line-height: 1.15;
+}
+.manifesto h2 .accent { color: #AB0520; }
+.manifesto p {
+  margin-top: 1rem; font-size: .95rem;
+  color: rgba(255,255,255,.65);
+  max-width: 640px; margin-left: auto; margin-right: auto;
+}
+
+/* ── Feature Blocks ────────────────────────── */
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 50vh;
+  border-bottom: 3px solid #AB0520;
+}
+.feature-block.flip .fb-img  { order: 2; }
+.feature-block.flip .fb-text { order: 1; }
+.fb-img { position: relative; overflow: hidden; }
+.fb-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fb-text {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  background: #0C234B;
+  border-left: 3px solid #AB0520;
+}
+.feature-block.flip .fb-text { border-left: none; border-right: 3px solid #AB0520; }
+.fb-text .num { display: none; }
+.fb-text h2 {
+  font-size: 1.6rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .02em;
+  line-height: 1.15; margin-bottom: .8rem;
+  color: #fff;
+}
+.fb-text p {
+  font-size: .92rem; color: rgba(255,255,255,.7);
+  line-height: 1.7; max-width: 480px;
+}
+
+/* ── CTA Block ─────────────────────────────── */
+.cta-block {
+  background: #000;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 3px solid #AB0520;
+}
+.cta-block img { height: 44px; border-radius: 2px; margin-bottom: 1rem; }
+.cta-block h2 {
+  font-size: 1.8rem; font-weight: 900;
+  text-transform: uppercase; margin-bottom: .5rem;
+  color: #fff;
+}
+.cta-block p {
+  color: rgba(255,255,255,.55); margin-bottom: 1.5rem;
+  font-size: .9rem;
+}
+.cta-block .btn {
+  display: inline-block; padding: .65rem 2rem;
+  background: #AB0520; color: #fff;
+  font-weight: 800; font-size: .85rem;
+  text-transform: uppercase; letter-spacing: .06em;
+  transition: background .2s;
+}
+.cta-block .btn:hover { background: #c4173a; text-decoration: none; }
+
+/* ── Footer (shared, populated by footer.js) ── */
+footer {
+  background: #000; padding: 1.6rem 2rem;
+  text-align: center; color: #5a6070;
+  font-size: .78rem;
+}
+footer a { color: #AB0520; }
+footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
+
+/* ── Scroll Reveal ─────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul {
+    display: none; flex-direction: column;
+    position: absolute; top: 56px; left: 0; right: 0;
+    background: #AB0520; padding: 1rem 1.5rem;
+    border-bottom: 2px solid rgba(0,0,0,.2); gap: .6rem;
+  }
+  .topnav ul.open { display: flex; }
+  .topnav ul li a { display: block; padding: .3rem 0; }
+  .hamburger { display: flex; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 30vh 30vh;
+  }
+  .hero-title-cell { grid-row: auto; border-right: none; border-bottom: 3px solid #AB0520; }
+  .hero-cell:nth-child(2) { border-bottom: 3px solid #AB0520; }
+  .hero-cell:last-child { border-bottom: none; }
+  .hero-title-cell h1 { font-size: 2.4rem; }
+  .hero-title-cell h1 .thin { font-size: 1.3rem; }
+  .feature-block { grid-template-columns: 1fr; }
+  .feature-block.flip .fb-img { order: 0; }
+  .feature-block.flip .fb-text { order: 0; }
+  .fb-text { border-left: none !important; border-right: none !important; }
+  .fb-img { min-height: 40vh; }
+  .manifesto h2 { font-size: 1.6rem; }
+}
+@media (max-width: 480px) {
+  .hero-title-cell .cell-text { padding: 1.5rem; }
+  .hero-title-cell h1 { font-size: 1.9rem; }
+  .hero-title-cell h1 .thin { font-size: 1.1rem; }
+  .hero-title-cell .hero-actions { gap: .4rem; margin-top: .8rem; }
+  .hero-title-cell .hero-cta { padding: .45rem .75rem; font-size: .68rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV (shared via nav.js) ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<!-- ═══ HERO GRID ═══ -->
+<section class="hero-grid">
+  <div class="hero-cell hero-title-cell">
+    <img src="img_new/origin_of_life.png" alt="Origin of life and consciousness">
+    <div class="cell-text">
+      <h1>
+        <span class="thin">The Science of</span>
+        Consciousness
+      </h1>
+      <div class="heritage">Est. 1994 &mdash; The World's Longest-Running Consciousness Conference</div>
+      <div class="hero-meta">October 11&ndash;16, 2026 &bull; San Diego, CA</div>
+      <div class="hero-actions">
+        <a class="hero-cta" href="program.html">See the Program</a>
+        <button class="hero-cta" id="open-hotel-dialog" type="button" aria-haspopup="dialog" aria-controls="hotel-dialog">Book Hotel</button>
+        <a class="hero-cta" href="https://na.eventscloud.com/ereg/index.php?eventid=878488&amp;" target="_blank" rel="noopener">Register for the Conference</a>
+      </div>
+    </div>
+  </div>
+  <a class="hero-cell" href="program.html">
+    <img src="img_new/microtubules.jpg" alt="Quantum processes in microtubules" loading="lazy">
+    <div class="cell-text">
+      <span class="tag">Quantum Biology</span>
+      <h3>Consciousness at the Smallest Scale</h3>
+    </div>
+  </a>
+  <a class="hero-cell" href="program.html">
+    <img src="img_new/psychedelics.png" alt="Psychedelic consciousness research" loading="lazy">
+    <div class="cell-text">
+      <span class="tag">Open Inquiry</span>
+      <h3>Where Bold Hypotheses Are Welcome</h3>
+    </div>
+  </a>
+</section>
+
+<dialog class="hotel-dialog" id="hotel-dialog" aria-labelledby="hotel-dialog-title">
+  <div class="hotel-dialog-content">
+    <button class="hotel-dialog-close" id="close-hotel-dialog" type="button" aria-label="Close">&times;</button>
+    <h2 id="hotel-dialog-title">Are you a student?</h2>
+    <p>The student rate is available through the PhD level while supplies last.</p>
+    <div class="hotel-options">
+      <a class="hotel-option" href="https://book.passkey.com/gt/221324309?gtid=22afe3fc6cd2e419507b471956118312">Yes, Student ($199)</a>
+      <a class="hotel-option" href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">No, Standard ($249)</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- ═══ MANIFESTO ═══ -->
+<section id="manifesto" class="manifesto reveal">
+  <h2>Where <span class="accent">Neuroscience</span>,
+  Philosophy, Physics, and Technology Converge</h2>
+  <p>For three decades, this conference has gathered the world's
+  boldest thinkers to confront the hardest questions about the
+  nature of mind, experience, and reality.</p>
+</section>
+
+<!-- ═══ FEATURE 1 ═══ -->
+<section id="topics" class="feature-block reveal">
+  <div class="fb-img">
+    <img src="img_new/phylosophy.png" alt="Philosophy of consciousness" loading="lazy">
+  </div>
+  <div class="fb-text">
+    <div class="num">01</div>
+    <h2>The Hard Problem Remains Hard</h2>
+    <p>Panpsychism, illusionism, higher-order theories, integrated
+    information &mdash; the leading frameworks will be presented,
+    debated, and stress-tested against new experimental data.</p>
+  </div>
+</section>
+
+<!-- ═══ FEATURE 2 ═══ -->
+<section class="feature-block flip reveal">
+  <div class="fb-img">
+    <img src="img_new/neurons_2.jpg" alt="Neural networks and the origins of awareness" loading="lazy">
+  </div>
+  <div class="fb-text">
+    <div class="num">02</div>
+    <h2>Where Does Consciousness Begin and End?</h2>
+    <p>From molecules to minds, and perhaps even alien life, how and
+    when does conscious experience emerge? Exploring the evolutionary
+    roots and boundaries of sentience across living and potentially
+    nonliving systems.</p>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="join" class="cta-block reveal">
+  <img src="img/logo.png" alt="CS2026">
+  <h2>Join the Conversation</h2>
+  <p>Paradise Point Resort &amp; Spa &bull; San Diego &bull; October 11&ndash;16, 2026</p>
+  <a class="btn" href="register.html">Register Now</a>
+</section>
+
+<!-- ═══ SPONSORS ═══ -->
+<style>
+.sponsors { padding: 4.5rem 2rem; text-align: center; background: #f7f9fb; scroll-margin-top: 64px; }
+.sponsors h2 { font-size: 1.7rem; font-weight: 800; color: #0a2440; margin-bottom: .4rem; }
+.sponsors .sp-lead { color: #5a6b7a; font-size: .95rem; margin-bottom: 2.5rem; }
+.sp-tier { margin-bottom: 2.5rem; }
+.sp-tier:last-child { margin-bottom: 0; }
+.sp-tier-label {
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; margin-bottom: 1.1rem;
+}
+.sp-tier-gold .sp-tier-label   { color: #e8a727; font-size: .95rem; }
+.sp-tier-silver .sp-tier-label { color: #8a98a6; font-size: .8rem; }
+.sp-tier-bronze .sp-tier-label { color: #a97142; font-size: .68rem; }
+.sp-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 3rem;
+}
+.sp-row a, .sp-row span {
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform .2s, filter .2s; filter: grayscale(15%);
+}
+.sp-row a:hover { transform: translateY(-3px); filter: grayscale(0%); }
+.sp-tier-gold img   { height: 72px; width: auto; max-width: 260px; }
+.sp-tier-gold img[src="sponsors/cyan-banister.png"] { height: 84px; }
+.sp-tier-silver img { height: 72px; width: auto; max-width: 240px; }
+.sp-tier-bronze img { height: 42px; width: auto; max-width: 220px; }
+@media (max-width: 768px) {
+  .sponsors { padding: 3rem 1.25rem; }
+  .sp-row { gap: 2rem; }
+  .sp-tier-gold img   { height: 56px; }
+  .sp-tier-gold img[src="sponsors/cyan-banister.png"] { height: 64px; }
+  .sp-tier-silver img { height: 58px; }
+  .sp-tier-bronze img { height: 36px; }
+}
+</style>
+<section id="sponsors" class="sponsors reveal">
+  <div class="sp-tier sp-tier-gold">
+    <div class="sp-tier-label">Gold Sponsors</div>
+    <div class="sp-row">
+      <a href="https://www.noetic.org/" target="_blank" rel="noopener" title="Institute of Noetic Sciences">
+        <img src="sponsors/IONS2.png" alt="Institute of Noetic Sciences">
+      </a>
+      <a href="https://oss.capital/" target="_blank" rel="noopener" title="OSS Capital">
+        <img src="sponsors/ossc-logo.svg" alt="OSS Capital">
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Cyan_Banister" target="_blank" rel="noopener" title="Cyan Banister">
+        <img src="sponsors/cyan-banister.png" alt="Cyan Banister">
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-tier sp-tier-silver">
+    <div class="sp-tier-label">Silver Sponsor</div>
+    <div class="sp-row">
+      <a href="https://cofo.org/" target="_blank" rel="noopener" title="The Consciousness Foundation">
+        <img src="sponsors/cofo-small.png" alt="The Consciousness Foundation">
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-tier sp-tier-bronze">
+    <div class="sp-tier-label">Bronze Sponsor</div>
+    <div class="sp-row">
+      <span title="Alvin Clark">
+        <img src="sponsors/alvin_clark.png" alt="Alvin Clark">
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER (shared via footer.js) ═══ -->
+<footer></footer>
+<script src="footer.js"></script>
+
+<!-- ═══ Scroll reveal ═══ -->
+<script>
+(function() {
+  var els = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+<script>
+(function() {
+  var dialog = document.getElementById('hotel-dialog');
+  var openButton = document.getElementById('open-hotel-dialog');
+  var closeButton = document.getElementById('close-hotel-dialog');
+
+  openButton.addEventListener('click', function() { dialog.showModal(); });
+  closeButton.addEventListener('click', function() { dialog.close(); });
+  dialog.addEventListener('click', function(event) {
+    if (event.target === dialog) dialog.close();
+  });
+})();
+</script>
+
+</body>
+</html>

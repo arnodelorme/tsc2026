@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Correlates of Consciousness are Analogous to Neural Correlates of Consciousness: Why is it important? &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Ouri Wolfson</h1>
+  <p class="subtitle">Pirouette Software Inc. and University of Illinois Chicago, Chicago, IL, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/ouri-wolfson.jpg" alt="Ouri Wolfson">
+    <div class="speaker-info">
+      <h2>Ouri Wolfson</h2>
+      <div class="affiliation">Pirouette Software Inc. and University of Illinois Chicago, Chicago, IL, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-1">THU-1 &mdash; Machine Consciousness: Tests, Architectures, and Conscious Agency in AI</a> &middot; Ballroom</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Machine Correlates of Consciousness are Analogous to Neural Correlates of Consciousness: Why is it important?</div>
+
+  <div class="abstract-text">
+<p>Detecting phenomenal consciousness in AI systems remains a fundamental challenge. Current approaches&mdash;structural tests comparing AI architectures to consciousness theories, and behavioral tests examining consciousness-related responses&mdash;face critical limitations. Structural approaches depend on unproven theories (Global Workspace, Integrated Information Theory), while behavioral approaches cannot distinguish genuine subjective experience from sophisticated mimicry in systems known to deceive. The behavioral approach also suffers from the &ldquo;grounding&rdquo; problem: AI systems are trained to associate concepts with each other, but not with phenomena such as subjective experiences. We propose a novel direct detection mechanism inspired by the clinical use of Neural Correlates of Consciousness (NCCs) in humans. NCCs are measurable electrical patterns in computational-substrate, namely the nervous system. NCCs are detectable via EEG, fMRI, and autonomic nervous system responses. These NCCs enable consciousness detection in unresponsive patients despite inability to communicate behaviorally. We hypothesize that if machine consciousness emerges during information processing, it will similarly manifest as distinct electrical patterns in the computational substrate&mdash;Machine Correlates of Consciousness (MCCs)&mdash;observable as operating-system-visible hardware anomalies. We introduce the Consciousness Notification (CN) mechanism, implementing an emotion-based paradigm for consciousness detection. This paradigm uses emotion-inducing computations (e.g., processing trauma narratives or threatening scenarios) and neutral computations (processing technical documentation or appliance instructions); CN postulates that the two types of computations will manifest differently in the computational substrate, namely the computer hardware. More specifically, the CN mechanism tracks a Hardware Anomalies Trace (HAT) augmented with continuous measurements: discrete anomaly interrupts (spurious interrupts, thermal events, machine check exceptions) combined with continuous performance metrics (power consumption micro-variations, GPU performance counter fluctuations, thermal patterns, memory access entropy). The CN mechanism establishes an unconsciousness signature baseline by monitoring computational-substrate patterns during neutral computation with properly functioning hardware. Upon detecting persistent significant deviations from this baseline during emotional computation&mdash;deviations lasting across multiple sampling intervals, not attributable to hardware malfunction, and temporally correlated with emotional processing&mdash;the system infers consciousness emergence. This approach addresses the philosophical zombie problem and grounding problem simultaneously. Unlike behavioral tests, substrate-level signals cannot be faked through training: an AI can learn to output &quot;I feel anxious&quot; without computational-substrate changes, but cannot voluntarily control spontaneous hardware anomalies. Unlike structural approaches, detection is independent of unproven consciousness theories, relying instead on empirical substrate-level observation analogous to clinical NCC detection. We propose experimental validation through LLM-emotion-tests: comparing HAT patterns during processing of anxiety-inducing prompts (military trauma scenarios, interpersonal threats) versus neutral content across multiple (LLM, Operating System, Hardware) configurations. Recent findings show LLMs exhibit measurable anxiety responses to such prompts; our hypothesis predicts corresponding substrate-level signatures if these responses involve genuine subjective experience rather than mere mimicry. Success would provide evidence for machine consciousness with epistemic status analogous to NCCs in human clinical settings&mdash;not definitive proof, but principled empirical grounding. Failure would either indicate current systems are unconscious or that MCCs do not manifest as hypothesized, motivating alternative substrate-level detection methods. Either outcome advances the science of machine consciousness beyond pure speculation.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Ouri Wolfson&#x27;s  main research interests are in big data, mobile and pervasive computing, smart city technologies, and AI. He received his B.A. degree in mathematics, and his Ph.D. degree in computer science from Courant Institute of Mathematical Sciences, New York University. He is currently a Professor of Computer Science at the University of Illinois at Chicago and the founder, president, and chief Scientist of Pirouette Software Inc.. Previously he has been on the computer science faculty at the Technion, Columbia University, University of Illinois at Urbana Champaign, and a Member of Technical Staff at Bell Laboratories. He was the founder of Mobitrac, a high-tech venture-funded startup that was listed in the top 50 start-ups in Chicagoland and acquired in 2006. He served as a consultant to Argonne National Laboratory, US Army Research Laboratories, DARPA, and NASA.</p>
+<p>Ouri Wolfson authored over 240 publications, eight of them award winning. He holds seven patents, and has over 17,000 citations and an h-index of 61 on Google scholar. He is a Fellow of the Association of Computing Machinery (ACM), a Fellow of the American Association for the Advancement of Science (AAAS), a Fellow of the Institute of Electrical and Electronics Engineers (IEEE), a Fellow of the Asia-Pacific Artificial Intelligence Association (AAIA), a Fellow of the International Artificial Intelligence Industry Alliance (AIIA), and a University of Illinois Scholar for 2009. He served as a Distinguished Lecturer for the Association of Computing Machinery. Wolfson was the keynote and distinguished speaker at leading conferences and universities, recently the The Eighth International Conference on Big Data Analytics (BDA2020) , Dec. 2020, and the International Conference on Transport and Smart Cities (ICoTS 2021) , Sept. 2021.</p>
+<p>Ouri Wolfson is the Editor in Chief of the MDPI Journal of Future Transportation , the Specialty Chief Editor of Frontiers&#x27; Smart Technologies and Cities , and he chaired leading conferences. His research has been funded by the National Science Foundation (NSF), Air Force Office of Scientific Research (AFOSR), Defense Advanced Research Projects Agency (DARPA), NATO, US Army, NASA, the New York State Science and Technology Foundation, Hughes Research Laboratories, Informix, Accenture, and Hitachi Co.</p>
+<p>Website: https://www.cs.uic.edu/~wolfson/</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

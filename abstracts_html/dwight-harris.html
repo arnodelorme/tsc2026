@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Is Awareness: Chiral Self-Translation as the Ground of Consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Dwight Harris</h1>
+  <p class="subtitle">Editor Reality&#x27;s Fugue Genesis, New Hope, Pennsylvania, USA / Dwightkharris@blogspot.com, Lambertville, New Jersey, USA / https://www.amazon.com/Awareness-Life-Ontological-Distinction-Biological-ebook/dp/B07N12VJ2Q, Lambertville, New Jersey, USA / Administrator, The  Conscious Organism, Facebook Group, Lambertville, New Jersey, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/dwight-harris.jpg" alt="Dwight Harris">
+    <div class="speaker-info">
+      <h2>Dwight Harris</h2>
+      <div class="affiliation">Editor Reality&#x27;s Fugue Genesis, New Hope, Pennsylvania, USA / Dwightkharris@blogspot.com, Lambertville, New Jersey, USA / https://www.amazon.com/Awareness-Life-Ontological-Distinction-Biological-ebook/dp/B07N12VJ2Q, Lambertville, New Jersey, USA / Administrator, The  Conscious Organism, Facebook Group, Lambertville, New Jersey, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Life Is Awareness: Chiral Self-Translation as the Ground of Consciousness</div>
+
+  <div class="authors-line">Dwight Harris, Carol Parker</div>
+  <div class="affiliations">Dwight Harris &mdash; Editor Reality&#x27;s Fugue Genesis, New Hope, Pennsylvania, USA / Dwightkharris@blogspot.com, Lambertville, New Jersey, USA / https://www.amazon.com/Awareness-Life-Ontological-Distinction-Biological-ebook/dp/B07N12VJ2Q, Lambertville, New Jersey, USA / Administrator, The  Conscious Organism, Facebook Group, Lambertville, New Jersey, USA<br>Carol Parker &mdash; Editor, Reality&#x27;s Fugue, New Hope, Pennslyvania, USA / Senior Advisor to the Board of Directors, Community Concerns Uganda Initiative, Bujembe, Jinja City, Uganda / US Benefits Manager for SLB, retired, Sugar Land, Texas, USA</div>
+
+  <div class="abstract-text">
+<p>There are three long-standing questions still unanswered by science: how the subjective, immaterial experiences of mind arise out of and interact with the objective, physical world of matter; what life is; and what consciousness is. More recently, a fourth has emerged: can artificial systems be aware? In this paper, we show how consciousness is the inevitable result of awareness&#x27; ability to self-express its own left-right-forward continuance &ndash; the invariant triaxial orientation intrinsic to any aware perspective in time &ndash; in the chiral shapes of organic molecules. The congruence between these theoretical &quot;givens&quot; perceived by awareness and the three dimensions of physical shape establishes a foundational correspondence that enables awareness to self-instantiate in the living organism. Citing evidence from geometry, biochemistry, microbiology and quantum physics, we posit that living awareness applies this self-correspondence to shape itself and the world it perceives by way of transitional dimensionality, progressing from point, to line, plane and three-dimensional object. Using this progression, living awareness &quot;grasps&quot; the size and angular directions of shapes as meaning relative to its own left-right-forward perspective, then applies it to build a directional-size language by which it shapes its own physical form. Employing this self-generated lexicon linking right-chiral nucleotides with left-chiral amino acids, it fashions a bodily form, stores the details in individual and species memory, then translates them into task-performing protein shapes that self-organize in hierarchical functionality. These functional task-structures constitute the &ldquo;parts&rdquo; of an organism, maintaining its form from one now moment to the next. Life is the maintenance of this self-shaped whole form through interpreted and selected passing matter parts. The nucleotides of memory, amino acids of procedure and lipids of the cell membrane all incorporate a recurring left-right-forward pattern that is also embedded in the relationships underlying the universal genetic code itself. In metabolism, matter passes through the body of an organism leaving its form unchanged; in life, form passes through matter in the process of shaping itself and the world it senses as a potter&rsquo;s idea &ldquo;passes through&rdquo; a lump of clay in shaping a bowl or vase. In life, the flow of form through matter is experienced as awareness &ndash; something that is not &quot;added onto&quot; matter but rather the unifying principle inherent in it. Life-critical information stored in DNA is translated into functional task-structures that in turn feed information back into DNA memory, constituting an integrated looping hierarchy that shapes the physical form of each new generation in the process of continually acting on and interacting with matter. This recursive flow establishes the ground wherein awareness co-evolves along with the forms it shapes, giving rise to successively higher levels of self-realization reflected in greater body complexity, symbolic language and advanced qualitative expressions of mind. This framework resolves all four questions on structural grounds: living awareness is not a computational function that can be implemented regardless of substrate. It is the physical instantiation of left-right-forward continuance in chiral matter. Lacking bilateral chirality and embodied self-translation, an artificial system can imitate awareness, but it cannot be alive or aware</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>After receiving a BA in Arts and Sciences at Penn State University in 1967, I studied philosophy under Hans Jonas, author of The Phenomenon of Life at the Graduate Faculty of New School, NYC. Jonas rejected traditional mind-matter dualism, arguing that living beings always unite form (organization, pattern) and substance (matter), noting that their form persists even as the substance that comprises their physical bodies is constantly changing in the processes of metabolism. Over the years, while mostly supporting myself as a computer systems administrator, I further developed this theory of life&#x27;s inversion of form and substance.</p>
+<p>Based on my background, F. Samuel Brainard requested my help in editing his book, Reality&rsquo;s Fugue: Reconciling Worldviews in Philosophy, Religion and Science. This book is an elucidation of his view that these three disciplines are epistemologically united in the same universal awareness.</p>
+<p>I differ with Brainard in that for awareness to have meaning, there must be a specific something that is aware.  For me, that something is life. Brainard&#x27;s distinction between &quot;conscious&rdquo; and &ldquo;unconscious&rdquo; awareness suggested to me how life itself constitutes the bridge between form and substance as well as mind and matter.</p>
+<p>In my self-published book, Awareness and Life: The Ontological Distinction of Biological Life, I theorized that Jonas&#x27; inversion makes life itself the unification of consciousness-matter dualism. In the history of the universe, forms of matter increase in complexity until life is the freeing of form from matter. Human consciousness evolved from the first unicellular organisms.</p>
+<p>I&#x27;ve now almost completed my second book, edited, co-written and illustrated by Carol Parker, The Conscious Organism: How Life Organizes the World.  The work is about 425 pages and incorporates 170 illustrations. In it, we detail what we mean by awareness and how it is instantiated in life beginning with the unicellular organism. In the first half, we discuss awareness abstractly; in the second half, we show how it self-manifests in life.</p>
+<p>My entry was accepted at the Tucson Az Conference this past April.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Details &mdash; The Science of Consciousness 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.5;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle { font-size: 1.05rem; opacity: .85; }
+.ws-live-badge {
+  display: inline-block; margin-top: 1.1rem; padding: .45rem 1.3rem;
+  border: 1px solid rgba(232,167,39,.85); border-radius: 999px;
+  color: #e8a727; font-size: .88rem; font-weight: 700;
+  letter-spacing: .04em; background: rgba(10,36,64,.35);
+  transition: background .2s, color .2s;
+}
+.ws-live-badge:hover { background: #e8a727; color: #0a2440; text-decoration: none; }
+
+/* ── Timetable ───────────────────────────────── */
+.timetable-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+  overflow-x: auto;
+}
+.timetable-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.5rem;
+}
+.timetable {
+  display: grid;
+  grid-template-columns: 70px repeat(6, 1fr);
+  border-left: 2px solid #bbb;
+  min-width: 900px;
+  font-size: .8rem;
+}
+
+/* time labels column */
+.t-time {
+  grid-column: 1;
+  text-align: right; padding-right: .6rem;
+  font-size: .75rem; color: #666; font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex; align-items: flex-start; justify-content: flex-end;
+  padding-top: 2px;
+}
+
+/* day headers */
+.t-day {
+  text-align: center; font-weight: 700; font-size: .85rem;
+  padding: .6rem .3rem;
+  background: #f5f8fb;
+  border-bottom: 2px solid #bbb;
+  color: #0a2440;
+}
+
+/* grid cells */
+.t-cell {
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  min-height: 38px;
+  position: relative;
+}
+
+/* session blocks */
+.t-block {
+  border-radius: 4px;
+  padding: .45rem .55rem;
+  margin: 2px;
+  font-size: .78rem;
+  line-height: 1.35;
+  height: calc(100% - 4px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.t-block .session-title {
+  font-weight: 700; font-size: .8rem;
+  margin-bottom: .15rem;
+}
+.t-block .session-speakers {
+  font-size: .72rem; font-style: italic; opacity: .85;
+}
+.t-block .session-note {
+  font-size: .68rem; opacity: .7; margin-top: .1rem;
+}
+
+/* Color coding — pastels derived from navy/teal/gold palette */
+.bg-plenary    { background: #d6e6f0; color: #1a3050; }
+.bg-break      { background: #eaedf0; color: #666; text-align: center; }
+.bg-concurrent { background: #d0eaee; color: #1a4a50; }
+.bg-poster     { background: #ece6f4; color: #3a2a50; }
+.bg-workshop   { background: #dce8e0; color: #2a4030; }
+.bg-social     { background: #f2ead4; color: #4a3a18; }
+.bg-closing    { background: #f4d6d6; color: #5a1a1a; }
+.bg-breakfast  { background: #eaedf0; color: #555; }
+.bg-lunch      { background: #eaedf0; color: #666; text-align: center; }
+
+/* ── Week-at-a-glance overview ──────────────── */
+.overview-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 0;
+}
+.overview-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1rem;
+}
+.ov-scroll { overflow-x: auto; margin-bottom: 1rem; }
+.ov-table {
+  table-layout: fixed; width: 100%; min-width: 860px;
+  border-collapse: collapse;
+  font-size: .78rem; line-height: 1.35;
+}
+.ov-table th, .ov-table td {
+  border: 1px solid #dde3ed;
+  padding: .45rem .5rem;
+  vertical-align: top;
+}
+.ov-table thead th {
+  background: #0a2440; color: #fff;
+  text-align: center; font-weight: 700;
+  font-size: .8rem; padding: .55rem .4rem;
+}
+.ov-table thead th span {
+  display: block; font-weight: 400; font-size: .7rem; opacity: .75;
+}
+.ov-table .ov-time {
+  width: 65px; text-align: right; padding-right: .6rem;
+  font-size: .72rem; font-weight: 600; color: #555;
+  background: #f8f9fb;
+  white-space: nowrap;
+}
+.ov-table td .ov-title {
+  font-weight: 600; font-size: .73rem; color: #0a2440;
+}
+.ov-table td .ov-speakers {
+  font-size: .66rem; color: #666; font-style: italic;
+  margin-top: .1rem;
+}
+.ov-table td.bg-plenary,
+.ov-table td.bg-concurrent,
+.ov-table td.bg-workshop,
+.ov-table td.bg-poster,
+.ov-table td.bg-social,
+.ov-table td.bg-closing { min-height: 52px; }
+.ov-table .ov-row-plenary td.bg-plenary { height: 60px; }
+
+/* span helpers for multi-column blocks */
+.span-all { grid-column: 2 / -1; }
+.span-2   { grid-column: span 2; }
+.span-3   { grid-column: span 3; }
+
+/* ── Day sections (stacked for clarity) ──────── */
+.day-section {
+  margin-bottom: 2.5rem;
+}
+.dg-block[id] { scroll-margin-top: 70px; }
+.pl-chip {
+  display: inline-block; background: #0a2440; color: #fff;
+  font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+  padding: .1rem .45rem; border-radius: 8px; vertical-align: middle;
+  margin-right: .3rem;
+}
+.day-section h3 {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .8rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.day-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border-left: 2px solid #bbb;
+}
+.dg-time {
+  font-size: .78rem; color: #666; font-weight: 600;
+  padding: .5rem .6rem .5rem 0;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+.dg-content {
+  border-bottom: 1px solid #eee;
+  padding: .35rem .5rem;
+}
+.dg-block {
+  border-radius: 5px;
+  padding: .55rem .7rem;
+  margin: 2px 0;
+}
+.dg-block .session-title {
+  font-weight: 700; font-size: .88rem;
+  margin-bottom: .15rem;
+}
+.dg-block .session-speakers {
+  font-size: .8rem; font-style: italic; opacity: .85;
+}
+.dg-block .session-note {
+  font-size: .75rem; opacity: .7; margin-top: .15rem;
+}
+
+/* ── Legend ───────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  margin: 1.5rem 0 2rem;
+  font-size: .78rem;
+}
+.legend-item {
+  display: flex; align-items: center; gap: .35rem;
+}
+.legend-swatch {
+  width: 16px; height: 16px; border-radius: 3px;
+}
+
+/* ── Speaker mismatch highlight ──────────────── */
+.speaker-missing { }
+
+.speaker-new { }
+
+.speaker-maybe { }
+.speaker-unconfirmed { }
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .timetable-wrap { padding: 1.5rem .5rem 3rem; }
+  .overview-wrap { padding: 1.5rem .5rem 0; }
+}
+
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Program Details</h1>
+  <p class="subtitle">October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
+  <p style="margin:0;"><a class="ws-live-badge" href="workshops.html">New &middot; Sunday workshops announced</a></p>
+</header>
+
+<!-- ═══ PROGRAM ═══ -->
+<div class="timetable-wrap">
+
+<h2>Detailed Timetable</h2>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch bg-plenary"></div> Plenary</div>
+  <div class="legend-item"><div class="legend-swatch bg-concurrent"></div> Concurrent sessions</div>
+  <div class="legend-item"><div class="legend-swatch bg-workshop"></div> Workshops</div>
+  <div class="legend-item"><div class="legend-swatch bg-poster"></div> Posters</div>
+  <div class="legend-item"><div class="legend-swatch bg-social"></div> Social / experiential</div>
+  <div class="legend-item"><div class="legend-swatch bg-break"></div> Break</div>
+</div>
+
+<!-- ── SUNDAY ── -->
+<div class="day-section">
+  <h3>Sunday, October 11 &mdash; Workshops &amp; Opening Plenary</h3>
+  <div class="day-grid">
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-workshop">
+        <div class="session-title">Morning Workshops (5 parallel)</div>
+        <div style="font-size:.75rem;margin-top:.15rem;"><a href="workshops.html">see details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">12:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break">
+        <div class="session-title">Lunch break</div>
+      </div>
+    </div>
+    <div class="dg-time">1:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-workshop">
+        <div class="session-title">Afternoon Workshops (5 parallel)</div>
+        <div style="font-size:.75rem;margin-top:.15rem;"><a href="workshops.html">see details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Light reception &amp; registration</div>
+      </div>
+    </div>
+    <div class="dg-time">7:05 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-closing">
+        <div class="session-title">Opening</div>
+      </div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <a href="workshops.html#non-human" class="dg-block bg-workshop" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Featured Workshop<br><span style="font-weight:normal;font-style:italic">The Varieties of Non-Human Consciousness</span> &rarr;</div>
+        <div class="session-note">Chair: Susan Schneider</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── MONDAY ── -->
+<div class="day-section">
+  <h3>Monday, October 12</h3>
+  <div class="day-grid">
+    <div class="dg-time">7:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Experiential Sessions</div>
+        <div class="session-note">TennisCentric: An Experiential Study of Flow and Consciousness, 7:00&ndash;7:45 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">MAHP &mdash; Mindful Awareness Healing Practice, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">Quest for Presence &mdash; Synchronistic Morning Sessions, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-1">
+        <div class="session-title"><span class="pl-chip">PL-1</span> Quantum Biophotonics in Living Systems</div>
+        <div class="session-speakers">Jack Tuszynski, Lea Gassab, Roumiana Tsenkova</div>
+        <div class="session-note" data-auto="talk-title">Tuszynski: <a href="abstracts_html/jack-tuszynski.html">An overview of the experimental tests of the Orch OR theory: UV and visible light absorption and re-emission of photons by tubulin and microtubules</a></div>
+        <div class="session-note" data-auto="talk-title">Gassab: <a href="abstracts_html/lea-gassab.html">Quantum Biophotonics of Microtubules: Light, Energy, and Neural Function</a></div>
+        <div class="session-note" data-auto="talk-title">Tsenkova: <a href="abstracts_html/roumiana-tsenkova.html">Aquaphotomics for Consciousness: Linking Microtubules, Anesthesia, and Water Spectral Dynamics</a></div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-2">
+        <div class="session-title"><span class="pl-chip">PL-2</span> UAP, Anomalies, and Consciousness</div>
+        <div class="session-speakers"><span class="speaker-new">Garry Nolan</span></div>
+        <div class="session-note" data-auto="talk-title">Nolan: TBA</div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div><div class="session-note">Experiential: Binaural Beats, 1&ndash;1:45 PM, Garden Room &mdash; <a href="experientials.html#confirmed">details</a></div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-3">
+        <div class="session-title"><span class="pl-chip">PL-3</span> Neuroscience of Consciousness</div>
+        <div class="session-speakers">Edward Boyden, Terry Sejnowski, Tracy Brandmeyer</div>
+        <div class="session-note" data-auto="talk-title">Boyden: <a href="abstracts_html/edward-boyden.html">How can bioengineers contribute to the study of consciousness?</a></div>
+        <div class="session-note" data-auto="talk-title">Sejnowski: <a href="abstracts_html/terrence-sejnowski.html">NeuroAI</a></div>
+        <div class="session-note" data-auto="talk-title">Brandmeyer: <a href="abstracts_html/tracy-brandmeyer.html">Genes, Brain Circuits, and Consciousness: A New Era of Precision Neuroscience</a></div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <a href="concurrent.html#mon-1" class="dg-block bg-concurrent" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Concurrent Sessions 1 (7 parallel) &rarr;</div>
+      </a>
+    </div>
+    <div class="dg-time">7:05 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Reception</div>
+      </div>
+    </div>
+    <div class="dg-time">9:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social"><div class="session-title">Consciousness Happenings<br><span style="font-weight:normal;font-style:italic">TBA</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TUESDAY ── -->
+<div class="day-section">
+  <h3>Tuesday, October 13</h3>
+  <div class="day-grid">
+    <div class="dg-time">7:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Experiential Sessions</div>
+        <div class="session-note">TennisCentric: An Experiential Study of Flow and Consciousness, 7:00&ndash;7:45 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">MAHP &mdash; Mindful Awareness Healing Practice, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">Quest for Presence &mdash; Synchronistic Morning Sessions, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-4">
+        <div class="session-title"><span class="pl-chip">PL-4</span> Psychedelics and Consciousness</div>
+        <div class="session-speakers">Robin Carhart-Harris, Fadel Zeidan, <span class="speaker-new">Travis Craddock</span></div>
+        <div class="session-note" data-auto="talk-title">Carhart-Harris: <a href="abstracts_html/robin-carhart-harris.html">How Psychedelics Work: Illuminating the Hidden Mind</a></div>
+        <div class="session-note" data-auto="talk-title">Zeidan: <a href="abstracts_html/fadel-zeidan.html">Beyond the Trip: A Neurobiological Framework for Integrating Mindfulness and Psychedelic-Assisted Therapy</a></div>
+        <div class="session-note" data-auto="talk-title">Craddock: <a href="abstracts_html/travis-craddock.html">Quantum Spin Dynamics in the Cytoskeleton: Implications for the Quantum Brain</a></div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-5">
+        <div class="session-title"><span class="pl-chip">PL-5</span> Biology of Consciousness</div>
+        <div class="session-speakers">Michael Levin (Remote), Nirosha Murugan</div>
+        <div class="session-note" data-auto="talk-title">Levin: <a href="abstracts_html/michael-levin.html">Diverse intelligence in unconventional embodiments: origins and implications</a></div>
+        <div class="session-note" data-auto="talk-title">Murugan: <a href="abstracts_html/nirosha-murugan.html">Consciousness as a Biophysical Informational Landscape Shaped by Patterned Energy Dynamics</a></div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div><div class="session-note">Experiential: Binaural Beats, 1&ndash;1:45 PM, Garden Room &mdash; <a href="experientials.html#confirmed">details</a></div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-6">
+        <div class="session-title"><span class="pl-chip">PL-6</span> Quantum AI and Consciousness</div>
+        <div class="session-speakers">Hartmut Neven, Susan Schneider, Anirban Bandyopadhyay</div>
+        <div class="session-note" data-auto="talk-title">Neven: <a href="abstracts_html/hartmut-neven.html">Towards a Brain-Quantum Computer Interface: Identifying Potential Coupling Mechanisms via Anesthetic Isotope Effects</a></div>
+        <div class="session-note" data-auto="talk-title">Schneider: <a href="abstracts_html/susan-schneider.html">Which AIs Might be Conscious, and Why it Matters</a></div>
+        <div class="session-note" data-auto="talk-title">Bandyopadhyay: <a href="abstracts_html/anirban-bandyopadhyay.html">Toward Brain-Like Consciousness in Self-Evolving Organic Gel-Based Quantum Hardware</a></div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <a href="concurrent.html#tue-1" class="dg-block bg-concurrent" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Concurrent Sessions 2 (6 parallel) &rarr;</div>
+      </a>
+    </div>
+    <div class="dg-time">7:05 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <a href="posters.html#ps1" class="dg-block bg-poster" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Poster Session 1 &rarr;</div>
+        <div class="session-note">Mission Bay Room</div>
+      </a>
+    </div>
+    <div class="dg-time">9:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social"><div class="session-title">Consciousness Happenings<br><span style="font-weight:normal;font-style:italic">TBA</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WEDNESDAY ── -->
+<div class="day-section">
+  <h3>Wednesday, October 14</h3>
+  <div class="day-grid">
+    <div class="dg-time">7:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Experiential Sessions</div>
+        <div class="session-note">TennisCentric: An Experiential Study of Flow and Consciousness, 7:00&ndash;7:45 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">MAHP &mdash; Mindful Awareness Healing Practice, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">Quest for Presence &mdash; Synchronistic Morning Sessions, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-7">
+        <div class="session-title"><span class="pl-chip">PL-7</span> Non-Local Consciousness and &ldquo;Psi&rdquo;</div>
+        <div class="session-speakers">Diane Hennacy Powell, Helan&eacute; Wahbeh, Dean Radin</div>
+        <div class="session-note" data-auto="talk-title">Hennacy: <a href="abstracts_html/diane-hennacy.html">Unfiltered Consciousness: Insights from Individuals with Altered Access</a></div>
+        <div class="session-note" data-auto="talk-title">Wahbeh: <a href="abstracts_html/helane-wahbeh.html">If Consciousness Were Non-Local: A Convergence Argument from Psi Research</a></div>
+        <div class="session-note" data-auto="talk-title">Radin: <a href="abstracts_html/dean-radin.html">Fringe Physics: Experimental Tests of the Consciousness&ndash;Collapse Hypothesis</a></div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-8">
+        <div class="session-title"><span class="pl-chip">PL-8</span> Cerebral Organoids and Consciousness</div>
+        <div class="session-speakers">Alysson Muotri, Kenneth Kosik</div>
+        <div class="session-note" data-auto="talk-title">Muotri: <a href="abstracts_html/alysson-muotri.html">Human brain organoids as a plataform to investigate the emercence of consciousness</a></div>
+        <div class="session-note" data-auto="talk-title">Kosik: <a href="abstracts_html/kenneth-kosik.html">Effects of Natural Xenon on Human Brain Organoids and Cultured Neurons</a></div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div><div class="session-note">Experiential: Binaural Beats, 1&ndash;1:45 PM, Garden Room &mdash; <a href="experientials.html#confirmed">details</a></div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-9">
+        <div class="session-title"><span class="pl-chip">PL-9</span> Is the Brain Organized by Connectomics or Wavefields?</div>
+        <div class="session-speakers">Andr&eacute; Bastos, <span class="speaker-new">Eric Halgren</span>, Edward Large</div>
+        <div class="session-note" data-auto="talk-title">Bastos: <a href="abstracts_html/andre-bastos.html">Predictive Coding: A More Cognitive Process Than We Thought?</a></div>
+        <div class="session-note" data-auto="talk-title">Halgren: <a href="abstracts_html/eric-halgren.html">A Possible Mechanism of Cortical Integration Supporting Mental Activity in Humans</a></div>
+        <div class="session-note" data-auto="talk-title">Large: <a href="abstracts_html/edward-large.html">Musical Neurodynamics &ndash; Resonance, Stability, and the Embodied Mind</a></div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <a href="concurrent.html#wed-1" class="dg-block bg-concurrent" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Concurrent Sessions 3 (6 parallel) &rarr;</div>
+      </a>
+    </div>
+    <div class="dg-time">7:05 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <a href="posters.html#ps2" class="dg-block bg-poster" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Poster Session 2 &rarr;</div>
+        <div class="session-note">Mission Bay Room</div>
+      </a>
+    </div>
+    <div class="dg-time">9:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social"><div class="session-title">Collective Consciousness Concert</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── THURSDAY ── -->
+<div class="day-section">
+  <h3>Thursday, October 15</h3>
+  <div class="day-grid">
+    <div class="dg-time">7:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Experiential Sessions</div>
+        <div class="session-note">TennisCentric: An Experiential Study of Flow and Consciousness, 7:00&ndash;7:45 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">MAHP &mdash; Mindful Awareness Healing Practice, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">Quest for Presence &mdash; Synchronistic Morning Sessions, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">8:30 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-10">
+        <div class="session-title"><span class="pl-chip">PL-10</span> Origins of Life and Consciousness &mdash; Which Came First?</div>
+        <div class="session-speakers"><span class="speaker-new">Steen Rasmussen</span>, Stuart Hameroff, Farhan Lakhany</div>
+        <div class="session-note" data-auto="talk-title">Rasmussen: <a href="abstracts_html/steen-rasmussen.html">Emergence of life and sentience</a></div>
+        <div class="session-note" data-auto="talk-title">Hameroff: TBA</div>
+        <div class="session-note" data-auto="talk-title">Lakhany: <a href="abstracts_html/farhan-lakhany.html">Evaluating the Quantum Pleasure Principle</a></div>
+      </div>
+    </div>
+    <div class="dg-time">10:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-11">
+        <div class="session-title"><span class="pl-chip">PL-11</span> The Spectrum of Conscious States</div>
+        <div class="session-speakers">Schooler, Hoffman</div>
+        <div class="session-note" data-auto="talk-title">Schooler: <a href="abstracts_html/jonathan-schooler.html">The Kite of Consciousness: How Time Moves Through Nested Minds</a></div>
+        <div class="session-note" data-auto="talk-title">Hoffman: <a href="abstracts_html/donald-hoffman.html">The Recursive Trace Logic of Observers and Agents</a></div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">Lunch</div><div class="session-note">Experiential: Binaural Beats, 1&ndash;1:45 PM, Garden Room &mdash; <a href="experientials.html#confirmed">details</a></div></div>
+    </div>
+    <div class="dg-time">2:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-12">
+        <div class="session-title"><span class="pl-chip">PL-12</span> Consciousness and AI</div>
+        <div class="session-speakers">Jennifer Prendki, TBA</div>
+        <div class="session-note" data-auto="talk-title">Prendki: TBA</div>
+      </div>
+    </div>
+    <div class="dg-time">4:10 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">5:00 pm</div>
+    <div class="dg-content">
+      <a href="concurrent.html#thu-1" class="dg-block bg-concurrent" style="text-decoration:none;color:inherit;display:block;">
+        <div class="session-title">Concurrent Sessions 4 (7 parallel) &rarr;</div>
+      </a>
+    </div>
+    <div class="dg-time">7:05 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break</div></div>
+    </div>
+    <div class="dg-time">7:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Luau Dinner</div>
+      </div>
+    </div>
+    <div class="dg-time">9:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social"><div class="session-title">Poetry Slam</div><div class="session-note">You do not have to attend the dinner in order to participate in the Poetry Slam.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FRIDAY ── -->
+<div class="day-section">
+  <h3>Friday, October 16</h3>
+  <div class="day-grid">
+    <div class="dg-time">7:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-social">
+        <div class="session-title">Experiential Sessions</div>
+        <div class="session-note">TennisCentric: An Experiential Study of Flow and Consciousness, 7:00&ndash;7:45 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">MAHP &mdash; Mindful Awareness Healing Practice, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+        <div class="session-note">Quest for Presence &mdash; Synchronistic Morning Sessions, 7:00&ndash;8:00 am &mdash; <a href="experientials.html#confirmed">details</a></div>
+      </div>
+    </div>
+    <div class="dg-time">9:00 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-13">
+        <div class="session-title"><span class="pl-chip">PL-13</span> Anesthesia and Consciousness</div>
+        <div class="session-speakers">Sarika Katiyar, <span class="speaker-new">Hemal Patel</span>, Mike Wiest</div>
+        <div class="session-note" data-auto="talk-title">Katiyar: <a href="abstracts_html/sarika-katiyar.html">Brain Megahertz Signatures of Anaesthetic-Induced Loss of Consciousness in the Surgical Operating Room</a></div>
+        <div class="session-note" data-auto="talk-title">Patel: <a href="abstracts_html/hemal-patel.html">The Caveolar Consciousness Hypothesis: How Lipids, Mitochondria, and the Cytoskeleton Shape Anesthesia</a></div>
+        <div class="session-note" data-auto="talk-title">Wiest: <a href="abstracts_html/michael-wiest.html">Orchestrated objective reduction is quantum active inference</a></div>
+      </div>
+    </div>
+    <div class="dg-time">11:10 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-break"><div class="session-title">Break (30 min)</div></div>
+    </div>
+    <div class="dg-time">11:40 am</div>
+    <div class="dg-content">
+      <div class="dg-block bg-plenary" id="pl-14">
+        <div class="session-title"><span class="pl-chip">PL-14</span> Is AI Conscious? (Panel)</div>
+        <div class="session-speakers">Roger Penrose (Remote), Stuart Hameroff, Susan Schneider, Giulio Tononi</div>
+        <div class="session-note" data-auto="talk-title">Penrose: <a href="abstracts_html/roger-penrose.html">Is AI Conscious?</a></div>
+        <div class="session-note" data-auto="talk-title">Hameroff: <a href="abstracts_html/stuart-hameroff.html">Is AI Conscious?</a></div>
+        <div class="session-note" data-auto="talk-title">Schneider: <a href="abstracts_html/susan-schneider-971.html">Is AI Conscious?</a></div>
+        <div class="session-note" data-auto="talk-title">Tononi: <a href="abstracts_html/giulio-tononi.html">Is AI Conscious?</a></div>
+      </div>
+    </div>
+    <div class="dg-time">12:30 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-closing">
+        <div class="session-title">Conference Close: The Future of Consciousness</div>
+      </div>
+    </div>
+    <div class="dg-time">1:00 pm</div>
+    <div class="dg-content">
+      <div class="dg-block bg-lunch"><div class="session-title">End of conference</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="day-section" id="concurrent-poster-links">
+  <h3>Concurrent &amp; Poster Sessions</h3>
+  <p style="font-size:.92rem;color:#555;">Concurrent talks (MON&ndash;THU, 5:00&ndash;7:05 pm) and posters (Tuesday &amp; Wednesday evenings) are listed on their own pages:</p>
+  <p><a href="concurrent.html">View Concurrent Presentations &rarr;</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="posters.html">View Poster Sessions &rarr;</a></p>
+</div>
+
+<p style="font-size:.85rem;color:#888;margin-top:2rem;">Program is preliminary and subject to change.</p>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer></footer>
+<script src="footer.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bursts, not mean shifts: the Immersive Ionosphere audiovisual-feedback QRNG platform tests the temporal-burst hypothesis, plus a sealed Human / LLM / PRNG follow-up &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Mason Ulrika Borchard</h1>
+  <p class="subtitle">Valdosta State University, Valdosta, GA, USA / Ionosphere Laboratories, Esparto, CA, USA / The Aegix Linux Project, Kingsport, TN, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/mason-ulrika-borchard.jpg" alt="Mason Ulrika Borchard">
+    <div class="speaker-info">
+      <h2>Mason Ulrika Borchard</h2>
+      <div class="affiliation">Valdosta State University, Valdosta, GA, USA / Ionosphere Laboratories, Esparto, CA, USA / The Aegix Linux Project, Kingsport, TN, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-5">THU-5 &mdash; Consciousness-Based Science: Information, Memory, and Temporal Integration</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Bursts, not mean shifts: the Immersive Ionosphere audiovisual-feedback QRNG platform tests the temporal-burst hypothesis, plus a sealed Human / LLM / PRNG follow-up</div>
+
+  <div class="authors-line">Mason Ulrika Borchard, Danielle Caputi, Timothy Beach</div>
+  <div class="affiliations">Mason Ulrika Borchard &mdash; Valdosta State University, Valdosta, GA, USA / Ionosphere Laboratories, Esparto, CA, USA / The Aegix Linux Project, Kingsport, TN, USA<br>Danielle Caputi &mdash; Ionosphere Laboratories, Esparto, CA, USA<br>Timothy Beach &mdash; The Aegix Linux Project, Kingsport, TN, USA / Ionosphere Laboratories, Esparto, CA, USA</div>
+
+  <div class="abstract-text">
+<p>Most RNG tests of mind-matter interaction seat a subject at a screen and ask them to nudge a random stream one way, and the pooled effect on the mean is small and contested. A new platform, Ionosphere, asks whether scaling participant engagement can produce a detectable signal. We turn a quantum random number generator (QRNG) into an immersive audiovisual environment: a room-scale LED grid, or a 192-rod chandelier, with a soundscape, reacting in real time to the live stream. As the stream drifts from randomness the display resolves from a glitch into a clear image, so people are drawn in by the impulse to &quot;fix&quot; the flickering lights rather than told to concentrate. The central hypothesis is that bursts (a 60-s period with |z| ≥ 1.96 on bit-count deviation) occur more than chance while attention is absorbed, an approach others have proposed after null RNG results. We describe three exploratory deployments, then the sealed confirmatory follow-up in progress. Autumn Lights (October 2025): A four-day festival installation, 24.5 million quantum-random bytes across 3,222 sixty-second periods, aggregate-null (4.28% bursts vs 5.00% expected). When experienced meditators arrived unannounced, the deployment&#x27;s peak z-score followed (z = 3.31, nominal below 0.001, uncorrected). NYE 2025/2026: The control design came from this deployment: an attended unit against a simultaneous hidden second unit in the same building and window, unknown to those present; both were null. The pattern used that night looked best in its high-noise state, so its feedback rewarded randomness over signal, a mismatch later patterns corrected. July 4 paired run (2026): an attended TrueRNG drove live feedback beside a pseudo-RNG control with none, same machine, 1,000 time-aligned 60-s periods each. Both aggregate-null. During nine focus sessions logged in real time before any contrast (107 periods), the attended arm&#x27;s burst rate ran 10.3% against 3.9% elsewhere; a circular-shift placement test that preserves the series&#x27; dependence found 7 of 1,000 placements with an in-window burst count ≥ observed (p = .007), while the control stayed flat. Across perturbation checks the contrast ranges from p = .003 to a nonsignificant .059, losing significance only at the strictest variant. These windows are exploratory, so the sealed follow-up carries the confirmatory weight. Sealed Human / LLM / Pseudo-RNG follow-up (in progress): A preregistered contrast runs the complete attended, live-feedback condition on the live hardware stream against a matched unattended pseudo-RNG control. Session start times are fixed and pre-committed, leaving no timing decision to influence and closing the operator&#x27;s timing-based decision-augmentation channel. An exploratory arm puts a large language model (Claude Opus 4.5) in the operator&#x27;s seat, asking whether a nonhuman, goal-directed operator produces the same signature. To our knowledge no peer-reviewed study has tested a language model in this role; the nearest prior art, a 2015 patent (US 9,189,744), is untested and unreplicated. Single-operator and single-apparatus, so experimenter effects and substrate specificity remain open, and independent replication remains necessary. The larger question is whether immersion and engagement, not instruction alone, belong in how this field defines an operator.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Mason Ulrika Borchard is a software engineer, consciousness researcher, and doctoral candidate whose work bridges quantum-randomness experimentation with education technology and ecology. She co-founded Ionosphere, a QRNG-driven audiovisual platform investigating consciousness-matter interaction, where she leads data analysis and presented the platform&#x27;s first two experiments at the 2026 ACORN symposium. She holds a master&#x27;s degree from the University of Southern California and is pursuing a Ph.D. in Adult Learning and Development at Valdosta State University. Alongside her doctoral work, Mason is building Borchard Labs, an AI-driven research-simulation platform for underserved STEM undergraduates. Awards include induction into the Honor Society of Phi Kappa Phi and recognition in the XPRIZE Hall of Fame as a Pandemic Response Challenge Finalist.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

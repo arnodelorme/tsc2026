@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Hierarchical Theoretical Framework for Conscious Awareness Through Emergent Quantum&ndash;Informational Coupling &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Bhavishya Ankush</h1>
+  <p class="subtitle">DAV, Sonipat, Haryana, India</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/bhavishya-ankush.jpg" alt="Bhavishya Ankush">
+    <div class="speaker-info">
+      <h2>Bhavishya Ankush</h2>
+      <div class="affiliation">DAV, Sonipat, Haryana, India</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">A Hierarchical Theoretical Framework for Conscious Awareness Through Emergent Quantum&ndash;Informational Coupling</div>
+
+  <div class="abstract-text">
+<p>Despite decades of progress in neuroscience, cognitive science, and quantum-inspired theories of consciousness, no universally accepted framework currently explains how subjective experience emerges from physical processes or how mechanisms spanning fundamental physics and biological organization are connected. Existing theories successfully address important aspects of conscious behavior, including neural integration, information processing, and quantum coherence, yet a comprehensive hierarchical architecture linking these domains remains absent. This work presents a developing theoretical framework that explores one possible physical pathway through which conscious awareness could emerge by integrating concepts from quantum mechanics, systems neuroscience, and string-inspired mathematical organization. The proposed framework hypothesizes the existence of an emergent, quantized informational field arising from deeper physical dynamics. Rather than introducing a new fundamental interaction, this field is treated as an effective substrate capable of supporting interactions between sufficiently organized physical systems and is mathematically represented within Hilbert space. The hierarchical organization is motivated by the need to bridge successive levels of physical description&mdash;from fundamental physical dynamics to neural organization and ultimately subjective experience. Inspired by the multi-scale mathematical structure explored in string theory, the framework investigates whether consciousness may be better understood as an emergent phenomenon arising through successive levels of physical organization rather than as an isolated biological process. Within this framework, consciousness is proposed to require two necessary conditions: sufficient structural complexity and an appropriate degree of coherence. Complexity provides the organizational architecture required for large-scale information processing, while coherence establishes the phase synchronization necessary for resonance and stable coupling between neural systems and the proposed informational field. Following successful coupling, the coherent brain&ndash;field system is hypothesized to evolve as a unified quantum state. Collapse-like state transitions occurring within this coupled system are proposed to correspond to discrete moments of conscious awareness, while the continuous succession of such transitions gives rise to the unified subjective experience perceived as continuous consciousness. Unlike existing models that primarily emphasize either biological mechanisms or quantum processes independently, this framework proposes a hierarchical architecture intended to integrate both perspectives within a single conceptual model. The objective is not to claim a definitive solution to the Hard Problem of Consciousness, but to provide a mathematically motivated theoretical foundation that may guide future formalization, computational modeling, and interdisciplinary investigation. This work is presented as a developing theoretical framework whose assumptions and mathematical formalism remain subject to refinement and future validation. By emphasizing conceptual consistency, hierarchical organization, and compatibility with existing scientific theories, the proposed framework aims to offer a structured foundation for exploring how principles from modern theoretical physics and neuroscience might ultimately converge toward a deeper understanding of conscious experience.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Bhavishya Ankush is an independent high school researcher from India with interests in theoretical physics, consciousness science, cosmology, and artificial intelligence. Her research focuses on developing interdisciplinary theoretical frameworks that integrate quantum mechanics, systems neuroscience, and mathematical physics to explore the physical foundations of consciousness. She serves as a NASA Citizen Scientist contributing to astronomical data analysis and actively pursues independent research in theoretical physics and complex systems. Her long-term goal is to contribute to fundamental research at the intersection of physics, neuroscience, and consciousness science.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

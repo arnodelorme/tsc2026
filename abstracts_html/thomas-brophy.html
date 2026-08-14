@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Copenhagen Opening: A Meta-Theoretical Framework for the Ontological Status of Psi &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Thomas Brophy</h1>
+  <p class="subtitle">IONS, Novato, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/thomas-brophy.jpg" alt="Thomas Brophy">
+    <div class="speaker-info">
+      <h2>Thomas Brophy</h2>
+      <div class="affiliation">IONS, Novato, CA, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-1">MON-1 &mdash; Quantum Theories of Consciousness and the Measurement Problem</a> &middot; Ballroom</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+        <a class="tag tag-workshop" href="../workshops.html#psi">Workshop: Psi &amp; Consciousness Science</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Copenhagen Opening: A Meta-Theoretical Framework for the Ontological Status of Psi</div>
+
+  <div class="authors-line">Thomas Brophy, Natasha Greenstein</div>
+  <div class="affiliations">Thomas Brophy &mdash; IONS, Novato, CA, USA<br>Natasha Greenstein &mdash; Universitat Pompeu Fabra, Barcelona, Barcelona, Spain / Princeton University Physics Dept., Princeton, NJ, USA</div>
+
+  <div class="abstract-text">
+<p>Psi phenomena, despite decades of well-published empirical data indicating psi exists, lack a well-accepted theoretical framework as to the ontological status of what psi phenomena are. Without a framework specifying what psi is, experiments accumulate anomalies rather than adjudicate theories. In this paper we seek to develop a meta-theoretical framework that can potentially sustain the existence of psi phenomena, shed light on their ontological status, and potentially develop from first-principles of physics and metaphysics model calculations that fit empirical psi data and predict psi experimental outcomes; to explain published data, and to predict a priori the results of various categories of psi experiments, starting with quantum random number generator experiments (such as Radin and Cline 2026, or the Global Consciousness Project New Years Eve data (Radin 2025)). We identify an ontological opening in the causal structure of modern quantum physics (similarly as Penrose does in Shadows of the Mind) to the state reduction process in Copenhagen quantum mechanics, and build meta-theoretical constructs around that. Read deeply &mdash; as Heisenberg, Bohr, and Wheeler intended &mdash; Copenhagen is an ontological claim: physical reality consists of measurement outcomes, and the formalism is silent on what fixes an outcome. Von Neumann showed the cut can be placed anywhere along the measurement chain; Wigner placed it at consciousness; Wheeler&#x27;s delayed-choice analysis removed the tacit restriction that the fixing observation occurs at the time of generation. The resulting von Neumann&ndash;Wigner&ndash;Wheeler causal structure &mdash; in which actualization is distinct from decoherence and may act across time &mdash; was identified decades ago in the psi Observational Theories (Schmidt, Walker, Houtkooper), whose signature prediction was influence entering at the observation of feedback. We trace that general meta-theoretical umbrella through two particular camps of theory: PK-interactive approaches in which psi-consciousness acts on quantum state reduction through some kind of quantum information domain process; vs pre-sentient decision augmentation theory approaches &ndash; which two camps are also associated with the two scientific leaders of the US government military intelligence community&#x27;s Stargate program that was declassified in 1995 (Puthoff vs May). A third approach is a two-state vector formalism (TSVF) of Aharonov, Bergmann, and Lebowitz. A fourth approach is a recent radical-pair-mechanism model of conscious influence on QRNGs (Greenstein, this conference), extracted from which observed statistics is an equivalent biomagnetic regime of the human heart and brain. We show how those four different approaches exist within the same meta-theoretical Copenhagen-opening framework, and all four approaches can be mathematized to predict or explain real world empirical psi data. (Implemented in the companion paper to this conference by Greenstein.)</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Thomas G. Brophy, PhD, is President of the Institute of Noetic Sciences (IONS). He previously served as president of California Institute for Human Science (CIHS). His tenure as president of CIHS oversaw a many-year effort to achieve regional accreditation from the Western Association of Schools and Colleges, Colleges and Universities Commission (WSCUC) in 2021, for CIHS as a unique mind, body, spirit integral university. Earning a BA in physics from Colorado College, and MS and PhD degrees in physics from the University of Colorado (CU), Boulder, Thomas&rsquo; academic and scientific appointments include: the CU Nuclear Physics Laboratory, the CU Laboratory for Atmospheric and Space Physics (LASP) where he worked on NASA&rsquo;s Voyager and Cassini spacecraft projects, and an appointment as a National Science Foundation Exchange Scientist at the University of Tokyo Department of Earth and Planetary Physics and ISAS robotic space program, where he published pioneering work on computational solutions to the Boltzmann equation, the astrodynamical origins of planetary rings and interstellar comets.  Thomas explored the fundamental science and ontology of consciousness and its cultural implications in his 1998 book The Mechanism Demands a Mysticism: An Exploration of Spirit, Matter, and Physics. His study of the archaeoastronomy of prehistoric Egypt, published in his books The Origin Map, and Black Genesis co-authored with Robert Bauval, has been cited as relevant to the study of extraterrestrial, or transhuman, intelligence.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

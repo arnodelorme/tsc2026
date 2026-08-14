@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changes Recorded by the Sentiometer, a Putative Mind - State Measuring Device in Meditators and Non-Meditators &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Lavanya Rajesh Kumar</h1>
+  <p class="subtitle">Houston Methodist research Institute, Houston, TX, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/lavanya-rajesh-kumar.png" alt="Lavanya Rajesh Kumar">
+    <div class="speaker-info">
+      <h2>Lavanya Rajesh Kumar</h2>
+      <div class="affiliation">Houston Methodist research Institute, Houston, TX, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-5">THU-5 &mdash; Consciousness-Based Science: Information, Memory, and Temporal Integration</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Changes Recorded by the Sentiometer, a Putative Mind - State Measuring Device in Meditators and Non-Meditators</div>
+
+  <div class="authors-line">Lavanya Rajesh Kumar, Santosh Helekar</div>
+  <div class="affiliations">Lavanya Rajesh Kumar &mdash; Houston Methodist research Institute, Houston, TX, USA<br>Santosh Helekar &mdash; Houston Methodist research Institute, Houston, TX, USA</div>
+
+  <div class="abstract-text">
+<p>Objective measurement of conscious states remains a central challenge in consciousness research. We describe a novel biophysical signal detected by a noninvasive photoelectronic device, the Sentiometer, developed in our laboratory. This device records millisecond-scale changes in the peri-somatic space via modulation of diffracted light emitted from a low-power laser source. Prior work has shown that this signal varies reliably with level of consciousness, including reduced amplitude and altered rise time in anesthetized mice and diminished responses in unconscious intensive care unit patients, as well as modulation with cognitive engagement during task performance. Here, we present findings from an ongoing pilot study examining differences in the photo-modulatory sentiometric response (SR) between meditators and non-meditators across distinct mental states. Seventeen participants recruited from the Houston area (8 non-meditators, 9 meditators; mean age = 37.5 years; 58.8% female; Asian = 52.9%, White = 47.1% , NH-82.4%) completed a structured protocol consisting of baseline (45 min), mind wandering (MW1, 10 min), meditation (Med, 15 min), mind wandering (MW2, 10 min), and video viewing (VV, 30 min). The Sentiometer was positioned laterally on the head, and bifrontal EEG was simultaneously recorded using a MUSE S headband. Subjective reports of mental state were intermittently collected during MW and meditation sessions. Preliminary analyses of the Sentiometer-derived signal are presented here, with EEG and qualitative findings to be presented separately. A linear mixed-effects model revealed a strong effect of session on the SR metric - standardized luminance, with lower values in Mediation-Med (estimate = -0.0216, 95% CI [-0.0336, -0.0096]), MW2 (estimate = -0.0300, 95% CI [-0.0421, -0.0180]), and Video -VV (estimate = -0.0384, 95% CI [-0.0504, -0.0263]) relative to MW1. No overall effects of group or sex were observed. A modest group × session interaction emerged at MW2 (estimate = -0.0177, 95% CI [-0.0353, -0.0002], p = 0.047). Tukey-adjusted post hoc comparisons showed that both groups declined from MW1, but meditators exhibited a more gradual reduction across sessions, whereas non-meditators showed a sharp early decrease followed by a plateau. In meditators, the largest contrasts were MW1&ndash;MW2 (d ≈ 2.37, 95% CI [1.11, 3.63]) and MW1&ndash;Video (d ≈ 3.03, 95% CI [1.77, 4.29]); in non-meditators, the strongest differences were MW1&ndash;MW2 (d ≈ 3.77, 95% CI [2.44, 5.11]) and MW1&ndash;Video (d ≈ 3.48, 95% CI [2.15, 4.82]). These findings demonstrate robust state-dependent variation in the sentiometric signal, supporting its sensitivity to dynamically fluctuating cognitive and experiential states. While group differences were not statistically definitive in this pilot sample, observed trends warrant further investigation in larger cohorts. The Sentiometer holds promise as a noninvasive tool for probing the biophysical correlates of consciousness and mind-state dynamics in both clinical and research settings.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Lavanya Rajesh Kumar is an applied behavioral neuroscientist whose work bridges contemplative science, digital health, and translational neuroscience. With over a decade of experience leading multidisciplinary projects including research across healthcare, academic, and community settings, she investigates how technology‑enabled, data‑driven models can advance preventive and precision mental healthcare. Her current research at Houston Methodist&rsquo;s Department of Psychiatry focuses on consciousness, neuromodulation, and integrative approaches to stress‑related and inflammatory conditions.</p>
+<p>Dr. Kumar&rsquo;s scientific interests center on the relationship between contemplative practices, inflammation, altered states of consciousness, human flourishing, and on how emerging technologies such as wearable devices and digital health applications can facilitate personalized well‑being. Her long‑term vision is to build accessible tools that integrate psychological assessment, contemplative science, and physiological monitoring to support preventive and precision mental healthcare.</p>
+<p>She earned her Ph.D. in Applied Cognitive Science and Human Factors from Michigan Technological University, where she investigated the cognitive and emotional mechanisms underlying motor learning and executive function. Her earlier academic training includes an M.Phil. in Applied Psychology, an M.Sc. in Psychology, and a Postgraduate Diploma in Clinical Psychology, complemented by degrees in Marketing Management and Economics. This interdisciplinary foundation informs her translational approach to behavioral neuroscience and digital intervention design.</p>
+<p>Dr. Kumar previously served as Assistant Professor at the University of Colorado School of Medicine, leading federally and state‑funded initiatives in health behavior change, nicotine cessation, and digital therapeutics. Her postdoctoral work at Yale University School of Medicine contributed to the development of therapeutic interventions for youth nicotine cessation including a digital cognitive‑behavioral solution. She has authored and co‑authored numerous peer‑reviewed publications in Experimental Brain Research, Nicotine &amp; Tobacco Research, Addictive Behaviors, and the Journal of Psychiatric Practice.</p>
+<p>Her contributions have been recognized through awards such as the  prestigious J.N. Tata Endowment Award, Portage Health Foundation&rsquo; Graduate Assistantship, and Yale&rsquo;s Innovation to Impact Entrepreneurship Program. She has presented her work at leading forums including the Society for Neuroscience, the American Psychological Association, and the Hawaii  International Conference on System Sciences.</p>
+<p>Beyond her research, Dr. Kumar is deeply committed to equity‑centered, community‑partnered science and mentoring interdisciplinary teams. Her work exemplifies a convergence of neuroscience, technology, and contemplative inquiry -advancing a vision of human flourishing through integrative, evidence‑based innovation.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

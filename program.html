@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program &mdash; The Science of Consciousness 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.5;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle { font-size: 1.05rem; opacity: .85; }
+.ws-live-badge {
+  display: inline-block; margin-top: 1.1rem; padding: .45rem 1.3rem;
+  border: 1px solid rgba(232,167,39,.85); border-radius: 999px;
+  color: #e8a727; font-size: .88rem; font-weight: 700;
+  letter-spacing: .04em; background: rgba(10,36,64,.35);
+  transition: background .2s, color .2s;
+}
+.ws-live-badge:hover { background: #e8a727; color: #0a2440; text-decoration: none; }
+.program-details-button {
+  display: inline-block; padding: .55rem 1.3rem;
+  border-radius: 999px; background: #b3261e; color: #fff;
+  font-size: .9rem; font-weight: 700; letter-spacing: .02em;
+  transition: background .2s;
+}
+.program-details-button:hover { background: #8f1f19; color: #fff; text-decoration: none; }
+.program-content { display: flex; flex-direction: column; }
+.details-link-wrap { margin: 1.25rem 0 2.5rem; text-align: center; }
+
+/* ── Timetable ───────────────────────────────── */
+.timetable-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+  overflow-x: auto;
+}
+.timetable-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.5rem;
+}
+.timetable {
+  display: grid;
+  grid-template-columns: 70px repeat(6, 1fr);
+  border-left: 2px solid #bbb;
+  min-width: 900px;
+  font-size: .8rem;
+}
+
+/* time labels column */
+.t-time {
+  grid-column: 1;
+  text-align: right; padding-right: .6rem;
+  font-size: .75rem; color: #666; font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex; align-items: flex-start; justify-content: flex-end;
+  padding-top: 2px;
+}
+
+/* day headers */
+.t-day {
+  text-align: center; font-weight: 700; font-size: .85rem;
+  padding: .6rem .3rem;
+  background: #f5f8fb;
+  border-bottom: 2px solid #bbb;
+  color: #0a2440;
+}
+
+/* grid cells */
+.t-cell {
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  min-height: 38px;
+  position: relative;
+}
+
+/* session blocks */
+.t-block {
+  border-radius: 4px;
+  padding: .45rem .55rem;
+  margin: 2px;
+  font-size: .78rem;
+  line-height: 1.35;
+  height: calc(100% - 4px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.t-block .session-title {
+  font-weight: 700; font-size: .8rem;
+  margin-bottom: .15rem;
+}
+.t-block .session-speakers {
+  font-size: .72rem; font-style: italic; opacity: .85;
+}
+.t-block .session-note {
+  font-size: .68rem; opacity: .7; margin-top: .1rem;
+}
+
+/* Color coding — pastels derived from navy/teal/gold palette */
+.bg-plenary    { background: #d6e6f0; color: #1a3050; }
+.bg-break      { background: #eaedf0; color: #666; text-align: center; }
+.bg-concurrent { background: #d0eaee; color: #1a4a50; }
+.bg-poster     { background: #ece6f4; color: #3a2a50; }
+.bg-workshop   { background: #dce8e0; color: #2a4030; }
+.bg-social     { background: #f2ead4; color: #4a3a18; }
+.bg-closing    { background: #f4d6d6; color: #5a1a1a; }
+.bg-breakfast  { background: #eaedf0; color: #555; }
+.bg-lunch      { background: #eaedf0; color: #666; text-align: center; }
+
+/* ── Week-at-a-glance overview ──────────────── */
+.overview-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 1rem 0;
+}
+.overview-wrap h2 {
+  font-size: 1.6rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1rem;
+}
+.ov-scroll { overflow-x: auto; margin-bottom: 1rem; }
+.ov-table {
+  table-layout: fixed; width: 100%; min-width: 860px;
+  border-collapse: collapse;
+  font-size: .78rem; line-height: 1.35;
+}
+.ov-table th, .ov-table td {
+  border: 1px solid #dde3ed;
+  padding: .45rem .5rem;
+  vertical-align: top;
+}
+.ov-table thead th {
+  background: #0a2440; color: #fff;
+  text-align: center; font-weight: 700;
+  font-size: .8rem; padding: .55rem .4rem;
+}
+.ov-table thead th span {
+  display: block; font-weight: 400; font-size: .7rem; opacity: .75;
+}
+.ov-table .ov-time {
+  width: 65px; text-align: right; padding-right: .6rem;
+  font-size: .72rem; font-weight: 600; color: #555;
+  background: #f8f9fb;
+  white-space: nowrap;
+}
+.ov-table td .ov-title {
+  font-weight: 600; font-size: .73rem; color: #0a2440;
+}
+.ov-table td .ov-speakers {
+  font-size: .66rem; color: #666; font-style: italic;
+  margin-top: .1rem;
+}
+.ov-table td.bg-plenary,
+.ov-table td.bg-concurrent,
+.ov-table td.bg-workshop,
+.ov-table td.bg-poster,
+.ov-table td.bg-social,
+.ov-table td.bg-closing { min-height: 52px; }
+.ov-table .ov-row-plenary td.bg-plenary { height: 60px; }
+
+/* span helpers for multi-column blocks */
+.span-all { grid-column: 2 / -1; }
+.span-2   { grid-column: span 2; }
+.span-3   { grid-column: span 3; }
+
+/* ── Day sections (stacked for clarity) ──────── */
+.day-section {
+  margin-bottom: 2.5rem;
+}
+.day-section h3 {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .8rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.day-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border-left: 2px solid #bbb;
+}
+.dg-time {
+  font-size: .78rem; color: #666; font-weight: 600;
+  padding: .5rem .6rem .5rem 0;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+.dg-content {
+  border-bottom: 1px solid #eee;
+  padding: .35rem .5rem;
+}
+.dg-block {
+  border-radius: 5px;
+  padding: .55rem .7rem;
+  margin: 2px 0;
+}
+.dg-block .session-title {
+  font-weight: 700; font-size: .88rem;
+  margin-bottom: .15rem;
+}
+.dg-block .session-speakers {
+  font-size: .8rem; font-style: italic; opacity: .85;
+}
+.dg-block .session-note {
+  font-size: .75rem; opacity: .7; margin-top: .15rem;
+}
+
+/* ── Legend ───────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  margin: 1.5rem 0 2rem;
+  font-size: .78rem;
+}
+.legend-item {
+  display: flex; align-items: center; gap: .35rem;
+}
+.legend-swatch {
+  width: 16px; height: 16px; border-radius: 3px;
+}
+
+/* ── Speaker mismatch highlight ──────────────── */
+.speaker-missing { }
+
+.speaker-new { }
+
+.speaker-maybe { }
+.speaker-unconfirmed { }
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .timetable-wrap { padding: 1.5rem .5rem 3rem; }
+  .overview-wrap { padding: 1.5rem .5rem 0; }
+  .program-content #topics { order: 1; }
+  .program-content .overview-wrap { order: 2; }
+  .program-content #speakers { order: 3; }
+}
+
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Conference Program</h1>
+  <p class="subtitle">October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
+  <p style="margin:0;"><a class="ws-live-badge" href="workshops.html">New &middot; Sunday workshops announced</a></p>
+</header>
+
+<main class="program-content">
+
+<!-- ═══ PLENARY SPEAKERS GALLERY (moved from former index.html) ═══ -->
+<section id="speakers" class="speakers-section">
+  <h2 class="section-title">Confirmed Speakers</h2>
+  <p class="section-lead">Leading researchers from neuroscience, physics, philosophy, and beyond.</p>
+  <div class="speakers-grid">
+      <!-- Row 1 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/edward-boyden.jpg" alt="Edward Boyden">
+        <h3><a href="abstracts_html/edward-boyden.html">Edward Boyden</a></h3>
+        <p class="affiliation">MIT &amp; HHMI</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/robin-carhart-harris.jpg" alt="Robin Carhart-Harris">
+        <h3><a href="abstracts_html/robin-carhart-harris.html">Robin Carhart-Harris</a></h3>
+        <p class="affiliation">UCSF Neurology</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/susan-schneider.jpg" alt="Susan Schneider">
+        <h3><a href="abstracts_html/susan-schneider.html">Susan Schneider</a></h3>
+        <p class="affiliation">Florida Atlantic University</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/stuart-hameroff.jpg" alt="Stuart Hameroff">
+        <h3><a href="abstracts_html/stuart-hameroff.html">Stuart Hameroff</a></h3>
+        <p class="affiliation">University of Arizona</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/terrence-sejnowski.jpg" alt="Terry Sejnowski">
+        <h3><a href="abstracts_html/terrence-sejnowski.html">Terry Sejnowski</a></h3>
+        <p class="affiliation">Salk Institute for Biological Studies</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/helane-wahbeh.jpg" alt="Helan&eacute; Wahbeh">
+        <h3><a href="abstracts_html/helane-wahbeh.html">Helan&eacute; Wahbeh</a></h3>
+        <p class="affiliation">Institute of Noetic Sciences</p>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/roger-penrose.jpg" alt="Roger Penrose">
+        <h3><a href="abstracts_html/roger-penrose.html">Roger Penrose</a></h3>
+        <p class="affiliation">University of Oxford</p>
+        <span class="tag tag-remote">Remote</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/giulio-tononi.png" alt="Giulio Tononi">
+        <h3>Giulio Tononi</h3>
+        <p class="affiliation">University of Wisconsin&ndash;Madison</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/donald-hoffman.png" alt="Donald Hoffman">
+        <h3>Donald Hoffman</h3>
+        <p class="affiliation">University of California, Irvine</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/eric-halgren.png" alt="Eric Halgren">
+        <h3><a href="abstracts_html/eric-halgren.html">Eric Halgren</a></h3>
+        <p class="affiliation">UC San Diego</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/diane-hennacy-powell.png" alt="Diane Hennacy Powell">
+        <h3><a href="abstracts_html/diane-hennacy.html">Diane Hennacy Powell</a></h3>
+        <p class="affiliation">Independent (Psychiatrist &amp; Author)</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/michael-levin.jpg" alt="Michael Levin">
+        <h3><a href="abstracts_html/michael-levin.html">Michael Levin</a></h3>
+        <p class="affiliation">Tufts University</p>
+        <span class="tag tag-remote">Remote</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/garry-nolan.jpg" alt="Garry Nolan">
+        <h3><a href="abstracts_html/garry-nolan.html">Garry Nolan</a></h3>
+        <p class="affiliation">Stanford University</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/hartmut-neven.jpg" alt="Hartmut Neven">
+        <h3><a href="abstracts_html/hartmut-neven.html">Hartmut Neven</a></h3>
+        <p class="affiliation">Google Quantum AI</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/jack-tuszynski.png" alt="Jack Tuszynski">
+        <h3><a href="abstracts_html/jack-tuszynski.html">Jack Tuszy&#324;ski</a></h3>
+        <p class="affiliation">Politecnico di Torino</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/alysson-muotri.jpg" alt="Alysson Muotri">
+        <h3><a href="abstracts_html/alysson-muotri.html">Alysson Muotri</a></h3>
+        <p class="affiliation">UC San Diego</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/fadel-zeidan.png" alt="Fadel Zeidan">
+        <h3><a href="abstracts_html/fadel-zeidan.html">Fadel Zeidan</a></h3>
+        <p class="affiliation">UC San Diego</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/nirosha-murugan.jpg" alt="Nirosha Murugan">
+        <h3><a href="abstracts_html/nirosha-murugan.html">Nirosha Murugan</a></h3>
+        <p class="affiliation">Wilfrid Laurier University</p>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/kenneth-kosik.png" alt="Kenneth Kosik">
+        <h3><a href="abstracts_html/kenneth-kosik.html">Kenneth Kosik</a></h3>
+        <p class="affiliation">UC Santa Barbara</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/dean-radin.jpg" alt="Dean Radin">
+        <h3><a href="abstracts_html/dean-radin.html">Dean Radin</a></h3>
+        <p class="affiliation">Institute of Noetic Sciences</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/roumiana-tsenkova.png" alt="Roumiana Tsenkova">
+        <h3><a href="abstracts_html/roumiana-tsenkova.html">Roumiana Tsenkova</a></h3>
+        <p class="affiliation">Kobe University</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/andre-bastos.jpg" alt="Andr&eacute; M. Bastos">
+        <h3><a href="abstracts_html/andre-bastos.html">Andr&eacute; M. Bastos</a></h3>
+        <p class="affiliation">Vanderbilt University</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/jonathan-schooler.png" alt="Jonathan Schooler">
+        <h3><a href="abstracts_html/jonathan-schooler.html">Jonathan Schooler</a></h3>
+        <p class="affiliation">UC Santa Barbara</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/jennifer-prendki.jpg" alt="Jennifer Prendki">
+        <h3><a href="abstracts_html/jennifer-prendki.html">Jennifer Prendki</a></h3>
+        <p class="affiliation">Founder &amp; CEO, Dyssonance AI</p>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/steen-rasmussen.jpg" alt="Steen Rasmussen">
+        <h3><a href="abstracts_html/steen-rasmussen.html">Steen Rasmussen</a></h3>
+        <p class="affiliation">Univ. of Southern Denmark &amp; Santa Fe Institute</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/hemal-patel.png" alt="Hemal Patel">
+        <h3><a href="abstracts_html/hemal-patel.html">Hemal Patel</a></h3>
+        <p class="affiliation">UC San Diego</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/tracy-brandmeyer.png" alt="Tracy Brandmeyer">
+        <h3><a href="abstracts_html/tracy-brandmeyer.html">Tracy Brandmeyer</a></h3>
+        <p class="affiliation">Cognigenics and BrainMind</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/edward-large.jpg" alt="Edward Large">
+        <h3><a href="abstracts_html/edward-large.html">Edward Large</a></h3>
+        <p class="affiliation">University of Connecticut</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/travis-craddock.png" alt="Travis Craddock">
+        <h3><a href="abstracts_html/travis-craddock.html">Travis Craddock</a></h3>
+        <p class="affiliation">University of Waterloo</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/Sarika-Katiyar.jpg" alt="Sarika Katiyar">
+        <h3><a href="abstracts_html/sarika-katiyar.html">Sarika Katiyar</a></h3>
+        <p class="affiliation">Indian Council of Medical Research</p>
+      </div>
+
+      <!-- Row 6 -->
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/anirban-bandyopadhyay.jpg" alt="Anirban Bandyopadhyay">
+        <h3><a href="abstracts_html/anirban-bandyopadhyay.html">Anirban Bandyopadhyay</a></h3>
+        <p class="affiliation">National Institute for Materials Science, Tsukuba, Japan</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/farhan-lakhany.png" alt="Farhan Lakhany">
+        <h3><a href="abstracts_html/farhan-lakhany.html">Farhan Lakhany</a></h3>
+        <p class="affiliation">San Jos&eacute; State University</p>
+        <span class="tag tag-new">New</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/mike-wiest.jpg" alt="Mike Wiest">
+        <h3><a href="abstracts_html/michael-wiest.html">Mike Wiest</a></h3>
+        <p class="affiliation">Wellesley College</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/lea-gassab.png" alt="Lea Gassab">
+        <h3><a href="abstracts_html/lea-gassab.html">Lea Gassab</a></h3>
+        <p class="affiliation">University of Waterloo</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/thomas-campbell.jpg" alt="Thomas Campbell">
+        <h3><a href="abstracts_html/thomas-campbell.html">Thomas Campbell</a></h3>
+        <p class="affiliation">Purdue University</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/cassandra-vieten.jpg" alt="Cassandra Vieten">
+        <h3><a href="abstracts_html/cassandra-vieten.html">Cassandra Vieten</a></h3>
+        <p class="affiliation">UC San Diego</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/oren-shriki.jpg" alt="Oren Shriki">
+        <h3><a href="abstracts_html/oren-shriki.html">Oren Shriki</a></h3>
+        <p class="affiliation">Ben-Gurion University of the Negev</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/thomas-brophy-new.jpg" alt="Thomas Brophy">
+        <h3><a href="abstracts_html/thomas-brophy.html">Thomas Brophy</a></h3>
+        <p class="affiliation">Institute of Noetic Sciences</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/melanie-boly.png" alt="Melanie Boly">
+        <h3><a href="workshops.html#iit">Melanie Boly</a></h3>
+        <p class="affiliation">University of Wisconsin&ndash;Madison</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/rael-cahn.jpg" alt="Rael Cahn">
+        <h3><a href="workshops.html#psychedelics">Rael Cahn</a></h3>
+        <p class="affiliation">University of Southern California</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/adam-curry.jpg" alt="Adam Curry">
+        <h3><a href="abstracts_html/adam-curry.html">Adam Curry</a></h3>
+        <p class="affiliation">Entangled Labs</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/marina-weiler.jpg" alt="Marina Weiler">
+        <h3><a href="abstracts_html/marina-weiler.html">Marina Weiler</a></h3>
+        <p class="affiliation">University of Virginia</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/scott-makeig.jpg" alt="Scott Makeig">
+        <h3><a href="abstracts_html/scott-makeig.html">Scott Makeig</a></h3>
+        <p class="affiliation">UC San Diego</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/daniel-sheehan.png" alt="Daniel Sheehan">
+        <h3><a href="abstracts_html/daniel-sheehan.html">Daniel Sheehan</a></h3>
+        <p class="affiliation">University of San Diego</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/marilyn-schlitz.jpeg" alt="Marilyn Schlitz">
+        <h3><a href="abstracts_html/marilyn-schlitz.html">Marilyn Schlitz</a></h3>
+        <p class="affiliation">Sofia University</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/eric-garland.jpg" alt="Eric Garland">
+        <h3><a href="abstracts_html/eric-garland.html">Eric Garland</a></h3>
+        <p class="affiliation">UC San Diego</p>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-avatar" src="img/jennifer-penberthy.jpg" alt="Jennifer Penberthy">
+        <h3><a href="abstracts_html/jennifer-penberthy.html">Jennifer Penberthy</a></h3>
+        <p class="affiliation">University of Virginia School of Medicine</p>
+      </div>
+
+  </div>
+</section>
+
+<!-- ═══ PLENARY TOPICS ═══ -->
+<section id="topics" class="speakers-section plenary-list-section">
+  <h2 class="section-title">Plenary Session Topics</h2>
+  <p class="section-lead">Fourteen plenary sessions across six days &mdash; spanning quantum biology, neuroscience, AI, psi research, and the origins of consciousness.</p>
+  <ol class="plenary-list">
+    <li><span class="pl-id">PL-1</span> Quantum Biophotonics in Living Systems</li>
+    <li><span class="pl-id">PL-2</span> UAP, Anomalies, and Consciousness</li>
+    <li><span class="pl-id">PL-3</span> Neuroscience of Consciousness</li>
+    <li><span class="pl-id">PL-4</span> Psychedelics and Consciousness</li>
+    <li><span class="pl-id">PL-5</span> Biology of Consciousness</li>
+    <li><span class="pl-id">PL-6</span> Quantum AI and Consciousness</li>
+    <li><span class="pl-id">PL-7</span> Non-Local Consciousness and &ldquo;Psi&rdquo;</li>
+    <li><span class="pl-id">PL-8</span> Cerebral Organoids and Consciousness</li>
+    <li><span class="pl-id">PL-9</span> Is the Brain Organized by Connectomics or Wavefields?</li>
+    <li><span class="pl-id">PL-10</span> Origins of Life and Consciousness &mdash; Which Came First?</li>
+    <li><span class="pl-id">PL-11</span> The Spectrum of Conscious States</li>
+    <li><span class="pl-id">PL-12</span> Consciousness and AI</li>
+    <li><span class="pl-id">PL-13</span> Anesthesia and Consciousness</li>
+    <li><span class="pl-id">PL-14</span> Is AI Conscious? (Panel)</li>
+  </ol>
+</section>
+
+<!-- ═══ WEEK AT A GLANCE ═══ -->
+<div class="overview-wrap" id="at-a-glance">
+<h2>Program at a Glance</h2>
+<div class="ov-scroll">
+<table class="ov-table">
+<thead>
+  <tr>
+    <th style="width:65px"></th>
+    <th>Sunday<span>Oct 11</span></th>
+    <th>Monday<span>Oct 12</span></th>
+    <th>Tuesday<span>Oct 13</span></th>
+    <th>Wednesday<span>Oct 14</span></th>
+    <th>Thursday<span>Oct 15</span></th>
+    <th>Friday<span>Oct 16</span></th>
+  </tr>
+</thead>
+<tbody>
+  <!-- 7:00 am Experiential -->
+  <tr>
+    <td class="ov-time">7:00 am</td>
+    <td></td>
+    <td class="bg-social"><div class="ov-title">Experiential Sessions</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="experientials.html#confirmed">see confirmed list</a></div></td>
+    <td class="bg-social"><div class="ov-title">Experiential Sessions</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="experientials.html#confirmed">see confirmed list</a></div></td>
+    <td class="bg-social"><div class="ov-title">Experiential Sessions</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="experientials.html#confirmed">see confirmed list</a></div></td>
+    <td class="bg-social"><div class="ov-title">Experiential Sessions</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="experientials.html#confirmed">see confirmed list</a></div></td>
+    <td class="bg-social"><div class="ov-title">Experiential Sessions</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="experientials.html#confirmed">see confirmed list</a></div></td>
+  </tr>
+  <!-- AM Plenary 1 -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">8:30 am</td>
+    <td class="bg-workshop"><div class="ov-title">Morning Workshops</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="workshops.html">see details</a></div></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-1: Quantum Biophotonics</div>
+      <div class="ov-speakers">Tuszynski, Gassab, Tsenkova</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-4: Psychedelics &amp; Consciousness</div>
+      <div class="ov-speakers">Carhart-Harris, Zeidan, Craddock</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-7: Non-Local Consciousness &amp; Psi</div>
+      <div class="ov-speakers">Hennacy, Wahbeh, Radin</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-10: Life or Consciousness First?</div>
+      <div class="ov-speakers">Rasmussen, Hameroff, Lakhany</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-13: Anesthesia &amp; Consciousness</div>
+      <div class="ov-speakers">Katiyar, Patel, Wiest</div>
+    </td>
+  </tr>
+  <!-- Break -->
+  <tr>
+    <td class="ov-time">10:40</td>
+    <td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td>
+  </tr>
+  <!-- AM Plenary 2 -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">11:10 am</td>
+    <td class="bg-workshop"><div class="ov-title">Morning Workshops (cont.)</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="workshops.html">see details</a></div></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-2: UAP, Anomalies, and Consciousness</div>
+      <div class="ov-speakers">Nolan</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-5: Biology of Consciousness</div>
+      <div class="ov-speakers">Levin, Murugan</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-8: Cerebral Organoids</div>
+      <div class="ov-speakers">Muotri, Kosik</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-11: The Spectrum of Conscious States</div>
+      <div class="ov-speakers">Schooler, Hoffman</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-14: Is AI Conscious?</div>
+      <div class="ov-speakers">Penrose, Hameroff, Schneider, Tononi</div>
+    </td>
+  </tr>
+  <!-- Lunch / Closing -->
+  <tr>
+    <td class="ov-time">12:30</td>
+    <td class="bg-break"><div class="ov-title" style="text-align:left;"><strong>Lunch break (on your own)</strong></div></td>
+    <td class="bg-break"><div class="ov-title" style="text-align:left;"><strong>Lunch break (on your own)</strong></div><div style="font-size:.66rem;margin-top:.1rem;text-align:left;"><em><a href="experientials.html#confirmed">Binaural beat experiential</a></em></div></td>
+    <td class="bg-break"><div class="ov-title" style="text-align:left;"><strong>Lunch break (on your own)</strong></div><div style="font-size:.66rem;margin-top:.1rem;text-align:left;"><em><a href="experientials.html#confirmed">Binaural beat experiential</a></em></div></td>
+    <td class="bg-break"><div class="ov-title" style="text-align:left;"><strong>Lunch break (on your own)</strong></div><div style="font-size:.66rem;margin-top:.1rem;text-align:left;"><em><a href="experientials.html#confirmed">Binaural beat experiential</a></em></div></td>
+    <td class="bg-break"><div class="ov-title" style="text-align:left;"><strong>Lunch break (on your own)</strong></div><div style="font-size:.66rem;margin-top:.1rem;text-align:left;"><em><a href="experientials.html#confirmed">Binaural beat experiential</a></em></div></td>
+    <td class="bg-closing">
+      <div class="ov-title">Closing (ends 1PM)</div>
+    </td>
+  </tr>
+  <!-- PM Plenary -->
+  <tr class="ov-row-plenary">
+    <td class="ov-time">2:00 pm</td>
+    <td class="bg-workshop"><div class="ov-title">Afternoon Workshops</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="workshops.html">see details</a></div></td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-3: Neuroscience of Consciousness</div>
+      <div class="ov-speakers">Boyden, Sejnowski, Brandmeyer</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-6: Quantum AI &amp; Consciousness</div>
+      <div class="ov-speakers">Neven, Schneider, Bandyopadhyay</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-9: Connectomics or Wavefields?</div>
+      <div class="ov-speakers">Bastos, Halgren, Large</div>
+    </td>
+    <td class="bg-plenary">
+      <div class="ov-title">PL-12: Consciousness and AI</div>
+      <div class="ov-speakers">Prendki, TBA</div>
+    </td>
+    <td></td>
+  </tr>
+  <!-- Break -->
+  <tr>
+    <td class="ov-time">4:10</td>
+    <td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td></td>
+  </tr>
+  <!-- Late afternoon -->
+  <tr>
+    <td class="ov-time">5:00 pm</td>
+    <td class="bg-social"><div class="ov-title">Light Reception</div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 3</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent"><div class="ov-title">Concurrent 4</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td></td>
+  </tr>
+  <!-- 7:05 pm -->
+  <tr>
+    <td class="ov-time">7:05 pm</td>
+    <td class="bg-closing"><div class="ov-title">Opening</div></td>
+    <td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td></td>
+  </tr>
+  <!-- 7:30 pm -->
+  <tr>
+    <td class="ov-time">7:30 pm</td>
+    <td class="bg-plenary"><div class="ov-title">Featured Workshop<br><span style="font-weight:normal;font-style:italic">To be announced (TBA)</span></div></td>
+    <td class="bg-social"><div class="ov-title">Reception</div></td>
+    <td class="bg-poster"><div class="ov-title">Poster Session 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
+    <td class="bg-poster"><div class="ov-title">Poster Session 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
+    <td class="bg-social"><div class="ov-title">Luau Dinner</div></td>
+    <td></td>
+  </tr>
+  <!-- 9:30 pm -->
+  <tr>
+    <td class="ov-time">9:30 pm</td>
+    <td></td>
+    <td class="bg-social"><div class="ov-title">Consciousness Happenings<br><span style="font-weight:normal;font-style:italic">TBA</span></div></td>
+    <td class="bg-social"><div class="ov-title">Consciousness Happenings<br><span style="font-weight:normal;font-style:italic">TBA</span></div></td>
+    <td class="bg-social"><div class="ov-title">Collective Consciousness Concert</div></td>
+    <td class="bg-social"><div class="ov-title">Poetry Slam</div></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+</div>
+  <p class="details-link-wrap"><a class="program-details-button" href="program_details.html">View Detailed Program</a></p>
+</div>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer></footer>
+<script src="footer.js"></script>
+
+
+</body>
+</html>

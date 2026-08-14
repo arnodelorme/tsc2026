@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fascial Transducer: A Missing Middle Between Movement, Body, and Consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Logan Linthicum</h1>
+  <p class="subtitle">Cal Poly Humboldt, arcata, CA, USA / University of California San Francisco, San Francisco, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/logan-linthicum.jpg" alt="Logan Linthicum">
+    <div class="speaker-info">
+      <h2>Logan Linthicum</h2>
+      <div class="affiliation">Cal Poly Humboldt, arcata, CA, USA / University of California San Francisco, San Francisco, CA, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-7">MON-7 &mdash; Embodied and Situated Cognition: Body, Movement, and Conscious Experience</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Fascial Transducer: A Missing Middle Between Movement, Body, and Consciousness</div>
+
+  <div class="abstract-text">
+<p>Consciousness studies move between neural computation and cellular biophysics. Between lies an undertheorized middle layer: the cytoskeleton&ndash;fascia&ndash;interstitium continuum. This paper proposes that continuum is a fractal tensegrity system and a multimodal transducer: a substrate in which mechanical, hydraulic, electrical, optical, and metabolic processes interlink from intracellular cytoskeleton to movement, sleep, and conscious state. This architecture is formalized as the fascial transducer. Its first claim is that tensegrity plus multimodal transduction makes movement intrinsically integrative. The paper demonstrates that these domains are transduced into one another: deformation becomes pressure and flow; flow produces charge separation and streaming potentials; loading alters hydration geometry, proprioception, vascular demand, mitochondrial state, and action possibility. Movement turns perturbation into a constraint problem across linked domains. This gives movement evolutionary priority: before brains represented the world, organisms had to orient, feed, withdraw, stabilize, repair, and coordinate. Drawing on Levin&rsquo;s account of scaling cognition and IIT&rsquo;s emphasis on integrated intrinsic state, emotion is defined as integrated body state with valence and action character, felt as readiness, inhibition, approach, withdrawal, repair, or rest. The hydrated fascial-interstitial continuum is proposed as an electro-hydraulic biological computation layer. Interstitial flow, pressure gradients, collagen piezoelectricity, streaming potentials, structured hydration, and fascial tension form a fractal medium through which perturbations are integrated into posture, pain, attention, autonomic regulation, and self-state. Motion drives this compute cycle: movement spends and redistributes tension, pressure, flow, charge, and metabolic gradients, updating organismal state through the hydraulic matrix. Garborg et al.&rsquo;s abdominal-coupling result supports this hydraulic logic twice: waking motion can mechanically couple abdomen, CNS motion, and interstitial/CSF redistribution, while sleep shows the complementary still phase in which slow vascular and glymphatic rhythms can consolidate, clear, repair, and retune without the competing demands of outward movement. The body computes through motion and restores the conditions of computation through sleep. Finally, the paper proposes a biological optical parametric oscillator and endogenous photobiomodulation hypothesis. Mechanistic support is assembled from tryptophan-network superradiance, coherent random lasing in bone, collagen&rsquo;s nonlinear and polarization-sensitive optical behavior, mitochondrial photon emission, anesthetic sensitivity of tryptophan excitons, picrotoxin-associated excitonic effects, and photobiomodulatory sensitivity. The optical component provides an aneural mechanism by which consciousness effects associated with tryptophan excitons by Orch-OR, anesthesia and picrotoxin could propagate through collagen-hydration optics to bind whole-organism relevance. Fascial loading may alter collagen alignment, hydration geometry, refractive conditions, emitter spacing, and cavity-like boundaries, tuning semi-coherent near-infrared output that feeds back on mitochondrial metabolism, nitric oxide signaling, water structuring, and cellular excitability. This framework interprets hypermobile Ehlers-Danlos syndrome and autism as altered substrate tuning. If connective tissue participates in integration, altered collagen mechanics should affect proprioception, interoception, sensory gain, motor planning, autonomic regulation, pain, fatigue, and criticality tuning. It clarifies why traditional phenomenologies organize experience around posture, breath, tension, flow, embodied attention, and whole-body coherence. These may describe a physiological fact: conscious state is steered through the same fractal transductive medium that organizes movement. It offers a testable, continuous physiological missing middle linking movement, emotion, sleep, metabolism, tissue coherence, and neural state.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Logan Linthicum is an independent researcher, writer, and interdisciplinary theorist whose work centers on consciousness as an intrinsic, scale-free process in living systems. His current project, The Fascial Transducer, grows out of a broader interest in how organisms integrate themselves across scales: molecular, cellular, tissue-level, organismal, experiential, and perhaps even evolutionary. Rather than treating consciousness as an output of brains alone, Logan approaches it as a property that may arise wherever matter achieves sufficiently integrated, self-referential organization.</p>
+<p>His background combines formal scientific training with long-term independent synthesis. Logan was a Humboldt-CIRM Bridges scholar in 2009&ndash;2010, working at the University of California, San Francisco under Professor Pamela Denbesten on ameloblast differentiation from human embryonic stem cells and whole-tooth generation. Earlier, at Humboldt State University, he conducted undergraduate research in salmon genetics under Dr. Amy Sprowles. Although he has been outside formal academic science since that period, he has continued to study widely across consciousness research, developmental biology, bioelectricity, connective tissue biology, quantum biology, regenerative medicine, complex systems, evolutionary theory, photobiology, and anomalous biological phenomena.</p>
+<p>Logan describes his intellectual style as expert generalism: the disciplined attempt to understand enough functional structure across many domains to notice when separated fields are describing different faces of the same process. He is especially interested in the power of cross-disciplinary pattern recognition, where insights emerge not from deeper specialization within one silo, but from rotating ideas across many literatures until hidden correspondences become visible. His work is motivated by the belief that many of the hardest problems in biology and consciousness may persist because the relevant explanatory layer falls between established disciplines.</p>
+<p>This orientation led him to the fascial transducer framework, which proposes the cytoskeleton&ndash;fascia&ndash;interstitium continuum as a neglected substrate of embodied integration. The framework reflects Logan&rsquo;s wider interest in consciousness as continuous with movement, affect, metabolism, development, and organismal self-organization. His theoretical work brings together bioelectric morphogenesis, tensegrity, interstitial flow, collagen piezoelectricity, photobiomodulation, tryptophan excitonics, optical coherence, and traditional embodied phenomenologies.</p>
+<p>Logan&rsquo;s broader aim is to help make visible a missing middle between cellular biophysics and neural accounts of mind. He approaches theory-building as a form of exploratory synthesis: not merely collecting references, but searching for the underlying architecture that makes disconnected findings begin to rhyme. His work asks whether consciousness, emotion, movement, and biological organization may be expressions of one scale-repeating integrative process.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

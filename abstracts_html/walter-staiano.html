@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Fatigue: Using Cognitive Load as Gateway to Peak Experience and Higher Awareness states &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Walter Staiano</h1>
+  <p class="subtitle">University of Valencia, VALÈNCIA, Valencia, Spain</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>Walter Staiano</h2>
+      <div class="affiliation">University of Valencia, VALÈNCIA, Valencia, Spain</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Beyond Fatigue: Using Cognitive Load as Gateway to Peak Experience and Higher Awareness states</div>
+
+  <div class="authors-line">Walter Staiano, Marco Romagnoli, Ulrich Kirk</div>
+  <div class="affiliations">Walter Staiano &mdash; University of Valencia, VALÈNCIA, Valencia, Spain<br>Marco Romagnoli &mdash; University of Valencia, VALÈNCIA, Valencia, Spain<br>Ulrich Kirk &mdash; SDU, Odense, Funen, Denmark</div>
+
+  <div class="abstract-text">
+<p>Traditionally viewed as detrimental to performance, mental fatigue and cognitive overload are increasingly being reinterpreted through the lens of adaptive neuroplasticity. In this presentation, I introduce a novel framework positioning cognitive load&mdash;especially in the form of deliberate mental fatigue induction through Brain Endurance Training (BET) as a potent catalyst for enhanced conscious experience, including access to flow states and mindfulness-like awareness. Drawing from neuroscience, sport psychology, contemplative science, and consciousness research, I synthesize findings that support a common neural pathway underpinning BET, mindfulness training, and the flow experience. BET, originally designed to train cognitive resilience in athletes, involves prolonged response-inhibition tasks (e.g., Stroop, n-back) during or around physical training. Recent neuroimaging data show that BET increases structural-functional coupling in core executive and salience network regions&mdash;including the dorsolateral prefrontal cortex (DLPFC), anterior cingulate cortex (ACC), and anterior insula&mdash;while concurrently downregulating activity in default mode network (DMN) regions such as the medial prefrontal cortex (mPFC) and posterior cingulate cortex (PCC). These changes reflect a brain reconfiguration similar to what is observed in mindfulness meditation and flow: increased task-positive network efficiency, reduced self-referential processing, and heightened interoceptive awareness. Mindfulness training, especially in athletes, has shown to improve inhibitory control, decrease subjective mental demand, and foster attentional stability during high-load states. Neurobiologically, mindfulness is associated with enhanced engagement of the ACC and insula, supporting focused awareness and non-reactivity. Similarly, flow states are characterized by intense task immersion, diminished self-monitoring, and intrinsic reward, underpinned by a unique neural signature: activation of DLPFC, ACC, insula, and motor areas, with deactivation of the DMN, amygdala, and memory-related medial temporal lobe structures. These converging findings suggest a shared tri-network dynamic: flow and meditative states arise when the salience network (ACC, insula) detects challenge and mobilizes the central executive network (DLPFC, parietal cortex) while suppressing DMN activity. BET appears to trigger this same reconfiguration through sustained cognitive challenge. The result is a state of high neural efficiency, low emotional reactivity, and deep task absorption&mdash;a flow-ready brain. Importantly, both BET and mindfulness produce these changes without altering physiological markers of fatigue (e.g., heart rate, blood lactate, muscle metabolism), implying a central rather than peripheral adaptation. In this way, deliberate exposure to cognitive load combined with physical training may paradoxically reduce the felt cost of mental effort while enhancing focus and awareness. Such outcomes raise compelling questions for consciousness science: Can cognitive stress, when applied systematically, serve as a training vehicle for accessing altered states? Is flow an emergent property of optimized brain network dynamics? By bridging high-performance training, contemplative neuroscience, and flow theory, this framework redefines the role of cognitive effort. It positions potentially BET not merely as a performance enhancer but as a consciousness-modifying tool: a cognitive pathway to the same states sought through meditation and spiritual practice. In doing so, it opens the door to future interdisciplinary research exploring how cognitive demand, far from being an obstacle, might be a gateway to expanded states of awareness.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>I am a cognitive neuroscientist and performance physiologist with a deep fascination for how deliberate cognitive training can elevate human consciousness. My journey began in sport science, where I explored how mental fatigue influences sport performance, effort-based decision-making processes and perceptions. Over the years, I&rsquo;ve expanded that lens, investigating how cognitive load and attentional demand, when strategically applied, can induce states typically associated with mindfulness and flow.</p>
+<p>I pioneered Brain Endurance Training (BET), a method that uses cognitive stress (applied during physical tasks) to increase mental resilience. Our research has shown that BET not only enhances physical performance in elite athletes but also reconfigures brain networks in ways similar to mindfulness and meditative practices. What intrigues me most is the convergence of disciplines: how practices rooted in contemplative traditions align with neuroplastic changes triggered by cognitive effort. Whether it&rsquo;s mindfulness meditation, flow states during peak performance, or altered states induced by binaural beats or psychedelics, I aim to uncover the shared neural architectures that support these transformations.</p>
+<p>My goal is to bridge empirical science, ancient philosophy and experiential consciousness, leveraging tools from neuroscience to ancient practices to better understand how humans can train their minds not just for performance, but for expanded consciousness. I believe that cognitive load, when properly structured, offers an accessible gateway into states of enhanced presence, clarity, and awareness.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

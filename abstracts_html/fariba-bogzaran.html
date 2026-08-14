@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obstacles to Evolution of Consciousness: Two inquiries through scientific study of Lucid Dreaming. &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Fariba Bogzaran</h1>
+  <p class="subtitle">California Institute of Integral Studies, San Francisco, CA, USA / Lucid Art Foundation, Inverness, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/fariba-bogzaran.jpg" alt="Fariba Bogzaran">
+    <div class="speaker-info">
+      <h2>Fariba Bogzaran</h2>
+      <div class="affiliation">California Institute of Integral Studies, San Francisco, CA, USA / Lucid Art Foundation, Inverness, CA, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-4">THU-4 &mdash; Phenomenology and First-Person Methods in Consciousness Research</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Obstacles to Evolution of Consciousness: Two inquiries through scientific study of Lucid Dreaming.</div>
+
+  <div class="abstract-text">
+<p>In 1988, a scientific (quantitative) investigation of transpersonal experience in lucid dreaming was conducted with seventy-seven participants (Bogzaran, 1989). In this two-week study, high-frequency lucid dreamers were invited to incubate the transpersonal dimensions of lucid dreaming. The incubation involved setting a specific intention to involve spiritual experiences in lucid dreams. First, participants wrote about their concept of the Divine and used the MILD method to assist them to induce lucid dreaming. Out of seventy-seven participants, thirty-four were able to have a lucid dream and carry their intention into the dream. They became lucid, remembered the intention, and reported an experience of a spiritual nature. After analysis, the result showed: 1) Core spiritual belief shape dream experience. 2) Setting intention directly impacts behavior and experience in lucid dreams. 3) Whether an intention is open or closed, it influences experience in dreams. 4) Preconceived idea of the Divine can limit what is experienced in the dream. Although the study would have been more conducive to qualitative research, it had to be conducted using quantitative method because lucid dreaming was not yet fully recognized in the field. In addition, the subject matter was obscure within the phenomena of lucid dreaming, and qualitative research was questioned as a viable form of scientific inquiry. The other thirty-three participants were not examined or discussed in the study. The data was not considered because they could not carry out the task in their lucid dreams. Thirty-six years later, those who were not included in the research were examined using phenomenological research and pattern analysis. This hermeneutic practice of &ldquo;returning&rdquo; to the data brought new perspective and confirmed the findings of the first research. Their experiences showed that the lucid dreamers, who could not carry on the intention, created obstacles by using a certain vocabulary holding them back and a few displayed that their core belief prevented them to have dreams of that nature. The study revealed how core beliefs and language can be deterrent to the development of new perception and hence an obstacle to evolving consciousness. This presentation discusses both research thirty-six years apart and its relevance in the current conversation about human consciousness.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Fariba Bogzaran, Ph.D., scientist/artist/visionary founded the first dream studies graduate program at John F. Kennedy University in Berkeley, California. She taught at JFK University in both the Departments of Interdisciplinary Consciousness Studies and Arts and Consciousness for over two decades. Among her publications are two coauthored books: Extraordinary Dreams (2002) and Integral Dreaming (2012) both published by the State University of New York Press (SUNY Press). As a scientist, she was part of the team of researchers exploring scientific studies on lucid dreaming at the Stanford Sleep Laboratory (1986&ndash;1989) working with Stephen LaBerge. She conducted the first scientific research on lucid dream incubation and transpersonal experiences (1989). Her pioneering art-based research, Images of the Lucid Mind: A Phenomenological Study of Lucid Dreaming and Modern Painting (1996), examined the parallels between transpersonal lucid dream experiences and the &ldquo;inner world&rdquo; paintings working with the last two members of the surrealist group Roberto Matta and Gordon Onslow Ford. Her post doctorate research led to coin the term Lucid Art, which examines and explores the phenomena of mediation, lucid dreaming, art and its impact on the viewer. She cofounded the Lucid Art Foundation with the surrealist painter Gordon Onslow Ford in 1998 where she has been the founding director. She is an adjunct faculty member at the California Institute of Integral Studies in San Francisco teaching on lucid dreaming. Among her art publications are: A Place of Creation (2024); Gordon Onslow Ford: A Man on the Green Island (2019); Artists, Poets and Visionaries of SS Vallejo: 1949-1969 (2018), and many others (see www.lucidart.org/fariba-bogzaran-articles-and-chapters).</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

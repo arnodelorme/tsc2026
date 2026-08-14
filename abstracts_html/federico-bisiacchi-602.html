@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness As Informational Trajectory: A Fractal Framework Of Position, Experience, And Integration &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Federico Bisiacchi</h1>
+  <p class="subtitle">Independent Researcher, Montale, PT, Italy</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/federico-bisiacchi.jpg" alt="Federico Bisiacchi">
+    <div class="speaker-info">
+      <h2>Federico Bisiacchi</h2>
+      <div class="affiliation">Independent Researcher, Montale, PT, Italy</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Consciousness As Informational Trajectory: A Fractal Framework Of Position, Experience, And Integration</div>
+
+  <div class="abstract-text">
+<p>Consciousness as Informational Trajectory: A Fractal Framework of Position, Experience, and Integration Consciousness research has long oscillated between neural reductionism and purely phenomenological accounts, leaving the relationship between subjective experience, biological adaptation, and long-term developmental integration incompletely described. This paper introduces the Fractal Consciousness Framework (FCF), a theoretical model conceptualizing consciousness not as a static property of cognitive systems, but as a dynamic, recursive informational process emerging through the continuous interaction between a localized biological system and its experiential history. The framework rests on three foundational constructs and one generative cycle. Position defines the unique biological and informational configuration through which a perspective becomes possible &mdash; the specific intersection of genetics, epigenetic state, embodied memory, and relational context that constitutes a conscious vantage point at any given moment. From Position emerges Trajectory: the unfolding sequence of experiences, choices, interactions, and adaptations that shape systemic development across time. Trajectory is not merely biographical; it is biologically inscribed through neural plasticity, physiological regulation, memory consolidation, and epigenetic marking, each experience leaving measurable traces that alter the conditions of subsequent experience. Δₖ &mdash; an informational differential describing the structural gap between successive configurations of a system &mdash; functions as the generative engine of transformation. Rather than representing deficit or absence, Δₖ is the asymmetry that drives learning, adaptation, and increasing organizational complexity. It is not what is missing &mdash; it is what moves the system forward.These constructs converge in a recursive developmental cycle: Position → Trajectory → Experience → Trace → Integration → New Position Each iteration produces a system that is informationally richer, biologically modified, and differently positioned for subsequent experience. The process is fractal: self-similar organizational principles operate across biological, psychological, and phenomenological scales, linking cellular adaptation, personal development, and collective meaning-making within a unified structural logic. The Buddhabrot fractal provides a geometric representation of the recursive dynamics proposed by the framework &mdash; generated not from static forms but from the accumulation of iterative trajectories across the complex plane. This correspondence is symbolically formalized through the Equation of Consciousness, integrating the biological and physical processes within a single recursive framework. C_t = \sum_k \Big[ \mathcal{O}2_k^2 \cdot \Delta_k \Big] \cdot \mathcal{H}_k(P_k + M_k + E_k) \cdot F(k) \cdot e^{\Lambda_k} \cdot A(Q_m, R_m) The FCF generates testable hypotheses concerning experiential intensity, epigenetic adaptation, neural synchronization, biophotonic emission, and long-term integration trajectories. It represents a development within the broader Unified Fractal Consciousness Theory (UFCT), extending its architecture into individual developmental phenomenology. Rather than reducing consciousness to mechanism or elevating it beyond biological grounding, the Fractal Consciousness Framework proposes that consciousness is precisely the process by which a positioned biological system transforms experience into identity &mdash; recursively, fractally, and potentially without terminus.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Federico Bisiacchi</p>
+<p>Author, Researcher, and Integrated Wellness Professional</p>
+<p>I am a multidisciplinary author, independent researcher, and practitioner in the field of integrated wellness and consciousness studies.</p>
+<p>Over the past twenty years, I have merged scientific inquiry and experiential practice, integrating biology, quantum physics, anatomy, and awareness-based disciplines.</p>
+<p>I hold an MBA in Marketing (Florence, Italy), a degree in Osteopathy (USA), and a Diploma in Clinical Anatomy (Paris, France).</p>
+<p>Research Focus</p>
+<p>My current research investigates the relationship between consciousness, emotions, DNA, the morphic field, and the quantum structure of life. I propose that DNA is not only a biological code but also a luminous, fractal antenna capable of storing conscious information, emitting biophotons, and modulating our connection to the quantum field.</p>
+<p>In 2025, I developed The Fractal Equation of Consciousness, a theoretical model integrating quantum biology, epigenetics, and photonic communication. That same year, I presented at The Science of Consciousness Conference (Barcelona) with the framework Man as a Biological Prism: A Fractal Model Integrating Consciousness, DNA, and Quantum Information. My work is featured in international academic communities such as (OSC-L) Open Science Community-Lab , Advanced Theoretical Physics and Mathematics; Big Fractal; Coherence Relational Community; CosmosChrono &mdash; Research in Astrophysics, Cosmology &amp; Quantum Frontiers; Czech University of Life Sciences Prague | Česká zemědělská univerzita v Praze ČZU; Fractal Cosmos; Fractal Science and Intelligence; Fundamental Physics Seminar; Genetics and Genomics; Non-standard cosmology and astrophysics; The Theory of Holographic Evolution: A Synthesis of Universal Functional Selection, Information-Mass Equivalence, and the Fractal-Holographic Principle; Theoretical Physics/ Applied/ Mathematical/ Computational/; Theory of Objectivity: Fundamentals Logicians, Ontological and Scientists for a New Physics and Cosmology; Unified Physics &amp; Cosmic Exploration Community; Unus Mundus - Theory of Everything , Δ.72 Coherence Physics &amp; Biological Time Studies; Institute of Natural Science and Applied technology; D10Z -The Manual of the Mechanics of infinity; Modified Einstein Field Interacion; Codex Alpha-Informational Physics; Non-standard cosmology and astrophysics; Geometria AHXIOM; Coherence Relational Community; Effective Field Theory.</p>
+<p>Publications</p>
+<p>•        Inside the Mirror &ndash; Book - autobiographical journey of transformation</p>
+<p>•        Man as a Biological Prism &ndash; Book - scientific-philosophical vision of the human body as a prism of light</p>
+<p>•        The Mathematics of Awareness &ndash; Book - in production</p>
+<p>•        Fractal Consciousness and the Informational Structure of Reality &ndash; preprint (2025)</p>
+<p>•        The Fractal Equation of Consciousness &ndash; preprint (2025)</p>
+<p>•.       The Unified Fractal Consciousness Theory - preprint (2025)</p>
+<p>•.       DNA Resonance and the Superradiant Collapse of Qualia: A Quantum-Informed Biological Framework &ndash; preprint (2025)</p>
+<p>•.       Man as Biological Prism (Presentation, The Science of Consciousness 2025, Barcelona) &ndash; preprint (2025)</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+.api/
+.claude-flow/
+.claude/
+.mcp.json
+.venv/
+Claude_interactions.md
+analysis/speaker_rankings.md
+backup_stuart/
+backup_ua/
+center/
+codes/
+contracts/UCSD_packet/~$e Science of Consciousness Conference 2026 Final2.docx
+contracts/UCSD_second_packet/
+documents/IONS_Sponsorship_Invitation.pptx
+documents/~$IONS_Sponsorship_Invitation.pptx
+flyer/tsc_prospectus.pdf
+hotel/
+ions_newsletter/
+posters/POSTER BOARD_RENTAL FORM copy.pdf
+reviewers/
+temptemp/
+workshops
+contractor_abi
+abstracts_xls
+node_modules
+old
+temp
+.context/
+.gitignore
+CLAUDE.md
+NOTES.md
+update_website
+__pycache__/
+tsc_private/

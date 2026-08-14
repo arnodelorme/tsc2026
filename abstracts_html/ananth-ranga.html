@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hierarchical Dual-Aspect Realism: An Epistemic Hierarchy Between Experience and the Physical &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Ananth Ranga</h1>
+  <p class="subtitle">Independent Researcher, MILPITAS, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/ananth-ranga.jpeg" alt="Ananth Ranga">
+    <div class="speaker-info">
+      <h2>Ananth Ranga</h2>
+      <div class="affiliation">Independent Researcher, MILPITAS, CA, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../concurrent.html#wed-4">WED-4 &mdash; Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Hierarchical Dual-Aspect Realism: An Epistemic Hierarchy Between Experience and the Physical</div>
+
+  <div class="abstract-text">
+<p>The hard problem of consciousness persists because contemporary science successfully explains the structure, function, and neural correlates of physical systems associated with experience without explaining why these processes are accompanied by subjective experience. Major theories of consciousness, including physicalism, idealism, and dual-aspect theories, each illuminate important aspects of the problem while leaving unresolved questions concerning the relationship between experience and the physical. Dual-aspect approaches are particularly attractive because they avoid treating mind and matter as separate substances, instead regard the physical and the experiential as irreducible aspects of reality. However, existing formulations generally treat these aspects symmetrically while treating the experiential aspect as a single category. This paper develops Hierarchical Dual-Aspect Realism (HDAR), which addresses both limitations by introducing an explicit epistemic hierarchy within a dual-aspect framework and distinguishing awareness from the structured contents of experience. HDAR maintains that awareness and physical organization are irreducible aspects of reality while assigning them different explanatory roles. The physical world is not denied, nor is it reduced to consciousness. Rather, HDAR proposes that experience has epistemic priority because every observation, measurement, inference, and scientific model is necessarily encountered within experience. Conversely, experience can occur prior to measurement, conceptualization, or scientific analysis. The proposed hierarchy is therefore epistemic rather than ontological: it concerns the order in which reality becomes knowable, not the order in which reality exists. While elements of this asymmetry have been acknowledged within phenomenological and dual-aspect traditions, HDAR makes it the organizing principle of the framework. HDAR also distinguishes awareness from the structured contents that appear within awareness. Awareness is treated as the enabling condition for experience, whereas physical organization constrains the forms that experience can take. The framework further proposes an intuitive conceptual vocabulary in which awareness may be viewed as a field of Light, structured experience as Shadow, and physical organization as Matter. Just as the shape of a shadow depends upon both light and the object that constrains it, conscious experience depends upon both awareness and the physical and informational organization of biological systems. This vocabulary is intended as an explanatory model rather than a literal physical analogy, allowing first-person experience and third-person scientific investigation to be interpreted within a common conceptual framework. Instead of interpreting neural activity as generating consciousness itself, HDAR interprets it as characterizing the relationship between physical organization (Matter) and structured experience (Shadow), while awareness (Light) remains the enabling condition for experience. Within this framework, empirical approaches including neural correlates of consciousness, predictive processing, and Integrated Information Theory can be interpreted as investigating different aspects of the Matter&ndash;Shadow relationship, while philosophical theories of consciousness and contemplative traditions investigate awareness and its relation to the physical.By separating questions concerning awareness from those concerning the organization of experience, HDAR clarifies how different disciplines can investigate different aspects of consciousness while remaining part of the same overall framework. In this way, HDAR provides a common conceptual vocabulary through which these diverse approaches can be understood as complementary investigations of the same underlying reality.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Ananth Ranga is an AI scientist and independent consciousness researcher. Alongside more than 15 years of experience in artificial intelligence and machine learning as a scientist at Amazon , he has spent the past decade independently studying consciousness through philosophy, neuroscience, and contemplative traditions. He has completed multiple silent meditation retreats, including Vipassana, which have informed his interest in first-person approaches to consciousness. He presented a poster at The Science of Consciousness 2025 in Barcelona and is the developer of the Hierarchical Dual-Aspect Realism (HDAR) framework.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

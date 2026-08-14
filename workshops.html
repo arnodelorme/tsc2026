@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshops &mdash; The Science of Consciousness 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+.back-bar a:hover { text-decoration: underline; }
+
+.session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
+.session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.menu-section { margin-bottom: 1.1rem; }
+.menu-section-title {
+  font-size: .95rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff !important; background: #24303a; border-left: 4px solid #1a96b8;
+  padding: .4rem .7rem; border-radius: 4px; margin-bottom: .55rem;
+}
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #b8d4d8; border-color: #1a96b8; }
+.menu-btn .btn-time { font-size: .72rem; font-weight: 400; color: #555; display: block; margin-top: .15rem; }
+
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel { display: none; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: .5rem; }
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .3rem; }
+.session-panel .ws-meta { font-size: .82rem; color: #666; margin-bottom: .8rem; }
+.session-panel ol { margin: 0 0 0 1.2rem; padding: 0; font-size: .88rem; line-height: 1.6; }
+.session-panel ol li { margin-bottom: .4rem; }
+.session-panel ol li strong { color: #0a2440; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+
+/* speaker photo chips */
+.spk-grid { display: flex; flex-wrap: wrap; gap: 1rem 1.1rem; margin: .6rem 0 .2rem; }
+.spk { width: 124px; text-align: center; font-size: .84rem; }
+.spk .av, .spk .ini { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; display: flex; align-items: center; justify-content: center; margin: 0 auto .45rem; box-shadow: 0 3px 10px rgba(10,36,64,.2); }
+.spk .ini { background: linear-gradient(135deg, #1a96b8, #0a2440); color: #fff; font-weight: 700; font-size: 1.8rem; }
+.spk .nm { display: block; color: #0a2440; line-height: 1.2; }
+.spk .nm em { color: #777; font-style: italic; }
+.av-sm { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: .35rem; box-shadow: 0 1px 4px rgba(10,36,64,.2); }
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1 id="pageTitle">Workshops</h1>
+  <p class="subtitle" id="pageSubtitle">Sunday, October 11 &middot; 10 workshops</p>
+</header>
+
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<div class="session-menu">
+  <h2>Select a workshop:</h2>
+  <div class="menu-section">
+    <h3 class="menu-section-title">Morning &middot; 8:30 am</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s2" onclick="showSession(this,'s2')">Quantum Biology (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s7" onclick="showSession(this,'s7')">Psychedelics (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s9" onclick="showSession(this,'s9')">MAHP Yoga &amp; Mindfulness <span class="btn-time">8:30&ndash;10:30</span></button>
+      <button class="menu-btn" data-panel="s5" onclick="showSession(this,'s5')">OBEs &amp; Past Life Memories (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+      <button class="menu-btn" data-panel="s10" onclick="showSession(this,'s10')">Life as manifestation (Part 1) <span class="btn-time">8:30&ndash;10:40</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Mid-Morning &middot; 11:10 am</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s2" onclick="showSession(this,'s2')">Quantum Biology (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s7" onclick="showSession(this,'s7')">Psychedelics (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s1" onclick="showSession(this,'s1')">Psi &amp; Consciousness (Part 1) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s5" onclick="showSession(this,'s5')">OBEs &amp; Past Life Memories (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+      <button class="menu-btn" data-panel="s10" onclick="showSession(this,'s10')">Life as Manifestation (Part 2) <span class="btn-time">11:10&ndash;12:30</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Afternoon &middot; 2:00 pm</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s2" onclick="showSession(this,'s2')">Quantum Biology (Part 3) <span class="btn-time">2:00&ndash;4:00</span></button>
+      <button class="menu-btn" data-panel="s4" onclick="showSession(this,'s4')">Brain EM Field <span class="btn-time">2:00&ndash;4:00</span></button>
+      <button class="menu-btn" data-panel="s1" onclick="showSession(this,'s1')">Psi &amp; Consciousness (Part 2) <span class="btn-time">2:00&ndash;4:10</span></button>
+      <button class="menu-btn" data-panel="s8" onclick="showSession(this,'s8')">Extraocular Perception <span class="btn-time">2:00&ndash;4:00</span></button>
+      <button class="menu-btn" data-panel="s11" onclick="showSession(this,'s11')">IIT, Consciousness &amp; AI <span class="btn-time">2:00&ndash;4:10</span></button>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3 class="menu-section-title">Evening &middot; 7:00 pm</h3>
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="s6" onclick="showSession(this,'s6')">Non-Human Consciousness <span class="btn-time">7:00&ndash;9:00</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="session-wrap">
+
+<div class="session-panel" data-slot="morning" id="s2">
+  <h3>Quantum Biology and the Brain</h3>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Part 3: 2:00 &ndash; 4:00 pm &middot; Chair: Travis Craddock</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/travis-craddock.png" alt="Travis Craddock"><span class="nm">Travis Craddock <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/joseph-jacks.jpg" alt="Joseph Jacks"><span class="nm">Joseph Jacks</span></div>
+    <div class="spk"><img class="av" src="img/jack-tuszynski.png" alt="Jack Tuszynski"><span class="nm">Jack Tuszynski</span></div>
+    <div class="spk"><img class="av" src="img/nirosha-murugan.jpg" alt="Nirosha Murugan"><span class="nm">Nirosha Murugan</span></div>
+    <div class="spk"><img class="av" src="img/lea-gassab.png" alt="Lea Gassab"><span class="nm">Lea Gassab</span></div>
+    <div class="spk"><img class="av" src="img/mark-bailey.jpg" alt="Mark Bailey"><span class="nm">Mark Bailey</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Led by Travis Craddock (Tier 1 Canada Research Chair in Quantum Neurobiology, University of Waterloo), this workshop explores emerging evidence and theoretical frameworks at the intersection of quantum physics, biology, and consciousness research. Together, the talks examine how quantum-scale processes may contribute to biological organization, neural information processing, and new scientific approaches to understanding mind and brain.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Joseph Jacks</strong> &mdash; <em>The current state of quantum biology research.</em> Founder and General Partner of OSS Capital, San Francisco, California, USA.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Jack Tuszynski</strong> &mdash; <em>Quantum metabolism and the biological Planck constant.</em> Professor of Biomedical Engineering at the Polytechnic University of Turin, Italy; Professor Emeritus at the University of Alberta, Edmonton, Canada; and Senior Scientific Advisor at NexiVerify, Vancouver, Canada.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Nirosha Murugan</strong> &mdash; <em>Endogenous Brain Light and the Potential for Optical Communication.</em> Tier 2 Canada Research Chair in Biophysics and Assistant Professor, Department of Health Sciences, Wilfrid Laurier University, Waterloo, Ontario, Canada.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Lea Gassab</strong> &mdash; <em>Microtubules as quantum-optical systems in biology.</em> Provost&rsquo;s Interdisciplinary Postdoctoral Scholar in the Departments of Biology, Physics &amp; Astronomy, and Chemistry, and the Waterloo Institute for Nanotechnology, University of Waterloo, Waterloo, Ontario, Canada.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Mark Bailey</strong> &mdash; <em>Superpsychism.</em> Founder of DataField Intelligence LLC; Associate Director of the Center for the Future of AI, Mind, and Society; and Research Affiliate Professor, Department of Electrical Engineering and Computer Science, Florida Atlantic University, Boca Raton, Florida, USA.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 3 (2:00 &ndash; 4:00 pm)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Daniel Lanino</strong> &mdash; <em>Centrioles and consciousness.</em> Ph.D. student and research assistant at the University of California, Los Angeles (UCLA).</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kelvin McQueen</strong> &mdash; <em>Does the no-cloning principle prevent quantum consciousness?</em> Assistant Professor of Philosophy at Chapman University and Affiliate Faculty of the Institute for Quantum Studies.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>TBA</strong> &mdash; TBA.</p>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s4">
+  <h3>Brain Electromagnetic Field Generation, Computation and Information Processing</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Bruce MacIver</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/bruce-maciver.png" alt="Bruce MacIver"><span class="nm">Bruce MacIver <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/jonathan-schooler.png" alt="Jonathan Schooler"><span class="nm">Jonathan Schooler</span></div>
+    <div class="spk"><img class="av" src="img/tam-hunt.png" alt="Tam Hunt"><span class="nm">Tam Hunt</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Electromagnetic field (EMF) theories of consciousness have been proposed to explain brain function for over seventy years. Interest in the theory continues because it explains mind&ndash;brain integration and offers a simple solution to the &ldquo;binding problem&rdquo; of our unified conscious experience &mdash; thereby addressing the &ldquo;hard problem&rdquo; of consciousness. EM fields are easily measured, and many correlates of field activity have been noted, associated with loss and recovery of consciousness, sensory perception, and behavior. This workshop brings together leading proponents of the EMF theory of consciousness to discuss how the brain generates EM fields, how these fields control neuronal activity via ephaptic interactions throughout the brain, and how field matrix computing can bring about information integration. Ample time is reserved for audience participation and speaker interactions &mdash; including discussion of theoretical and empirical support for the EMF&rsquo;s role in consciousness, the self, the mind, mind&ndash;brain duality, and parapsychological possibilities such as telepathy and cosmic consciousness.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Presenters:</strong></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Jonathan W. Schooler, PhD</strong> &mdash; <em>Background and history of EMF theories of consciousness.</em> Schooler is a Distinguished Professor of Psychological and Brain Sciences at the University of California Santa Barbara, Director of UCSB&rsquo;s Center for Mindfulness and Human Potential, and Director of the Sage Center for the Study of the Mind. His research intersects philosophy and psychology, including the relationship between mindfulness and mind-wandering and theories of consciousness. A former holder of a Tier 1 Canada Research Chair, his research has been featured on <em>Closer to Truth</em>, BBC <em>Horizon</em>, and <em>Through the Wormhole</em> with Morgan Freeman. With over 270 scholarly publications and over 50,000 citations, he is a six-time recipient of the Clarivate Web of Science Highly Cited Researcher Award and is ranked among the top 100 cognitive psychologists by ScholarGPS and AcademicInfluence.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>M. Bruce MacIver, MSc, PhD</strong> &mdash; <em>Experimental evidence showing how EMFs are generated by neurons and how the fields influence neuronal discharge.</em> MacIver is a Professor Emeritus of neurophysiology at Stanford University, where he directs the <a href="https://web.stanford.edu/group/maciverlab/" target="_blank" rel="noopener">Neuropharmacology Lab</a>. He holds the 2004 Cox Medal from Stanford University and the 2017 Elemer Zsigmond Award from the International Society for Anaesthetic Pharmacology. He is interested in ways to measure consciousness as well as theories of consciousness, especially the electromagnetic field theory that our mind &mdash; and hence consciousness &mdash; resides in the ever-changing cloud of energy generated by our brains, which in turn influences our neural circuitry through ephaptic feedback. MacIver is a leading researcher developing new ways to visualize this energy cloud using non-linear dynamic analyses of EEG/MEG recordings.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Tam Hunt</strong> &mdash; <em>Neuronal synchronization and rhythms that amplify and integrate EMF activity.</em> Hunt is a scholar at UC Santa Barbara&rsquo;s METALAB, where he studies consciousness and the philosophy of mind. He has been lead guest editor for two Frontiers in Human Neuroscience research topics, including &ldquo;EM field theories of consciousness: Opportunities and obstacles&rdquo; and &ldquo;Mapping the resonome.&rdquo; He is lead developer, with Jonathan Schooler, of the <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2019.00378/full" target="_blank" rel="noopener">General Resonance Theory</a> of consciousness, a public policy lawyer specializing in green energy and AI safety, and host of the Diamond Mind podcast. His website is <a href="http://tam-hunt.com/" target="_blank" rel="noopener">tam-hunt.com</a>.</p>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s11">
+  <h3>Integrated Information Theory: History, Evidence, and AI</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:10 pm &middot; Chair: Melanie Boly</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/melanie-boly.png" alt="Melanie Boly"><span class="nm">Melanie Boly <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/william-marshall.png" alt="William Marshall"><span class="nm">William Marshall</span></div>
+    <div class="spk"><img class="av" src="img/giulio-tononi.png" alt="Giulio Tononi"><span class="nm">Giulio Tononi <em>(to be confirmed)</em></span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">This workshop reviews the history of integrated information theory, from its early formulation to current empirical and conceptual debates, and asks what the framework implies for consciousness, experimental testing, and machine intelligence. The central claim is that the AI question is critical and urgent, and that if IIT is roughly right, standard Von Neumann computers do not generate consciousness.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (2:00 &ndash; 3:00 pm)</strong> &mdash; update on theory and experiments:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Melanie Boly</strong> &mdash; <em>IIT history, current status, and the experimental program.</em> An overview of the theory, what has been established, and where the evidence still needs to be sharpened.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>William Marshall</strong> &mdash; <em>Experimental testing and progress updates.</em> Professor at Brock University and long standing member of the IIT group, contributing perspective on the current experimental program and its limits.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (3:00 &ndash; 4:10 pm)</strong> &mdash; AI, conclusions, and discussion:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Giulio Tononi</strong> &mdash; <em>Consciousness, AI, and the computationalist mainstream.</em> The consciousness and AI angle is both critical and urgent. If IIT is roughly right, AI is not conscious at all as long as it runs on Von Neumann computers.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Discussion</strong> &mdash; The audience can take up the current confusion around computational functionalism.</p>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s1">
+  <h3>Psi and the Evolution of Consciousness Science</h3>
+  <div class="ws-meta">Sunday &middot; Part 1: 11:10 am &ndash; 12:30 pm &middot; Part 2: 2:00 pm &ndash; 4:10 pm &middot; Chair: Thomas Brophy</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/thomas-brophy-new.jpg" alt="Thomas Brophy"><span class="nm">Thomas Brophy <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/claudia-welss.jpg" alt="Claudia Welss"><span class="nm">Claudia Welss</span></div>
+    <div class="spk"><img class="av" src="img/dean-radin.jpg" alt="Dean Radin"><span class="nm">Dean Radin</span></div>
+    <div class="spk"><img class="av" src="img/helane-wahbeh.jpg" alt="Helane Wahbeh"><span class="nm">Helan&eacute; Wahbeh</span></div>
+    <div class="spk"><img class="av" src="img/erik-brinsmead.png" alt="Erik Brinsmead"><span class="nm">Erik Brinsmead</span></div>
+    <div class="spk"><img class="av" src="img/sitara-tadeo.jpeg" alt="Sitara Tadeo"><span class="nm">Sitara Tadeo</span></div>
+    <div class="spk"><img class="av" src="img/arnaud-delorme.jpg" alt="Arnaud Delorme"><span class="nm">Arnaud Delorme <em>(Discussant)</em></span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">This workshop explores the position that incorporating psi phenomena and psi research into a new scientific framework that can sustain their existence will be the centerpiece of a revolution in scientific method and framework needed to incorporate a science of consciousness, and emerging phenomenology including UAP, into a whole-of-reality ontology. The workshop runs in two parts: Part 1 in the late morning and Part 2 in the afternoon.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presentations of 25 minutes each:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Claudia Welss, IONS Executive Chair</strong> &mdash; From the Overview Effect that inspired IONS&rsquo; founding to the Global Consciousness Project and Global Mind Change, this talk traces the evolution of consciousness research toward a more interconnected view of mind and reality. It explores how these ideas have shaped IONS&rsquo; mission and their implications for the future of consciousness science.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Dean Radin, IONS Chief Scientist</strong> &mdash; <em>Nonlocal Minds: Information Without Boundaries.</em> From StarGate&rsquo;s remote viewers to random number generators whose outputs correlate with mental intention, psi research suggests that these phenomena are all linked to ways that information &ldquo;flows&rdquo; through space and time. This talk traces an arc from classified remote viewing programs, to mind&ndash;matter interaction studies with truly random systems, and to a new generation of experiments probing the quantum observer effect. Taken individually, these are curiosities. Taken together, they suggest something more provocative: consciousness may entail a mode of nonlocal information access that transcends the skull and is unbound by the everyday constraints of space, time, or causality.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (2:00 pm &ndash; 4:10 pm)</strong> &mdash; presentations of 25 minutes each:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Helan&eacute; Wahbeh, IONS Director of Research</strong> &mdash; This talk presents a research program that brings trance-channeled communications attributed to extraterrestrial intelligences into disciplined empirical study, combining structured interviews, transformer-based semantic analysis, and reflexive thematic analysis, without adjudicating the ontological status of the purported sources. The findings demonstrate measurable internal organization and convergent themes across independent channelers, offering a replicable template for studying contested consciousness- and UAP-adjacent phenomena as organized meaning-making discourse.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Erik Brinsmead, IONS AI Lead</strong> &mdash; This talk presents an AI-driven analysis of channeled communications, demonstrating how modern machine learning methods can uncover patterns and structure in the noetic archive. It also explores the broader potential of AI to accelerate research in consciousness and anomalistic phenomena.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Sitara Tadeo, IONS Science Team</strong> &mdash; This talk presents new research on the psychological changes associated with out-of-body experiences, offering a first public look at IONS&rsquo; ongoing OBE research program. It examines how these experiences may transform perception, well-being, and our understanding of consciousness.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Thomas Brophy, IONS President</strong> &mdash; This talk introduces IONS Y and explores the development of scientific and philosophical frameworks that explicitly incorporate consciousness and psi into a broader ontology of reality. It considers how such frameworks may help unify findings from consciousness research, anomalous phenomena, and emerging scientific paradigms.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Q&amp;A and dialogue</strong> &mdash; 30 minutes, joined by Arnaud Delorme.</p>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s5">
+  <h3>Research at the Edge of Consciousness: OBEs, Past Life Memories and Altered States of Consciousness</h3>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Chair: Kunal Mooley</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/kunal-mooley.png" alt="Kunal Mooley"><span class="nm">Kunal Mooley <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler"><span class="nm">Marina Weiler</span></div>
+    <div class="spk"><img class="av" src="img/kim-penberthy.png" alt="Kim Penberthy"><span class="nm">Kim Penberthy</span></div>
+    <div class="spk"><img class="av" src="img/saeedeh-sadeghi.png" alt="Saeedeh Sadeghi"><span class="nm">Saeedeh Sadeghi</span></div>
+    <div class="spk"><img class="av" src="img/martin-fleming.png" alt="Martin Fleming"><span class="nm">Martin Fleming</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">At the borderlands of consciousness, near-death experiences (NDEs), out-of-body experiences (OBEs), and reports of past-life memories raise pointed questions about whether consciousness depends entirely on the brain. This workshop reviews the scientific study of these phenomena &mdash; from prospective hospital NDE research and tests of perception during OBEs to systematically investigated cases of children who report past-life memories &mdash; and what they may imply for theories of mind.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presentations:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Marina Weiler</strong> (UVA/DOPS) &mdash; <em>Veridical out-of-body experiences.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kim Penberthy</strong> (UVA/DOPS) &mdash; <em>Beyond the Boundaries of Mind: After-Death Communications and Near-Death Experiences.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Saeedeh Sadeghi</strong> (UVA/DOPS) &mdash; <em>Past-Life Memories in Children: Common Patterns Across Many Cases.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Martin Fleming</strong> (SPi, BIHS) &mdash; <em>Quantitative Experimentation with Remote Perception.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kunal Mooley</strong> (IMICS, IITK, Caltech; Chair) &mdash; <em>Exploring the Mind Body problem through Neurobiological Studies of children claiming past life memories.</em></p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; panel discussion with all presenters.</p>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s6">
+  <h3>The Varieties of Non-Human Consciousness</h3>
+  <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 9:00 pm &middot; Chair: Susan Schneider</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/susan-schneider.jpg" alt="Susan Schneider"><span class="nm">Susan Schneider <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/anirban-bandyopadhyay.jpg" alt="Anirban Bandyopadhyay"><span class="nm">Anirban Bandyopadhyay</span></div>
+    <div class="spk"><img class="av" src="img/mike-wiest.jpg" alt="Mike Wiest"><span class="nm">Mike Wiest</span></div>
+    <div class="spk"><div class="ini">+</div><span class="nm">More speakers coming soon</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Could consciousness extend beyond the human brain &mdash; to animals, plants, cultured neurons, or artificial systems? This workshop probes the criteria and evidence for consciousness in non-human systems, from brain organoids and microtubule-based models to machine intelligence, and asks how we might recognize or measure minds unlike our own.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">The session runs as a series of <strong>fast 15-minute presentations</strong>, with each speaker offering a concise, focused talk followed by brief discussion. <strong>Full program to be posted soon.</strong></p>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s7">
+  <h3>Consciousness and Psychedelics</h3>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm &middot; Chair: Rael Cahn</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/rael-cahn.jpg" alt="Rael Cahn"><span class="nm">Rael Cahn<br><em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/joe-tafur.png" alt="Joe Tafur"><span class="nm">Joe Tafur</span></div>
+    <div class="spk"><img class="av" src="img/kieran-fox.png" alt="Kieran Fox"><span class="nm">Kieran Fox</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">The deepest forms of healing have long been understood as inseparable from spiritual transformation &mdash; a reorientation of the self toward connection, wholeness, and unity beyond ordinary egoic experience. This workshop brings together three physician-scientists to examine spiritual healing as both lived reality and emerging science. Rael Cahn (USC) presents two decades of EEG, ERP, and neuroimaging research comparing meditative and psychedelic states and current work on mindfulness-assisted psilocybin therapy grounded in non-dual awareness. Joe Tafur (Modern Spirit) explores the role of spiritual healing in psychedelic-assisted therapies, drawing on his new book <em>Medicine Song: Spiritual Healing and the Psychedelic Renaissance</em>, his work with psychedelic therapies, and his training in South American curanderismo. Kieran Fox (UCSF) situates these findings within contemplative and psychedelic neuroscience and the lineage of scientific seekers, Einstein among them, who found in oneness the deepest motivation for inquiry. Together they ask how a science of consciousness might take spiritual healing seriously without reducing it.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presenters:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>B. Rael Cahn, MD, PhD</strong> &mdash; <em>The Dissolving Self: Neurophysiology of Meditative and Psychedelic States and Their Healing Potential.</em><span style="display:block;height:.35rem"></span>Cahn is Clinical Associate Professor of Psychiatry at the Keck School of Medicine of USC and Director of the USC Center for Mindfulness Science, where he leads the Meditation and Psychedelic Therapy Lab. Drawing on more than twenty years of EEG, ERP, and neuroimaging research, he compares how long-term meditation and psilocybin reshape sensory and cognitive processing, narrative self-referencing, and the felt sense of selfhood. He examines where contemplative and psychedelic states converge and diverge at the neural level, and how self-dissolution and non-dual awareness may serve as active ingredients in psychological healing &mdash; drawing on current work in mindfulness-assisted psilocybin therapy for depression to consider how rigorous neuroscience can illuminate, rather than explain away, the therapeutic power of self-transcendence.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Joe Tafur, MD</strong> &mdash; <em>Medicine Song: Spiritual Healing and the Psychedelic Renaissance.</em><span style="display:block;height:.35rem"></span>Tafur is a Colombian-American integrative physician, curandero, and author who trained for years in Traditional Amazonian Plant Medicine and South American curanderismo at Nihue Rao Centro Espiritual in Peru, and co-founded the nonprofit Modern Spirit and the Church of the Eagle and the Condor. Drawing on his most recent book, he explores spiritual healing as the heart of both Indigenous plant medicine and the contemporary psychedelic renaissance. Taking the prophecy of the Eagle and the Condor &mdash; the re-harmonizing of science and spirit, mind and heart &mdash; as a guiding frame, he examines the role of spiritual healing in modern medicine, arguing that sacred plants and psychedelic medicines, offered responsibly, can catalyze profound emotional healing through spiritual awakening &mdash; associated improvement in emotional and spiritual well-being are increasingly legible through modern advances in psychoneuroimmunology, epigenetics, and consciousness research.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presentation and closing panel:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Kieran C. R. Fox, MD, PhD</strong> &mdash; <em>Cosmic Religion: Oneness, Self-Transcendence, and the Scientific Pursuit of the Sacred.</em><span style="display:block;height:.35rem"></span>Fox is a physician-scientist at UCSF whose research centers on the neural mechanisms and therapeutic potential of meditation and psychedelics; he holds a doctorate in cognitive neuroscience from UBC and is the author of <em>I Am a Part of Infinity: The Spiritual Journey of Albert Einstein.</em> He situates contemplative and psychedelic experience within the history of science itself &mdash; the lineage of seekers, Einstein foremost among them, for whom a &ldquo;cosmic religious sense&rdquo; of unity and interconnectedness was not opposed to rigorous inquiry but its deepest source. Connecting the neuroscience of self-transcendence and the dissolution of ordinary self-other boundaries to enduring philosophical and spiritual frameworks of oneness, he argues that taking the experience of the sacred seriously may be essential both to a complete science of consciousness and to understanding why such experiences so reliably heal.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Closing panel</strong> &mdash; <em>Taking Spiritual Healing Seriously: Toward a Non-Reductive Science of Consciousness.</em><span style="display:block;height:.35rem"></span>All three presenters join a moderated discussion on how a science of consciousness might engage spiritual healing on its own terms &mdash; honoring the relational, cultural, and ethical contexts of contemplative and Indigenous practices while subjecting their mechanisms and outcomes to rigorous study. Audience Q&amp;A.</p>
+</div>
+
+<div class="session-panel" data-slot="afternoon" id="s8">
+  <h3>The MindSwan Prize: The Search for Extraocular Perception</h3>
+  <div class="ws-meta">Sunday afternoon &middot; 2:00 pm &ndash; 4:00 pm &middot; Chair: Stacey Murphy (CUSAC)</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/stacey-murphy.jpg" alt="Stacey Murphy"><span class="nm">Stacey Murphy <em>(Chair)</em></span></div>
+    <div class="spk"><img class="av" src="img/marina-weiler.jpg" alt="Marina Weiler"><span class="nm">Marina Weiler</span></div>
+    <div class="spk"><img class="av" src="img/david-chartrand.png" alt="David Chartrand"><span class="nm">David Chartrand</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">Extraocular perception &mdash; the claimed ability to perceive without the eyes &mdash; is a striking and contested frontier in consciousness research. The MindSwan Prize is an international scientific challenge that investigates such claims through rigorous, replicable methods. The workshop unfolds in three parts:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Marina Weiler</strong> (neuroscientist, Division of Perceptual Studies, University of Virginia) opens by reviewing what extraocular perception is, the existing scientific literature, and videos of current claims &mdash; then introduces the MindSwan research protocol, the challenges it raises, and how they can be met with scientific rigour. <strong>David Chartrand</strong> (Executive Director, CUSAC) explains the vision behind the MindSwan Prize and how open scientific challenges can advance consciousness research through collaboration and public participation. The session closes with a <strong>live protocol demonstration and open discussion</strong> (invited: Martin Monti), considering what successful results would actually represent and how future studies could distinguish between competing explanations.</p>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s9">
+  <h3>MAHP &mdash; Mindful Awareness Healing Practice</h3>
+  <div class="ws-meta">Sunday morning &middot; 8:30 am &ndash; 10:30 am &middot; Facilitator: Kelli (Kai) Silva</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/kelli-silva.png" alt="Kelli (Kai) Silva"><span class="nm">Kelli (Kai) Silva</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">An interdisciplinary contemplative workshop created by Dr. Kelli (Kai) Silva (Ph.D. Philosophy/Metaphysics). Mindful Awareness Healing Practice (MAHP) is an integrative experiential approach designed to cultivate awareness through mindful movement, breath regulation, meditation, and heart-centered practices. This workshop explores the relationship between body awareness, emotional regulation, and expanded states of consciousness by inviting participants to move from cognitive processing into direct embodied experience.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;">Through gentle movement, intentional breathing, guided meditation, and reflective awareness practices, participants will explore the connection between the body, mind, and heart as pathways for deeper self-awareness. Inspired by contemplative traditions and supported by emerging research on mindfulness, compassion, and mind-body practices, MAHP emphasizes qualities such as presence, gratitude, compassion, and connection. Participants will be guided through a progressive experience including grounding techniques, mindful movement, breath awareness, heart-focused meditation, and integration practices. The session is accessible to all levels and does not require previous yoga or meditation experience.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;">MAHP was developed as part of my doctoral exploration of Heart-Centered Awareness and has been shared in community and wellness settings, including an 8-week pilot experience with the UCSD Stein Institute for Research on Aging team, where participants reported improvements in calmness, emotional balance, focus, and overall well-being. This experiential workshop invites participants to explore consciousness not only as a concept to be studied, but as a lived experience accessed through awareness, embodiment, and the intelligence of the heart.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;">Sessions also held Monday through Friday, before the official program. <a href="https://kaisilva.com/" target="_blank" rel="noopener">kaisilva.com</a></p>
+</div>
+
+<div class="session-panel" data-slot="morning" id="s10">
+  <h3>Life as Manifestation: Origin of Life and Consciousness in the Framework of T-Consciousness Theory</h3>
+  <div class="ws-meta">Sunday morning &middot; Part 1: 8:30 &ndash; 10:40 am &middot; Part 2: 11:10 am &ndash; 12:30 pm</div>
+  <div class="spk-grid">
+    <div class="spk"><img class="av" src="img/farzad-ahmadkhanlou.jpg" alt="Farzad Ahmadkhanlou"><span class="nm">Farzad Ahmadkhanlou</span></div>
+    <div class="spk"><img class="av" src="img/simin-rahighi.jpg" alt="Simin Rahighi"><span class="nm">Simin Rahighi</span></div>
+    <div class="spk"><img class="av" src="img/noushin-nabavi.jpg" alt="Noushin Nabavi"><span class="nm">Noushin Nabavi</span></div>
+    <div class="spk"><img class="av" src="img/afshin-lorestani.jpg" alt="Afshin Lorestani"><span class="nm">Afshin Lorestani</span></div>
+  </div>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .9rem;">This workshop examines the origin of life, biological evolution, consciousness, and cosmic order through T-Consciousness theory. It treats life as a manifestation of information and intelligence under suitable physical and material conditions, and asks whether material explanations alone fully account for the emergence and evolution of living systems.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 1 (8:30 &ndash; 10:40 am)</strong> &mdash; presentations:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Farzad Ahmadkhanlou</strong> and <strong>Noushin Nabavi</strong> &mdash; <em>Origin of Life: Current Scientific Models and Unresolved Questions.</em> A critical review of prebiotic chemistry, biological organization, and the unresolved transition from chemistry to living systems.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Farzad Ahmadkhanlou</strong> &mdash; <em>T-Consciousness as a Universal Organizing Principle: Information, Intelligence, and Consciousness.</em> A framework-level introduction to the theory and its implications for biology and cosmology.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Noushin Nabavi</strong> &mdash; <em>Evolution, Adaptation, and the Development of Living Systems.</em> A systems biology perspective on how living organization develops and adapts.</p>
+  <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; presentations and discussion:</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Afshin Lorestani</strong> and <strong>Farzad Ahmadkhanlou</strong> &mdash; <em>Entanglement and Universal Interconnectedness.</em> A discussion of how interconnectedness is framed within the T-Consciousness model.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Simin Rahighi</strong> &mdash; <em>Consciousness Beyond the Brain and Non-Neural Intelligence.</em> A look at consciousness-centered biology outside a strictly neural frame.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Afshin Lorestani</strong> and <strong>Noushin Nabavi</strong> &mdash; <em>Earth, Cosmos, and Biological Dark Energy: Emerging Perspectives.</em> A broader view of biological order in relation to cosmology and systems science.</p>
+  <p style="font-size:.92rem;color:#555;margin:0 0 .9rem;"><strong>Panel discussion</strong> &mdash; <em>Implications for Biology, Consciousness Studies, Cosmology, and Systems Science.</em> Includes Q&amp;A and live experience of TCFs.</p>
+</div>
+
+</div>
+
+<footer></footer>
+<script src="footer.js"></script>
+
+<script>
+function showSession(btn, id) {
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  // A workshop spanning several time sections has one button per section — highlight them all.
+  document.querySelectorAll('.menu-btn[data-panel="' + id + '"]').forEach(function(b) { b.classList.add('active'); });
+  // Reflect the choice in the URL bar (no reload/scroll) so the link can be copied & shared.
+  if (PANEL_HASH[id] && window.history && history.replaceState) {
+    history.replaceState(null, '', '#' + PANEL_HASH[id]);
+  }
+}
+
+// Direct-link hooks: e.g. workshops.html#obe opens the NDEs &amp; OBEs tab, same as clicking it.
+var WORKSHOP_HASH = {
+  'psi': 's1', 'quantum-biology': 's2', 'quantum': 's2',
+  'emf': 's4', 'em-fields': 's4', 'iit': 's11', 'integrated-information-theory': 's11',
+  'melanie-boly': 's11', 'giulio-tononi': 's11',
+  'obe': 's5', 'nde': 's5', 'non-human': 's6',
+  'psychedelics': 's7', 'extraocular': 's8', 'mindswan': 's8',
+  'yoga': 's9', 'mahp': 's9', 'life': 's10', 't-consciousness': 's10', 'origin-of-life': 's10'
+};
+
+// Reverse map: clicking a workshop writes its hook into the URL.
+var PANEL_HASH = {
+  's1': 'psi', 's2': 'quantum-biology',
+  's4': 'emf', 's5': 'obe', 's6': 'non-human', 's7': 'psychedelics', 's8': 'extraocular',
+  's9': 'yoga', 's10': 'life', 's11': 'iit'
+};
+
+function showByPanel(panelId) {
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.style.display = ''; b.classList.remove('active'); });
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn[data-panel="' + panelId + '"]').forEach(function(b) { b.classList.add('active'); });
+  var panel = document.getElementById(panelId);
+  if (panel) panel.classList.add('active');
+}
+
+// Apply the current hash. Returns true if it matched a known hook.
+function applyHash() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  if (WORKSHOP_HASH[h]) { showByPanel(WORKSHOP_HASH[h]); return true; }
+  return false;
+}
+
+if (!applyHash()) {
+  // No recognized hash — show all workshops, first one active.
+  var firstBtn = document.querySelector('.menu-btn[data-panel="s9"]') || document.querySelector('.menu-btn');
+  if (firstBtn) {
+    firstBtn.classList.add('active');
+    document.getElementById(firstBtn.getAttribute('data-panel')).classList.add('active');
+  }
+}
+
+// React to hash changes without a reload.
+window.addEventListener('hashchange', applyHash);
+
+</script>
+</body>
+</html>

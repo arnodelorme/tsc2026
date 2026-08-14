@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consciousness Monism as a Theoretical Foundation for the Social Sciences &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>John Christensson</h1>
+  <p class="subtitle">University of Gothenburg, Gothenburg, Västra Götalandsregionen, Sweden</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>John Christensson</h2>
+      <div class="affiliation">University of Gothenburg, Gothenburg, Västra Götalandsregionen, Sweden</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Consciousness Monism as a Theoretical Foundation for the Social Sciences</div>
+
+  <div class="abstract-text">
+<p>Within the social sciences, it is not considered given what the fundamental nature of social phenomena and social realities is. Therefore, if we want to create an adequate study, we must make clear what we hold to be true about reality. It is quite odd if you think about it &ndash; a whole scientific domain, not agreeing to the most fundamental question: what is it, really, that we are studying? Sometimes, this question is misunderstood to be about something external to us, as in a mind-independent material world that exists independently of our observations and interactions with it. With the birth of quantum physics, as well as with the popular rise of monist philosophies, more scholars have however started to understand that the researcher cannot be fully separated from the research &ndash; &ldquo;thou are that&rdquo;, as it was formulated in The Upanishads, some 2500 years ago. As has been noted by several scholars from different social scientific disciplines (e.g., Barad, 2006; Bennett, 2010; Jackson, 2010; Pan, 2020; Wendt, 2015), this means that we must fundamentally rethink our scientific work, as we cannot keep pretending that we are detached observers studying a mind-independent world, as classical positivists would have it, when we know we are not. This question feeds directly into the question of &ldquo;what is consciousness?&rdquo; &ndash; if we cannot separate ourselves from the world, then we surely cannot separate ourselves from consciousness, or consciousness from the world, can we? For example, when you see a tree standing outside of your window, is the tree truly separate from you? Where does the tree start and you end? Typically, at least within modern Western cultures, we believe ourselves to be separate entities living in our own minds, controlling what our bodies and mind are doing and interacting with others from a distance. We do not experience ourselves as something that is inseparable from either phenomenal reality, other people, or the universe at large for that matter. However, I would argue, that this is just because we have learned to identify with our bodies (which surely is advantageous from an evolutionary standpoint, but not necessarily something that is needed once we intellectually have learned the importance of keeping our bodies alive), not because we in fact are separate from what is external to the delineation of the body&rsquo;s skin, just as Bernardo Kastrup (2019, 2020) argues. My argument is that what we in fact are studying within the social sciences, is consciousness. And when I am talking about consciousness, I am not talking about &ldquo;human consciousness&rdquo; as something separate from the rest of &ldquo;the world&rdquo;, existing somewhere in that large blob of meat we call brain. I am rather talking about consciousness as the existential prerequisite of anything and everything &ndash; from within consciousness we have inferred that there must be something external to consciousness, something fundamentally &ldquo;non-conscious&rdquo;. But what would this be? It would be non-existent, as existence without consciousness is a logical impossibility. Or so I will argue at least.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>I have been deeply interested in consciousness since my late teens. It struck me already as a seventeen year old as something completely marvelous that we are conscious beings, aware not just reflectively of our own existence, but in a direct phenomenal sense. It is the most mind-baffling fact there is, and something that I am sure that I will ponder to the end of my days.</p>
+<p>My formal education is however in political science, global studies, and analytical philosophy, rather than something more directly related to the study of consciousness. I am currently finishing my master&#x27;s thesis in global studies, where I am writing &quot;a immanent critique of monism&quot; that shows how all forms of monism by necessity should take consciousness as ontologically primeval, as we otherwise would have to have a substantial differentiation between what is conscious and what is not conscious, thus leading us to dualism. This is intended as a stepping stone for larger project where I am planning to develop a &quot;social science of consciousness&quot;, where humanity is seen as but one expression of a universal consciousness experiencing itself, and where we hopefully can make some actual progress within the social sciences (contrary to what has been the case so far, which a lot of social scientists would agree to).</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

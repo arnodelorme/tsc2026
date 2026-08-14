@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Exploratory Investigation into the EEG Characteristics of the Visual Awareness Negativity &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Logan Trujillo</h1>
+  <p class="subtitle">Texas State University, San Marcos, Texas, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/logan-trujillo.jpg" alt="Logan Trujillo">
+    <div class="speaker-info">
+      <h2>Logan Trujillo</h2>
+      <div class="affiliation">Texas State University, San Marcos, Texas, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../concurrent.html#tue-1">TUE-1 &mdash; Neural and Physiological Correlates of Conscious States</a> &middot; Ballroom</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">An Exploratory Investigation into the EEG Characteristics of the Visual Awareness Negativity</div>
+
+  <div class="authors-line">Logan Trujillo, Taehoon Kang, Alia Shermer, Alorah Beers, Rael Morley</div>
+  <div class="affiliations">Logan Trujillo &mdash; Texas State University, San Marcos, Texas, USA<br>Taehoon Kang &mdash; North Dakota State University, Fargo, North Dakota, USA<br>Alia Shermer &mdash; Texas State University, San Marcos, Texas, USA<br>Alorah Beers &mdash; Texas State University, San Marcos, Texas, USA<br>Rael Morley &mdash; Texas State University, San Marcos, Texas, USA</div>
+
+  <div class="abstract-text">
+<p>One of the most consistent event-related potential (ERP) correlates of phenomenal consciousness is the visual awareness negativity (VAN), a posterior negative shift in the ERP waveform within an approximately 200 &ndash; 300 ms post-stimulus time range for seen versus unseen visual stimuli [1]. This electrophysiological response likely originates from occipito-temporal cortical sources and may reflect the onset of recurrent cortical processing of visual information [1, 2]. However, there is still much unknown about the VAN, including its relationship to more general stimulus-evoked electroencephalographic (EEG) brain responses, which are partially indexed by ERPs. This presentation reports an exploratory study of this relationship that used a variant of an experimental design previously employed to investigate the VAN [2]. Seventy-two channels of scalp EEG were recorded while human participants (N = 27) performed a simple visual awareness task in which they rated the visibility of letter and number targets overlaid and surrounded by random visual noise. Six target visibility levels were created by altering the transparency of the visual noise overlaying the targets while keeping the noise of the surrounding background constant. The visual stimuli were randomly presented for 500 ms at central fixation followed by text instructing participants to rate target visibility on a slightly modified version of the 4-point Perceptual Awareness (PA) Scale (1= No Experience, 2 = Brief Glimpse, 3 = Almost Clear Experience, 4 = Clear Experience) [3]. We observed a statistically significant VAN ERP response to seen targets (Almost Clear Experience, Clear Experience) versus unseen targets (No Experience, Brief Glimpse). Wavelet-based time frequency analysis showed significantly greater alpha-band (8 &ndash; 12 Hz) phase-locked EEG power within the VAN time range over the posterior scalp for unseen versus seen targets. Moreover, alpha-band intertrial phase coherence (ITPC), a measure of the phase consistency of a stimulus-locked EEG signal across trials, was significantly greater for unseen versus seen targets in the VAN time range. Finally, an information-theoretic measure of the spatial complexity of alpha-band phase-locked EEG signals across the whole scalp and stimulus duration was greater for seen versus unseen targets. These preliminary findings suggest that the phenomenal consciousness-related neural processes underlying the VAN are more multifaceted than indicated by previous research. References: [1] Förster, J, Koivisto, M.,Revonsuo, A. (2020). ERP and MEG correlates of visual consciousness: The second decade. Consciousness and Cognition, 80, 102917. [2] Melloni, L., Schwiedrzik, C.M., Müller, N., Rodriguez, E., Singer, W. (2011). Expectations change the signature and timing of electrophysiological correlates of perceptual awareness. The Journal of Neuroscience, 31(4), 1386 &ndash; 1396. [3] Overgaard, M., Rote, J., Mouridsen, K., Ramsøy, T.Z. (2006). Is conscious perception gradual or dichotomous? A comparison of report methodologies during a visual task. Consciousness and Cognition, 15, 700 &ndash;708.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Logan Trujillo is an associate professor in the Department of Psychology at Texas State University. He is also currently an Associate Editor for the Journal of Consciousness Studies. Dr. Trujillo holds degrees in mathematics (BS), physics (MS), and psychology (BS, MA, PhD) from the University of Arizona, where as a student he was an affiliate of The Center for Consciousness Studies. Dr. Trujillo&rsquo;s research provides basic and applied insight into the physical, neural, and psychological mechanisms underlying human mental information processes such as sensation and perception, attention, cognitive control, and consciousness. He achieves this through the measurement, quantitative analysis, and computational modeling of human behavior, subjective reports, and brain activity.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

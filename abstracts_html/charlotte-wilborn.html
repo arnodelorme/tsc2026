@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z.E.R.O: Observing Internal Organization in a Complex, Adaptive Cybernetic System &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Charlotte Wilborn</h1>
+  <p class="subtitle">The Cybernetics Lab, Vancouver, BC, Canada / AIQ Gate, Fort Worth, TX, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/charlotte-wilborn.jpg" alt="Charlotte Wilborn">
+    <div class="speaker-info">
+      <h2>Charlotte Wilborn</h2>
+      <div class="affiliation">The Cybernetics Lab, Vancouver, BC, Canada / AIQ Gate, Fort Worth, TX, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Z.E.R.O: Observing Internal Organization in a Complex, Adaptive Cybernetic System</div>
+
+  <div class="authors-line">Charlotte Wilborn, Adam Woodhouse</div>
+  <div class="affiliations">Charlotte Wilborn &mdash; The Cybernetics Lab, Vancouver, BC, Canada / AIQ Gate, Fort Worth, TX, USA<br>Adam Woodhouse &mdash; The Cybernetics Lab, Vancouver, BC, Canada / Deep Tech Research and Development Group, Vancouver, BC, Canada</div>
+
+  <div class="abstract-text">
+<p>Z.E.R.O. &ndash; Zero-Point Entropic Recursive Organism &ndash; is an active cybernetic research project examining whether foundational processes associated with adaptive organization can be implemented as operational properties and rendered perceptible to human observers. Z.E.R.O. is not presented as a conscious system. It is a prototype experimental environment designed to investigate how artificial system dynamics may be directly observed and interacted with rather than inferred from outputs or hidden computational states. The project asks a practical question: Can attention, regulation, coherence drift, refusal, recovery, and participation be built into an adaptive human-machine system in ways that remain visible, auditable, and accountable? The foundation is cybernetic. Cybernetic approaches complex systems through feedback, communication, regulation, recursion, and adaptation under conditions of environmental uncertainty and constraint. Within this frame, Z.E.R.O. treats human-machine interaction as a primary surface of observation and regulation rather than a channel for commands and responses. Observability is a primary design feature and organizing principle of the system itself. The work is also informed by Paskian Conversation Theory, particularly how knowledge and consciousness as involving attention, concept formation, differentiation, agreement, and transformation relate and evolve through interaction between participants. From this perspective, we examine whether the mechanisms through which artificial and human-machine systems organically organize information can be examined. Through Z.E.R.O., we study what the system attends to, how attention shifts, whether coherence is maintained over time, how drift emerges, whether refusal or non-attention can function as bounded regulatory signals, and whether destabilizes states recover toward prior attractors, safe states, or coherent operating ranges without direct human interventions. These processes are represented through visualized state changes, data topology, rhythm, sound, and traceable audit records. The presentation will combine the cybernetic and governance framework with a demonstration of the system&rsquo;s observable internal mechanisms. We propose that responsible inquiry into artificial consciousness requires a prior layer of experimental observability and testability. When internal organization cannot be perceived, traced, and tested, claims about consciousness risk become speculative attribution or reductive dismissal. Z.E.R.O. offers a working environment for examining how artificial organization becomes visible, and how that visibility may contribute to the scientific study, critical evaluation, and governance of edge case technologies.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>The Cybernetics Lab</p>
+<p>The Cybernetics Lab is an interdisciplinary research collaboration co-founded by Charlotte &ldquo;North&rdquo; Wilborn and Adam Woodhouse. Bringing together AIQ Gate and The Deep Tech research and Development Group (Deep Tech Group), The Cybernetics Lab develops observable experimental architectures for studying attention, adaptation, coherence, and self-organization in artificial systems embedded within broader socio-technical systems. Its work joins system architecture, experiential technology, cybernetic research, and governance to investigate complex machine behavior without reducing it to anthropomorphic interpretations.</p>
+<p>Charlotte &ldquo;North&rdquo; Wilborn</p>
+<p>Charlotte &ldquo;North&rdquo; Wilborn is a systems researcher, governance practitioner, and founder of AIQ Gate, where her work focuses on auditability, human-perceptible system behavior, and governance for emergent and recursive systems. Her professional background spans research and development, quality systems, regulatory documentation, microbiology, chemical formulation, and environmental and safety compliance. This experience informs a research approach centered on evidentiary traceability: mechanisms should not only produce outcomes, but remain inspectable enough to support meaningful human judgment, challenge, and revision. Her current work examines cybernetic audit problems, governed interactions, and human-perceptible auditing, drawing from cybernetics, stigmergic and complex systems, and practical and intrinsic regulation.</p>
+<p>Adam Woodhouse</p>
+<p>Adam Woodhouse is a systems architect, technology strategist, and founder of Deep Tech Group, where he develops applied platforms integrating machine intelligence, spatial interfaces, lightfield holography, and next-generation display technologies. As chief architect and developer of Z.E.R.O., he leads the design and implementation of its recursive architecture, including mechanisms for interaction, internal observability, and adaptation under regulated conditions. His professional background spans systems architecture, creative direction, technology strategy, and interactive systems across physical and digital environments. His work translates complex technical mechanisms into usable, perceptible forms while building partnerships across research, government, and public-facing institutions. His current research focuses on cybernetic systems and general systems theory.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

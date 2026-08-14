@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slow Grokking or Sudden Escape: Two Computational Models of Consciousness in Spontaneous and Psychedelic-Assisted Addiction Recovery &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Mateusz Gola</h1>
+  <p class="subtitle">University of California, San Diego</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/mateusz-gola.jpg" alt="Mateusz Gola">
+    <div class="speaker-info">
+      <h2>Mateusz Gola</h2>
+      <div class="affiliation">University of California, San Diego</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-2">MON-2 &mdash; Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Slow Grokking or Sudden Escape: Two Computational Models of Consciousness in Spontaneous and Psychedelic-Assisted Addiction Recovery</div>
+
+  <div class="abstract-text">
+<p>On one hand, addiction ranks among the most persistent psychiatric disorders, and current pharmacological and behavioral treatments struggle to durably address its underlying neurobiology: chronic drug exposure produces self-reinforcing alterations to dopaminergic mesolimbic circuitry, long assumed to require sustained intervention to overwrite. On the other hand, longitudinal epidemiological studies show that many individuals with substance and behavioral addictions achieve sudden remission after years of struggle, without formal treatment. High effectiveness of recent psychedelic-assisted addiction treatment trials deepens this puzzle. Yet studies of unsupported psychedelic use complicate a purely pharmacological account: recreational exposure to the same 5-HT2A agonists (psilocybin, DMT, LSD) does not reliably produce comparable durable recovery, suggesting the psychedelic experience alone is insufficient. If addiction reflects a stable alteration of reward circuitry, how does one day, or one dose (but only within a therapeutic frame), undo it? We propose two computational models, inspired by neural network training dynamics, whose joint operation explains why therapeutic support matters. Model 1, Slow Grokking, accounts for spontaneous remission: in artificial networks, grokking (Power et al., 2022) is a delayed phase transition in which sustained regularization pressure gradually favors generalizing circuits over memorized ones, producing an abrupt shift after prolonged apparent stasis. We propose that accumulating negative consequences and unresolved psychological conflict themselves function as this regularization pressure, applied continuously over months or years, so that remission&#x27;s apparent suddenness is an illusion of timescale. Model 2, Sudden Escape, accounts for the acute drug-induced destabilization during psychedelic experiences: drawing on stochastic perturbation methods, the drug-induced surge in neural entropy acts as a transient, high-magnitude perturbation that dislodges an already-converged, overfitted network from its pathological minimum within a single session. Critically, destabilization alone does not guarantee durable reorganization: without sustained regularization pressure to guide resolution, recreational or unsupported psychedelic use produces a transient entropy spike but no lasting behavioral change &mdash; consistent with reports that unsupported use rarely yields durable recovery. We propose that psychedelic-assisted therapy works because it supplies both mechanisms jointly: preparation and integration sessions provide the sustained regularization pressure of Model 1, while the acute dosing session provides Model 2&#x27;s perturbation, together completing the transition. Consciousness supplies the remaining computational function common to both mechanisms: the phenomenological content of the resolving experience &mdash; its meaning, not merely its intensity &mdash; selects which generalized attractor state the system settles into, in spontaneous remission, unsupported use, and therapy-supported recovery alike. This yields dissociable, falsifiable predictions: spontaneous remission should show gradual pre-transition neural change with no acute entropy event; unsupported psychedelic use should show an acute entropy spike without durable behavioral change when phenomenological content is not integrated; and therapy-assisted recovery should show both signatures jointly, with outcome durability tracking the intensity of preparation and integration work, independent of drug and dose. By treating consciousness as the shared selection mechanism across all three pathways, we offer a unified, falsifiable computational account of why subjective experience &mdash; not neurochemistry or destabilization alone &mdash; is causally constitutive of recovery from a disorder otherwise defined by its persistence.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Mateusz Gola is a Full Professor of Psychology at the Institute of Psychology, Polish Academy of Sciences, and Research Scientist at the Institute for Neural Computation at UC San Diego (UCSD). He studies the neural mechanisms of behavioral addictions, addiction recovery, and habit changes &mdash; work that increasingly bridges into questions of subjective experience: how conscious meaning-making shapes, and is shaped by, the brain&#x27;s reward circuitry during both addictive behavior and recovery.</p>
+<p>Dr Gola is a globally recognized leader in research on neural mechanisms of behavioral addictions. His findings directly contributed to the World Health Organization&#x27;s decision to include Compulsive Sexual Behavior Disorder (CSBD) in the ICD-11. He has published over 200 articles in peer-reviewed international journals, holds three patents, and is the author of a popular-science book on his research.</p>
+<p>Bridging laboratory discovery with clinical application, Dr Gola has served as Principal Investigator on major research grants exploring fMRI and EEG biomarkers of behavioral addictions, pioneering clinical trials for pharmacological treatment of CSBD and the use of neuromodulation in behavioral addiction treatment, and behavior-tracking technologies, including mobile technology and artificial intelligence, for relapse prevention.</p>
+<p>His honors include the International Society for Sexual Medicine Award, a Doubble Bekker&#x27;s Award, Annual Award of the International Society for Trauma and Addiction Treatment, and the Kosciuszko Foundation Scholarship. He serves as a Section Editor for Current Addiction Reports and is a frequent public voice on brain science and addiction.</p>
+<p>Among many other things, currently Dr Gola turns to a more fundamental question raised by his clinical work: why does recovery from addiction &mdash; a disorder defined by its persistence &mdash; sometimes happen in a single day, or a single dose of psychedelics?</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

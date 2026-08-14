@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mean Project: Digital Phenotypic Collapse and the Archetypal Image &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Ana Iribas-Rudín</h1>
+  <p class="subtitle">Universidad Complutense, Madrid, Madrid, Spain</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/ana-iribas-rudn.png" alt="Ana Iribas-Rudín">
+    <div class="speaker-info">
+      <h2>Ana Iribas-Rudín</h2>
+      <div class="affiliation">Universidad Complutense, Madrid, Madrid, Spain</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-6">THU-6 &mdash; Art, Myth, and Dream: Cultural and Humanistic Approaches to Consciousness</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Mean Project: Digital Phenotypic Collapse and the Archetypal Image</div>
+
+  <div class="abstract-text">
+<p>This paper presents The Mean Project (Iribas-Rudín, 2026), a satirical conceptual artwork that extrapolates current trends in AI training into a dystopian scenario: a future where the internet has been flooded with AI-generated archetypal images to the point where searches return only a single, normative result for each category. Searching for &quot;dog,&quot; &quot;car,&quot; or &quot;house&quot; yields one image only &mdash; the canonical, perfectly generic version of each object. The result is the annihilation of visual diversity. The theoretical foundation of The Mean Project is the phenomenon known as model collapse (Shumailov et al., 2024): the progressive degradation of AI models trained recursively on AI-generated data. As each generation of synthetic images feeds the next, the tails of the statistical distribution (the rare, the particular, the eccentric) get systematically cut off. The Central Limit Theorem affirms that iterative training reduces variance with mathematical inevitability, converging toward a mean that is statistically dominant but ontologically impoverished. The Mean Project names the visual consequence of this process &quot;digital phenotypic collapse&quot;: the algorithmic equivalent of biological monoculture, where the extinction of variety precedes the collapse of the system itself. This normative image has a long genealogy. Renaissance painter Raphael Sanzio described in his letter to Baldassare Castiglione (1514) how beauty arose from synthesizing the particular features of many women into a certo concetto, an ideal concept formed in the artist&#x27;s mind. Francis Galton operationalized a secular version of that synthesis in 1878 through composite photography, superimposing portraits to extract the statistical type. Contemporary AI image generators complete the arc: they compress millions of particulars into the point of maximum probabilistic density in latent space, producing a sharp, normative image that no individual photograph ever was. The critical difference is that where Raphael exercised aesthetic and moral judgment, and Galton claimed scientific objectivity, the AI model simply produces whatever was most frequently labeled, mistaking the statistically dominant for the universal. This confusion is the satirical target of the project. Drawing on Barthes&#x27;s concept of myth (Mythologies, 1957), and on Flusser&#x27;s account of technical images as realizations of programs rather than representations of the world (Towards a Philosophy of Photography, 1983), the project argues that the archetypal AI image is ideological, not neutral. Its danger, in the spirit of Arendt&#x27;s banality of evil (Eichmann in Jerusalem, 1963), lies precisely in its blandness. The normative image doesn&#x27;t threaten; it merely displaces, until nothing else remains. The work further engages with Pariser&#x27;s filter bubble (The Filter Bubble, 2011) and the ecological metaphor of the tragedy of the commons, arguing that digital visual monoculture is not the outcome of individual decisions but of systemic logic that renders the particular invisible and, eventually, unthinkable. What is lost is not merely aesthetic diversity, but the very capacity of the image to bear witness to the irreducibly singular dimension of human production. The title operates on two registers: mean as statistical average, and mean as morally cruel. The archetypal image is both.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Ana Iribas is an associate professor and researcher at the Faculty of Fine Arts, Universidad Complutense de Madrid, Spain. She has also taught at the Universidad Autónoma de Madrid (MA in art therapy) and the U-tad (Degree in animation). Trained in several areas, she holds a PhD in fine arts, an MA in art therapy and a diploma in first cycle of medicine. Her lines of research are contemporary art and knowledge, art and psychology of consciousness, new technologies and the configuration of experience, and art education. She is or has been a member of three research groups and a national excellence R+D, leads innovation projects on the teaching of painting to dyschromatopsic students and is a member of editorial or scientific committees of several scientific journals and international conferences. She has presented research in more than 40 conferences in Europe, America and Asia and has authored almost 50 publications.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search &mdash; The Science of Consciousness 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.search-wrap { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+.search-box {
+  width: 100%; padding: .8rem 1.1rem; font-size: 1.05rem; font-family: inherit;
+  border: 2px solid #1a96b8; border-radius: 10px; outline: none;
+}
+.search-box:focus { box-shadow: 0 0 0 3px rgba(26,150,184,.25); }
+.search-hint { font-size: .82rem; color: #888; margin: .5rem 0 1.4rem; }
+
+.group-head {
+  font-size: 1rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: #fff; background: #24303a; border-left: 4px solid #1a96b8;
+  padding: .4rem .7rem; border-radius: 4px; margin: 1.4rem 0 .6rem;
+}
+.hit {
+  display: flex; gap: .9rem; align-items: center;
+  padding: .55rem .4rem; border-bottom: 1px solid #eef2f6;
+}
+.hit .av, .hit .ini {
+  width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(10,36,64,.18);
+}
+.hit .ini { background: linear-gradient(135deg, #1a96b8, #0a2440); color: #fff; font-weight: 700; font-size: 1.05rem; }
+.hit .body { min-width: 0; }
+.hit .nm { font-weight: 700; color: #0a2440; }
+.hit .aff { font-size: .78rem; color: #777; }
+.hit .tt { display: block; font-size: .85rem; line-height: 1.35; margin-top: .1rem; }
+.hit .meta { font-size: .74rem; color: #556; margin-top: .15rem; }
+.hit .meta .tag {
+  display: inline-block; font-size: .68rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .03em; padding: .1rem .45rem; border-radius: 8px; margin-right: .4rem;
+}
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.hit-page { display: block; padding: .55rem .4rem; border-bottom: 1px solid #eef2f6; }
+.hit-page .crumb { font-weight: 700; color: #0a2440; font-size: .92rem; }
+.hit-page .snip { font-size: .82rem; color: #555; margin-top: .15rem; }
+mark { background: #ffe9a8; padding: 0 .05em; border-radius: 2px; }
+.no-results, .type-more { font-size: .95rem; color: #777; padding: 1.2rem .4rem; }
+.more-note { font-size: .8rem; color: #999; padding: .5rem .4rem; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+}
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Search</h1>
+  <p class="subtitle">Speakers, abstracts, and conference pages</p>
+</header>
+
+<div class="search-wrap">
+  <input class="search-box" id="q" type="search" autofocus
+         placeholder="Search by name, topic, poster number, or page&hellip;"
+         autocomplete="off">
+  <div class="search-hint">Examples: &ldquo;radin&rdquo;, &ldquo;microtubules&rdquo;,
+    &ldquo;#706&rdquo;, &ldquo;refund&rdquo;, &ldquo;parking&rdquo;</div>
+  <div id="results"></div>
+</div>
+
+<footer></footer>
+<script src="footer.js"></script>
+
+<script src="search-data.js"></script>
+<script>
+(function () {
+  var input = document.getElementById('q');
+  var out = document.getElementById('results');
+  var MAX_PEOPLE = 60, MAX_PAGES = 25;
+
+  function fold(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  /* Highlight every query word inside text (case/accent-insensitive-ish). */
+  function highlight(text, words) {
+    var safe = esc(text);
+    words.forEach(function (w) {
+      if (w.length < 2) return;
+      try {
+        safe = safe.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>');
+      } catch (e) { /* ignore bad patterns */ }
+    });
+    return safe;
+  }
+  function initials(name) {
+    return name.split(/\s+/).filter(Boolean).slice(0, 2)
+               .map(function (w) { return w[0]; }).join('').toUpperCase();
+  }
+
+  /* Score one person record against the query words (all must match). */
+  function scorePerson(rec, words) {
+    var score = 0;
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i];
+      if (rec.q.indexOf(w) < 0) return 0;          /* word must match somewhere */
+      var name = fold(rec.n);
+      if (name.indexOf(w) === 0 || name.indexOf(' ' + w) >= 0) score += 100;
+      else if (name.indexOf(w) >= 0) score += 80;
+      else if (('#' + rec.id) === w || rec.id === w) score += 90;
+      else if (fold(rec.t).indexOf(w) >= 0) score += 60;
+      else if (fold(rec.s).indexOf(w) >= 0) score += 40;
+      else score += 20;                             /* affiliation, day, type… */
+    }
+    return score;
+  }
+  function scorePage(rec, words) {
+    var score = 0;
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i];
+      if (rec.q.indexOf(w) < 0) return 0;
+      if (fold(rec.h).indexOf(w) >= 0) score += 70;
+      else if (fold(rec.pg).indexOf(w) >= 0) score += 50;
+      else score += 20;
+    }
+    return score;
+  }
+
+  function personRow(rec, words) {
+    var img = rec.p
+      ? '<img class="av" src="' + rec.p + '" alt="" loading="lazy">'
+      : '<div class="ini">' + esc(initials(rec.n)) + '</div>';
+    var title = rec.t
+      ? '<a class="tt" href="' + rec.u + '">' + highlight(rec.t, words) + '</a>'
+      : '<a class="tt" href="' + rec.u + '">See the program</a>';
+    var meta = '<span class="tag tag-' + rec.ty.toLowerCase() + '">' + rec.ty + '</span>'
+             + esc([rec.d, rec.s].filter(Boolean).join(' · '));
+    return '<div class="hit">' + img + '<div class="body">'
+         + '<span class="nm">' + highlight(rec.n, words) + '</span>'
+         + (rec.f ? ' <span class="aff">' + highlight(rec.f, words) + '</span>' : '')
+         + title + '<div class="meta">' + meta + '</div></div></div>';
+  }
+  function pageRow(rec, words) {
+    var crumb = esc(rec.pg) + (rec.h ? ' › ' + highlight(rec.h, words) : '');
+    return '<a class="hit-page" href="' + rec.u + '">'
+         + '<span class="crumb">' + crumb + '</span>'
+         + '<div class="snip">' + highlight(rec.x, words) + '&hellip;</div></a>';
+  }
+
+  function run() {
+    var raw = input.value.trim();
+    if (history.replaceState) {
+      history.replaceState(null, '', raw ? '?q=' + encodeURIComponent(raw) : location.pathname);
+    }
+    if (raw.length < 2) {
+      out.innerHTML = '<div class="type-more">Type at least two characters to search '
+        + SEARCH_INDEX.people.length + ' presentations and the main conference pages.</div>';
+      return;
+    }
+    var words = fold(raw).split(/\s+/).filter(Boolean);
+    var people = [], pages = [];
+    SEARCH_INDEX.people.forEach(function (rec) {
+      var s = scorePerson(rec, words);
+      if (s > 0) people.push([s, rec]);
+    });
+    SEARCH_INDEX.pages.forEach(function (rec) {
+      var s = scorePage(rec, words);
+      if (s > 0) pages.push([s, rec]);
+    });
+    people.sort(function (a, b) { return b[0] - a[0] || a[1].n.localeCompare(b[1].n); });
+    pages.sort(function (a, b) { return b[0] - a[0]; });
+
+    var htmlParts = [];
+    if (people.length) {
+      htmlParts.push('<div class="group-head">Speakers &amp; Abstracts (' + people.length + ')</div>');
+      people.slice(0, MAX_PEOPLE).forEach(function (p) { htmlParts.push(personRow(p[1], words)); });
+      if (people.length > MAX_PEOPLE) {
+        htmlParts.push('<div class="more-note">Showing the first ' + MAX_PEOPLE + ' matches &mdash; refine your search to narrow down.</div>');
+      }
+    }
+    if (pages.length) {
+      htmlParts.push('<div class="group-head">Pages (' + pages.length + ')</div>');
+      pages.slice(0, MAX_PAGES).forEach(function (p) { htmlParts.push(pageRow(p[1], words)); });
+    }
+    if (!htmlParts.length) {
+      htmlParts.push('<div class="no-results">No matches for &ldquo;' + esc(raw)
+        + '&rdquo;. Try a last name, a topic word, or a poster number.</div>');
+    }
+    out.innerHTML = htmlParts.join('');
+  }
+
+  input.addEventListener('input', run);
+  var params = new URLSearchParams(location.search);
+  if (params.get('q')) input.value = params.get('q');
+  run();
+})();
+</script>
+
+</body>
+</html>

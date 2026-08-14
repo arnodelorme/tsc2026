@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&quot;Three Currents, One Equation: A Unified Dynamical Theory of Life, Consciousness, and Selfhood &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Marcus Schmieke</h1>
+  <p class="subtitle">Existential Consciousness Research Institute, Berlin, Berlin, Germany</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+
+    <div class="speaker-info">
+      <h2>Marcus Schmieke</h2>
+      <div class="affiliation">Existential Consciousness Research Institute, Berlin, Berlin, Germany</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">&quot;Three Currents, One Equation: A Unified Dynamical Theory of Life, Consciousness, and Selfhood</div>
+
+  <div class="abstract-text">
+<p>Leading theories of consciousness &mdash; Integrated Information Theory (IIT), Global Workspace Theory (GWT), Higher-Order Theories (HOT), Orch-OR, and the Free Energy Principle (FEP) &mdash; each capture distinct facets of conscious experience but rest on heterogeneous foundations and yield largely non-overlapping empirical predictions. I present the Quantum Blueprint Formalism (QBF), a unified dynamical framework derived from dissipative quantum field theory (Celeghini, Rasetti &amp; Vitiello 1992; Vitiello 1995), in which life, consciousness, and self-consciousness emerge as three structurally isomorphic regimes of a single canonical dynamics: the Mother Equation, a three-term Fokker&ndash;Planck process on a pre-coherent state space M_s. Projection from M_s onto the twelve-dimensional coherence manifold M_Θ yields the Equation of Life with stability&ndash;identity functional 𝒮 and Fisher metric g^ab. A first epistemic lift produces belief dynamics μ(Θ,t); a second produces self-model dynamics ν(μ,t). Each layer obeys the same three-term canonical structure (gradient drift, reference relaxation, stochastic exploration), differing only in semantic interpretation. This structure yields a sharp four-fold classification, purely dynamical and architecture-independent: non-living systems exhibit no persistent probability current; living systems sustain J^Θ ≠ 0; conscious systems additionally sustain J^μ ≠ 0; self-conscious systems sustain reflexive currents J^ν ≠ 0. Empirical validation: (i) circulation extraction from HRV data via three-term Fokker&ndash;Planck analysis (dose&ndash;response r = 0.998 on synthetic, validation pipeline on PhysioNet MIT-BIH/BIDMC); (ii) significant separation of conscious states on the Bonn EEG dataset (interictal vs. ictal |Ω|: Cohen&#x27;s d = −2.52, p = 2.2 × 10⁻³⁹); (iii) prediction of a sharp Kramers-type transition at consciousness onset/offset with a transient symmetric causal-closure violation (∼I_eff/4, τ ≈ 10 s). The framework distinguishes itself from IIT (sharp transition vs. gradual Φ), GWT (broadcast as a mechanism sustaining J^μ rather than the mechanism of consciousness itself), HOT (reflexive currents formalize &quot;thoughts about thoughts&quot;), Orch-OR (no requirement for warm-tissue quantum coherence; microtubules contribute to I_eff but play no privileged role), and FEP (inference as an explicit dynamical lift, not a substitute for physical dynamics). QBF does not claim to dissolve the hard problem of consciousness &mdash; Paper 36 of the corpus frames it as a structural boundary of formal description. What QBF provides is a complete, testable, physics-grounded architecture of necessary conditions for consciousness and self-consciousness, within a single unified mathematics.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Marcus Schmieke, Dr. h.c. (Nobel University, USA) is a German physicist, philosopher, and inventor based at Schloss Kränzlin near Berlin. He is the founder of the Existential Consciousness Research Institute (ECR Berlin) and developer of the Quantum Blueprint Formalism (QBF) &mdash; a theoretical framework deriving Standard Model structure, spacetime, and consciousness from a single dissipative quantum-field-theoretic master equation. He studied physics and philosophy at the universities of Hannover and Heidelberg, followed by twelve years of monastic study of Sanskrit scriptures in India. He founded the journal Tattva Viveka in 1994 and has held visiting professorships at Dev Sanskriti University, Haridwar. As an inventor he developed TimeWaver (2007) and co-founded Healy (2017). He has authored more than twenty books on the interrelation of consciousness and matter, most recently Quantum Longevity and Der Quanten-Code des Lebens / The Quantum Code of Life.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

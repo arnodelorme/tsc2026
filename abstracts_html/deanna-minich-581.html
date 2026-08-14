@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rhythmic Architecture of Consciousness: How Light, Time, Metabolism, and Endocrine Signaling Shape Human Awareness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Deanna Minich</h1>
+  <p class="subtitle">Institute for Science and Spirituality, Port Orchard, WA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/deanna-minich.jpg" alt="Deanna Minich">
+    <div class="speaker-info">
+      <h2>Deanna Minich</h2>
+      <div class="affiliation">Institute for Science and Spirituality, Port Orchard, WA, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Rhythmic Architecture of Consciousness: How Light, Time, Metabolism, and Endocrine Signaling Shape Human Awareness</div>
+
+  <div class="abstract-text">
+<p>Modern consciousness research has increasingly explored the relationship between brain function, perception, physiology, and subjective experience. Yet many models of consciousness continue to treat the mind as partially separated from the rhythmic biology of the body. Emerging evidence from chronobiology, psychoneuroendocrinology, metabolism, and systems biology suggests a different possibility: consciousness may not arise independently of biological timing systems, but through them. This presentation explores consciousness through the lens of rhythmic physiology. Circadian rhythms, endocrine signaling networks, mitochondrial energetics, autonomic regulation, nutrition, and environmental entrainment mechanisms together form an integrated architecture that shapes attention, mood, cognition, emotional processing, sleep, awareness states, and human experience itself. The talk bridges contemporary science with ancient systems of rhythm-based healing and symbolic frameworks that have long recognized the importance of timing, cycles, light-dark transitions, and environmental synchronization in human health and awareness. Topics include the role of light as a primary biological signal; melatonin and circadian neuroendocrine regulation; metabolic timing and mitochondrial energy production; the influence of food-derived signaling compounds on neurobiology; and the relationship between stress physiology, perception, and states of consciousness. Drawing from systems biology and functional medicine, this presentation proposes that health and consciousness emerge through coherence across multiple interconnected layers of human physiology: cellular, endocrine, neural, environmental, behavioral, and experiential. Dysregulation of these rhythmic systems may contribute not only to chronic disease, but also to fragmentation of attention, mood instability, altered cognition, and disconnection from internal and external environments. Rather than viewing consciousness solely as a cortical or computational phenomenon, this framework positions consciousness as an embodied, rhythmic process emerging through continuous communication between organism and environment. The body becomes not merely a vessel for awareness, but an active signaling interface translating light, time, food, stress, emotion, and environmental information into lived human experience. This interdisciplinary presentation integrates neuroscience, chronobiology, endocrinology, nutrition science, systems medicine, and contemplative perspectives to offer a biologically grounded yet expansive model of consciousness relevant to clinicians, researchers, educators, and those exploring the intersection of science and human potential.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Deanna Minich, PhD, CNS, IFMCP, FACN, is a nutrition scientist, functional medicine practitioner, educator, author, and speaker whose work bridges nutrition science, systems biology, chronobiology, and consciousness studies. She is the founder and leader of the Institute for Science &amp; Spirituality, an interdisciplinary initiative exploring the intersection of physiology, rhythm, environment, symbolism, and human awareness through both scientific and contemplative lenses.</p>
+<p>Dr. Minich is a Fellow of the American College of Nutrition (FACN) and a Certified Nutrition Specialist (CNS). She has trained extensively in functional medicine through the Institute for Functional Medicine and is widely recognized for translating complex scientific concepts into clinically relevant and accessible frameworks for both practitioners and the public. Her work frequently integrates nutritional biochemistry, endocrine signaling, mitochondrial function, circadian biology, polyphenol research, and systems-based approaches to health and healing.</p>
+<p>She serves as Chief Science Officer for Symphony Natural Health and has authored more than 50 scientific publications and seven books, including works focused on food, color, metabolism, and whole-person health. Dr. Minich is also known for developing the Rainbow Diet framework, an integrative model that examines the relationship between phytonutrients, physiology, psychology, and energetic symbolism.</p>
+<p>Her current work explores how biological rhythms, light exposure, environmental signaling, endocrine physiology, nutrition, and consciousness interact within the human organism. She has presented internationally for medical, academic, and wellness audiences on topics including women&rsquo;s health, menopause, circadian medicine, nutritional psychiatry, detoxification systems, and the role of lifestyle and environment in shaping cognition, resilience, and well-being.</p>
+<p>Dr. Minich is the recipient of the Linus and Ava Helen Pauling Award in Functional Medicine for her contributions to functional nutrition and integrative medicine education. Her interdisciplinary approach combines rigorous scientific inquiry with broader explorations of meaning, embodiment, and human potential, emphasizing the body as an interconnected communication network responsive to light, food, time, emotion, and environment.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

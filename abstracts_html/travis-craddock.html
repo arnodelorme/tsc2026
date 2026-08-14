@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Spin Dynamics in the Cytoskeleton: Implications for the Quantum Brain &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Travis Craddock</h1>
+  <p class="subtitle">University of Waterloo, Waterloo, ON, Canada</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/travis-craddock.png" alt="Travis Craddock">
+    <div class="speaker-info">
+      <h2>Travis Craddock</h2>
+      <div class="affiliation">University of Waterloo, Waterloo, ON, Canada</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../program_details.html#pl-4">PL-4: Psychedelics &amp; Consciousness</a> &middot; Ballroom</div>
+      <div class="tags">
+        <span class="tag tag-plenary">Plenary</span>
+
+        <a class="tag tag-workshop" href="../workshops.html#quantum-biology">Workshop: Quantum Biology and the Brain</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Quantum Spin Dynamics in the Cytoskeleton: Implications for the Quantum Brain</div>
+
+  <div class="abstract-text">
+<p>How molecular processes may contribute to information processing in the brain remains unresolved. Quantum biology offers a testable framework for examining whether quantum processes, such as spin dynamics, can influence cellular structures relevant to neural plasticity and cognition. We focus on microtubules, dynamic cytoskeletal polymers that regulate neuronal architecture and depend on a magnesium dependent assembly process. Recent experiments show that microtubule assembly responds jointly to weak magnetic fields and magnesium isotope substitution, with effects linked specifically to spin-bearing magnesium isotope. This pattern is consistent with a quantum biological process known as radical-pair spin dynamics, in which weak magnetic interactions and nuclear spins alter chemical reaction pathways. Specifically, results suggest the spin of magnesium affects a radical pair which may involve the spin of nearby phosphorous atoms. As microtubules contain ordered arrays of phosphorous containing nucleosides whose nuclei offer candidate spin degrees of freedom for biological information storage or processing, this suggests a possible manipulation of biological quantum information processing by magnetic fields. These findings identify the cytoskeleton as a plausible molecular interface through which quantum spin effects could influence neural organization and function. We outline experiments needed to identify the responsible chemical intermediates and test whether such effects extend from microtubules to neuronal plasticity and brain-level information processing.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Dr. Travis Craddock is an Associate Professor in the Department of Biology at the University of Waterloo and the Tier 1 Canada Research Chair in Quantum Neurobiology. Craddock seeks to understand the basic underlying physical and molecular processes of neuroinflammation to improve diagnosis and identify novel treatment strategies for neuroinflammatory illnesses including Alzheimer&rsquo;s and Parkinson&rsquo;s disease.</p>
+<p>Neuroinflammation is the inflammatory response within the brain or spinal cord. It is mediated by molecular signals such as changes in reactive oxygen species or metal ion imbalances. These signals activate the brain&rsquo;s immune cells, microglia and astrocytes, and affect neuron function. Acutely it may be neuroprotective by activating immune cells, while chronically it can be neurotoxic leading to tissue damage depending on the context and duration of the initial insult. The goal of his research is to fundamentally understand the damage processes of neuroinflammation and translate this fundamental knowledge towards developing novel alternative therapeutic and diagnostic approaches.</p>
+<p>Craddock&rsquo;s research focuses on understanding whether biology takes advantage of quantum level processes to give it an advantage, alongside developing a fundamental understanding of the uniqueness of life and biology. His work is also application‑driven, aiming to leverage those processes to come up with new ways to detect, diagnose and treat neuroinflammatory illnesses, including neurodegenerative and mental health conditions, like Alzheimer&rsquo;s disease and Parkinson&rsquo;s disease, that have been identified as one of the most serious health issues facing society today. By modeling sub-neural structures in the brain to advance knowledge and develop new approaches to diagnosing and treating illnesses, he aims to improve the quality of life for millions of people worldwide.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

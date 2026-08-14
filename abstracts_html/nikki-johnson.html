@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinking Beyond Intelligence: Giftedness, Consciousness, and the Development of Human Potential &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Nikki Johnson</h1>
+  <p class="subtitle">University of West Georgia, Carrollton, GA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/nikki-johnson.jpg" alt="Nikki Johnson">
+    <div class="speaker-info">
+      <h2>Nikki Johnson</h2>
+      <div class="affiliation">University of West Georgia, Carrollton, GA, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Thinking Beyond Intelligence: Giftedness, Consciousness, and the Development of Human Potential</div>
+
+  <div class="abstract-text">
+<p>The origin and development of exceptional human capabilities have been of central interest to philosophical, spiritual, psychological, and educational traditions for centuries. Why do some individuals display extraordinary capacities for creative expression, pattern recognition, transformative insight, or complex problem solving? Why have these abilities so often been observed alongside heightened sensitivity, neurodivergence, and various forms of psychological struggle? And ultimately, what do such individuals reveal about the fundamental nature of consciousness and human development? This dissertation approaches these longstanding questions through the case study of &ldquo;giftedness.&rdquo; By integrating Kazimierz Dabrowski&#x27;s Theory of Positive Disintegration with the work of Carl Jung and Roberto Assagioli, it proposes that many of the abilities and sensitivities associated with giftedness emerge through increased perception and integration of psychological material that would otherwise remain outside conscious awareness. From this perspective, giftedness reflects not merely enhanced measures of generalized or domain-specific intelligence, but an increased ability to perceive and utilize contents arising from domains of the unconscious. This framework extends Dabrowski&#x27;s developmental account by situating these characteristics within a broader psychological and neurobiological context&mdash;offering new ways of understanding both the strengths and vulnerabilities associated with giftedness, neurodiversity, and psychological development. The project further examines parallels between positive disintegration and Jungian individuation, suggesting that cultivation of higher potential may be more effectively pursued through personality type-specific interventions rather than a one-size-fits-all approach. Methodologically, the study focuses on introverted intuition&mdash;one of Jung&#x27;s psychological types associated with anticipatory insight and vivid imagination. Through thematic analysis of historical vignettes, structured personal narrative, and problem-centered interviews, the study aims to articulate developmental, educational, and psychotherapeutic interventions tailored to this population&mdash;establishing a prototype process that could subsequently be extended to other psychological types. In doing so, the project addresses several enduring debates in the literature&mdash;including how giftedness should be defined, why exceptional abilities and vulnerabilities so frequently coexist, and how interventions might become both more effective and inclusive. Beyond its practical applications, this work offers broader implications for consciousness science. It explores whether giftedness may be associated with neural dynamics operating closer to criticality&mdash;a regime characterized by heightened complexity, efficient information processing, and maximal sensitivity to perturbation. These properties parallel longstanding observations that gifted individuals often demonstrate both exceptional cognitive complexity and heightened responsiveness to internal and external stimuli&mdash;offering a potential neurobiological lens through which Dabrowski&#x27;s &ldquo;overexcitabilities&rdquo; might also be understood. More broadly, the project proposes that human development may reflect progressive optimization of the dynamic tension between organism and environment through an evolving balance between stability and flexibility, differentiation and integration, and openness to novel information while preserving a coherent experience of self and world. By integrating personality development, depth psychology, neuroscience, and consciousness science, the project opens productive new lines of inquiry for investigating the realization of higher human potential.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Nikki C. Johnson is a broad-based interdisciplinary scholar and educator deeply devoted to the advancement of psychological development, consciousness studies, and lifelong learning.</p>
+<p>She is now a doctoral candidate in Psychology (Consciousness and Society) at the University of West Georgia, where she has served as chapter vice president of Phi Kappa Phi&mdash;the world&#x27;s largest, oldest, and most selective interdisciplinary honor society. Her multiperspectival approach to education and course design has been recognized with the APA Division 1 Integrative Teaching Award, and she was selected as a recipient of a 2026 Phi Kappa Phi Graduate Research Grant.</p>
+<p>Throughout her career, Nikki has been intellectually driven by a passion for integrating ideas across different fields of knowledge. Having pursued extensive independent study spanning a wide range of disciplines, she specializes in synthesizing concepts from widespread sources to reveal new perspectives and theoretical possibilities. Her dissertation reconceptualizes &quot;giftedness&quot; through the perspectives of personality development and individuation&mdash;applying a transpersonal framework and potential neural correlates to Kazimierz Dabrowski&#x27;s Theory of Positive Disintegration.</p>
+<p>She serves as the Director of Education for the Alfred M. Hubbard Institute and as a peer reviewer for Theory &amp; Psychology and The Journal of Humanistic Psychology.</p>
+<p>Before entering academia, Nikki built a Fortune 500 career in content marketing, search engine optimization (SEO), and branding. After serving as Vice President of Copywriting for a fast-growth Internet marketing agency&mdash;where she directed content production for more than 1,000 hospitality and travel clients, including every major hotel brand&mdash;she founded two businesses and later served as Marketing Director for a financial technology platform, generating more than $2.1 million in daily revenue.</p>
+<p>Nikki graduated with Honors in Print Journalism from Pennsylvania State University in May 2001 and reported for four newspapers: The Hill, the Centre Daily Times, the Daily Collegian, and The Times Herald.</p>
+<p>In more recent years, she has worked as an independent consultant, public speaker, and TED Circle discussion leader&mdash;bridging diverse intellectual traditions to broaden scientific understanding, promote lifelong learning, and cultivate human flourishing.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

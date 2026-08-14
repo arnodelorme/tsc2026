@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Harder Problem: The Boundary Problem in Consciousness Studies &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Michael Cremo</h1>
+  <p class="subtitle">Bhaktivedanta Institute for Higher Studies, Gainesville, FL, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/michael-cremo.jpg" alt="Michael Cremo">
+    <div class="speaker-info">
+      <h2>Michael Cremo</h2>
+      <div class="affiliation">Bhaktivedanta Institute for Higher Studies, Gainesville, FL, USA</div>
+      <div class="presentation">Thursday, October 15 &middot; <a href="../concurrent.html#thu-3">THU-3 &mdash; Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">The Harder Problem: The Boundary Problem in Consciousness Studies</div>
+
+  <div class="abstract-text">
+<p>In light of the failure of any physicalist theory of consciousness to win general acceptance in the field of consciousness studies, some researchers are turning to theories that give consciousness its own independent status. This may take the form of panpsychism or cosmopsychism, in which consciousness is characterized as an all pervading monism. Others identify consciousness as a property of matter on the atomic or subatomic level. The boundary problem poses an obstacle to such theories of consciousness. What is the boundary problem? For supporters of theories that take consciousness as fundamental, the problem is that we do not normally experience consciousness as an all pervading unity. We experience things from a first person perspective that has boundaries, limits to the range of conscious perception. The consciousness of other persons appears to have similar boundaries. On the other end of the spectrum of consciousness based theories are those that propose matter on the atomic or subatomic level has a little bit of consciousness. But we don&#x27;t experience our consciousness as a swarm of particles of sentient matter. Up to the present, very little attention has been given to the boundary problem, as compare to the binding problem and the legendary hard problem. But as theories taking consciousness as fundamental become more prominent in cognitive studies, finding a solution to the boundary problem will become more urgent. I predict that in coming CS conferences we will see more sessions dedicated to this topic. A solution to the boundary problem will become one of the essential elements of any theory of consciousness. The theory would have to account for the boundaries of consciousness in first person perspective and for the level of such first person perspectives. When I say level, I mean in this context the different levels of organic structure. Why is our limited space of consciousness not at the molecular level or the macrocosmic level? Why is it at some middle level, on the scale of the human body? Those familiar with Indian knowledge systems such as Vedanta, will hear in my discussion of the boundary problem echoes of topics explored by Vedic sages thousands of years ago. They recognized that consciousness as we experience it, from our first person perspective, is limited, is individual, and scaled to match the form of our bodies. At the same time there is a universal feature of consciousness that is all pervading, and there is another feature of consciousness that is associated with matter on the atomic scale. A model incorporating these elements would solve the boundary problem. The individual conscious person (atma) is an eternal fragment of a source of an all pervading feature of consciousness. Being a tiny fragment of the whole, the atma&#x27;s field of consciousness is limited, with boundaries. Because the atma by superior arrangement is placed in a material bodily vehicle, the boundary of its first person conscious perspective is on the scale of that vehicle. That this Vedic perspective solves the problem is not a coincidence.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>i have presented posters and papers at this conference since 1996,  My work centers on exploring a consciousness based understanding of human existence, as in my book Human Devolution: A  Vedic Alternative to  Darwin&#x27;s Theory. I have given invited lectures at the Royal  Institution in London, the Russian Academy of Science in Moscow and the Indian  Institute of Science in Bangalore,.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

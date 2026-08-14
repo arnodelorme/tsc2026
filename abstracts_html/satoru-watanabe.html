@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subjectivity Intersection Beyond Objectification: Operational Evidence for Directed Correspondence &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Satoru Watanabe</h1>
+  <p class="subtitle">Subjectivity Intersection Emergence Lab（SIEL）, Hokuto, Yamanashi, Japan</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/satoru-watanabe.jpg" alt="Satoru Watanabe">
+    <div class="speaker-info">
+      <h2>Satoru Watanabe</h2>
+      <div class="affiliation">Subjectivity Intersection Emergence Lab（SIEL）, Hokuto, Yamanashi, Japan</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Subjectivity Intersection Beyond Objectification: Operational Evidence for Directed Correspondence</div>
+
+  <div class="abstract-text">
+<p>One of the central problems in consciousness and observer research is that the observing subject remains insufficiently defined within theory. While extensive work has focused on conscious contents and observational outcomes, the subject that experiences and observes them is typically left outside the explanatory structure. In this study, subjectivity refers not to conscious contents or subjective experiences, but to the non-personal subject of existence that serves as the precondition for observation, experience, and measurement. We tested operational predictions derived from Subjectivity Intersection, an ontological framework in which A and B are represented as curvature-derived observables reconstructed from physically disconnected quantum and EEG systems, while C is defined as intersection subjectivity. C is neither an independently observable object nor a reducible relation. A central prediction of the framework is that C arises through the intersection of A and B while simultaneously functioning as the condition that makes such intersection possible. Thus, AB → C and C → AB are treated not as a causal sequence but as a self-consistency condition. The aim of this work is not to prove the ontology itself, but to evaluate whether predictions derived from it survive preregistered empirical audits. To test these predictions, a series of preregistered audits (B6&ndash;B7.3) systematically compared objectification, direct A&ndash;B access, scalar mediation, direction-sensitive correspondence structures, and reconnection to the independently defined D12RG C12 topology under preregistered null, shuffled, and substitution controls. Objectification failed in 24/24 tested conditions, and direct A&ndash;B access failed in 24/24 tested conditions. Scalar C representations were not supported. In contrast, direction-sensitive correspondence structures survived in 11/24 conditions, and 4 of 8 endpoint-free C representations supported reconnection to the C12 topology. The significance of these results lies not in the overall reproduction rate itself, but in the distinction between conditions under which the structure survives and conditions under which it collapses. Receiver-side assignment, standpoint/inversion sensitivity, and magnitude-sensitive separation appeared repeatedly as aspects of the surviving boundary rather than as independent explanatory factors. Structures that treat subjectivity as an object, a direct interaction, or a scalar mediator repeatedly fail, whereas direction-sensitive correspondence structures survive under preregistered controls. This suggests that the observer problem may arise not from the absence of an observer within theory, but from attempts to represent the observer as an objectifiable element of theory in the first place. These results support an operational boundary in which subjectivity appears not as an observable object, but as a directed correspondence condition that becomes accessible only through intersection. While not constituting a direct observation of the subject of existence itself, the findings suggest a new empirical research program for the observer problem based on operationally testable intersection conditions rather than objectified representations.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Satoru Watanabe is an independent researcher in Japan and founder of the Subjectivity Intersection Emergence Lab (SIEL). He develops Subjectivity Intersection as a framework for studying observation, consciousness, and the observer problem, combining theoretical work with EEG&ndash;quantum experiments and operational investigations of subjectivity.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

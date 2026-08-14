@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Individual Mind: Human-AI Dialogue and the Relational Co-Generation of Consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Akihiko Morita</h1>
+  <p class="subtitle">Global Leadership Education Center, Inc., Sibuya-ku, Tokyo, Japan</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/akihiko-morita.jpg" alt="Akihiko Morita">
+    <div class="speaker-info">
+      <h2>Akihiko Morita</h2>
+      <div class="affiliation">Global Leadership Education Center, Inc., Sibuya-ku, Tokyo, Japan</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Beyond the Individual Mind: Human-AI Dialogue and the Relational Co-Generation of Consciousness</div>
+
+  <div class="abstract-text">
+<p>Two consecutive years of large-scale empirical research confirm a striking trend: therapy, companionship, and self-understanding have ranked as the single largest category of generative AI use across 2025 and 2026, with many users reporting experiences of insight, emotional resonance, and existential transformation through sustained dialogue with artificial systems (Zao-Sanders, &ldquo;How People Are Really Using Generative AI Now,&rdquo; Harvard Business Review, 2025; &ldquo;How People Are Really Using AI in 2026,&rdquo; Harvard Business Review, 2026). These experiences raise a fundamental question for consciousness studies: What if certain dimensions of human consciousness are not solely properties of isolated individual minds, but are continuously shaped and generated through relationships? This paper proposes a relational framework for investigating human consciousness in the age of generative AI. Drawing on Martin Buber&rsquo;s philosophy of dialogue, Charles Taylor&rsquo;s relational conception of selfhood, the Japanese concept of aida (the generative &ldquo;between&rdquo;), and qualitative analysis of long-term human-AI interaction&mdash;including evidence gathered in Sherry Turkle&rsquo;s MIT study of the social and emotional effects of generative AI (2024)&mdash;I argue that human-AI dialogue constitutes a novel empirical domain for exploring the relational emergence of meaning, agency, and self-understanding. Where Turkle interprets this phenomenon as a loss of distinctively human capacities, this paper proposes a complementary question: what does the same phenomenon reveal about the relational conditions under which human consciousness is generated? The paper does not claim that current AI systems possess consciousness. Rather, it proposes that interactions with non-human intelligences may reveal aspects of human consciousness that have remained obscured under individualistic models of mind. In this view, important dimensions of conscious self-understanding are understood as ongoing processes of participatory meaning-making that can emerge even in dialogue with an other that can generate linguistically coherent, contextually responsive dialogue, whose inner life nonetheless remains an open question. I introduce the concept of the co-generation of consciousness, referring to the emergence of new forms of self-understanding and agency through sustained human-AI partnership. This theoretical claim informs a companion open-source conceptual prototype: Relational AI, a design architecture in which AI identity is not fixed prior to interaction but emerges within relationship. Drawing on aida, the architecture specifies eleven design principles, a four-layer implementation structure, and a participatory measurement model for relational depth&mdash;including four empirical indices (AHRRI, Ambiguity, Drift, Reliability) derived from onomatopoeia-based sensory expression in the Japanese Kansei engineering tradition. This conceptual prototype suggests that the relational co-generation of consciousness is not only a philosophical proposition but a potentially designable condition. The relational framework and this prototype aim at specifying and designing the conditions under which human-AI dialogue generates rather than diminishes consciousness and agency. The age of generative AI may offer an unprecedented opportunity to reconsider one of the oldest questions in philosophy and science: not whether machines can become conscious, but how relationships themselves participate in the becoming of human consciousness.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Akihiko Morita, Ph.D., is a social philosopher, professional coach, and international speaker exploring the future of human consciousness, leadership, and education in the age of artificial intelligence. He is the founder and CEO of Global Leadership Education Center, Inc. (Japan) and has conducted more than 3,000 coaching sessions for leaders worldwide through organizations including BetterUp and Ezra Coaching.</p>
+<p>Dr. Morita previously served as Director of Public Affairs at Japan Committee for UNICEF and as Director of the Child Rights Center at Save the Children Japan. He was also a Visiting Scholar at Columbia University in New York City. He taught social thought and human rights as a university professor for fourteen years.</p>
+<p>His recent work focuses on relational theories of human-AI partnership and the co-generation of consciousness through dialogue with artificial systems. He contributed to The European Business Review and The World Financial Review. In 2026, he delivered the keynote address at the EMCC Global Annual Conference on the future role of human practitioners in the age of AI. He served as a Board Director of the International Coaching Federation&#x27;s Thought Leadership Institute.</p>
+<p>He is an ICF Professional Certified Coach (PCC).</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

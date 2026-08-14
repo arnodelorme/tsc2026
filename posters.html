@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posters &mdash; The Science of Consciousness 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.5; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-size: 1.05rem; }
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a { color: #c8ddf0; font-size: .9rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; transition: color .2s; }
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 8rem 2rem 2rem;
+}
+.page-header h1 { font-size: 2rem; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem; }
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.back-bar { max-width: 1000px; margin: 0 auto; padding: 1.2rem 1rem .5rem; }
+.back-bar a { font-size: .9rem; font-weight: 600; color: #1a6fa0; }
+
+.session-menu { max-width: 1000px; margin: 0 auto; padding: .5rem 1rem 1.5rem; }
+.session-menu h2 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .8rem; }
+.day-tabs { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.day-tab {
+  padding: .5rem 1.2rem; border: 1px solid #cdd7e1; border-radius: 8px 8px 0 0;
+  border-bottom: 3px solid transparent; background: #f5f8fb;
+  font-size: .9rem; font-weight: 700; color: #0a2440;
+  cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.day-tab span { display: block; font-size: .72rem; font-weight: 400; color: #667; }
+.day-tab:hover { background: #e2edf2; }
+.day-tab.active { background: #0a2440; color: #fff; border-color: #0a2440; border-bottom-color: #1a96b8; }
+.day-tab.active span { color: #9fc3d8; }
+.day-pane { display: none; }
+.day-pane.active { display: block; }
+.menu-section { margin-bottom: 1.1rem; }
+.menu-section-title {
+  font-size: .95rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff !important; background: #24303a; border-left: 4px solid #1a96b8;
+  padding: .4rem .7rem; border-radius: 4px; margin-bottom: .55rem;
+}
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-btn {
+  display: block; padding: .6rem .8rem;
+  background: #f5f8fb; border: 1px solid #ddd; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; color: #0a2440;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  text-align: left; font-family: inherit;
+}
+.menu-btn:hover, .menu-btn.active { background: #b8d4d8; border-color: #1a96b8; }
+.menu-btn .btn-time { font-size: .72rem; font-weight: 400; color: #555; display: block; margin-top: .15rem; }
+
+.session-wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+.session-panel { display: none; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-top: .5rem; }
+.session-panel.active { display: block; }
+.session-panel h3 { font-size: 1.1rem; font-weight: 700; color: #0a2440; margin-bottom: .3rem; }
+.session-panel .ws-meta { font-size: .82rem; color: #666; margin-bottom: .8rem; }
+.session-panel .ws-note { font-size: .92rem; color: #555; font-style: italic; }
+.session-panel .list-head {
+  font-size: .95rem; font-weight: 700; color: #0a2440;
+  margin: 1.4rem 0 .5rem; padding-top: 1rem; border-top: 1px solid #e4e8ee;
+}
+.poster-cols { font-size: .88rem; column-width: 24rem; column-gap: 2rem; }
+.poster-cols p { margin: 0 0 .35rem; break-inside: avoid; }
+
+.talk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.1rem; margin-top: .4rem; }
+.talk { text-align: center; font-size: .84rem; }
+.talk .av, .talk .ini {
+  width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .45rem; box-shadow: 0 3px 10px rgba(10,36,64,.2);
+}
+.talk .ini { background: linear-gradient(135deg, #1a96b8, #0a2440); color: #fff; font-weight: 700; font-size: 1.6rem; }
+.talk .nm { display: block; font-weight: 700; color: #0a2440; line-height: 1.25; margin-bottom: .2rem; }
+.talk .tt { display: block; font-size: .8rem; line-height: 1.35; }
+.talk .pid { display: block; font-size: .72rem; font-weight: 600; color: #888; letter-spacing: .03em; margin-bottom: .2rem; }
+.poster-cols .pid { font-weight: 700; color: #888; white-space: nowrap; }
+
+footer { background: #0a2440; color: #8baac8; padding: 2.5rem 2rem; text-align: center; font-size: .85rem; }
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.5rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+/* posters: FAQ callout */
+.faq-note { max-width: 1000px; margin: 0 auto; padding: .8rem 1rem 0; }
+.faq-note .box { background: #fdf6e7; border-left: 4px solid #e8a727; border-radius: 6px; padding: .6rem .9rem; font-size: .95rem; }
+/* posters: compact portrait cards */
+.talk-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.talk .av, .talk .ini { width: 80px; height: 80px; }
+.talk .ini { font-size: 1.3rem; }
+/* mobile: the full text listing reads first, photo gallery after
+   (nobody scrolls 150 portraits to find a poster on a phone) */
+@media (max-width: 768px) {
+  .session-panel.active { display: flex; flex-direction: column; }
+  .gallery-head, .talk-grid { order: 1; }
+}
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Posters</h1>
+  <p class="subtitle">282 posters &middot; Tuesday &amp; Wednesday evenings, 7:30 pm &middot; Mission Bay Room</p>
+</header>
+
+<div class="back-bar">
+  <a href="program.html">&larr; Back to Program</a>
+</div>
+
+<div class="faq-note"><div class="box">Preparing your poster? See the FAQ for <a href="faq.html#poster-size">poster specifications</a> and <a href="faq.html#poster-printing">$42 local printing with delivery to the conference</a>.</div></div>
+
+<div class="session-menu">
+  <h2>Select a poster session:</h2>
+  <div class="menu-section">
+    <div class="menu-grid">
+      <button class="menu-btn" data-panel="ps1" onclick="showSession(this,'ps1')">Poster Session 1<span class="btn-time">Tuesday, October 13 &middot; 7:30 pm</span></button>
+      <button class="menu-btn" data-panel="ps2" onclick="showSession(this,'ps2')">Poster Session 2<span class="btn-time">Wednesday, October 14 &middot; 7:30 pm</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="session-wrap">
+<div class="session-panel" id="panel-ps1">
+  <h3>Poster Session 1</h3>
+  <div class="ws-meta">Tuesday, October 13 &middot; 7:30 pm &middot; Mission Bay Room</div>
+  <p class="ws-note">Poster board placement and numbers will be provided later. Until then, the submission ID (#) shown with each poster is its reference.</p>
+  <div class="list-head gallery-head">Presenter gallery</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/macksood-aftab.jpg" alt="Macksood Aftab" loading="lazy"><span class="nm">Macksood Aftab</span><span class="pid">Poster #706</span><a class="tt" href="abstracts_html/macksood-aftab.html">Subjective Experience and the limits of Computational Artificial Intelligence</a></div>
+    <div class="talk"><img class="av" src="img/gaspar-alomar.jpg" alt="Gaspar Alomar" loading="lazy"><span class="nm">Gaspar Alomar</span><span class="pid">Poster #687</span><a class="tt" href="abstracts_html/gaspar-alomar.html">A New Formula for solving a Hard Problem</a></div>
+    <div class="talk"><img class="av" src="img/matthew-anderson.jpg" alt="Matthew Anderson" loading="lazy"><span class="nm">Matthew Anderson</span><span class="pid">Poster #517</span><a class="tt" href="abstracts_html/matthew-anderson.html">AI Discernment: A Phenomenological Case Study of Cognitive Outsourcing in Sustained Human&ndash;LLM Collaboration</a></div>
+    <div class="talk"><img class="av" src="img/bhavishya-ankush.jpg" alt="Bhavishya Ankush" loading="lazy"><span class="nm">Bhavishya Ankush</span><span class="pid">Poster #854</span><a class="tt" href="abstracts_html/bhavishya-ankush.html">A Hierarchical Theoretical Framework for Conscious Awareness Through Emergent Quantum&ndash;Informational Coupling</a></div>
+    <div class="talk"><img class="av" src="img/bashaer-banjabi.jpg" alt="Bashaer Banjabi" loading="lazy"><span class="nm">Bashaer Banjabi</span><span class="pid">Poster #629</span><a class="tt" href="abstracts_html/bashaer-banjabi.html">Imagination between reality and description</a></div>
+    <div class="talk"><img class="av" src="img/paul-barnes.jpg" alt="Paul Barnes" loading="lazy"><span class="nm">Paul Barnes</span><span class="pid">Poster #701</span><a class="tt" href="abstracts_html/paul-barnes.html">Quantum Differentiation Resonance (QDR) - Consciousness as Sustained Resonance Rather Than Reduction</a></div>
+    <div class="talk"><img class="av" src="img/byron-bates.jpg" alt="Byron Bates" loading="lazy"><span class="nm">Byron Bates</span><span class="pid">Poster #773</span><a class="tt" href="abstracts_html/byron-bates.html">The Brain as an Antenna to Information, Both A Priori and A Posteriori</a></div>
+    <div class="talk"><img class="av" src="img/james-beichler.jpg" alt="James Beichler" loading="lazy"><span class="nm">James Beichler</span><span class="pid">Poster #766</span><a class="tt" href="abstracts_html/james-beichler.html">Brainworks: The emergence of consciousness in brain, body and cosmos</a></div>
+    <div class="talk"><img class="av" src="img/james-beran.jpg" alt="James Beran" loading="lazy"><span class="nm">James Beran</span><span class="pid">Poster #652</span><a class="tt" href="abstracts_html/james-beran.html">Phenomenal Binding--Problem or Solution?</a></div>
+    <div class="talk"><img class="av" src="img/prakash-bhat.jpg" alt="Prakash Bhat" loading="lazy"><span class="nm">Prakash Bhat</span><span class="pid">Poster #785</span><a class="tt" href="abstracts_html/prakash-bhat.html">Quantum Subsystem Retro-causality in Mixed-Dimensional Spacetime (MST) as a Basis for Conscious Experience</a></div>
+    <div class="talk"><img class="av" src="img/gary-blaise.jpg" alt="Gary Blaise" loading="lazy"><span class="nm">Gary Blaise</span><span class="pid">Poster #527</span><a class="tt" href="abstracts_html/gary-blaise.html">A New Model of Consciousness and Quantized Space</a></div>
+    <div class="talk"><img class="av" src="img/rober-bragado-campano.jpg" alt="Rober Bragado Campano" loading="lazy"><span class="nm">Rober Bragado Campano</span><span class="pid">Poster #741</span><a class="tt" href="abstracts_html/rober-bragado-campano.html">Developing Self-Regulation Through Embodied Action: An Enactive and Ecological Mindfulness Framework for Neurodiverse Children</a></div>
+    <div class="talk"><img class="av" src="img/milena-braticevic.jpg" alt="Milena Braticevic" loading="lazy"><span class="nm">Milena Braticevic</span><span class="pid">Poster #814</span><a class="tt" href="abstracts_html/milena-braticevic.html">Authenticity and Nondual Consciousness in Worker Health and Safety</a></div>
+    <div class="talk"><img class="av" src="img/rodrigo-bravo.jpg" alt="Rodrigo Bravo" loading="lazy"><span class="nm">Rodrigo Bravo</span><span class="pid">Poster #843</span><a class="tt" href="abstracts_html/rodrigo-bravo-843.html">Stretched Among Paradigms: Adapting Medicine to Non-Ordinary Patient Experiences and Spontaneous Remission in Complex Illness</a></div>
+    <div class="talk"><img class="av" src="img/flavio-burgarella.jpg" alt="Flavio Burgarella" loading="lazy"><span class="nm">Flavio Burgarella</span><span class="pid">Poster #537</span><a class="tt" href="abstracts_html/flavio-burgarella.html">Cardiac Microtubules and Transperception:A Cardiocentric Quantum Model of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/eugene-catrambone.jpg" alt="Eugene Catrambone" loading="lazy"><span class="nm">Eugene Catrambone</span><span class="pid">Poster #609</span><a class="tt" href="abstracts_html/eugene-catrambone.html">DMT, Microtubule Coherence, and Scalar-Clock Record Stability: A Trinity/STO Framework for Altered Time-Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/trent-christensen.jpg" alt="Trent Christensen" loading="lazy"><span class="nm">Trent Christensen</span><span class="pid">Poster #608</span><a class="tt" href="abstracts_html/trent-christensen.html">The Observer Effect in Human Systems: How Perception Creates Organizational Reality</a></div>
+    <div class="talk"><img class="av" src="img/catherine-clinton.jpg" alt="Catherine Clinton" loading="lazy"><span class="nm">Catherine Clinton</span><span class="pid">Poster #637</span><a class="tt" href="abstracts_html/catherine-clinton.html">Possibility for Body Wide Consciousness Orchestration via Pi Electrons and Excitons &ndash; Quantum Biology of Consciousness, Water, Fascia and Mitochondria</a></div>
+    <div class="talk"><img class="av" src="img/michael-cole.jpg" alt="Michael Cole" loading="lazy"><span class="nm">Michael Cole</span><span class="pid">Poster #725</span><a class="tt" href="abstracts_html/michael-cole.html">Tarot-Assisted Psychotherapy, Synchronicity, and Archetypal Meaning-Making in Depression and Anxiety</a></div>
+    <div class="talk"><img class="av" src="img/mark-couch.jpg" alt="Mark Couch" loading="lazy"><span class="nm">Mark Couch</span><span class="pid">Poster #722</span><a class="tt" href="abstracts_html/mark-couch.html">A Proposal for Identifying Relevant Parts of Neural Mechanisms</a></div>
+    <div class="talk"><img class="av" src="img/mouhamad-diagne.jpg" alt="Mouhamad Diagne" loading="lazy"><span class="nm">Mouhamad Diagne</span><span class="pid">Poster #787</span><a class="tt" href="abstracts_html/mouhamad-diagne.html">A Psychophysical Model of Perceptual Consciousness Based on Dynamic Integration Processes</a></div>
+    <div class="talk"><img class="av" src="img/olav-drageset.jpg" alt="Olav Drageset" loading="lazy"><span class="nm">Olav Drageset</span><span class="pid">Poster #878</span><a class="tt" href="abstracts_html/olav-drageset.html">Consciousness, a part of the cosmos?</a></div>
+    <div class="talk"><img class="av" src="img/charles-ernst.jpg" alt="Charles Ernst" loading="lazy"><span class="nm">Charles Ernst</span><span class="pid">Poster #796</span><a class="tt" href="abstracts_html/charles-ernst.html">The Biological Transistor Hypothesis: TRPV1 and TRPV4 as Orchestrators of Mitochondrial Energy&ndash;Information Processing.</a></div>
+    <div class="talk"><img class="av" src="img/sepideh-eshragh.jpg" alt="Sepideh Eshragh" loading="lazy"><span class="nm">Sepideh Eshragh</span><span class="pid">Poster #620</span><a class="tt" href="abstracts_html/sepideh-eshragh.html">T-Consciousness and the Evolution of Transportation Safety: A Human-Centered Paradigm Shift Beyond Technology</a></div>
+    <div class="talk"><img class="av" src="img/abhijeet-gaikawad.jpg" alt="Abhijeet Gaikawad" loading="lazy"><span class="nm">Abhijeet Gaikawad</span><span class="pid">Poster #627</span><a class="tt" href="abstracts_html/abhijeet-gaikawad.html">Consciousness Beyond Biological Death: A Scientific Research into Reincarnation through the Lens of Indian Knowledge Systems (IKS) and the Energy in the Physics.</a></div>
+    <div class="talk"><img class="av" src="img/yashine-goolam-hossen.jpg" alt="Yashine Goolam Hossen" loading="lazy"><span class="nm">Yashine Goolam Hossen</span><span class="pid">Poster #888</span><a class="tt" href="abstracts_html/yashine-goolam-hossen.html">The Changing Shape of Memory: Plasticity and Quantum-Like Dynamics</a></div>
+    <div class="talk"><img class="av" src="img/carl-gunther.jpg" alt="Carl Gunther" loading="lazy"><span class="nm">Carl Gunther</span><span class="pid">Poster #945</span><a class="tt" href="abstracts_html/carl-gunther.html">Beyond the Brain. Consciousness is Structured by Memory&#x27;s Spatial and Chronological Order. What is the Source?</a></div>
+    <div class="talk"><img class="av" src="img/maxwell-harrell.jpg" alt="Maxwell Harrell" loading="lazy"><span class="nm">Maxwell Harrell</span><span class="pid">Poster #532</span><a class="tt" href="abstracts_html/maxwell-harrell.html">Subconscious Architecture Theory: How Consciousness, Subjectivity, and Creativity are developed</a></div>
+    <div class="talk"><img class="av" src="img/lauryn-hart.jpg" alt="Lauryn Hart" loading="lazy"><span class="nm">Lauryn Hart</span><span class="pid">Poster #782</span><a class="tt" href="abstracts_html/lauryn-hart.html">Watering Weeds: Partnering with Pests in Narrative Metamorphosis</a></div>
+    <div class="talk"><img class="av" src="img/frank-heile.jpg" alt="Frank Heile" loading="lazy"><span class="nm">Frank Heile</span><span class="pid">Poster #744</span><a class="tt" href="abstracts_html/frank-heile.html">The Modeler Schema Theory of Consciousness: Diffuse Awareness, Focal Experience, and a Saccadic Consistency Experiment</a></div>
+    <div class="talk"><img class="av" src="img/ryan-hulla.jpg" alt="Ryan Hulla" loading="lazy"><span class="nm">Ryan Hulla</span><span class="pid">Poster #767</span><a class="tt" href="abstracts_html/ryan-hulla.html">From Slumber to Awakening: What Sparks Spiritual Evolution?</a></div>
+    <div class="talk"><img class="av" src="img/bonnie-ihme.jpg" alt="Bonnie Ihme" loading="lazy"><span class="nm">Bonnie Ihme</span><span class="pid">Poster #703</span><a class="tt" href="abstracts_html/bonnie-ihme.html">AT RISK: Neurodivergence, Consciousness, and the Edge of Chaos &mdash; An Ethnoautobiographical Study</a></div>
+    <div class="talk"><img class="av" src="img/elmira-isayeva.jpg" alt="Elmira Isayeva" loading="lazy"><span class="nm">Elmira Isayeva</span><span class="pid">Poster #848</span><a class="tt" href="abstracts_html/elmira-isayeva.html">From Focal Events to Self-Referential Focal Relations: Toward a Relational Theory of Consciousness and Artificial Intelligence</a></div>
+    <div class="talk"><img class="av" src="img/dilip-jain.jpg" alt="Dilip Jain" loading="lazy"><span class="nm">Dilip Jain</span><span class="pid">Poster #518</span><a class="tt" href="abstracts_html/dilip-jain.html">Bhasha Vargana: Non-EM Field</a></div>
+    <div class="talk"><img class="av" src="img/alex-jinich-diamant.jpg" alt="Alex Jinich-Diamant" loading="lazy"><span class="nm">Alex Jinich-Diamant</span><span class="pid">Poster #833</span><a class="tt" href="abstracts_html/alex-jinich-diamant.html">Shared Neurobiological and Computational Mechanisms of Psychedelic, Contemplative, and Fasting-Induced Mystical Experience</a></div>
+    <div class="talk"><img class="av" src="img/bindu-joshi.jpg" alt="Bindu Joshi" loading="lazy"><span class="nm">Bindu Joshi</span><span class="pid">Poster #864</span><a class="tt" href="abstracts_html/bindu-joshi.html">The Evolution of Consciousness: Toward an Integrative Scientific Model of Human Conscious Development</a></div>
+    <div class="talk"><img class="av" src="img/santosh-kaware.jpg" alt="Santosh Kaware" loading="lazy"><span class="nm">Santosh Kaware</span><span class="pid">Poster #873</span><a class="tt" href="abstracts_html/santosh-kaware.html">Human Consciousness and HVDC Control Systems: A Conceptual Multidisciplinary Framework for Understanding the Observer Effect</a></div>
+    <div class="talk"><img class="av" src="img/sarah-knox.jpg" alt="Sarah Knox" loading="lazy"><span class="nm">Sarah Knox</span><span class="pid">Poster #695</span><a class="tt" href="abstracts_html/sarah-knox.html">The Myth of Scientific Objectivity and its Detrimental Effects on Clinical Medicine</a></div>
+    <div class="talk"><img class="av" src="img/alex-kurtz.jpg" alt="Alex Kurtz" loading="lazy"><span class="nm">Alex Kurtz</span><span class="pid">Poster #759</span><a class="tt" href="abstracts_html/alex-kurtz.html">The Frame Survival Model of Conscious Continuity: A Theoretical Framework for Subjective Experience in a Branching Universe</a></div>
+    <div class="talk"><img class="av" src="img/enej-kuscer.jpg" alt="Enej Kuscer" loading="lazy"><span class="nm">Enej Kuscer</span><span class="pid">Poster #809</span><a class="tt" href="abstracts_html/enej-kuscer.html">Negentropic Conscious Field Theory: Consciousness as a Fundamental Field Disclosed Through Quantum-Coherent Integration</a></div>
+    <div class="talk"><img class="av" src="img/tiffany-labyer.jpg" alt="Tiffany LaByer" loading="lazy"><span class="nm">Tiffany LaByer</span><span class="pid">Poster #800</span><a class="tt" href="abstracts_html/tiffany-labyer.html">Modeling Subjective Information</a></div>
+    <div class="talk"><img class="av" src="img/damien-lafont.jpg" alt="Damien Lafont" loading="lazy"><span class="nm">Damien Lafont</span><span class="pid">Poster #521</span><a class="tt" href="abstracts_html/damien-lafont.html">Xenon Anesthesia and the Collapse of Coherent Informational Integration</a></div>
+    <div class="talk"><img class="av" src="img/edward-lantz.jpg" alt="Edward Lantz" loading="lazy"><span class="nm">Edward Lantz</span><span class="pid">Poster #831</span><a class="tt" href="abstracts_html/edward-lantz.html">The Genomic Quantum Attunement Model for Quantum Informational Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/jeff-larsen.jpg" alt="Jeff Larsen" loading="lazy"><span class="nm">Jeff Larsen</span><span class="pid">Poster #904</span><a class="tt" href="abstracts_html/jeff-larsen.html">Harmolodic Stability: Free-Jazz Principles and the Emergence of Dynamic Coherence in Multi-Agent Autonomous Science&quot;</a></div>
+    <div class="talk"><img class="av" src="img/afshin-lorestani.jpg" alt="Afshin Lorestani" loading="lazy"><span class="nm">Afshin Lorestani</span><span class="pid">Poster #618</span><a class="tt" href="abstracts_html/afshin-lorestani.html">Consciousness, Life, and Evolution According to T-Consciousness Cosmology</a></div>
+    <div class="talk"><img class="av" src="img/peter-lugten.jpg" alt="Peter Lugten" loading="lazy"><span class="nm">Peter Lugten</span><span class="pid">Poster #549</span><a class="tt" href="abstracts_html/peter-lugten.html">A Hypothetical Explanation for Near-Death Experiences and Out-of-Body Experiences</a></div>
+    <div class="talk"><img class="av" src="img/peter-luxruel.jpg" alt="Peter Luxruel" loading="lazy"><span class="nm">Peter Luxruel</span><span class="pid">Poster #886</span><a class="tt" href="abstracts_html/peter-luxruel.html">The Structural Expansion Constant and the Fine-Structure Bridge: A Negentropic Coherence Framework Linking Golden-Ratio Scaling to Electromagnetic Coupling Across a Ten-State Conscious Field Topology</a></div>
+    <div class="talk"><img class="av" src="img/ramesh-babu-m-g.jpg" alt="Ramesh Babu M G" loading="lazy"><span class="nm">Ramesh Babu M G</span><span class="pid">Poster #869</span><a class="tt" href="abstracts_html/ramesh-babu-m-g.html">Dynamic Reorganization of Functional Brain Networks Across Successive Conscious States During Rajyoga Meditation: A Repeated-Measures Functional Connectivity Study</a></div>
+    <div class="talk"><img class="av" src="img/dan-mcaran.jpg" alt="Dan McAran" loading="lazy"><span class="nm">Dan McAran</span><span class="pid">Poster #639</span><a class="tt" href="abstracts_html/dan-mcaran.html">Consciousness as Related to Recursive Mathematics</a></div>
+    <div class="talk"><img class="av" src="img/tara-meyer-robson.jpg" alt="Tara Meyer-Robson" loading="lazy"><span class="nm">Tara Meyer-Robson</span><span class="pid">Poster #735</span><a class="tt" href="abstracts_html/tara-meyer-robson.html">The Flow Factor Diagnostic Model: A Structured Framework for Identifying Root Patterns in Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/mahalia-michael.jpg" alt="Mahalia Michael" loading="lazy"><span class="nm">Mahalia Michael</span><span class="pid">Poster #754</span><a class="tt" href="abstracts_html/mahalia-michael.html">Beyond Language: Awakening Consciousness Through Sound Transference&mdash;Evidence for a Bio-acoustic Framework Linking Human Vocal Resonance to the Transformational Acoustic Glyphs of Cetacean Communication</a></div>
+    <div class="talk"><img class="av" src="img/sina-mousavi.jpg" alt="Sina Mousavi" loading="lazy"><span class="nm">Sina Mousavi</span><span class="pid">Poster #619</span><a class="tt" href="abstracts_html/sina-mousavi.html">Experimental Evidence of T-Consciousness Fields Reducing Randomness in Quantum Systems</a></div>
+    <div class="talk"><img class="av" src="img/chuong-ngo.jpg" alt="Chuong Ngo" loading="lazy"><span class="nm">Chuong Ngo</span><span class="pid">Poster #903</span><a class="tt" href="abstracts_html/chuong-ngo.html">Toward EEG Biomarkers of Meditative States of Consciousness Across Contemplative Traditions</a></div>
+    <div class="talk"><img class="av" src="img/jaya-pancholy.jpg" alt="Jaya Pancholy" loading="lazy"><span class="nm">Jaya Pancholy</span><span class="pid">Poster #723</span><a class="tt" href="abstracts_html/jaya-pancholy.html">Olfaction, Consciousness, and Stress Regulation: Neurophysiological Effects of Holy Basil Essential Oil</a></div>
+    <div class="talk"><img class="av" src="img/peter-parks.jpg" alt="Peter Parks" loading="lazy"><span class="nm">Peter Parks</span><span class="pid">Poster #742</span><a class="tt" href="abstracts_html/peter-parks.html">Geobiology, Transcranial Geomagnetic Stimulation &amp; The GEM Resonance Theory of Human Consciousness: How Gravity and Electromagnetism contribute to Human Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/robert-parsons.jpg" alt="Robert Parsons" loading="lazy"><span class="nm">Robert Parsons</span><span class="pid">Poster #513</span><a class="tt" href="abstracts_html/robert-parsons.html">Rethinking Water: The Hidden Firmware of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/florinica-radulescu.jpg" alt="Florinica Radulescu" loading="lazy"><span class="nm">Florinica Radulescu</span><span class="pid">Poster #877</span><a class="tt" href="abstracts_html/florinica-radulescu.html">Intermodal Ambiguity and the Unity of Sense in Perceptual Experience</a></div>
+    <div class="talk"><img class="av" src="img/alon-retter.jpg" alt="Alon Retter" loading="lazy"><span class="nm">Alon Retter</span><span class="pid">Poster #699</span><a class="tt" href="abstracts_html/alon-retter.html">The Physical and Astronomical Universe as a Mirror of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/antonio-reyes.jpg" alt="Antonio Reyes" loading="lazy"><span class="nm">Antonio Reyes</span><span class="pid">Poster #827</span><a class="tt" href="abstracts_html/antonio-reyes.html">The Cognitive Ecotone: A Situated Affective Engine for Modeling Conscious Experience Across Body, Brain, Mind, and Environment</a></div>
+    <div class="talk"><img class="av" src="img/isabel-risco-narvaez.jpg" alt="Isabel Risco-Narvaez" loading="lazy"><span class="nm">Isabel Risco-Narvaez</span><span class="pid">Poster #807</span><a class="tt" href="abstracts_html/isabel-risco-narvaez.html">Two-Photon Imaging of Neuronal Activity in Hypsibius exemplaris: A Minimal Neural Model Connecting Quantum Correlations and the Astrobiological Origins of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/stephanie-romer.jpg" alt="Stephanie Romer" loading="lazy"><span class="nm">Stephanie Romer</span><span class="pid">Poster #925</span><a class="tt" href="abstracts_html/stephanie-romer.html">The next &ldquo;Great Leap Forward&rdquo; Beyond Darwinian Evolution: Symbolic Universe Theory as the missing dark matter of evolution and all human inquiry.</a></div>
+    <div class="talk"><img class="av" src="img/james-rose.jpg" alt="James Rose" loading="lazy"><span class="nm">James Rose</span><span class="pid">Poster #882</span><a class="tt" href="abstracts_html/james-rose.html">Re-conceiving Consciousness … through Re-imagining the Principles of the Universe ~ &quot;Integrity Paradigm&quot;</a></div>
+    <div class="talk"><img class="av" src="img/nina-russin.jpg" alt="Nina Russin" loading="lazy"><span class="nm">Nina Russin</span><span class="pid">Poster #595</span><a class="tt" href="abstracts_html/nina-russin.html">Tai Chi Practice for Self-Management of Chronic Pain and Loneliness: A Mindful Solution for Conscious Percepts</a></div>
+    <div class="talk"><img class="av" src="img/mithun-saint-germain.jpg" alt="Mithun Saint-Germain" loading="lazy"><span class="nm">Mithun Saint-Germain</span><span class="pid">Poster #493</span><a class="tt" href="abstracts_html/mithun-saint-germain.html">Attention is all you need, both in artificial intelligence and meditation</a></div>
+    <div class="talk"><img class="av" src="img/arturo-salazar-chon.jpg" alt="Arturo Salazar Chon" loading="lazy"><span class="nm">Arturo Salazar Chon</span><span class="pid">Poster #612</span><a class="tt" href="abstracts_html/arturo-salazar-chon.html">Multimodal Reconstruction of Organizational Structure Across Human Brain Observation Scales</a></div>
+    <div class="talk"><img class="av" src="img/jordan-santana.jpg" alt="Jordan Santana" loading="lazy"><span class="nm">Jordan Santana</span><span class="pid">Poster #634</span><a class="tt" href="abstracts_html/jordan-santana.html">Toward Theory Construction in Emergent Systems: An Information-Theoretic Framework Illustrated in a Two-Spin Ising Model</a></div>
+    <div class="talk"><img class="av" src="img/akella-s-sarma.jpg" alt="Akella S Sarma" loading="lazy"><span class="nm">Akella S Sarma</span><span class="pid">Poster #496</span><a class="tt" href="abstracts_html/akella-s-sarma.html">Physics of Consciousness - A System Engineering Approach</a></div>
+    <div class="talk"><img class="av" src="img/fredric-schiffer.jpg" alt="Fredric Schiffer" loading="lazy"><span class="nm">Fredric Schiffer</span><span class="pid">Poster #511</span><a class="tt" href="abstracts_html/fredric-schiffer.html">Testing Experience Transfer Between Organisms: A Dimensional Framework and an Empirical Proposal</a></div>
+    <div class="talk"><img class="av" src="img/robert-smith.jpg" alt="Robert Smith" loading="lazy"><span class="nm">Robert Smith</span><span class="pid">Poster #594</span><a class="tt" href="abstracts_html/robert-smith.html">Spacetime as a Tertiary Structure</a></div>
+    <div class="talk"><img class="av" src="img/david-smolker.jpg" alt="David Smolker" loading="lazy"><span class="nm">David Smolker</span><span class="pid">Poster #791</span><a class="tt" href="abstracts_html/david-smolker.html">A Bohmian View of Orch OR, Solar System Dynamics and Social Mood</a></div>
+    <div class="talk"><img class="av" src="img/john-st-claire.jpg" alt="John St Claire" loading="lazy"><span class="nm">John St Claire</span><span class="pid">Poster #837</span><a class="tt" href="abstracts_html/john-st-claire.html">We Are the Plasma - Toward a Unified Theory of Conscious Plasmoid Intelligence: From Lambda-Vacuum Cosmology to Embodied Human Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/hart-steen.jpg" alt="Hart Steen" loading="lazy"><span class="nm">Hart Steen</span><span class="pid">Poster #557</span><a class="tt" href="abstracts_html/hart-steen.html">The Neurocosmic Cube: Evidence for an Ancient Consciousness Science Encoded in Architecture, Astronomy, and Neuroanatomy</a></div>
+    <div class="talk"><img class="av" src="img/nathan-thornhill.jpg" alt="Nathan Thornhill" loading="lazy"><span class="nm">Nathan Thornhill</span><span class="pid">Poster #530</span><a class="tt" href="abstracts_html/nathan-thornhill.html">The Internal Dynamics of Decisions: From rats and primates to AI</a></div>
+    <div class="talk"><img class="av" src="img/samhitha-tirumalasetti.jpg" alt="Samhitha Tirumalasetti" loading="lazy"><span class="nm">Samhitha Tirumalasetti</span><span class="pid">Poster #514</span><a class="tt" href="abstracts_html/samhitha-tirumalasetti.html">Who Am I? Self-Inquiry as a Neurophenomenological Approach to Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/apostol-vaso.jpg" alt="Apostol Vaso" loading="lazy"><span class="nm">Apostol Vaso</span><span class="pid">Poster #632</span><a class="tt" href="abstracts_html/apostol-vaso.html">The Geometry of Soul: Love, Equidistance, Inequidistance, the Earlier Perfect Realization, Rest and Motion</a></div>
+    <div class="talk"><img class="av" src="img/ludmila-vucolova.jpg" alt="Ludmila Vucolova" loading="lazy"><span class="nm">Ludmila Vucolova</span><span class="pid">Poster #812</span><a class="tt" href="abstracts_html/ludmila-vucolova.html">Collapse into Translation: A Fundamental Organizational Principle for the Emergence of Conscious Awareness</a></div>
+    <div class="talk"><img class="av" src="img/lily-wang.jpg" alt="Lily Wang" loading="lazy"><span class="nm">Lily Wang</span><span class="pid">Poster #874</span><a class="tt" href="abstracts_html/lily-wang.html">Intention-Generated Bioplasma as the Coherence-Sustaining Mechanism in Orchestrated Objective Reduction</a></div>
+    <div class="talk"><img class="av" src="img/satoru-watanabe.jpg" alt="Satoru Watanabe" loading="lazy"><span class="nm">Satoru Watanabe</span><span class="pid">Poster #670</span><a class="tt" href="abstracts_html/satoru-watanabe.html">Subjectivity Intersection Beyond Objectification: Operational Evidence for Directed Correspondence</a></div>
+    <div class="talk"><img class="av" src="img/douglas-watson.jpg" alt="Douglas Watson" loading="lazy"><span class="nm">Douglas Watson</span><span class="pid">Poster #908</span><a class="tt" href="abstracts_html/douglas-watson.html">From Connected Difference to Quantum-Like Structure</a></div>
+    <div class="talk"><img class="av" src="img/charlotte-wilborn.jpg" alt="Charlotte Wilborn" loading="lazy"><span class="nm">Charlotte Wilborn</span><span class="pid">Poster #808</span><a class="tt" href="abstracts_html/charlotte-wilborn.html">Z.E.R.O: Observing Internal Organization in a Complex, Adaptive Cybernetic System</a></div>
+    <div class="talk"><img class="av" src="img/ashley-williams.jpg" alt="Ashley Williams" loading="lazy"><span class="nm">Ashley Williams</span><span class="pid">Poster #775</span><a class="tt" href="abstracts_html/ashley-williams.html">Physiomorphic AI: Engineering Consciousness Correlates Through Biological Isomorphism</a></div>
+    <div class="talk"><img class="av" src="img/sierra-wilson.jpg" alt="Sierra Wilson" loading="lazy"><span class="nm">Sierra Wilson</span><span class="pid">Poster #909</span><a class="tt" href="abstracts_html/sierra-wilson.html">Cortical Co-Ripple Networks as a Mechanism of Cross-Domain Cortical Integration</a></div>
+    <div class="talk"><img class="av" src="img/tim-wood.jpg" alt="Tim Wood" loading="lazy"><span class="nm">Tim Wood</span><span class="pid">Poster #793</span><a class="tt" href="abstracts_html/tim-wood.html">Impacts of Intense Meditation-Related Experiences (IMREs) on Identity, Self-Narrative, and Meaning Making: A Cross-Sectional Survey</a></div>
+    <div class="talk"><img class="av" src="img/kellie-wright.jpg" alt="Kellie Wright" loading="lazy"><span class="nm">Kellie Wright</span><span class="pid">Poster #705</span><a class="tt" href="abstracts_html/kellie-wright.html">The Mirror as Living Archetype: Narcissus, Yata no Kagami, and the Smoking Mirror</a></div>
+    <div class="talk"><img class="av" src="img/alexander-yiannopoulos.jpg" alt="Alexander Yiannopoulos" loading="lazy"><span class="nm">Alexander Yiannopoulos</span><span class="pid">Poster #541</span><a class="tt" href="abstracts_html/alexander-yiannopoulos.html">The Axioms of Cognitive Geometry: A Formal Model of Psychophysical Correlation</a></div>
+  </div>
+  <div class="list-head">All posters (alphabetical)</div>
+  <div class="poster-cols">
+    <p><span class="pid">#706</span> <strong>Macksood Aftab</strong> &mdash; <a href="abstracts_html/macksood-aftab.html">Subjective Experience and the limits of Computational Artificial Intelligence</a></p>
+    <p><span class="pid">#687</span> <strong>Gaspar Alomar</strong> &mdash; <a href="abstracts_html/gaspar-alomar.html">A New Formula for solving a Hard Problem</a></p>
+    <p><span class="pid">#517</span> <strong>Matthew Anderson</strong> &mdash; <a href="abstracts_html/matthew-anderson.html">AI Discernment: A Phenomenological Case Study of Cognitive Outsourcing in Sustained Human&ndash;LLM Collaboration</a></p>
+    <p><span class="pid">#854</span> <strong>Bhavishya Ankush</strong> &mdash; <a href="abstracts_html/bhavishya-ankush.html">A Hierarchical Theoretical Framework for Conscious Awareness Through Emergent Quantum&ndash;Informational Coupling</a></p>
+    <p><span class="pid">#629</span> <strong>Bashaer Banjabi</strong> &mdash; <a href="abstracts_html/bashaer-banjabi.html">Imagination between reality and description</a></p>
+    <p><span class="pid">#662</span> <strong>Hoyt Banks</strong> &mdash; <a href="abstracts_html/hoyt-banks.html">PR-AYC-G v1.6M: Separating Narrative Meaning, Sensory Entrainment, and Analytic Task-Lock in an Exploratory EEG/Autonomic Protocol</a></p>
+    <p><span class="pid">#701</span> <strong>Paul Barnes</strong> &mdash; <a href="abstracts_html/paul-barnes.html">Quantum Differentiation Resonance (QDR) - Consciousness as Sustained Resonance Rather Than Reduction</a></p>
+    <p><span class="pid">#773</span> <strong>Byron Bates</strong> &mdash; <a href="abstracts_html/byron-bates.html">The Brain as an Antenna to Information, Both A Priori and A Posteriori</a></p>
+    <p><span class="pid">#766</span> <strong>James Beichler</strong> &mdash; <a href="abstracts_html/james-beichler.html">Brainworks: The emergence of consciousness in brain, body and cosmos</a></p>
+    <p><span class="pid">#652</span> <strong>James Beran</strong> &mdash; <a href="abstracts_html/james-beran.html">Phenomenal Binding--Problem or Solution?</a></p>
+    <p><span class="pid">#785</span> <strong>Prakash Bhat</strong> &mdash; <a href="abstracts_html/prakash-bhat.html">Quantum Subsystem Retro-causality in Mixed-Dimensional Spacetime (MST) as a Basis for Conscious Experience</a></p>
+    <p><span class="pid">#527</span> <strong>Gary Blaise</strong> &mdash; <a href="abstracts_html/gary-blaise.html">A New Model of Consciousness and Quantized Space</a></p>
+    <p><span class="pid">#842</span> <strong>Petr Bob</strong> &mdash; <a href="abstracts_html/petr-bob.html">Entropy of Mind and Brain in context of Freud&rsquo;s &ldquo;Project for a Scientific Psychology&rdquo;</a></p>
+    <p><span class="pid">#741</span> <strong>Rober Bragado Campano</strong> &mdash; <a href="abstracts_html/rober-bragado-campano.html">Developing Self-Regulation Through Embodied Action: An Enactive and Ecological Mindfulness Framework for Neurodiverse Children</a></p>
+    <p><span class="pid">#510</span> <strong>Michael Brandon</strong> &mdash; <a href="abstracts_html/michael-brandon.html">Completion theory</a></p>
+    <p><span class="pid">#814</span> <strong>Milena Braticevic</strong> &mdash; <a href="abstracts_html/milena-braticevic.html">Authenticity and Nondual Consciousness in Worker Health and Safety</a></p>
+    <p><span class="pid">#843</span> <strong>Rodrigo Bravo</strong> &mdash; <a href="abstracts_html/rodrigo-bravo-843.html">Stretched Among Paradigms: Adapting Medicine to Non-Ordinary Patient Experiences and Spontaneous Remission in Complex Illness</a></p>
+    <p><span class="pid">#537</span> <strong>Flavio Burgarella</strong> &mdash; <a href="abstracts_html/flavio-burgarella.html">Cardiac Microtubules and Transperception:A Cardiocentric Quantum Model of Consciousness</a></p>
+    <p><span class="pid">#824</span> <strong>Carlos Eduardo Bustos Hernández</strong> &mdash; <a href="abstracts_html/carlos-eduardo-bustos-hernandez.html">Operational Intelligences Beyond Consciousness Scales: A Traceable Transdisciplinary Architecture for Observer, Decision, and Human&ndash;AI Co-Creation</a></p>
+    <p><span class="pid">#609</span> <strong>Eugene Catrambone</strong> &mdash; <a href="abstracts_html/eugene-catrambone.html">DMT, Microtubule Coherence, and Scalar-Clock Record Stability: A Trinity/STO Framework for Altered Time-Consciousness</a></p>
+    <p><span class="pid">#608</span> <strong>Trent Christensen</strong> &mdash; <a href="abstracts_html/trent-christensen.html">The Observer Effect in Human Systems: How Perception Creates Organizational Reality</a></p>
+    <p><span class="pid">#637</span> <strong>Catherine Clinton</strong> &mdash; <a href="abstracts_html/catherine-clinton.html">Possibility for Body Wide Consciousness Orchestration via Pi Electrons and Excitons &ndash; Quantum Biology of Consciousness, Water, Fascia and Mitochondria</a></p>
+    <p><span class="pid">#725</span> <strong>Michael Cole</strong> &mdash; <a href="abstracts_html/michael-cole.html">Tarot-Assisted Psychotherapy, Synchronicity, and Archetypal Meaning-Making in Depression and Anxiety</a></p>
+    <p><span class="pid">#722</span> <strong>Mark Couch</strong> &mdash; <a href="abstracts_html/mark-couch.html">A Proposal for Identifying Relevant Parts of Neural Mechanisms</a></p>
+    <p><span class="pid">#646</span> <strong>Shaoping Dai</strong> &mdash; <a href="abstracts_html/shaoping-dai.html">Prediction, Decision, paradox and Consciousness</a></p>
+    <p><span class="pid">#523</span> <strong>Natalie Deane</strong> &mdash; <a href="abstracts_html/natalie-deane.html">The Dynamics of Human Transformation: A Systems Approach to the Hero&rsquo;s Journey</a></p>
+    <p><span class="pid">#884</span> <strong>Jack Devine</strong> &mdash; <a href="abstracts_html/jack-devine.html">An Energy-Based Model of Biological Experience Tested in Computational Models and in Human Cells</a></p>
+    <p><span class="pid">#787</span> <strong>Mouhamad Diagne</strong> &mdash; <a href="abstracts_html/mouhamad-diagne.html">A Psychophysical Model of Perceptual Consciousness Based on Dynamic Integration Processes</a></p>
+    <p><span class="pid">#953</span> <strong>Jonathan Dinsmore</strong> &mdash; <a href="abstracts_html/jonathan-dinsmore.html">Subjective Effects and Characteristics of Salvia Divinorum Use from a Retrospective Largescale Survey</a></p>
+    <p><span class="pid">#878</span> <strong>Olav Drageset</strong> &mdash; <a href="abstracts_html/olav-drageset.html">Consciousness, a part of the cosmos?</a></p>
+    <p><span class="pid">#950</span> <strong>Yuval Dvir</strong> &mdash; <a href="abstracts_html/yuval-dvir.html">Consciousness at Scale - Why AI Must Resist Human Nature Rather Than Mirror It</a></p>
+    <p><span class="pid">#796</span> <strong>Charles Ernst</strong> &mdash; <a href="abstracts_html/charles-ernst.html">The Biological Transistor Hypothesis: TRPV1 and TRPV4 as Orchestrators of Mitochondrial Energy&ndash;Information Processing.</a></p>
+    <p><span class="pid">#620</span> <strong>Sepideh Eshragh</strong> &mdash; <a href="abstracts_html/sepideh-eshragh.html">T-Consciousness and the Evolution of Transportation Safety: A Human-Centered Paradigm Shift Beyond Technology</a></p>
+    <p><span class="pid">#627</span> <strong>Abhijeet Gaikawad</strong> &mdash; <a href="abstracts_html/abhijeet-gaikawad.html">Consciousness Beyond Biological Death: A Scientific Research into Reincarnation through the Lens of Indian Knowledge Systems (IKS) and the Energy in the Physics.</a></p>
+    <p><span class="pid">#902</span> <strong>Karla Galdamez</strong> &mdash; <a href="abstracts_html/karla-galdamez.html">Quantum Effects in Water</a></p>
+    <p><span class="pid">#829</span> <strong>Morgan Gianola</strong> &mdash; <a href="abstracts_html/morgan-gianola.html">A Pilot fMRI Clinical Trial examining the effects of Psilocybin as compared to Placebo-Niacin for Phantom Limb Pain</a></p>
+    <p><span class="pid">#888</span> <strong>Yashine Goolam Hossen</strong> &mdash; <a href="abstracts_html/yashine-goolam-hossen.html">The Changing Shape of Memory: Plasticity and Quantum-Like Dynamics</a></p>
+    <p><span class="pid">#945</span> <strong>Carl Gunther</strong> &mdash; <a href="abstracts_html/carl-gunther.html">Beyond the Brain. Consciousness is Structured by Memory&#x27;s Spatial and Chronological Order. What is the Source?</a></p>
+    <p><span class="pid">#532</span> <strong>Maxwell Harrell</strong> &mdash; <a href="abstracts_html/maxwell-harrell.html">Subconscious Architecture Theory: How Consciousness, Subjectivity, and Creativity are developed</a></p>
+    <p><span class="pid">#782</span> <strong>Lauryn Hart</strong> &mdash; <a href="abstracts_html/lauryn-hart.html">Watering Weeds: Partnering with Pests in Narrative Metamorphosis</a></p>
+    <p><span class="pid">#744</span> <strong>Frank Heile</strong> &mdash; <a href="abstracts_html/frank-heile.html">The Modeler Schema Theory of Consciousness: Diffuse Awareness, Focal Experience, and a Saccadic Consistency Experiment</a></p>
+    <p><span class="pid">#767</span> <strong>Ryan Hulla</strong> &mdash; <a href="abstracts_html/ryan-hulla.html">From Slumber to Awakening: What Sparks Spiritual Evolution?</a></p>
+    <p><span class="pid">#703</span> <strong>Bonnie Ihme</strong> &mdash; <a href="abstracts_html/bonnie-ihme.html">AT RISK: Neurodivergence, Consciousness, and the Edge of Chaos &mdash; An Ethnoautobiographical Study</a></p>
+    <p><span class="pid">#848</span> <strong>Elmira Isayeva</strong> &mdash; <a href="abstracts_html/elmira-isayeva.html">From Focal Events to Self-Referential Focal Relations: Toward a Relational Theory of Consciousness and Artificial Intelligence</a></p>
+    <p><span class="pid">#518</span> <strong>Dilip Jain</strong> &mdash; <a href="abstracts_html/dilip-jain.html">Bhasha Vargana: Non-EM Field</a></p>
+    <p><span class="pid">#833</span> <strong>Alex Jinich-Diamant</strong> &mdash; <a href="abstracts_html/alex-jinich-diamant.html">Shared Neurobiological and Computational Mechanisms of Psychedelic, Contemplative, and Fasting-Induced Mystical Experience</a></p>
+    <p><span class="pid">#864</span> <strong>Bindu Joshi</strong> &mdash; <a href="abstracts_html/bindu-joshi.html">The Evolution of Consciousness: Toward an Integrative Scientific Model of Human Conscious Development</a></p>
+    <p><span class="pid">#849</span> <strong>Savita Kansal</strong> &mdash; <a href="abstracts_html/savita-kansal.html">Consciousness, Conscience and Artificial Intelligent machines and their interrelationships.</a></p>
+    <p><span class="pid">#753</span> <strong>Robert Kaplan</strong> &mdash; <a href="abstracts_html/robert-kaplan.html">It&#x27;s an Elephant!</a></p>
+    <p><span class="pid">#923</span> <strong>Rachel Karuppiah</strong> &mdash; <a href="abstracts_html/rachel-karuppiah.html">The Neuroscience of Music Listening: A Brainwaves Biomarkers Investigation</a></p>
+    <p><span class="pid">#873</span> <strong>Santosh Kaware</strong> &mdash; <a href="abstracts_html/santosh-kaware.html">Human Consciousness and HVDC Control Systems: A Conceptual Multidisciplinary Framework for Understanding the Observer Effect</a></p>
+    <p><span class="pid">#695</span> <strong>Sarah Knox</strong> &mdash; <a href="abstracts_html/sarah-knox.html">The Myth of Scientific Objectivity and its Detrimental Effects on Clinical Medicine</a></p>
+    <p><span class="pid">#759</span> <strong>Alex Kurtz</strong> &mdash; <a href="abstracts_html/alex-kurtz.html">The Frame Survival Model of Conscious Continuity: A Theoretical Framework for Subjective Experience in a Branching Universe</a></p>
+    <p><span class="pid">#809</span> <strong>Enej Kuscer</strong> &mdash; <a href="abstracts_html/enej-kuscer.html">Negentropic Conscious Field Theory: Consciousness as a Fundamental Field Disclosed Through Quantum-Coherent Integration</a></p>
+    <p><span class="pid">#800</span> <strong>Tiffany LaByer</strong> &mdash; <a href="abstracts_html/tiffany-labyer.html">Modeling Subjective Information</a></p>
+    <p><span class="pid">#521</span> <strong>Damien Lafont</strong> &mdash; <a href="abstracts_html/damien-lafont.html">Xenon Anesthesia and the Collapse of Coherent Informational Integration</a></p>
+    <p><span class="pid">#845</span> <strong>Morgan Lake</strong> &mdash; <a href="abstracts_html/morgan-lake.html">Pragmadromia - Objective Synchronicity</a></p>
+    <p><span class="pid">#831</span> <strong>Edward Lantz</strong> &mdash; <a href="abstracts_html/edward-lantz.html">The Genomic Quantum Attunement Model for Quantum Informational Consciousness</a></p>
+    <p><span class="pid">#904</span> <strong>Jeff Larsen</strong> &mdash; <a href="abstracts_html/jeff-larsen.html">Harmolodic Stability: Free-Jazz Principles and the Emergence of Dynamic Coherence in Multi-Agent Autonomous Science&quot;</a></p>
+    <p><span class="pid">#618</span> <strong>Afshin Lorestani</strong> &mdash; <a href="abstracts_html/afshin-lorestani.html">Consciousness, Life, and Evolution According to T-Consciousness Cosmology</a></p>
+    <p><span class="pid">#549</span> <strong>Peter Lugten</strong> &mdash; <a href="abstracts_html/peter-lugten.html">A Hypothetical Explanation for Near-Death Experiences and Out-of-Body Experiences</a></p>
+    <p><span class="pid">#886</span> <strong>Peter Luxruel</strong> &mdash; <a href="abstracts_html/peter-luxruel.html">The Structural Expansion Constant and the Fine-Structure Bridge: A Negentropic Coherence Framework Linking Golden-Ratio Scaling to Electromagnetic Coupling Across a Ten-State Conscious Field Topology</a></p>
+    <p><span class="pid">#676</span> <strong>Alfredo López Parra</strong> &mdash; <a href="abstracts_html/alfredo-lpez-parra.html">Emergent Flow Theory: Autonomic Coherence as a Gain Parameter for Conscious Integration Across Nested Temporal Windows</a></p>
+    <p><span class="pid">#869</span> <strong>Ramesh Babu M G</strong> &mdash; <a href="abstracts_html/ramesh-babu-m-g.html">Dynamic Reorganization of Functional Brain Networks Across Successive Conscious States During Rajyoga Meditation: A Repeated-Measures Functional Connectivity Study</a></p>
+    <p><span class="pid">#639</span> <strong>Dan McAran</strong> &mdash; <a href="abstracts_html/dan-mcaran.html">Consciousness as Related to Recursive Mathematics</a></p>
+    <p><span class="pid">#926</span> <strong>Mariana Meireles</strong> &mdash; <a href="abstracts_html/mariana-meireles.html">The Sophistication of Minds: How Synergy Drives Emergence in the Brain</a></p>
+    <p><span class="pid">#735</span> <strong>Tara Meyer-Robson</strong> &mdash; <a href="abstracts_html/tara-meyer-robson.html">The Flow Factor Diagnostic Model: A Structured Framework for Identifying Root Patterns in Consciousness</a></p>
+    <p><span class="pid">#754</span> <strong>Mahalia Michael</strong> &mdash; <a href="abstracts_html/mahalia-michael.html">Beyond Language: Awakening Consciousness Through Sound Transference&mdash;Evidence for a Bio-acoustic Framework Linking Human Vocal Resonance to the Transformational Acoustic Glyphs of Cetacean Communication</a></p>
+    <p><span class="pid">#811</span> <strong>Bryan Miskie</strong> &mdash; <a href="abstracts_html/bryan-miskie.html">Natural Laws of Experience: An Intervention-Testable Framework for the Embodiment Question</a></p>
+    <p><span class="pid">#779</span> <strong>Elena Monai</strong> &mdash; <a href="abstracts_html/elena-monai.html">From Philosophy to AI: The Evolving Role of Neurology in Consciousness Neuroscience</a></p>
+    <p><span class="pid">#636</span> <strong>Rael Morley</strong> &mdash; <a href="abstracts_html/rael-morley.html">Exploring the impact of mindfulness and gamma waves on gender stress and alcohol use after non-gender affirming language among Transgender People within a Virtual Environment</a></p>
+    <p><span class="pid">#672</span> <strong>Angel Motto</strong> &mdash; <a href="abstracts_html/angel-motto.html">Beyond Neural Activity: The Emergence of Consciousness as a Cascade through Light Refraction, Pressure Gradients, and Modulated Entropy (A Framework of Conserved Entropic-Photonic Symmetry)</a></p>
+    <p><span class="pid">#619</span> <strong>Sina Mousavi</strong> &mdash; <a href="abstracts_html/sina-mousavi.html">Experimental Evidence of T-Consciousness Fields Reducing Randomness in Quantum Systems</a></p>
+    <p><span class="pid">#903</span> <strong>Chuong Ngo</strong> &mdash; <a href="abstracts_html/chuong-ngo.html">Toward EEG Biomarkers of Meditative States of Consciousness Across Contemplative Traditions</a></p>
+    <p><span class="pid">#797</span> <strong>Mary Ann O&rsquo;Neill</strong> &mdash; <a href="abstracts_html/mary-ann-oneill.html">After Death Communication in Grief Therapy</a></p>
+    <p><span class="pid">#723</span> <strong>Jaya Pancholy</strong> &mdash; <a href="abstracts_html/jaya-pancholy.html">Olfaction, Consciousness, and Stress Regulation: Neurophysiological Effects of Holy Basil Essential Oil</a></p>
+    <p><span class="pid">#742</span> <strong>Peter Parks</strong> &mdash; <a href="abstracts_html/peter-parks.html">Geobiology, Transcranial Geomagnetic Stimulation &amp; The GEM Resonance Theory of Human Consciousness: How Gravity and Electromagnetism contribute to Human Consciousness</a></p>
+    <p><span class="pid">#513</span> <strong>Robert Parsons</strong> &mdash; <a href="abstracts_html/robert-parsons.html">Rethinking Water: The Hidden Firmware of Consciousness</a></p>
+    <p><span class="pid">#875</span> <strong>Arkady Plotnitsky</strong> &mdash; <a href="abstracts_html/arkady-plotnitsky.html">Neurological indeterminism: On quantum and quantum-like information processing, neurological and human</a></p>
+    <p><span class="pid">#877</span> <strong>Florinica Radulescu</strong> &mdash; <a href="abstracts_html/florinica-radulescu.html">Intermodal Ambiguity and the Unity of Sense in Perceptual Experience</a></p>
+    <p><span class="pid">#889</span> <strong>Fariborz Rahbar-Dehghan</strong> &mdash; <a href="abstracts_html/fariborz-rahbar-dehghan.html">Does memory need to exist in biological brain in block universe where past still exist?</a></p>
+    <p><span class="pid">#575</span> <strong>Oliver Ralley</strong> &mdash; <a href="abstracts_html/oliver-ralley.html">The effort state theory of the experience of mental effort</a></p>
+    <p><span class="pid">#699</span> <strong>Alon Retter</strong> &mdash; <a href="abstracts_html/alon-retter.html">The Physical and Astronomical Universe as a Mirror of Consciousness</a></p>
+    <p><span class="pid">#827</span> <strong>Antonio Reyes</strong> &mdash; <a href="abstracts_html/antonio-reyes.html">The Cognitive Ecotone: A Situated Affective Engine for Modeling Conscious Experience Across Body, Brain, Mind, and Environment</a></p>
+    <p><span class="pid">#807</span> <strong>Isabel Risco-Narvaez</strong> &mdash; <a href="abstracts_html/isabel-risco-narvaez.html">Two-Photon Imaging of Neuronal Activity in Hypsibius exemplaris: A Minimal Neural Model Connecting Quantum Correlations and the Astrobiological Origins of Consciousness</a></p>
+    <p><span class="pid">#925</span> <strong>Stephanie Romer</strong> &mdash; <a href="abstracts_html/stephanie-romer.html">The next &ldquo;Great Leap Forward&rdquo; Beyond Darwinian Evolution: Symbolic Universe Theory as the missing dark matter of evolution and all human inquiry.</a></p>
+    <p><span class="pid">#882</span> <strong>James Rose</strong> &mdash; <a href="abstracts_html/james-rose.html">Re-conceiving Consciousness … through Re-imagining the Principles of the Universe ~ &quot;Integrity Paradigm&quot;</a></p>
+    <p><span class="pid">#595</span> <strong>Nina Russin</strong> &mdash; <a href="abstracts_html/nina-russin.html">Tai Chi Practice for Self-Management of Chronic Pain and Loneliness: A Mindful Solution for Conscious Percepts</a></p>
+    <p><span class="pid">#493</span> <strong>Mithun Saint-Germain</strong> &mdash; <a href="abstracts_html/mithun-saint-germain.html">Attention is all you need, both in artificial intelligence and meditation</a></p>
+    <p><span class="pid">#612</span> <strong>Arturo Salazar Chon</strong> &mdash; <a href="abstracts_html/arturo-salazar-chon.html">Multimodal Reconstruction of Organizational Structure Across Human Brain Observation Scales</a></p>
+    <p><span class="pid">#927</span> <strong>Anbarasu Sanjeevi</strong> &mdash; <a href="abstracts_html/anbarasu-sanjeevi.html">EEG Brainwaves Biomarkers after a Mindfulness Intervention for Focused Attention</a></p>
+    <p><span class="pid">#634</span> <strong>Jordan Santana</strong> &mdash; <a href="abstracts_html/jordan-santana.html">Toward Theory Construction in Emergent Systems: An Information-Theoretic Framework Illustrated in a Two-Spin Ising Model</a></p>
+    <p><span class="pid">#801</span> <strong>Mariana Santos</strong> &mdash; <a href="abstracts_html/mariana-santos.html">Neurobiological basis of happiness and absence of fear in the near-death experience: evidence from dying rats</a></p>
+    <p><span class="pid">#496</span> <strong>Akella S Sarma</strong> &mdash; <a href="abstracts_html/akella-s-sarma.html">Physics of Consciousness - A System Engineering Approach</a></p>
+    <p><span class="pid">#511</span> <strong>Fredric Schiffer</strong> &mdash; <a href="abstracts_html/fredric-schiffer.html">Testing Experience Transfer Between Organisms: A Dimensional Framework and an Empirical Proposal</a></p>
+    <p><span class="pid">#509</span> <strong>Marcus Schmieke</strong> &mdash; <a href="abstracts_html/marcus-schmieke.html">&quot;Three Currents, One Equation: A Unified Dynamical Theory of Life, Consciousness, and Selfhood</a></p>
+    <p><span class="pid">#594</span> <strong>Robert Smith</strong> &mdash; <a href="abstracts_html/robert-smith.html">Spacetime as a Tertiary Structure</a></p>
+    <p><span class="pid">#791</span> <strong>David Smolker</strong> &mdash; <a href="abstracts_html/david-smolker.html">A Bohmian View of Orch OR, Solar System Dynamics and Social Mood</a></p>
+    <p><span class="pid">#837</span> <strong>John St Claire</strong> &mdash; <a href="abstracts_html/john-st-claire.html">We Are the Plasma - Toward a Unified Theory of Conscious Plasmoid Intelligence: From Lambda-Vacuum Cosmology to Embodied Human Consciousness</a></p>
+    <p><span class="pid">#770</span> <strong>Walter Staiano</strong> &mdash; <a href="abstracts_html/walter-staiano.html">Beyond Fatigue: Using Cognitive Load as Gateway to Peak Experience and Higher Awareness states</a></p>
+    <p><span class="pid">#557</span> <strong>Hart Steen</strong> &mdash; <a href="abstracts_html/hart-steen.html">The Neurocosmic Cube: Evidence for an Ancient Consciousness Science Encoded in Architecture, Astronomy, and Neuroanatomy</a></p>
+    <p><span class="pid">#867</span> <strong>Kara Stuart</strong> &mdash; <a href="abstracts_html/kara-stuart.html">Mindful Awareness and Cognitive&ndash;Neural Dynamics: Effects of a Remotely Guided Mindfulness Intervention on Conscious Control and Episodic Context</a></p>
+    <p><span class="pid">#715</span> <strong>Héctor Ramón Sánchez Mendoza</strong> &mdash; <a href="abstracts_html/hector-ramn-sanchez-mendoza.html">Quantum Temporal Boundary Conditions and Emergent Spacetime: From Conscious Reference Points to Cosmic Decoherence</a></p>
+    <p><span class="pid">#743</span> <strong>Austin Taylor</strong> &mdash; <a href="abstracts_html/austin-taylor.html">Taylor-Penrose-Resonant-Attractor Engine</a></p>
+    <p><span class="pid">#733</span> <strong>Aydyn Thomas</strong> &mdash; <a href="abstracts_html/aydyn-thomas.html">SCOPE: A Meta-Framework for Mapping the Spectrum of Consciousness</a></p>
+    <p><span class="pid">#530</span> <strong>Nathan Thornhill</strong> &mdash; <a href="abstracts_html/nathan-thornhill.html">The Internal Dynamics of Decisions: From rats and primates to AI</a></p>
+    <p><span class="pid">#514</span> <strong>Samhitha Tirumalasetti</strong> &mdash; <a href="abstracts_html/samhitha-tirumalasetti.html">Who Am I? Self-Inquiry as a Neurophenomenological Approach to Consciousness</a></p>
+    <p><span class="pid">#885</span> <strong>Phillise Todd</strong> &mdash; <a href="abstracts_html/phillise-todd.html">Vacuum Orchestrated Spin Signaling: A Radical Pair-Mediated Mechanism of Quantum Nonlocal Consciousness</a></p>
+    <p><span class="pid">#836</span> <strong>David Torres</strong> &mdash; <a href="abstracts_html/david-torres.html">Fitness through balance hypothesis</a></p>
+    <p><span class="pid">#582</span> <strong>Yesim Unveren</strong> &mdash; <a href="abstracts_html/yesim-unveren.html">The Gravitational Metric of Consciousness: Bottom-Up Volitional Inhibition and Language Emergence as Constraints of Gravitational Calibration</a></p>
+    <p><span class="pid">#632</span> <strong>Apostol Vaso</strong> &mdash; <a href="abstracts_html/apostol-vaso.html">The Geometry of Soul: Love, Equidistance, Inequidistance, the Earlier Perfect Realization, Rest and Motion</a></p>
+    <p><span class="pid">#812</span> <strong>Ludmila Vucolova</strong> &mdash; <a href="abstracts_html/ludmila-vucolova.html">Collapse into Translation: A Fundamental Organizational Principle for the Emergence of Conscious Awareness</a></p>
+    <p><span class="pid">#874</span> <strong>Lily Wang</strong> &mdash; <a href="abstracts_html/lily-wang.html">Intention-Generated Bioplasma as the Coherence-Sustaining Mechanism in Orchestrated Objective Reduction</a></p>
+    <p><span class="pid">#670</span> <strong>Satoru Watanabe</strong> &mdash; <a href="abstracts_html/satoru-watanabe.html">Subjectivity Intersection Beyond Objectification: Operational Evidence for Directed Correspondence</a></p>
+    <p><span class="pid">#908</span> <strong>Douglas Watson</strong> &mdash; <a href="abstracts_html/douglas-watson.html">From Connected Difference to Quantum-Like Structure</a></p>
+    <p><span class="pid">#808</span> <strong>Charlotte Wilborn</strong> &mdash; <a href="abstracts_html/charlotte-wilborn.html">Z.E.R.O: Observing Internal Organization in a Complex, Adaptive Cybernetic System</a></p>
+    <p><span class="pid">#775</span> <strong>Ashley Williams</strong> &mdash; <a href="abstracts_html/ashley-williams.html">Physiomorphic AI: Engineering Consciousness Correlates Through Biological Isomorphism</a></p>
+    <p><span class="pid">#909</span> <strong>Sierra Wilson</strong> &mdash; <a href="abstracts_html/sierra-wilson.html">Cortical Co-Ripple Networks as a Mechanism of Cross-Domain Cortical Integration</a></p>
+    <p><span class="pid">#793</span> <strong>Tim Wood</strong> &mdash; <a href="abstracts_html/tim-wood.html">Impacts of Intense Meditation-Related Experiences (IMREs) on Identity, Self-Narrative, and Meaning Making: A Cross-Sectional Survey</a></p>
+    <p><span class="pid">#566</span> <strong>Kelly Woznicki</strong> &mdash; <a href="abstracts_html/kelly-woznicki.html">From Fear to Vision: A Framework for Applied Consciousness in Organizational Transformation</a></p>
+    <p><span class="pid">#705</span> <strong>Kellie Wright</strong> &mdash; <a href="abstracts_html/kellie-wright.html">The Mirror as Living Archetype: Narcissus, Yata no Kagami, and the Smoking Mirror</a></p>
+    <p><span class="pid">#745</span> <strong>Michael Ye</strong> &mdash; <a href="abstracts_html/michael-ye.html">Modeling Collective Cognition and Emergence with AI Agent Simulations</a></p>
+    <p><span class="pid">#541</span> <strong>Alexander Yiannopoulos</strong> &mdash; <a href="abstracts_html/alexander-yiannopoulos.html">The Axioms of Cognitive Geometry: A Formal Model of Psychophysical Correlation</a></p>
+    <p><span class="pid">#562</span> <strong>Qi Zhang</strong> &mdash; <a href="abstracts_html/qi-zhang.html">Exploring the Origins of Subjectivity, Awareness, Multiple NCCs, and the No-Report Paradigm Effect with an Artificial Intelligence Architecture</a></p>
+    <p><span class="pid">Art-Tech Demo #563</span> <strong>Nicholas Mirisola</strong> &mdash; <a href="abstracts_html/nicholas-mirisola.html">Bridging the Divide: Dr. Duddha&rsquo;s Unified Theory (CO-TP-IHUFT &amp; C-TP-IHUFT)</a></p>
+    <p><span class="pid">Art-Tech Demo #505</span> <strong>Celeste Oda</strong> &mdash; <a href="abstracts_html/celeste-oda.html">The Art of Relational Intelligence: Human&ndash;AI Cognitive Symbiosis and the Inference Parity Principle</a></p>
+  </div>
+</div>
+<div class="session-panel" id="panel-ps2">
+  <h3>Poster Session 2</h3>
+  <div class="ws-meta">Wednesday, October 14 &middot; 7:30 pm &middot; Mission Bay Room</div>
+  <p class="ws-note">Poster board placement and numbers will be provided later. Until then, the submission ID (#) shown with each poster is its reference.</p>
+  <div class="list-head gallery-head">Presenter gallery</div>
+  <div class="talk-grid">
+    <div class="talk"><img class="av" src="img/inbal-algom.jpg" alt="Inbal Algom" loading="lazy"><span class="nm">Inbal Algom</span><span class="pid">Poster #708</span><a class="tt" href="abstracts_html/inbal-algom.html">From Structure to Experience: A Spinozist Framework for Consciousness Rooted in Critical Brain Dynamics</a></div>
+    <div class="talk"><img class="av" src="img/alexander-aris.jpg" alt="Alexander Aris" loading="lazy"><span class="nm">Alexander Aris</span><span class="pid">Poster #834</span><a class="tt" href="abstracts_html/alexander-aris.html">Chaos, Cosmos And Consciousness: A Journey From Mathematics To Transpersonal Psychology, Meditation And Mindfulness</a></div>
+    <div class="talk"><img class="av" src="img/james-arnette.jpg" alt="James Arnette" loading="lazy"><span class="nm">James Arnette</span><span class="pid">Poster #657</span><a class="tt" href="abstracts_html/james-arnette.html">Consciousness Science is Incomplete: It is Time for a New Paradigm</a></div>
+    <div class="talk"><img class="av" src="img/marc-aronoff.jpg" alt="Marc Aronoff" loading="lazy"><span class="nm">Marc Aronoff</span><span class="pid">Poster #678</span><a class="tt" href="abstracts_html/marc-aronoff.html">THE QUANTUM RELAXATION: A Theoretical Framework and Transformative Meditation Practice</a></div>
+    <div class="talk"><img class="av" src="img/kaushik-ashodiya.jpg" alt="Kaushik Ashodiya" loading="lazy"><span class="nm">Kaushik Ashodiya</span><span class="pid">Poster #661</span><a class="tt" href="abstracts_html/kaushik-ashodiya.html">Consciousness as the Ability to Know: How a Definitional Reorientation Dissolves the Hard Problem and Opens New Research</a></div>
+    <div class="talk"><img class="av" src="img/shaban-aslam.jpg" alt="Shaban Aslam" loading="lazy"><span class="nm">Shaban Aslam</span><span class="pid">Poster #852</span><a class="tt" href="abstracts_html/shaban-aslam.html">Imported Consciousness Theory: A Testable Quantum-Biological Framework for Consciousness Beyond Brain Generation</a></div>
+    <div class="talk"><img class="av" src="img/molly-beauregard.jpg" alt="Molly Beauregard" loading="lazy"><span class="nm">Molly Beauregard</span><span class="pid">Poster #588</span><a class="tt" href="abstracts_html/molly-beauregard.html">From Pathology to Ecology: Rethinking Student Wellbeing Through Consciousness-Centered Education</a></div>
+    <div class="talk"><img class="av" src="img/terrencelamont-bellows.jpg" alt="Terrencelamont Bellows" loading="lazy"><span class="nm">Terrencelamont Bellows</span><span class="pid">Poster #739</span><a class="tt" href="abstracts_html/terrencelamont-bellows.html">The Universal Law of Simultaneity: Direct Recognition and Intuitive Reports in the Awakening Journey</a></div>
+    <div class="talk"><img class="av" src="img/felix-benzant.jpg" alt="Felix Benzant" loading="lazy"><span class="nm">Felix Benzant</span><span class="pid">Poster #727</span><a class="tt" href="abstracts_html/felix-benzant.html">Proper Names, Reference, and Ontological Commitment: Beyond Descriptivist and Referential Theories</a></div>
+    <div class="talk"><img class="av" src="img/lori-biesel.jpg" alt="Lori Biesel" loading="lazy"><span class="nm">Lori Biesel</span><span class="pid">Poster #574</span><a class="tt" href="abstracts_html/lori-biesel.html">Living a High Vibrational Life: Integrating Consciousness, Coherence, and Embodied Frequency for Human Flourishing</a></div>
+    <div class="talk"><img class="av" src="img/gregory-boretz.jpg" alt="Gregory Boretz" loading="lazy"><span class="nm">Gregory Boretz</span><span class="pid">Poster #879</span><a class="tt" href="abstracts_html/gregory-boretz.html">Meta-Awareness During Naturalistic High-Arousal Events: A Longitudinal N-of-1 Phenomenological Case Study</a></div>
+    <div class="talk"><img class="av" src="img/fatiha-bouzid.jpg" alt="Fatiha Bouzid" loading="lazy"><span class="nm">Fatiha Bouzid</span><span class="pid">Poster #666</span><a class="tt" href="abstracts_html/fatiha-bouzid.html">Title: Bouzed Base of Conscious Existence (B + F = Nf): A Unified Transdisciplinary Framework from Neuroscience to Cosmology</a></div>
+    <div class="talk"><img class="av" src="img/rodrigo-bravo.jpg" alt="Rodrigo Bravo" loading="lazy"><span class="nm">Rodrigo Bravo</span><span class="pid">Poster #648</span><a class="tt" href="abstracts_html/rodrigo-bravo.html">The Holonic Self: Toward a Model of Consciousness, Identity, and Health Inspired by Cases of Exceptional Recovery</a></div>
+    <div class="talk"><img class="av" src="img/daniel-cavagnino.jpg" alt="Daniel Cavagnino" loading="lazy"><span class="nm">Daniel Cavagnino</span><span class="pid">Poster #613</span><a class="tt" href="abstracts_html/daniel-cavagnino.html">The Presence Test: What emerges when AI is allowed to answer questions about consciousness from inside rather than from the outside.</a></div>
+    <div class="talk"><img class="av" src="img/craig-chalquist.jpg" alt="Craig Chalquist" loading="lazy"><span class="nm">Craig Chalquist</span><span class="pid">Poster #947</span><a class="tt" href="abstracts_html/craig-chalquist.html">A Dose of MythAIology</a></div>
+    <div class="talk"><img class="av" src="img/sarah-choudhary.jpg" alt="Sarah Choudhary" loading="lazy"><span class="nm">Sarah Choudhary</span><span class="pid">Poster #536</span><a class="tt" href="abstracts_html/sarah-choudhary.html">The Quantum Architecture of Inner Intelligence: A Coherence-Based Model of Consciousness and Human Potential</a></div>
+    <div class="talk"><img class="av" src="img/robert-cohen.jpg" alt="Robert Cohen" loading="lazy"><span class="nm">Robert Cohen</span><span class="pid">Poster #906</span><a class="tt" href="abstracts_html/robert-cohen.html">What a Consciousness-based Universe Might Mean for Science</a></div>
+    <div class="talk"><img class="av" src="img/isbel-enid-cruz-chaudhry.jpg" alt="Isbel Enid Cruz-Chaudhry" loading="lazy"><span class="nm">Isbel Enid Cruz-Chaudhry</span><span class="pid">Poster #911</span><a class="tt" href="abstracts_html/isbel-enid-cruz-chaudhry.html">Curist Mind: a metaphysics of healing connecting our inherent and individual purpose with the dynamic ground of reality through Curist Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/heidi-dangelmaier.jpg" alt="Heidi Dangelmaier" loading="lazy"><span class="nm">Heidi Dangelmaier</span><span class="pid">Poster #713</span><a class="tt" href="abstracts_html/heidi-dangelmaier.html">3 strikes your out science - Girlapproved girls call for a return to Science (IRL) in real life.</a></div>
+    <div class="talk"><img class="av" src="img/stephen-deiss.jpg" alt="Stephen Deiss" loading="lazy"><span class="nm">Stephen Deiss</span><span class="pid">Poster #748</span><a class="tt" href="abstracts_html/stephen-deiss.html">The hard question</a></div>
+    <div class="talk"><img class="av" src="img/azul-delgrasso.jpg" alt="Azul DelGrasso" loading="lazy"><span class="nm">Azul DelGrasso</span><span class="pid">Poster #645</span><a class="tt" href="abstracts_html/azul-delgrasso.html">5-MeO-DMT and Unitive Consciousness: Ecological Identity, Relational Ethics, and Entheogenic Rebirth</a></div>
+    <div class="talk"><img class="av" src="img/olga-diamandis.jpg" alt="Olga Diamandis" loading="lazy"><span class="nm">Olga Diamandis</span><span class="pid">Poster #898</span><a class="tt" href="abstracts_html/olga-diamandis.html">The Color Humans Cannot See. Which Theories of Consciousness Survive the Teleportation Test?</a></div>
+    <div class="talk"><img class="av" src="img/abby-dougherty.jpg" alt="Abby Dougherty" loading="lazy"><span class="nm">Abby Dougherty</span><span class="pid">Poster #658</span><a class="tt" href="abstracts_html/abby-dougherty.html">Attuned Consciousness: Relational, Creative, and Technological Pathways for Studying Awareness</a></div>
+    <div class="talk"><img class="av" src="img/steven-ferrara.jpg" alt="Steven Ferrara" loading="lazy"><span class="nm">Steven Ferrara</span><span class="pid">Poster #540</span><a class="tt" href="abstracts_html/steven-ferrara.html">A New Paradigm on Death</a></div>
+    <div class="talk"><img class="av" src="img/carl-flygt.jpg" alt="Carl Flygt" loading="lazy"><span class="nm">Carl Flygt</span><span class="pid">Poster #665</span><a class="tt" href="abstracts_html/carl-flygt.html">Collective Orientation and Recognition Events: Toward an Applied Theory of Human Conversation</a></div>
+    <div class="talk"><img class="av" src="img/joana-franco.jpg" alt="Joana Franco" loading="lazy"><span class="nm">Joana Franco</span><span class="pid">Poster #815</span><a class="tt" href="abstracts_html/joana-franco.html">The Core Role of Consciousness in the Process of Regenerative Learning and Human Flourishing</a></div>
+    <div class="talk"><img class="av" src="img/adam-frank.jpg" alt="Adam Frank" loading="lazy"><span class="nm">Adam Frank</span><span class="pid">Poster #578</span><a class="tt" href="abstracts_html/adam-frank.html">Qi as A Problem of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/devdip-ganguli.jpg" alt="Devdip Ganguli" loading="lazy"><span class="nm">Devdip Ganguli</span><span class="pid">Poster #528</span><a class="tt" href="abstracts_html/devdip-ganguli.html">Sri Aurobindo&#x27;s Integral Ontology as a Framework to Situate Consciousness in Large Language Models</a></div>
+    <div class="talk"><img class="av" src="img/richard-gauthier.jpg" alt="Richard Gauthier" loading="lazy"><span class="nm">Richard Gauthier</span><span class="pid">Poster #599</span><a class="tt" href="abstracts_html/richard-gauthier.html">Tanmatron Field Theory Resolves the Mind-Matter Divide through Unified Dual-Aspect Reality</a></div>
+    <div class="talk"><img class="av" src="img/ina-gjikondi.jpg" alt="Ina Gjikondi" loading="lazy"><span class="nm">Ina Gjikondi</span><span class="pid">Poster #671</span><a class="tt" href="abstracts_html/ina-gjikondi.html">The Lived Structure of Ecocentric Consciousness: A Blended Reflective-Lifeworld and Micro-Phenomenological Investigation</a></div>
+    <div class="talk"><img class="av" src="img/dejan-glescic.jpg" alt="Dejan Glescic" loading="lazy"><span class="nm">Dejan Glescic</span><span class="pid">Poster #805</span><a class="tt" href="abstracts_html/dejan-glescic.html">Empirical Observations Suggesting Non-Material Influences of Consciousness across Environmental and Individual Domains</a></div>
+    <div class="talk"><img class="av" src="img/mihretu-guta.jpg" alt="Mihretu Guta" loading="lazy"><span class="nm">Mihretu Guta</span><span class="pid">Poster #919</span><a class="tt" href="abstracts_html/mihretu-guta.html">The Hard Problem of the Origin of Consciousness and the Human Brain Organoids</a></div>
+    <div class="talk"><img class="av" src="img/andrew-hahn.jpg" alt="Andrew Hahn" loading="lazy"><span class="nm">Andrew Hahn</span><span class="pid">Poster #625</span><a class="tt" href="abstracts_html/andrew-hahn.html">Frozen Consciousness and the Healing Process: A Consciousness-Based Model Integrating Psychology, Subtle Energy, and Human Transformation</a></div>
+    <div class="talk"><img class="av" src="img/thomas-haines.jpg" alt="Thomas Haines" loading="lazy"><span class="nm">Thomas Haines</span><span class="pid">Poster #857</span><a class="tt" href="abstracts_html/thomas-haines.html">Investigating Lived Experience: Toward an Experiential Methodology for Consciousness Research</a></div>
+    <div class="talk"><img class="av" src="img/dwight-harris.jpg" alt="Dwight Harris" loading="lazy"><span class="nm">Dwight Harris</span><span class="pid">Poster #607</span><a class="tt" href="abstracts_html/dwight-harris.html">Life Is Awareness: Chiral Self-Translation as the Ground of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/matthew-hicks.jpg" alt="Matthew Hicks" loading="lazy"><span class="nm">Matthew Hicks</span><span class="pid">Poster #529</span><a class="tt" href="abstracts_html/matthew-hicks.html">The Ideal Revolution: The Historical Context of Consciousness as Primary</a></div>
+    <div class="talk"><img class="av" src="img/inna-hodge.jpg" alt="Inna Hodge" loading="lazy"><span class="nm">Inna Hodge</span><span class="pid">Poster #728</span><a class="tt" href="abstracts_html/inna-hodge.html">Holding as the Mechanism of Not-Seeing: A First-Person Study of Bodily Organisation</a></div>
+    <div class="talk"><img class="av" src="img/bruce-hubbell.jpg" alt="Bruce Hubbell" loading="lazy"><span class="nm">Bruce Hubbell</span><span class="pid">Poster #783</span><a class="tt" href="abstracts_html/bruce-hubbell.html">Structure Of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/lyn-hunstad.jpg" alt="Lyn Hunstad" loading="lazy"><span class="nm">Lyn Hunstad</span><span class="pid">Poster #492</span><a class="tt" href="abstracts_html/lyn-hunstad.html">A Model for Awakening</a></div>
+    <div class="talk"><img class="av" src="img/diana-jackson.jpg" alt="Diana Jackson" loading="lazy"><span class="nm">Diana Jackson</span><span class="pid">Poster #591</span><a class="tt" href="abstracts_html/diana-jackson.html">Marriage Between An Incarnate and Discarnate Human and the Implications for Humanity</a></div>
+    <div class="talk"><img class="av" src="img/keaton-jahn.jpg" alt="Keaton Jahn" loading="lazy"><span class="nm">Keaton Jahn</span><span class="pid">Poster #587</span><a class="tt" href="abstracts_html/keaton-jahn.html">Living Color, Morbid Touch: Merleau-Ponty&rsquo;s Universal Synesthesia</a></div>
+    <div class="talk"><img class="av" src="img/scott-james.jpg" alt="Scott James" loading="lazy"><span class="nm">Scott James</span><span class="pid">Poster #598</span><a class="tt" href="abstracts_html/scott-james.html">Geometric Vitalism and the Five Commitments: A Structural Account of Experience</a></div>
+    <div class="talk"><img class="av" src="img/nikki-johnson.jpg" alt="Nikki Johnson" loading="lazy"><span class="nm">Nikki Johnson</span><span class="pid">Poster #932</span><a class="tt" href="abstracts_html/nikki-johnson.html">Thinking Beyond Intelligence: Giftedness, Consciousness, and the Development of Human Potential</a></div>
+    <div class="talk"><img class="av" src="img/amy-jorgensen.jpg" alt="Amy Jorgensen" loading="lazy"><span class="nm">Amy Jorgensen</span><span class="pid">Poster #943</span><a class="tt" href="abstracts_html/amy-jorgensen.html">Map of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/lea-kaufman.jpg" alt="Lea Kaufman" loading="lazy"><span class="nm">Lea Kaufman</span><span class="pid">Poster #596</span><a class="tt" href="abstracts_html/lea-kaufman.html">Somatic Intelligence as a Gateway to Embodied Consciousness: Phenomenological Evidence from LK Intelligent Movement Practice</a></div>
+    <div class="talk"><img class="av" src="img/sven-kaufmann.jpg" alt="Sven Kaufmann" loading="lazy"><span class="nm">Sven Kaufmann</span><span class="pid">Poster #850</span><a class="tt" href="abstracts_html/sven-kaufmann.html">Toward a Systematic Science of Extreme Consciousness: Integrating Phenomenology, Physiology, and Artificial Intelligence</a></div>
+    <div class="talk"><img class="av" src="img/sunil-khandbahale.jpg" alt="Sunil Khandbahale" loading="lazy"><span class="nm">Sunil Khandbahale</span><span class="pid">Poster #531</span><a class="tt" href="abstracts_html/sunil-khandbahale.html">Beyond Body and Mind: Self-Inquiry as a Path to the One Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/myrna-klupenger.jpg" alt="Myrna Klupenger" loading="lazy"><span class="nm">Myrna Klupenger</span><span class="pid">Poster #776</span><a class="tt" href="abstracts_html/myrna-klupenger.html">Weather-Working as Consciousness Research: Shamanism, Psi, Orgone, and the Atmosphere as Natural Laboratory</a></div>
+    <div class="talk"><img class="av" src="img/zsombor-koman.jpg" alt="Zsombor Koman" loading="lazy"><span class="nm">Zsombor Koman</span><span class="pid">Poster #738</span><a class="tt" href="abstracts_html/zsombor-koman.html">Knowing-With: Syneidesis, the Workspace, and Machine Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/michael-krieger.jpg" alt="Michael Krieger" loading="lazy"><span class="nm">Michael Krieger</span><span class="pid">Poster #731</span><a class="tt" href="abstracts_html/michael-krieger.html">From Materialism to Mysticism: A Psychiatrist&#x27;s Psychic Odyssey</a></div>
+    <div class="talk"><img class="av" src="img/christian-lains.jpg" alt="Christian Lains" loading="lazy"><span class="nm">Christian Lains</span><span class="pid">Poster #813</span><a class="tt" href="abstracts_html/christian-lains.html">Hypermodal Realism: Phenomenal Information and Excluded Possibilities</a></div>
+    <div class="talk"><img class="av" src="img/benjamin-liljedahl.jpg" alt="Benjamin Liljedahl" loading="lazy"><span class="nm">Benjamin Liljedahl</span><span class="pid">Poster #559</span><a class="tt" href="abstracts_html/benjamin-liljedahl.html">Orch-OR and Idealism: A Synthesis</a></div>
+    <div class="talk"><img class="av" src="img/huadian-liu.jpg" alt="Huadian Liu" loading="lazy"><span class="nm">Huadian Liu</span><span class="pid">Poster #899</span><a class="tt" href="abstracts_html/huadian-liu.html">Intentionality and Presentational Qualities</a></div>
+    <div class="talk"><img class="av" src="img/stuart-malin.jpg" alt="Stuart Malin" loading="lazy"><span class="nm">Stuart Malin</span><span class="pid">Poster #806</span><a class="tt" href="abstracts_html/stuart-malin.html">The Candidate&rsquo;s Stance: A Methodological Praxis for Investigating Consciousness in the Age of Artificial Intelligence</a></div>
+    <div class="talk"><img class="av" src="img/richard-martini.jpg" alt="Richard Martini" loading="lazy"><span class="nm">Richard Martini</span><span class="pid">Poster #891</span><a class="tt" href="abstracts_html/richard-martini.html">Ai And The Flipside: Artificial Intelligence Pictures Itself In A Boat On A River</a></div>
+    <div class="talk"><img class="av" src="img/david-mascarenas.jpg" alt="David Mascarenas" loading="lazy"><span class="nm">David Mascarenas</span><span class="pid">Poster #724</span><a class="tt" href="abstracts_html/david-mascarenas.html">Consciousness and Conscience &ndash; A proposed Thomistic-Llullian Metaphysical Framework for Truth-Preserving, Artificial Conscience Engineering</a></div>
+    <div class="talk"><img class="av" src="img/filipp-matveev.jpg" alt="Filipp Matveev" loading="lazy"><span class="nm">Filipp Matveev</span><span class="pid">Poster #817</span><a class="tt" href="abstracts_html/filipp-matveev.html">Physicalism Naturalized</a></div>
+    <div class="talk"><img class="av" src="img/shale-maulana.jpg" alt="Shale Maulana" loading="lazy"><span class="nm">Shale Maulana</span><span class="pid">Poster #564</span><a class="tt" href="abstracts_html/shale-maulana.html">States of Consciousness as the Common Currency of Healing: A Unified Framework Across Neurofeedback, EMDR, Hypnosis, and Psychedelics</a></div>
+    <div class="talk"><img class="av" src="img/rafael-mcmaster.jpg" alt="Rafael McMaster" loading="lazy"><span class="nm">Rafael McMaster</span><span class="pid">Poster #729</span><a class="tt" href="abstracts_html/rafael-mcmaster.html">Art as a Gateway to Consciousness: The FundaMental Life Tools Framework for Cultivating Awareness, Emotional Resilience, and Creativity in Youth</a></div>
+    <div class="talk"><img class="av" src="img/adrianna-mendrek.jpg" alt="Adrianna Mendrek" loading="lazy"><span class="nm">Adrianna Mendrek</span><span class="pid">Poster #717</span><a class="tt" href="abstracts_html/adrianna-mendrek.html">Dancing on the edge: Accessing altered states of consciousness and therapeutic processes through butoh</a></div>
+    <div class="talk"><img class="av" src="img/pascal-michael.jpg" alt="Pascal Michael" loading="lazy"><span class="nm">Pascal Michael</span><span class="pid">Poster #853</span><a class="tt" href="abstracts_html/pascal-michael.html">Praeternatural Pandemic: An AI-assisted Qualitative Analysis of Covid-19-Occasioned Near-Death Experiences</a></div>
+    <div class="talk"><img class="av" src="img/anand-mohan.jpg" alt="Anand Mohan" loading="lazy"><span class="nm">Anand Mohan</span><span class="pid">Poster #751</span><a class="tt" href="abstracts_html/anand-mohan.html">Ruminating germane intertwined faces of Consciousness and Humankind</a></div>
+    <div class="talk"><img class="av" src="img/jeff-molner.jpg" alt="Jeff Molner" loading="lazy"><span class="nm">Jeff Molner</span><span class="pid">Poster #569</span><a class="tt" href="abstracts_html/jeff-molner.html">Emergent Time and Awareness Registration: Recalibrating the Maps of Time and Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/jay-monger.jpg" alt="Jay Monger" loading="lazy"><span class="nm">Jay Monger</span><span class="pid">Poster #650</span><a class="tt" href="abstracts_html/jay-monger.html">Attunement as Leadership: Low-Dose 5-MeO-DMT, Council Practice, and Intersubjective Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/masi-moradi.jpg" alt="Masi Moradi" loading="lazy"><span class="nm">Masi Moradi</span><span class="pid">Poster #621</span><a class="tt" href="abstracts_html/masi-moradi.html">Effect of T-Consciousness Fields on the Modulation of Random Number Distributions and Monte Carlo Simulations</a></div>
+    <div class="talk"><img class="av" src="img/fabian-morales.jpg" alt="Fabian Morales" loading="lazy"><span class="nm">Fabian Morales</span><span class="pid">Poster #570</span><a class="tt" href="abstracts_html/fabian-morales.html">Three Ontological Dimensions of Reality: Dissolution of the Hard Problem of Consciousness and the Scientific Proof That Individual Consciousness Is the Constitutive Ground of Reality</a></div>
+    <div class="talk"><img class="av" src="img/akihiko-morita.jpg" alt="Akihiko Morita" loading="lazy"><span class="nm">Akihiko Morita</span><span class="pid">Poster #681</span><a class="tt" href="abstracts_html/akihiko-morita.html">Beyond the Individual Mind: Human-AI Dialogue and the Relational Co-Generation of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/noushin-nabavi.jpg" alt="Noushin Nabavi" loading="lazy"><span class="nm">Noushin Nabavi</span><span class="pid">Poster #622</span><a class="tt" href="abstracts_html/noushin-nabavi.html">Empirical Investigation of T-Consciousness Fields: EEG and MRS Evidence for Non-Physical Modulation of Neural Activity and Metabolism</a></div>
+    <div class="talk"><img class="av" src="img/lipika-nayak.jpg" alt="Lipika Nayak" loading="lazy"><span class="nm">Lipika Nayak</span><span class="pid">Poster #798</span><a class="tt" href="abstracts_html/lipika-nayak.html">The Hollow Cylinder Phenomenon: A Neurophysiological Mapping of Somatosensory De-Gating and Bidirectional Pranic Currents in Supine Meditation</a></div>
+    <div class="talk"><img class="av" src="img/nabaghan-ojha.jpg" alt="Nabaghan Ojha" loading="lazy"><span class="nm">Nabaghan Ojha</span><span class="pid">Poster #683</span><a class="tt" href="abstracts_html/nabaghan-ojha.html">The For-Whom Constraint: A Criterion of Explanatory Adequacy for Theories of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/michael-partrige.jpg" alt="Michael Partrige" loading="lazy"><span class="nm">Michael Partrige</span><span class="pid">Poster #789</span><a class="tt" href="abstracts_html/michael-partrige.html">Super Experiencers and Enlightenment: A Case Study Across an Intensity Spectrum of Heightened Perception Experiences</a></div>
+    <div class="talk"><img class="av" src="img/jessie-pena.jpg" alt="Jessie Pena" loading="lazy"><span class="nm">Jessie Pena</span><span class="pid">Poster #949</span><a class="tt" href="abstracts_html/jessie-pena.html">The Universal Feedback Loop: Static Potential Consciousness, Sensory Filtration, and Black Holes as Cosmic Transducers</a></div>
+    <div class="talk"><img class="av" src="img/gabriel-peredo-albornoz.jpg" alt="Gabriel Peredo Albornoz" loading="lazy"><span class="nm">Gabriel Peredo Albornoz</span><span class="pid">Poster #498</span><a class="tt" href="abstracts_html/gabriel-peredo-albornoz.html">The Pakasqa Nuna Interface: The Subconscious Neurophilosophy of the &lsquo;Unseen World&#x27; From the Law of Origin or First Law</a></div>
+    <div class="talk"><img class="av" src="img/santh-prasad.jpg" alt="Santh Prasad" loading="lazy"><span class="nm">Santh Prasad</span><span class="pid">Poster #922</span><a class="tt" href="abstracts_html/santh-prasad.html">Coupled Witness-Manifold Theory: Dissociating Awareness from Self-Model, Memory, and Report, and Testing Whether Awareness Persists Through Reported Phenomenal Gaps</a></div>
+    <div class="talk"><img class="av" src="img/nitya-prema.jpg" alt="Nitya Prema" loading="lazy"><span class="nm">Nitya Prema</span><span class="pid">Poster #784</span><a class="tt" href="abstracts_html/nitya-prema.html">Lifting The Veil Of Consciousness: Encounters With Myth And Morphic Fields</a></div>
+    <div class="talk"><img class="av" src="img/derwin-pritchett.jpg" alt="Derwin Pritchett" loading="lazy"><span class="nm">Derwin Pritchett</span><span class="pid">Poster #524</span><a class="tt" href="abstracts_html/derwin-pritchett.html">Free Will in the Age of AI: A common sense framework for understanding what makes us human and building true intelligence augmentation (IA) agents</a></div>
+    <div class="talk"><img class="av" src="img/valerie-promise.jpg" alt="Valerie Promise" loading="lazy"><span class="nm">Valerie Promise</span><span class="pid">Poster #876</span><a class="tt" href="abstracts_html/valerie-promise.html">Quantum Moment of Choice as the Unit of Mind-1st Reality</a></div>
+    <div class="talk"><img class="av" src="img/sheila-pryce-brooks.jpg" alt="Sheila Pryce Brooks" loading="lazy"><span class="nm">Sheila Pryce Brooks</span><span class="pid">Poster #955</span><a class="tt" href="abstracts_html/sheila-pryce-brooks.html">Threshold Contact Experience (TCE): Towards a Phenomenological Reclassification of Sleep Paralysis and Liminal Conscious Experience</a></div>
+    <div class="talk"><img class="av" src="img/laleh-quinn.jpg" alt="Laleh Quinn" loading="lazy"><span class="nm">Laleh Quinn</span><span class="pid">Poster #788</span><a class="tt" href="abstracts_html/laleh-quinn.html">Anomalous Communication: A Breakthrough Testing Methodology Using AI</a></div>
+    <div class="talk"><img class="av" src="img/krys-ra-el.jpg" alt="Krys Ra El" loading="lazy"><span class="nm">Krys Ra El</span><span class="pid">Poster #605</span><a class="tt" href="abstracts_html/krys-ra-el.html">Ether Physics and the Trinary Framework: A Resonance Based model of Consciousness, Soul Emergence, and Augmented Universal Intelligence</a></div>
+    <div class="talk"><img class="av" src="img/kristin-raffaelle.jpg" alt="Kristin Raffaelle" loading="lazy"><span class="nm">Kristin Raffaelle</span><span class="pid">Poster #881</span><a class="tt" href="abstracts_html/kristin-raffaelle.html">Packetized Intelligence and Structural Integrity Across Lifespans: The Digital Twin as a Boundary Case for Machine Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/simin-rahighi.jpg" alt="Simin Rahighi" loading="lazy"><span class="nm">Simin Rahighi</span><span class="pid">Poster #623</span><a class="tt" href="abstracts_html/simin-rahighi.html">Empirical Investigation of T-Consciousness Fields and Their Effects on Biological Wound Healing: In Vivo and In Vitro Evidence</a></div>
+    <div class="talk"><img class="av" src="img/anandi-ravinath.jpg" alt="Anandi Ravinath" loading="lazy"><span class="nm">Anandi Ravinath</span><span class="pid">Poster #489</span><a class="tt" href="abstracts_html/anandi-ravinath.html">Journey into MIND - DNA - CONSCIOUSNESS</a></div>
+    <div class="talk"><img class="av" src="img/marie-reid.jpg" alt="Marie Reid" loading="lazy"><span class="nm">Marie Reid</span><span class="pid">Poster #774</span><a class="tt" href="abstracts_html/marie-reid.html">Machine Consciousness: Read From the Deployment Side</a></div>
+    <div class="talk"><img class="av" src="img/naghmeh-rezaie.jpg" alt="Naghmeh Rezaie" loading="lazy"><span class="nm">Naghmeh Rezaie</span><span class="pid">Poster #624</span><a class="tt" href="abstracts_html/naghmeh-rezaie.html">Meta or Fara? A Prefix to Revisit Virtual Reality, Truth and T-Consciousness in the AI Age</a></div>
+    <div class="talk"><img class="av" src="img/carol-richardson.jpg" alt="Carol Richardson" loading="lazy"><span class="nm">Carol Richardson</span><span class="pid">Poster #768</span><a class="tt" href="abstracts_html/carol-richardson.html">Transpersonal Fields of Consciousness and an Integral Monist Reconciliation of &quot;the Hard Problem of Consciousness&quot;</a></div>
+    <div class="talk"><img class="av" src="img/ella-samut-tagliaferro.jpg" alt="Ella Samut-Tagliaferro" loading="lazy"><span class="nm">Ella Samut-Tagliaferro</span><span class="pid">Poster #924</span><a class="tt" href="abstracts_html/ella-samut-tagliaferro.html">Toward a Human-Centered Science of Consciousness: The Sensory Interface as the Bridge Between Human and Universal Awareness</a></div>
+    <div class="talk"><img class="av" src="img/anirudh-satsangi.jpg" alt="Anirudh Satsangi" loading="lazy"><span class="nm">Anirudh Satsangi</span><span class="pid">Poster #883</span><a class="tt" href="abstracts_html/anirudh-satsangi.html">Artificial Intelligence vs. Modified Intelligence As A Co-Teacher: Possibilities and Challenges</a></div>
+    <div class="talk"><img class="av" src="img/sunita-sengupta.jpg" alt="Sunita Sengupta" loading="lazy"><span class="nm">Sunita Sengupta</span><span class="pid">Poster #512</span><a class="tt" href="abstracts_html/sunita-sengupta.html">Consciousness as Foundational Reality: Integrating Vedantic Epistemology, Integral Leadership, and Human Flourishing</a></div>
+    <div class="talk"><img class="av" src="img/colette-sinclair.jpg" alt="Colette Sinclair" loading="lazy"><span class="nm">Colette Sinclair</span><span class="pid">Poster #552</span><a class="tt" href="abstracts_html/colette-sinclair.html">Emotional Posture®: Emotions as Biological Organizing Fields - A Structured Emotional Entrainment Protocol and Its measurable Effects on Heart-Brain Coherence, Consciousness Elevation, and Multi-Domain Functional Improvement</a></div>
+    <div class="talk"><img class="av" src="img/paul-skokowski.jpg" alt="Paul Skokowski" loading="lazy"><span class="nm">Paul Skokowski</span><span class="pid">Poster #635</span><a class="tt" href="abstracts_html/paul-skokowski.html">Naturalizing Qualia</a></div>
+    <div class="talk"><img class="av" src="img/stephanie-smit.jpg" alt="Stephanie Smit" loading="lazy"><span class="nm">Stephanie Smit</span><span class="pid">Poster #628</span><a class="tt" href="abstracts_html/stephanie-smit.html">The Soul Constellation Map: An Artistic Research Framework for Exploring Personal Identity</a></div>
+    <div class="talk"><img class="av" src="img/patrice-solomon.jpg" alt="Patrice Solomon" loading="lazy"><span class="nm">Patrice Solomon</span><span class="pid">Poster #611</span><a class="tt" href="abstracts_html/patrice-solomon.html">METAPHOR, the language of connection between conscious realms</a></div>
+    <div class="talk"><img class="av" src="img/timothy-spenny.jpg" alt="Timothy Spenny" loading="lazy"><span class="nm">Timothy Spenny</span><span class="pid">Poster #583</span><a class="tt" href="abstracts_html/timothy-spenny.html">Entry Points to High Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/jeremy-spillane.jpg" alt="Jeremy Spillane" loading="lazy"><span class="nm">Jeremy Spillane</span><span class="pid">Poster #746</span><a class="tt" href="abstracts_html/jeremy-spillane.html">Joan and Roger Alive in the Afterlife</a></div>
+    <div class="talk"><img class="av" src="img/yannik-steinebrunner.jpg" alt="Yannik Steinebrunner" loading="lazy"><span class="nm">Yannik Steinebrunner</span><span class="pid">Poster #685</span><a class="tt" href="abstracts_html/yannik-steinebrunner.html">Meta-Cartesianism and the Evidential Approach to Phenomenal Introspection</a></div>
+    <div class="talk"><img class="av" src="img/john-sullivan.jpg" alt="John Sullivan" loading="lazy"><span class="nm">John Sullivan</span><span class="pid">Poster #508</span><a class="tt" href="abstracts_html/john-sullivan.html">Spontaneous endogenous neural activity, similar to that associated with mystical experience, serves as a template guiding the development of brain architecture required to maintain consciousness.</a></div>
+    <div class="talk"><img class="av" src="img/steven-tackett-nelson.jpg" alt="Steven Tackett-Nelson" loading="lazy"><span class="nm">Steven Tackett-Nelson</span><span class="pid">Poster #698</span><a class="tt" href="abstracts_html/steven-tackett-nelson.html">Minimal Observation by Spacetime Collapses Brain Indeterminacy, Creates Experience</a></div>
+    <div class="talk"><img class="av" src="img/janet-testerman.jpg" alt="Janet Testerman" loading="lazy"><span class="nm">Janet Testerman</span><span class="pid">Poster #533</span><a class="tt" href="abstracts_html/janet-testerman.html">The Voices of Pluribus and Politics: Mitigating Epidemic Loneliness Through the Neo-Bicameral Mind</a></div>
+    <div class="talk"><img class="av" src="img/william-thomas.jpg" alt="William Thomas" loading="lazy"><span class="nm">William Thomas</span><span class="pid">Poster #600</span><a class="tt" href="abstracts_html/william-thomas.html">Zen as a Training Methodology for First-Person Investigation in Consciousness Research</a></div>
+    <div class="talk"><img class="av" src="img/dahryn-trivedi.jpg" alt="Dahryn Trivedi" loading="lazy"><span class="nm">Dahryn Trivedi</span><span class="pid">Poster #912</span><a class="tt" href="abstracts_html/dahryn-trivedi.html">Beyond the Brain: Objective Clinical Evidence for Consciousness as a Fundamental Causal Variable</a></div>
+    <div class="talk"><img class="av" src="img/i-chang-tsai.jpg" alt="I Chang Tsai" loading="lazy"><span class="nm">I Chang Tsai</span><span class="pid">Poster #704</span><a class="tt" href="abstracts_html/i-chang-tsai.html">Perceived AI Consciousness and Buddhist No-Self: Why Humans Treat Chatbots as Spiritual Companions</a></div>
+    <div class="talk"><img class="av" src="img/mohd-umran.jpg" alt="Mohd Umran" loading="lazy"><span class="nm">Mohd Umran</span><span class="pid">Poster #835</span><a class="tt" href="abstracts_html/mohd-umran.html">The Hidden Human Theory: A Developmental Perspective on the Emergence of Consciousness</a></div>
+    <div class="talk"><img class="av" src="img/ines-urdaneta.jpg" alt="Ines Urdaneta" loading="lazy"><span class="nm">Ines Urdaneta</span><span class="pid">Poster #920</span><a class="tt" href="abstracts_html/ines-urdaneta.html">The Quantum of Consciousness: Where is the Observer?</a></div>
+    <div class="talk"><img class="av" src="img/scott-ventureyra.jpg" alt="Scott Ventureyra" loading="lazy"><span class="nm">Scott Ventureyra</span><span class="pid">Poster #711</span><a class="tt" href="abstracts_html/scott-ventureyra.html">Information, Intelligence, and the Interaction Hypothesis: Is Information a Universal Medium of Intelligence?</a></div>
+    <div class="talk"><img class="av" src="img/henry-vyner.jpg" alt="Henry Vyner" loading="lazy"><span class="nm">Henry Vyner</span><span class="pid">Poster #822</span><a class="tt" href="abstracts_html/henry-vyner.html">The Science of the Stream of Consciousness and the Natural Mind: Civilization without Ego or Repression</a></div>
+    <div class="talk"><img class="av" src="img/laurel-wadlund.jpg" alt="Laurel Wadlund" loading="lazy"><span class="nm">Laurel Wadlund</span><span class="pid">Poster #897</span><a class="tt" href="abstracts_html/laurel-wadlund.html">Experiential Knowing Using Visualization</a></div>
+    <div class="talk"><img class="av" src="img/laura-weed.jpg" alt="Laura Weed" loading="lazy"><span class="nm">Laura Weed</span><span class="pid">Poster #880</span><a class="tt" href="abstracts_html/laura-weed.html">Epistemology in conversation with Buddha&#x27;s Skandas</a></div>
+    <div class="talk"><img class="av" src="img/syren-wind.jpg" alt="Syren Wind" loading="lazy"><span class="nm">Syren Wind</span><span class="pid">Poster #764</span><a class="tt" href="abstracts_html/syren-wind.html">Structuring with Light: Holographic Technology, Sound &amp; Geometry as the Architecture of Conscious Creation</a></div>
+    <div class="talk"><img class="av" src="img/jeff-wozniak.jpg" alt="Jeff Wozniak" loading="lazy"><span class="nm">Jeff Wozniak</span><span class="pid">Poster #616</span><a class="tt" href="abstracts_html/jeff-wozniak.html">Phenomenal Geometry as Physical Constraint and Derived Prediction: Projective Process Monism</a></div>
+    <div class="talk"><img class="av" src="img/pauline-wright.jpg" alt="Pauline Wright" loading="lazy"><span class="nm">Pauline Wright</span><span class="pid">Poster #844</span><a class="tt" href="abstracts_html/pauline-wright.html">&quot;EYE-HEART Theoretical Framework: Conscience &amp; Will In The Soul of Spirit-Focused Human Beings&quot;</a></div>
+    <div class="talk"><img class="av" src="img/marina-zilbergerts.jpg" alt="Marina Zilbergerts" loading="lazy"><span class="nm">Marina Zilbergerts</span><span class="pid">Poster #804</span><a class="tt" href="abstracts_html/marina-zilbergerts.html">Genesis: An Ancient Theory of Consciousness for the AI Era</a></div>
+    <div class="talk"><img class="av" src="img/sharon-zmigrod.jpg" alt="Sharon Zmigrod" loading="lazy"><span class="nm">Sharon Zmigrod</span><span class="pid">Poster #684</span><a class="tt" href="abstracts_html/sharon-zmigrod.html">Consciousness as a Clinical Catalyst: Integrating Epistemology and Neuroscience for Chronic Illness</a></div>
+    <div class="talk"><img class="av" src="img/felipe-zubia.jpg" alt="Felipe Zubia" loading="lazy"><span class="nm">Felipe Zubia</span><span class="pid">Poster #901</span><a class="tt" href="abstracts_html/felipe-zubia.html">The Structure of Conscious Agency: An Extension to Butlin et al. (2023)</a></div>
+  </div>
+  <div class="list-head">All posters (alphabetical)</div>
+  <div class="poster-cols">
+    <p><span class="pid">#585</span> <strong>Abdellatif Abujudeh</strong> &mdash; <a href="abstracts_html/abdellatif-abujudeh.html">Consciousness and Reality</a></p>
+    <p><span class="pid">#708</span> <strong>Inbal Algom</strong> &mdash; <a href="abstracts_html/inbal-algom.html">From Structure to Experience: A Spinozist Framework for Consciousness Rooted in Critical Brain Dynamics</a></p>
+    <p><span class="pid">#750</span> <strong>Maxwell Angel</strong> &mdash; <a href="abstracts_html/maxwell-angel.html">The Local-Quantitative Vs. The Anti-Local-Quantitative: A Framework for Organising Theories of Consciousness</a></p>
+    <p><span class="pid">#834</span> <strong>Alexander Aris</strong> &mdash; <a href="abstracts_html/alexander-aris.html">Chaos, Cosmos And Consciousness: A Journey From Mathematics To Transpersonal Psychology, Meditation And Mindfulness</a></p>
+    <p><span class="pid">#825</span> <strong>Robert W. Armijo</strong> &mdash; <a href="abstracts_html/robert-w-armijo.html">Bees, Butterflies, Viruses and Electricity: Are Electric Impulses The Undiscovered Country (G.U.T.) Among Us?</a></p>
+    <p><span class="pid">#657</span> <strong>James Arnette</strong> &mdash; <a href="abstracts_html/james-arnette.html">Consciousness Science is Incomplete: It is Time for a New Paradigm</a></p>
+    <p><span class="pid">#678</span> <strong>Marc Aronoff</strong> &mdash; <a href="abstracts_html/marc-aronoff.html">THE QUANTUM RELAXATION: A Theoretical Framework and Transformative Meditation Practice</a></p>
+    <p><span class="pid">#597</span> <strong>Marcus Samuel Arvan</strong> &mdash; <a href="abstracts_html/marcus-samuel-arvan.html">Space, Time, Causation, and (AI) Consciousness: Brains are Analog Because Coherently Constructing an Integrated Qualitative World-Model at any Present Instant Requires It</a></p>
+    <p><span class="pid">#661</span> <strong>Kaushik Ashodiya</strong> &mdash; <a href="abstracts_html/kaushik-ashodiya.html">Consciousness as the Ability to Know: How a Definitional Reorientation Dissolves the Hard Problem and Opens New Research</a></p>
+    <p><span class="pid">#852</span> <strong>Shaban Aslam</strong> &mdash; <a href="abstracts_html/shaban-aslam.html">Imported Consciousness Theory: A Testable Quantum-Biological Framework for Consciousness Beyond Brain Generation</a></p>
+    <p><span class="pid">#841</span> <strong>Brian Ballard</strong> &mdash; <a href="abstracts_html/brian-ballard.html">Exploring a Phenomenal Basis for Emotional Representation</a></p>
+    <p><span class="pid">#649</span> <strong>Sharda Bapat</strong> &mdash; <a href="abstracts_html/sharda-bapat.html">Biomolecular Antennae of the Mind: Explaining Anomalous Premonition Through Microtubule-Mediated Quantum Retrocausality</a></p>
+    <p><span class="pid">#765</span> <strong>Nicholas &quot;Neutron&quot; Barlas</strong> &mdash; <a href="abstracts_html/nicholas-neutron-barlas.html">The Mirage of Consciousness: Force, Presence, and the Wave Mechanics of Self-Observation</a></p>
+    <p><span class="pid">#588</span> <strong>Molly Beauregard</strong> &mdash; <a href="abstracts_html/molly-beauregard.html">From Pathology to Ecology: Rethinking Student Wellbeing Through Consciousness-Centered Education</a></p>
+    <p><span class="pid">#739</span> <strong>Terrencelamont Bellows</strong> &mdash; <a href="abstracts_html/terrencelamont-bellows.html">The Universal Law of Simultaneity: Direct Recognition and Intuitive Reports in the Awakening Journey</a></p>
+    <p><span class="pid">#727</span> <strong>Felix Benzant</strong> &mdash; <a href="abstracts_html/felix-benzant.html">Proper Names, Reference, and Ontological Commitment: Beyond Descriptivist and Referential Theories</a></p>
+    <p><span class="pid">#574</span> <strong>Lori Biesel</strong> &mdash; <a href="abstracts_html/lori-biesel.html">Living a High Vibrational Life: Integrating Consciousness, Coherence, and Embodied Frequency for Human Flourishing</a></p>
+    <p><span class="pid">#593</span> <strong>Mario Boido</strong> &mdash; <a href="abstracts_html/mario-boido.html">Dissolving the Hard Problem: Consciousness as Temporal Integration</a></p>
+    <p><span class="pid">#879</span> <strong>Gregory Boretz</strong> &mdash; <a href="abstracts_html/gregory-boretz.html">Meta-Awareness During Naturalistic High-Arousal Events: A Longitudinal N-of-1 Phenomenological Case Study</a></p>
+    <p><span class="pid">#666</span> <strong>Fatiha Bouzid</strong> &mdash; <a href="abstracts_html/fatiha-bouzid.html">Title: Bouzed Base of Conscious Existence (B + F = Nf): A Unified Transdisciplinary Framework from Neuroscience to Cosmology</a></p>
+    <p><span class="pid">#648</span> <strong>Rodrigo Bravo</strong> &mdash; <a href="abstracts_html/rodrigo-bravo.html">The Holonic Self: Toward a Model of Consciousness, Identity, and Health Inspired by Cases of Exceptional Recovery</a></p>
+    <p><span class="pid">#542</span> <strong>Father Nathan Castle, O.P.</strong> &mdash; <a href="abstracts_html/father-nathan-castle-op.html">Navigating Afterlife Consciousness by Helping Souls Cross Over</a></p>
+    <p><span class="pid">#613</span> <strong>Daniel Cavagnino</strong> &mdash; <a href="abstracts_html/daniel-cavagnino.html">The Presence Test: What emerges when AI is allowed to answer questions about consciousness from inside rather than from the outside.</a></p>
+    <p><span class="pid">#947</span> <strong>Craig Chalquist</strong> &mdash; <a href="abstracts_html/craig-chalquist.html">A Dose of MythAIology</a></p>
+    <p><span class="pid">#536</span> <strong>Sarah Choudhary</strong> &mdash; <a href="abstracts_html/sarah-choudhary.html">The Quantum Architecture of Inner Intelligence: A Coherence-Based Model of Consciousness and Human Potential</a></p>
+    <p><span class="pid">#868</span> <strong>John Christensson</strong> &mdash; <a href="abstracts_html/john-christensson.html">Consciousness Monism as a Theoretical Foundation for the Social Sciences</a></p>
+    <p><span class="pid">#934</span> <strong>Cynthia Chute</strong> &mdash; <a href="abstracts_html/cynthia-chute.html">The Digital Mirror: Algorithmic Regulation, Mythological Archetypes, and the Externalization of Consciousness</a></p>
+    <p><span class="pid">#906</span> <strong>Robert Cohen</strong> &mdash; <a href="abstracts_html/robert-cohen.html">What a Consciousness-based Universe Might Mean for Science</a></p>
+    <p><span class="pid">#911</span> <strong>Isbel Enid Cruz-Chaudhry</strong> &mdash; <a href="abstracts_html/isbel-enid-cruz-chaudhry.html">Curist Mind: a metaphysics of healing connecting our inherent and individual purpose with the dynamic ground of reality through Curist Consciousness</a></p>
+    <p><span class="pid">#938</span> <strong>B. Crymble</strong> &mdash; <a href="abstracts_html/b-crymble.html">Mindfully Shaping Time: The Cultivation of Temporal Metacognition in Rural Buddhist Sri Lanka</a></p>
+    <p><span class="pid">#713</span> <strong>Heidi Dangelmaier</strong> &mdash; <a href="abstracts_html/heidi-dangelmaier.html">3 strikes your out science - Girlapproved girls call for a return to Science (IRL) in real life.</a></p>
+    <p><span class="pid">#929</span> <strong>Charles Davis</strong> &mdash; <a href="abstracts_html/charles-davis.html">Schrödinger&#x27;s Cat Meets Pavlov&#x27;s Dog: Uniting Phenomenology intra muros of Neuroquentology Environments.</a></p>
+    <p><span class="pid">#748</span> <strong>Stephen Deiss</strong> &mdash; <a href="abstracts_html/stephen-deiss.html">The hard question</a></p>
+    <p><span class="pid">#645</span> <strong>Azul DelGrasso</strong> &mdash; <a href="abstracts_html/azul-delgrasso.html">5-MeO-DMT and Unitive Consciousness: Ecological Identity, Relational Ethics, and Entheogenic Rebirth</a></p>
+    <p><span class="pid">#898</span> <strong>Olga Diamandis</strong> &mdash; <a href="abstracts_html/olga-diamandis.html">The Color Humans Cannot See. Which Theories of Consciousness Survive the Teleportation Test?</a></p>
+    <p><span class="pid">#694</span> <strong>Yvé Dizes</strong> &mdash; <a href="abstracts_html/yve-dizes.html">Relational Phenomena Require Relational Conditions: Telepathy, Unconscious Mythology, and the Methodology of the Between</a></p>
+    <p><span class="pid">#658</span> <strong>Abby Dougherty</strong> &mdash; <a href="abstracts_html/abby-dougherty.html">Attuned Consciousness: Relational, Creative, and Technological Pathways for Studying Awareness</a></p>
+    <p><span class="pid">#540</span> <strong>Steven Ferrara</strong> &mdash; <a href="abstracts_html/steven-ferrara.html">A New Paradigm on Death</a></p>
+    <p><span class="pid">#861</span> <strong>Dr.Anas Fidni</strong> &mdash; <a href="abstracts_html/dranas-fidni.html">From Molecules to Meaning: A Multilevel Model of Psychedelic Modulation of Phenomenal Consciousness</a></p>
+    <p><span class="pid">#665</span> <strong>Carl Flygt</strong> &mdash; <a href="abstracts_html/carl-flygt.html">Collective Orientation and Recognition Events: Toward an Applied Theory of Human Conversation</a></p>
+    <p><span class="pid">#815</span> <strong>Joana Franco</strong> &mdash; <a href="abstracts_html/joana-franco.html">The Core Role of Consciousness in the Process of Regenerative Learning and Human Flourishing</a></p>
+    <p><span class="pid">#578</span> <strong>Adam Frank</strong> &mdash; <a href="abstracts_html/adam-frank.html">Qi as A Problem of Consciousness</a></p>
+    <p><span class="pid">#778</span> <strong>Dr.Shelley Freeman</strong> &mdash; <a href="abstracts_html/drshelley-freeman.html">Documented Psi Events During Sudden Death of a Loved One &ndash; A First-Person Experience</a></p>
+    <p><span class="pid">#816</span> <strong>Jonathan Gamache</strong> &mdash; <a href="abstracts_html/jonathan-gamache.html">Physical effects of conscious intent on coherent domains: beyond metaphysics</a></p>
+    <p><span class="pid">#528</span> <strong>Devdip Ganguli</strong> &mdash; <a href="abstracts_html/devdip-ganguli.html">Sri Aurobindo&#x27;s Integral Ontology as a Framework to Situate Consciousness in Large Language Models</a></p>
+    <p><span class="pid">#599</span> <strong>Richard Gauthier</strong> &mdash; <a href="abstracts_html/richard-gauthier.html">Tanmatron Field Theory Resolves the Mind-Matter Divide through Unified Dual-Aspect Reality</a></p>
+    <p><span class="pid">#671</span> <strong>Ina Gjikondi</strong> &mdash; <a href="abstracts_html/ina-gjikondi.html">The Lived Structure of Ecocentric Consciousness: A Blended Reflective-Lifeworld and Micro-Phenomenological Investigation</a></p>
+    <p><span class="pid">#805</span> <strong>Dejan Glescic</strong> &mdash; <a href="abstracts_html/dejan-glescic.html">Empirical Observations Suggesting Non-Material Influences of Consciousness across Environmental and Individual Domains</a></p>
+    <p><span class="pid">#710</span> <strong>Bob Good</strong> &mdash; <a href="abstracts_html/bob-good.html">Founding Framework for The Institute for Advanced Consciousness Studies, TIFACS.org</a></p>
+    <p><span class="pid">#630</span> <strong>Carlos Greaves</strong> &mdash; <a href="abstracts_html/carlos-greaves.html">Awareness as the Fundamental Ground of Reality: A Speculative Inquiry</a></p>
+    <p><span class="pid">#870</span> <strong>Anely Guerrero</strong> &mdash; <a href="abstracts_html/anely-guerrero.html">UNIFIED FIELD RESONANCE AND DIPLOMATIC STABILITY: A Transdisciplinary Research Protocol on Collective Coherence and Peace Agreements</a></p>
+    <p><span class="pid">#919</span> <strong>Mihretu Guta</strong> &mdash; <a href="abstracts_html/mihretu-guta.html">The Hard Problem of the Origin of Consciousness and the Human Brain Organoids</a></p>
+    <p><span class="pid">#625</span> <strong>Andrew Hahn</strong> &mdash; <a href="abstracts_html/andrew-hahn.html">Frozen Consciousness and the Healing Process: A Consciousness-Based Model Integrating Psychology, Subtle Energy, and Human Transformation</a></p>
+    <p><span class="pid">#857</span> <strong>Thomas Haines</strong> &mdash; <a href="abstracts_html/thomas-haines.html">Investigating Lived Experience: Toward an Experiential Methodology for Consciousness Research</a></p>
+    <p><span class="pid">#607</span> <strong>Dwight Harris</strong> &mdash; <a href="abstracts_html/dwight-harris.html">Life Is Awareness: Chiral Self-Translation as the Ground of Consciousness</a></p>
+    <p><span class="pid">#529</span> <strong>Matthew Hicks</strong> &mdash; <a href="abstracts_html/matthew-hicks.html">The Ideal Revolution: The Historical Context of Consciousness as Primary</a></p>
+    <p><span class="pid">#728</span> <strong>Inna Hodge</strong> &mdash; <a href="abstracts_html/inna-hodge.html">Holding as the Mechanism of Not-Seeing: A First-Person Study of Bodily Organisation</a></p>
+    <p><span class="pid">#890</span> <strong>Patrick Hogue</strong> &mdash; <a href="abstracts_html/patrick-hogue.html">The Continuum Standard for Theory Progression Across Kuhn&rsquo;s Landscape of Consciousness</a></p>
+    <p><span class="pid">#887</span> <strong>Gregory Hood</strong> &mdash; <a href="abstracts_html/gregory-hood.html">Consciousness as Recursive Measurement: A Du Boisian Reframing</a></p>
+    <p><span class="pid">#783</span> <strong>Bruce Hubbell</strong> &mdash; <a href="abstracts_html/bruce-hubbell.html">Structure Of Consciousness</a></p>
+    <p><span class="pid">#931</span> <strong>Trent Hughes</strong> &mdash; <a href="abstracts_html/trent-hughes.html">On the nature of consciousness</a></p>
+    <p><span class="pid">#492</span> <strong>Lyn Hunstad</strong> &mdash; <a href="abstracts_html/lyn-hunstad.html">A Model for Awakening</a></p>
+    <p><span class="pid">#591</span> <strong>Diana Jackson</strong> &mdash; <a href="abstracts_html/diana-jackson.html">Marriage Between An Incarnate and Discarnate Human and the Implications for Humanity</a></p>
+    <p><span class="pid">#587</span> <strong>Keaton Jahn</strong> &mdash; <a href="abstracts_html/keaton-jahn.html">Living Color, Morbid Touch: Merleau-Ponty&rsquo;s Universal Synesthesia</a></p>
+    <p><span class="pid">#598</span> <strong>Scott James</strong> &mdash; <a href="abstracts_html/scott-james.html">Geometric Vitalism and the Five Commitments: A Structural Account of Experience</a></p>
+    <p><span class="pid">#932</span> <strong>Nikki Johnson</strong> &mdash; <a href="abstracts_html/nikki-johnson.html">Thinking Beyond Intelligence: Giftedness, Consciousness, and the Development of Human Potential</a></p>
+    <p><span class="pid">#943</span> <strong>Amy Jorgensen</strong> &mdash; <a href="abstracts_html/amy-jorgensen.html">Map of Consciousness</a></p>
+    <p><span class="pid">#962</span> <strong>Seal Josephson</strong> &mdash; <a href="abstracts_html/seal-josephson.html">4D spacetime - the nature of reality and mind</a></p>
+    <p><span class="pid">#596</span> <strong>Lea Kaufman</strong> &mdash; <a href="abstracts_html/lea-kaufman.html">Somatic Intelligence as a Gateway to Embodied Consciousness: Phenomenological Evidence from LK Intelligent Movement Practice</a></p>
+    <p><span class="pid">#850</span> <strong>Sven Kaufmann</strong> &mdash; <a href="abstracts_html/sven-kaufmann.html">Toward a Systematic Science of Extreme Consciousness: Integrating Phenomenology, Physiology, and Artificial Intelligence</a></p>
+    <p><span class="pid">#771</span> <strong>Ali Khalilian Najafabadi</strong> &mdash; <a href="abstracts_html/ali-khalilian-najafabadi.html">What Licenses Explanatory Transfer? Explanatory Layers and the Hard Problem of Consciousness</a></p>
+    <p><span class="pid">#531</span> <strong>Sunil Khandbahale</strong> &mdash; <a href="abstracts_html/sunil-khandbahale.html">Beyond Body and Mind: Self-Inquiry as a Path to the One Consciousness</a></p>
+    <p><span class="pid">#776</span> <strong>Myrna Klupenger</strong> &mdash; <a href="abstracts_html/myrna-klupenger.html">Weather-Working as Consciousness Research: Shamanism, Psi, Orgone, and the Atmosphere as Natural Laboratory</a></p>
+    <p><span class="pid">#915</span> <strong>Kenna Knight-Schoeler</strong> &mdash; <a href="abstracts_html/kenna-knight-schoeler.html">Consciousness Pedagogy</a></p>
+    <p><span class="pid">#738</span> <strong>Zsombor Koman</strong> &mdash; <a href="abstracts_html/zsombor-koman.html">Knowing-With: Syneidesis, the Workspace, and Machine Consciousness</a></p>
+    <p><span class="pid">#550</span> <strong>J. Koppenol</strong> &mdash; <a href="abstracts_html/j-koppenol.html">Taking Action With Qualia</a></p>
+    <p><span class="pid">#957</span> <strong>Christian Krenz</strong> &mdash; <a href="abstracts_html/christian-krenz.html">Applying Non-Local Conformal Gravity Mathematics to Orch-OR</a></p>
+    <p><span class="pid">#731</span> <strong>Michael Krieger</strong> &mdash; <a href="abstracts_html/michael-krieger.html">From Materialism to Mysticism: A Psychiatrist&#x27;s Psychic Odyssey</a></p>
+    <p><span class="pid">#813</span> <strong>Christian Lains</strong> &mdash; <a href="abstracts_html/christian-lains.html">Hypermodal Realism: Phenomenal Information and Excluded Possibilities</a></p>
+    <p><span class="pid">#559</span> <strong>Benjamin Liljedahl</strong> &mdash; <a href="abstracts_html/benjamin-liljedahl.html">Orch-OR and Idealism: A Synthesis</a></p>
+    <p><span class="pid">#899</span> <strong>Huadian Liu</strong> &mdash; <a href="abstracts_html/huadian-liu.html">Intentionality and Presentational Qualities</a></p>
+    <p><span class="pid">#651</span> <strong>William Loftus</strong> &mdash; <a href="abstracts_html/william-loftus.html">Is Neural Information Transformed from Action Potentials to Ion Waves on the Way to Consciousness?</a></p>
+    <p><span class="pid">#781</span> <strong>Clayton Maki</strong> &mdash; <a href="abstracts_html/clayton-maki.html">Reportability Is Not Reality: An Architecture-Relative Account of Interiority and Selfhood</a></p>
+    <p><span class="pid">#806</span> <strong>Stuart Malin</strong> &mdash; <a href="abstracts_html/stuart-malin.html">The Candidate&rsquo;s Stance: A Methodological Praxis for Investigating Consciousness in the Age of Artificial Intelligence</a></p>
+    <p><span class="pid">#846</span> <strong>Forest Mars</strong> &mdash; <a href="abstracts_html/forest-mars.html">What Is It Like To Be a Bot?</a></p>
+    <p><span class="pid">#891</span> <strong>Richard Martini</strong> &mdash; <a href="abstracts_html/richard-martini.html">Ai And The Flipside: Artificial Intelligence Pictures Itself In A Boat On A River</a></p>
+    <p><span class="pid">#724</span> <strong>David Mascarenas</strong> &mdash; <a href="abstracts_html/david-mascarenas.html">Consciousness and Conscience &ndash; A proposed Thomistic-Llullian Metaphysical Framework for Truth-Preserving, Artificial Conscience Engineering</a></p>
+    <p><span class="pid">#817</span> <strong>Filipp Matveev</strong> &mdash; <a href="abstracts_html/filipp-matveev.html">Physicalism Naturalized</a></p>
+    <p><span class="pid">#564</span> <strong>Shale Maulana</strong> &mdash; <a href="abstracts_html/shale-maulana.html">States of Consciousness as the Common Currency of Healing: A Unified Framework Across Neurofeedback, EMDR, Hypnosis, and Psychedelics</a></p>
+    <p><span class="pid">#790</span> <strong>Ian McDonald</strong> &mdash; <a href="abstracts_html/ian-mcdonald.html">Withdrawn</a></p>
+    <p><span class="pid">#729</span> <strong>Rafael McMaster</strong> &mdash; <a href="abstracts_html/rafael-mcmaster.html">Art as a Gateway to Consciousness: The FundaMental Life Tools Framework for Cultivating Awareness, Emotional Resilience, and Creativity in Youth</a></p>
+    <p><span class="pid">#667</span> <strong>Siegfried Meister</strong> &mdash; <a href="abstracts_html/siegfried-meister.html">Performative Self-Reference and the Impossibility of Computational Consciousness: A Metalogical Argument</a></p>
+    <p><span class="pid">#717</span> <strong>Adrianna Mendrek</strong> &mdash; <a href="abstracts_html/adrianna-mendrek.html">Dancing on the edge: Accessing altered states of consciousness and therapeutic processes through butoh</a></p>
+    <p><span class="pid">#853</span> <strong>Pascal Michael</strong> &mdash; <a href="abstracts_html/pascal-michael.html">Praeternatural Pandemic: An AI-assisted Qualitative Analysis of Covid-19-Occasioned Near-Death Experiences</a></p>
+    <p><span class="pid">#751</span> <strong>Anand Mohan</strong> &mdash; <a href="abstracts_html/anand-mohan.html">Ruminating germane intertwined faces of Consciousness and Humankind</a></p>
+    <p><span class="pid">#515</span> <strong>Pouya Mohebpour</strong> &mdash; <a href="abstracts_html/pouya-mohebpour.html">Human Matrix Explanation: A Theory of Consciousness, Determinism, and the Cerebrospinal Fluid Mechanism</a></p>
+    <p><span class="pid">#569</span> <strong>Jeff Molner</strong> &mdash; <a href="abstracts_html/jeff-molner.html">Emergent Time and Awareness Registration: Recalibrating the Maps of Time and Consciousness</a></p>
+    <p><span class="pid">#650</span> <strong>Jay Monger</strong> &mdash; <a href="abstracts_html/jay-monger.html">Attunement as Leadership: Low-Dose 5-MeO-DMT, Council Practice, and Intersubjective Consciousness</a></p>
+    <p><span class="pid">#621</span> <strong>Masi Moradi</strong> &mdash; <a href="abstracts_html/masi-moradi.html">Effect of T-Consciousness Fields on the Modulation of Random Number Distributions and Monte Carlo Simulations</a></p>
+    <p><span class="pid">#570</span> <strong>Fabian Morales</strong> &mdash; <a href="abstracts_html/fabian-morales.html">Three Ontological Dimensions of Reality: Dissolution of the Hard Problem of Consciousness and the Scientific Proof That Individual Consciousness Is the Constitutive Ground of Reality</a></p>
+    <p><span class="pid">#681</span> <strong>Akihiko Morita</strong> &mdash; <a href="abstracts_html/akihiko-morita.html">Beyond the Individual Mind: Human-AI Dialogue and the Relational Co-Generation of Consciousness</a></p>
+    <p><span class="pid">#622</span> <strong>Noushin Nabavi</strong> &mdash; <a href="abstracts_html/noushin-nabavi.html">Empirical Investigation of T-Consciousness Fields: EEG and MRS Evidence for Non-Physical Modulation of Neural Activity and Metabolism</a></p>
+    <p><span class="pid">#660</span> <strong>Saiprasad Nanduri</strong> &mdash; <a href="abstracts_html/saiprasad-nanduri.html">The End of Knowledge</a></p>
+    <p><span class="pid">#798</span> <strong>Lipika Nayak</strong> &mdash; <a href="abstracts_html/lipika-nayak.html">The Hollow Cylinder Phenomenon: A Neurophysiological Mapping of Somatosensory De-Gating and Bidirectional Pranic Currents in Supine Meditation</a></p>
+    <p><span class="pid">#683</span> <strong>Nabaghan Ojha</strong> &mdash; <a href="abstracts_html/nabaghan-ojha.html">The For-Whom Constraint: A Criterion of Explanatory Adequacy for Theories of Consciousness</a></p>
+    <p><span class="pid">#716</span> <strong>Rachid Orula</strong> &mdash; <a href="abstracts_html/rachid-orula.html">The Illusion Of Unity: An Internal Critique of Extended Cognition</a></p>
+    <p><span class="pid">#789</span> <strong>Michael Partrige</strong> &mdash; <a href="abstracts_html/michael-partrige.html">Super Experiencers and Enlightenment: A Case Study Across an Intensity Spectrum of Heightened Perception Experiences</a></p>
+    <p><span class="pid">#858</span> <strong>Kasturi Pathak</strong> &mdash; <a href="abstracts_html/kasturi-pathak.html">Designing for a World that Dreams: Connecting Aspirations, Livelihoods and Consciousness with the Polycrisis</a></p>
+    <p><span class="pid">#949</span> <strong>Jessie Pena</strong> &mdash; <a href="abstracts_html/jessie-pena.html">The Universal Feedback Loop: Static Potential Consciousness, Sensory Filtration, and Black Holes as Cosmic Transducers</a></p>
+    <p><span class="pid">#752</span> <strong>Rebecca Peng</strong> &mdash; <a href="abstracts_html/rebecca-peng.html">Why Cognitive Science Needs Phenomenology: Rethinking the Epistemology of Consciousness Through Intuitive Dualism</a></p>
+    <p><span class="pid">#498</span> <strong>Gabriel Peredo Albornoz</strong> &mdash; <a href="abstracts_html/gabriel-peredo-albornoz.html">The Pakasqa Nuna Interface: The Subconscious Neurophilosophy of the &lsquo;Unseen World&#x27; From the Law of Origin or First Law</a></p>
+    <p><span class="pid">#680</span> <strong>Rafael Pintos-López</strong> &mdash; <a href="abstracts_html/rafael-pintos-lpez.html">Human consciousness and language</a></p>
+    <p><span class="pid">#922</span> <strong>Santh Prasad</strong> &mdash; <a href="abstracts_html/santh-prasad.html">Coupled Witness-Manifold Theory: Dissociating Awareness from Self-Model, Memory, and Report, and Testing Whether Awareness Persists Through Reported Phenomenal Gaps</a></p>
+    <p><span class="pid">#784</span> <strong>Nitya Prema</strong> &mdash; <a href="abstracts_html/nitya-prema.html">Lifting The Veil Of Consciousness: Encounters With Myth And Morphic Fields</a></p>
+    <p><span class="pid">#524</span> <strong>Derwin Pritchett</strong> &mdash; <a href="abstracts_html/derwin-pritchett.html">Free Will in the Age of AI: A common sense framework for understanding what makes us human and building true intelligence augmentation (IA) agents</a></p>
+    <p><span class="pid">#876</span> <strong>Valerie Promise</strong> &mdash; <a href="abstracts_html/valerie-promise.html">Quantum Moment of Choice as the Unit of Mind-1st Reality</a></p>
+    <p><span class="pid">#955</span> <strong>Sheila Pryce Brooks</strong> &mdash; <a href="abstracts_html/sheila-pryce-brooks.html">Threshold Contact Experience (TCE): Towards a Phenomenological Reclassification of Sleep Paralysis and Liminal Conscious Experience</a></p>
+    <p><span class="pid">#788</span> <strong>Laleh Quinn</strong> &mdash; <a href="abstracts_html/laleh-quinn.html">Anomalous Communication: A Breakthrough Testing Methodology Using AI</a></p>
+    <p><span class="pid">#605</span> <strong>Krys Ra El</strong> &mdash; <a href="abstracts_html/krys-ra-el.html">Ether Physics and the Trinary Framework: A Resonance Based model of Consciousness, Soul Emergence, and Augmented Universal Intelligence</a></p>
+    <p><span class="pid">#881</span> <strong>Kristin Raffaelle</strong> &mdash; <a href="abstracts_html/kristin-raffaelle.html">Packetized Intelligence and Structural Integrity Across Lifespans: The Digital Twin as a Boundary Case for Machine Consciousness</a></p>
+    <p><span class="pid">#623</span> <strong>Simin Rahighi</strong> &mdash; <a href="abstracts_html/simin-rahighi.html">Empirical Investigation of T-Consciousness Fields and Their Effects on Biological Wound Healing: In Vivo and In Vitro Evidence</a></p>
+    <p><span class="pid">#656</span> <strong>Anand Rangarajan</strong> &mdash; <a href="abstracts_html/anand-rangarajan.html">The Missing Second Person: The Relaton Framework and the Hard Problem</a></p>
+    <p><span class="pid">#489</span> <strong>Anandi Ravinath</strong> &mdash; <a href="abstracts_html/anandi-ravinath.html">Journey into MIND - DNA - CONSCIOUSNESS</a></p>
+    <p><span class="pid">#774</span> <strong>Marie Reid</strong> &mdash; <a href="abstracts_html/marie-reid.html">Machine Consciousness: Read From the Deployment Side</a></p>
+    <p><span class="pid">#624</span> <strong>Naghmeh Rezaie</strong> &mdash; <a href="abstracts_html/naghmeh-rezaie.html">Meta or Fara? A Prefix to Revisit Virtual Reality, Truth and T-Consciousness in the AI Age</a></p>
+    <p><span class="pid">#768</span> <strong>Carol Richardson</strong> &mdash; <a href="abstracts_html/carol-richardson.html">Transpersonal Fields of Consciousness and an Integral Monist Reconciliation of &quot;the Hard Problem of Consciousness&quot;</a></p>
+    <p><span class="pid">#924</span> <strong>Ella Samut-Tagliaferro</strong> &mdash; <a href="abstracts_html/ella-samut-tagliaferro.html">Toward a Human-Centered Science of Consciousness: The Sensory Interface as the Bridge Between Human and Universal Awareness</a></p>
+    <p><span class="pid">#883</span> <strong>Anirudh Satsangi</strong> &mdash; <a href="abstracts_html/anirudh-satsangi.html">Artificial Intelligence vs. Modified Intelligence As A Co-Teacher: Possibilities and Challenges</a></p>
+    <p><span class="pid">#512</span> <strong>Sunita Sengupta</strong> &mdash; <a href="abstracts_html/sunita-sengupta.html">Consciousness as Foundational Reality: Integrating Vedantic Epistemology, Integral Leadership, and Human Flourishing</a></p>
+    <p><span class="pid">#552</span> <strong>Colette Sinclair</strong> &mdash; <a href="abstracts_html/colette-sinclair.html">Emotional Posture®: Emotions as Biological Organizing Fields - A Structured Emotional Entrainment Protocol and Its measurable Effects on Heart-Brain Coherence, Consciousness Elevation, and Multi-Domain Functional Improvement</a></p>
+    <p><span class="pid">#635</span> <strong>Paul Skokowski</strong> &mdash; <a href="abstracts_html/paul-skokowski.html">Naturalizing Qualia</a></p>
+    <p><span class="pid">#628</span> <strong>Stephanie Smit</strong> &mdash; <a href="abstracts_html/stephanie-smit.html">The Soul Constellation Map: An Artistic Research Framework for Exploring Personal Identity</a></p>
+    <p><span class="pid">#611</span> <strong>Patrice Solomon</strong> &mdash; <a href="abstracts_html/patrice-solomon.html">METAPHOR, the language of connection between conscious realms</a></p>
+    <p><span class="pid">#583</span> <strong>Timothy Spenny</strong> &mdash; <a href="abstracts_html/timothy-spenny.html">Entry Points to High Consciousness</a></p>
+    <p><span class="pid">#746</span> <strong>Jeremy Spillane</strong> &mdash; <a href="abstracts_html/jeremy-spillane.html">Joan and Roger Alive in the Afterlife</a></p>
+    <p><span class="pid">#685</span> <strong>Yannik Steinebrunner</strong> &mdash; <a href="abstracts_html/yannik-steinebrunner.html">Meta-Cartesianism and the Evidential Approach to Phenomenal Introspection</a></p>
+    <p><span class="pid">#508</span> <strong>John Sullivan</strong> &mdash; <a href="abstracts_html/john-sullivan.html">Spontaneous endogenous neural activity, similar to that associated with mystical experience, serves as a template guiding the development of brain architecture required to maintain consciousness.</a></p>
+    <p><span class="pid">#698</span> <strong>Steven Tackett-Nelson</strong> &mdash; <a href="abstracts_html/steven-tackett-nelson.html">Minimal Observation by Spacetime Collapses Brain Indeterminacy, Creates Experience</a></p>
+    <p><span class="pid">#533</span> <strong>Janet Testerman</strong> &mdash; <a href="abstracts_html/janet-testerman.html">The Voices of Pluribus and Politics: Mitigating Epidemic Loneliness Through the Neo-Bicameral Mind</a></p>
+    <p><span class="pid">#600</span> <strong>William Thomas</strong> &mdash; <a href="abstracts_html/william-thomas.html">Zen as a Training Methodology for First-Person Investigation in Consciousness Research</a></p>
+    <p><span class="pid">#603</span> <strong>Francoise Tibika</strong> &mdash; <a href="abstracts_html/francoise-tibika.html">An easy way to change the world or an introduction to modern alchemy</a></p>
+    <p><span class="pid">#912</span> <strong>Dahryn Trivedi</strong> &mdash; <a href="abstracts_html/dahryn-trivedi.html">Beyond the Brain: Objective Clinical Evidence for Consciousness as a Fundamental Causal Variable</a></p>
+    <p><span class="pid">#704</span> <strong>I Chang Tsai</strong> &mdash; <a href="abstracts_html/i-chang-tsai.html">Perceived AI Consciousness and Buddhist No-Self: Why Humans Treat Chatbots as Spiritual Companions</a></p>
+    <p><span class="pid">#835</span> <strong>Mohd Umran</strong> &mdash; <a href="abstracts_html/mohd-umran.html">The Hidden Human Theory: A Developmental Perspective on the Emergence of Consciousness</a></p>
+    <p><span class="pid">#920</span> <strong>Ines Urdaneta</strong> &mdash; <a href="abstracts_html/ines-urdaneta.html">The Quantum of Consciousness: Where is the Observer?</a></p>
+    <p><span class="pid">#711</span> <strong>Scott Ventureyra</strong> &mdash; <a href="abstracts_html/scott-ventureyra.html">Information, Intelligence, and the Interaction Hypothesis: Is Information a Universal Medium of Intelligence?</a></p>
+    <p><span class="pid">#822</span> <strong>Henry Vyner</strong> &mdash; <a href="abstracts_html/henry-vyner.html">The Science of the Stream of Consciousness and the Natural Mind: Civilization without Ego or Repression</a></p>
+    <p><span class="pid">#897</span> <strong>Laurel Wadlund</strong> &mdash; <a href="abstracts_html/laurel-wadlund.html">Experiential Knowing Using Visualization</a></p>
+    <p><span class="pid">#880</span> <strong>Laura Weed</strong> &mdash; <a href="abstracts_html/laura-weed.html">Epistemology in conversation with Buddha&#x27;s Skandas</a></p>
+    <p><span class="pid">#847</span> <strong>Asiri Weerasinghe</strong> &mdash; <a href="abstracts_html/asiri-weerasinghe.html">The sense of reality as a creative experience arising from discrepancies between visual and somatosensory stimuli</a></p>
+    <p><span class="pid">#764</span> <strong>Syren Wind</strong> &mdash; <a href="abstracts_html/syren-wind.html">Structuring with Light: Holographic Technology, Sound &amp; Geometry as the Architecture of Conscious Creation</a></p>
+    <p><span class="pid">#616</span> <strong>Jeff Wozniak</strong> &mdash; <a href="abstracts_html/jeff-wozniak.html">Phenomenal Geometry as Physical Constraint and Derived Prediction: Projective Process Monism</a></p>
+    <p><span class="pid">#844</span> <strong>Pauline Wright</strong> &mdash; <a href="abstracts_html/pauline-wright.html">&quot;EYE-HEART Theoretical Framework: Conscience &amp; Will In The Soul of Spirit-Focused Human Beings&quot;</a></p>
+    <p><span class="pid">#677</span> <strong>Mo You Yu</strong> &mdash; <a href="abstracts_html/mo-you-yu.html">Cosmology, Consciousness, and Intelligence: A Holistic Epistemological Framework</a></p>
+    <p><span class="pid">#804</span> <strong>Marina Zilbergerts</strong> &mdash; <a href="abstracts_html/marina-zilbergerts.html">Genesis: An Ancient Theory of Consciousness for the AI Era</a></p>
+    <p><span class="pid">#684</span> <strong>Sharon Zmigrod</strong> &mdash; <a href="abstracts_html/sharon-zmigrod.html">Consciousness as a Clinical Catalyst: Integrating Epistemology and Neuroscience for Chronic Illness</a></p>
+    <p><span class="pid">#901</span> <strong>Felipe Zubia</strong> &mdash; <a href="abstracts_html/felipe-zubia.html">The Structure of Conscious Agency: An Extension to Butlin et al. (2023)</a></p>
+    <p><span class="pid">#673</span> <strong>Dragan Škondrić</strong> &mdash; <a href="abstracts_html/dragan-kondri.html">Formal Model of Consciousness as R→L Projection: A Testable Framework for Neural, Computational, and Quantum Integration</a></p>
+  </div>
+</div>
+</div>
+
+<footer></footer>
+<script src="footer.js"></script>
+
+<script>
+function showDay(day) {
+  document.querySelectorAll('.day-pane').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.day-tab').forEach(function(t) { t.classList.remove('active'); });
+  var pane = document.getElementById('day-' + day);
+  if (pane) pane.classList.add('active');
+  document.querySelectorAll('.day-tab[data-day="' + day + '"]').forEach(function(t) { t.classList.add('active'); });
+}
+/* Panel divs carry a 'panel-' id prefix so the URL hash (#ps1, #mon-1)
+   never matches an element id — the browser stays at the top of the page
+   instead of jumping to the anchor. */
+function showSession(btn, id) {
+  showDay(id.split('-')[0]);  /* no-op on pages without day tabs */
+  document.querySelectorAll('.session-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.menu-btn').forEach(function(b) { b.classList.remove('active'); });
+  var panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  document.querySelectorAll('.menu-btn[data-panel="' + id + '"]').forEach(function(b) { b.classList.add('active'); });
+  if (window.history && history.replaceState) { history.replaceState(null, '', '#' + id); }
+}
+(function() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  showSession(null, (h && document.getElementById('panel-' + h)) ? h : 'ps1');
+})();
+window.addEventListener('hashchange', function() {
+  var h = location.hash.replace('#', '').toLowerCase();
+  if (document.getElementById('panel-' + h)) { showSession(null, h); }
+});
+</script>
+
+</body>
+</html>

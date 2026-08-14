@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entry Points to High Consciousness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Timothy Spenny</h1>
+  <p class="subtitle">UAPedia, New York, NY, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/timothy-spenny.jpg" alt="Timothy Spenny">
+    <div class="speaker-info">
+      <h2>Timothy Spenny</h2>
+      <div class="affiliation">UAPedia, New York, NY, USA</div>
+      <div class="presentation">Wednesday, October 14 &middot; <a href="../posters.html#ps2">Poster Session 2</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Entry Points to High Consciousness</div>
+
+  <div class="abstract-text">
+<p>Entry Points to Expanded Awareness: Mapping Convergent Human Experiences at the Edge of Consciousness Humanity&rsquo;s understanding of consciousness remains fragmented across disciplines, often divided between neuroscience, psychology, spirituality, physics, and anomalous experience research. Yet a growing body of experiential reports suggests that altered or expanded states of awareness may emerge through remarkably similar pathways, regardless of whether they originate in clinical, spiritual, traumatic, or anomalous contexts. This presentation proposes a conceptual framework for examining these &ldquo;entry points&rdquo; into expanded consciousness and explores whether these experiences represent disconnected phenomena, or different expressions of an underlying cognitive and ontological reality. While mainstream science often isolates these experiences into separate explanatory silos, this presentation argues that they may share overlapping neurological, psychological, informational, and phenomenological structures. The work draws from emerging consciousness research, predictive processing theory, anomalistic psychology, transpersonal psychology, integrated information theory, quantum-adjacent interpretations of perception, and cross-cultural mystical traditions. Particular attention is given to recurring experiential patterns reported across populations: perceived contact with non-human intelligence, radical shifts in meaning attribution, temporal distortions, hyper-connectivity, symbolic synchronicities, and transformative aftereffects. The presentation also examines the role of collective consciousness and cultural framing in shaping these experiences. For example, historical religious visions, modern UFO encounters, and psychedelic revelations frequently contain structurally similar motifs interpreted through different symbolic languages. This raises critical questions: Are these experiences culturally manufactured hallucinations, emergent properties of the brain under altered states, or glimpses into a deeper layer of consciousness that conventional materialist models have not yet adequately explained? Importantly, this framework does not advocate for uncritical belief in paranormal claims. Rather, it proposes a scientifically open yet disciplined approach to studying consciousness at its boundaries. By comparing experiential convergence across disciplines traditionally treated as incompatible, researchers may uncover new models for understanding perception, cognition, selfhood, and human meaning-making. The presentation argues that the stigma surrounding anomalous experiences has historically limited interdisciplinary inquiry and that a more integrated research paradigm is necessary to advance consciousness science. Finally, the discussion explores the implications of these convergent experiences for the future of human development, mental health, spirituality, and societal transformation. As artificial intelligence, neurotechnology, and global connectivity accelerate humanity&rsquo;s engagement with questions of identity and awareness, understanding the mechanisms and meaning of expanded states of consciousness may become increasingly important&mdash;not only scientifically, but culturally and existentially. This presentation invites researchers across neuroscience, psychology, physics, anthropology, religious studies, and UAP/anomalous phenomena studies to consider whether consciousness itself may be the unifying variable underlying many of humanity&rsquo;s most profound and least understood experiences.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Timothy Spenny is a corporate strategist, researcher, and consciousness-focused entrepreneur whose work explores the intersection of consciousness, the phenomenon, human awareness and reality. He is the co-founder of UAPedia and producer of UAPCon 1&amp;2.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

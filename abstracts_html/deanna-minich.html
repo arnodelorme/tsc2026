@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melatonin and the Architecture of Consciousness: Light, Mitochondria, and the Rhythms of Awareness &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Deanna Minich</h1>
+  <p class="subtitle">Institute for Science and Spirituality, Port Orchard, WA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/deanna-minich.jpg" alt="Deanna Minich">
+    <div class="speaker-info">
+      <h2>Deanna Minich</h2>
+      <div class="affiliation">Institute for Science and Spirituality, Port Orchard, WA, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-6">MON-6 &mdash; Biophysics of Living Systems: Light, Water, Mitochondria, and Healing</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Melatonin and the Architecture of Consciousness: Light, Mitochondria, and the Rhythms of Awareness</div>
+
+  <div class="abstract-text">
+<p>Melatonin is often reduced to a &ldquo;sleep hormone,&rdquo; yet its biology points to something far more expansive. Synthesized not only in the pineal gland but also within mitochondria throughout the body, melatonin acts as a regulator of timing, energy, and cellular communication. In this talk, we will explore melatonin as a molecular bridge between light, metabolism, and consciousness. Beginning with its role as a circadian signal of darkness, we will examine how melatonin helps orchestrate transitions between states of awareness: wakefulness, dreaming, and deep sleep. These shifts are not merely passive but are actively structured by melatonin&rsquo;s influence on mitochondrial function, redox balance, and neuroendocrine signaling. Through these pathways, melatonin contributes to how the brain processes information, consolidates memory, and clears metabolic byproducts via the glymphatic system. We will also explore emerging research suggesting that melatonin&rsquo;s actions extend beyond sleep into domains of perception, mood regulation, and possibly altered states of consciousness. Its interaction with neurotransmitter systems, including serotonin and dopamine, positions it as a key modulator of internal experience. At the same time, modern environmental inputs such as artificial light at night, circadian disruption, and lifestyle patterns may attenuate melatonin signaling, with downstream effects on cognition, emotional resilience, and long-term brain health. Integrating mechanistic science with a systems-level perspective, this session reframes melatonin as a central timing molecule that helps synchronize internal physiology with external cycles of light and darkness. Attendees will gain a deeper understanding of how circadian biology shapes consciousness and how practical interventions, from light exposure to nutritional strategies, can support melatonin&rsquo;s role in maintaining coherent, resilient states of awareness. This presentation offers a new lens: not simply how we sleep, but how we experience and process reality itself, through the rhythmic intelligence of melatonin.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Deanna Minich, MS, PhD, CNS, IFMCP, FACN is a nutrition scientist, functional medicine clinician, educator, and author with over 50 peer-reviewed scientific publications and seven books on nutrition, health, and human potential. She serves as Chief Science Officer at Symphony Natural Health, where she leads scientific research, product development, and educational initiatives with a focus on women&rsquo;s health and endocrine aging.</p>
+<p>Dr. Minich is widely recognized for her integrative and systems-based approach to nutrition science, bridging biochemistry, physiology, and lifestyle medicine with a deeper exploration of how food and environment influence human biology. Her work has been particularly influential in advancing the understanding of phytonutrients, including flavonoids and polyphenols, as signaling molecules that impact cellular communication, metabolism, and brain health.</p>
+<p>A central theme of her research is the role of circadian biology in health and disease. She has contributed to expanding the scientific dialogue around melatonin, moving beyond its traditional association with sleep to highlight its roles in mitochondrial function, oxidative balance, immune modulation, and neuroendocrine regulation. Her work emphasizes how modern lifestyle factors such as light exposure, stress, and environmental inputs intersect with internal biological rhythms to shape health, cognition, and resilience.</p>
+<p>Dr. Minich has also been actively engaged in developing clinical frameworks that translate complex science into practical strategies for clinicians and the public. Her work integrates dietary patterns, nutrient timing, and targeted supplementation to support hormonal balance, metabolic resilience, and healthy aging, particularly during the menopausal transition.</p>
+<p>She is a recipient of the Linus and Ava Helen Pauling Award and is a Fellow of the American College of Nutrition (FACN), recognizing her contributions to nutrition science and clinical practice. She has lectured internationally for healthcare professionals, academic audiences, and interdisciplinary conferences.</p>
+<p>Dr. Minich&rsquo;s work continues to explore the intersection of nutrition, circadian biology, and consciousness, with a focus on how biological systems process information from food, light, and environment to influence physiology and human potential. More information about her work can be found at DeannaMinich.com.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

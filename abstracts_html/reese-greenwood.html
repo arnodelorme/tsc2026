@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nested Fractal Reality Framework: A Step Towards A Unifying Consciousness Theory &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Reese Greenwood</h1>
+  <p class="subtitle">University of North Texas, Denton, TX, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/reese-greenwood.jpg" alt="Reese Greenwood">
+    <div class="speaker-info">
+      <h2>Reese Greenwood</h2>
+      <div class="affiliation">University of North Texas, Denton, TX, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-3">MON-3 &mdash; Unified and Universal Frameworks: Consciousness Beyond the Brain</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Nested Fractal Reality Framework: A Step Towards A Unifying Consciousness Theory</div>
+
+  <div class="authors-line">Reese Greenwood, Anthony Ryals, Kara Stuart, Riley Petherbridge, Manuela Azevedo, Whitney Brimhall, Diana Towe, Calvin Sims, Jennifer Wadlington, Kurt Geggus</div>
+  <div class="affiliations">Reese Greenwood &mdash; University of North Texas, Denton, TX, USA<br>Anthony Ryals &mdash; University of North Texas, Denton, TX, USA<br>Kara Stuart &mdash; University of North Texas, Denton, TX, USA<br>Riley Petherbridge &mdash; University of North Texas, Denton, TX, USA<br>Manuela Azevedo &mdash; University of North Texas, Denton, TX, USA<br>Whitney Brimhall &mdash; University of North Texas, Denton, TX, USA<br>Diana Towe &mdash; University of North Texas, Denton, TX, USA<br>Calvin Sims &mdash; University of North Texas, Denton, TX, USA<br>Jennifer Wadlington &mdash; University of North Texas, Denton, TX, USA<br>Kurt Geggus &mdash; Brookdale Senior Living Solutions, Denton, TX, USA</div>
+
+  <div class="abstract-text">
+<p>Nested Fractal Reality Framework (NFRF) proposes that reality is composed of hierarchically nested systems whose interactions give rise to qualitatively new domains of existence. As systems increase in complexity and their interactions cross threshold conditions, they generate emergent structures with novel capacities; for example, physics giving rise to chemistry, chemistry to biology, and biology to technology. These emergent realms continue to influence one another across scales; human-generated pollution, for instance, simultaneously affects ecological, organismal, and cellular systems, creating feedback loops between systems. Within NFRF, consciousness is conceived as a system-relative, functional experience arising from efficient interaction between the environment and internal parts of a entity. The quality of a system&rsquo;s perception is determined by the relationships necessary for persistent self&ndash;environment coupling. This definition does not imply uniform phenomenology across levels; instead, it identifies structural preconditions under which forms of awareness may emerge whenever a system achieves sufficient complexity, integration, and unification. NFRF provides a structural vocabulary for identifying parallels in self organizing system dynamics across disciplines. It additionally emphasizes how human perceptual constraints, methodological limits, and conceptual assumptions shape the scientific study of consciousness. By mapping relationships across physical, chemical, biological, and technological domains, NFRF offers a meta-framework capable of incorporating diverse theories of consciousness, including neurobiological, evolutionary, computational, philosophical, and quantum accounts, within a unified nested architecture of reality. NFRF is highly complementary to emerging theories such as Riddle and Schooler&rsquo;s Nested Observer Window model (NOW), which characterizes layers of awareness within cognitive systems, from non-conscious processing to conscious experience and meta-awareness. NFRF extends this logic by proposing that observerhood emerges fractally when systems cross the requisite threshold of complexity and self&ndash;environment integration. In this view, NOW&rsquo;s observer layers can be interpreted as specific instances of a broader fractal principle. This synthesis positions meta-awareness not as an exclusively human trait, but as a structural possibility that may arise at multiple levels of organization, including biological collectives, ecological networks, and potentially AI systems. A further strength of the NFRF is its ability to integrate theological and contemplative traditions without sacrificing scientific rigor. Concepts such as Indra&rsquo;s Net and the Taoist microcosm&ndash;macrocosm analogy resonate with NFRF&rsquo;s fractal, nested organization. Rather than treating these traditions as metaphors, NFRF frames them as convergent intuitions about the recursive structure of complex systems, paralleling contemporary ideas in emergence theory, relational ontology, and self-organizing dynamics. This cross-cultural compatibility invites dialogue between scientific, philosophical, and contemplative worldviews. In summary, NFRF offers a conceptually daring yet structurally grounded ontology by (1) identifying complex system mechanisms through which novel forms of organization and awareness emerge; (2) unifying scientific and philosophical theories with contemplative traditions; (3) extending observerhood capabilities beyond biology; and (4) reframing consciousness a property of a fundamental relational reality. Together with complementary models such as NOW, NFRF provides a multi-level, fractally organized account of consciousness capable of sparking interdisciplinary dialogue about whether awareness is merely a feature of organisms, or a structural principle woven into through a self-organizing reality.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>I graduated magna cum laude with my B.S. in Psychology from the University of North Texas. Upon graduation, I was awarded the Distinguished Honors Scholar Award for my research on Complex PTSD in the honors college. I am now a doctoral student in UNT&#x27;s Behavioral Science program. My interest in consciousness began through discussions with my mentor, Dr. Anthony Ryals. While most of my research has centered around childhood adversity, I have a deep passion for organizing complex phenomena, which lends itself useful for studying consciousness. During my undergrad, I began developing a framework that gives a unique view of reality and what implications its structure could have in regards to how we study consciousness. I&#x27;m excited to attend the Science of Consciousness Conference and dive deeper into the realm of consciousness research.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

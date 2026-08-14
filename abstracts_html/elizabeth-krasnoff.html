@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binaural Beats as Experiential &ldquo;Digital Drugs&rdquo; &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Elizabeth Krasnoff</h1>
+  <p class="subtitle">Cal Institute of Integral Studies, SF, Cal, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/elizabeth-krasnoff.jpg" alt="Elizabeth Krasnoff">
+    <div class="speaker-info">
+      <h2>Elizabeth Krasnoff</h2>
+      <div class="affiliation">Cal Institute of Integral Studies, SF, Cal, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../concurrent.html#tue-2">TUE-2 &mdash; Contemplative Practice and Transformation: Breath, Heart, and Awakening</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Binaural Beats as Experiential &ldquo;Digital Drugs&rdquo;</div>
+
+  <div class="abstract-text">
+<p>Humans have long sought to alter their mental states through various cultural practices, specifically through the cross-cultural phenomenon of using rhythmic sound to cause altered states of consciousness (American Psychological Association, 2018; Van Pool, 2009). This experiential session will first address the most recent discoveries on the behavioral, perceived, and neural pathways related to the altered states of consciousness elicited by rhythmic sounds, particularly binaural beats (BB). BB result from listening to two different sound frequencies, one in each ear, which cause the perception of one illusory sound. BB have gained status as a new type of &ldquo;digital drug&rdquo; due to their potential to alter mood and perception (Aparicio-Terres et al., 2025). The altered states of consciousness induced by rhythmic sounds are usually felt as deep relaxation. The mechanism of the altered states may be explained by entrainment of thalamocortical brain pathways with low-frequency tones&mdash;a state that resembles psychedelic experience (Aparicio-Terres et al., 2025). Thalamocortical pathways play an important role in hearing by transmitting sound information from the thalamus to the cerebral cortex of the brain (Winer, 2011; Hackett, 2011). These pathways support the brain in perceiving features of sound including pitch, intensity, and location (Winer, 2011; Hackett, 2011). The second 30 minutes of the session will consist of an experiential Alpha Theta Binaural Beats Silent Disco for attendees. We will listen to original BB music tracks that I created, that are currently offered for streaming on Spotify, and are the heartbeat of my podcast, Beats of the Month. Alpha theta BB are known to induce relaxation and a heightened mood in listeners (Sharma et al., 2017). The session will be long enough since research shows that BB require stimulation duration of as little as 10 minutes (Colzato et al., 2017; Galvez et al., 2018) and up to 20&ndash;30 minutes to affect perception (Jirakittayakorn &amp; Wongsawat, 2017). References American Psychological Association. (2018). Altered state of consciousness (ASC). Aparicio‐Terrés, R., López‐Mochales, S., Díaz‐Andreu, M., &amp; Escera, C. (2025). The neurobiology of altered states of consciousness induced by drumming and other rhythmic sound patterns. Annals of the New York Academy of Sciences. https://doi.org/10.1111/nyas.15403 Colzato, L. S., Barone, H., Sellaro, R., &amp; Hommel, B. (2017). More attentional focusing through binaural beats: Evidence from the global&ndash;local task. Psychological Research, 81(1), 271&ndash;277. https://doi.org/10.1007/s00426-015-0727-0 Gálvez, G., Recuero, M., Canuet, L., &amp; Del-Pozo, F. (2018). Short-term effects of binaural beats on EEG power, functional connectivity, cognition, gait and anxiety in Parkinson&rsquo;s disease. International Journal of Neural Systems, 28(05), Article 1750055. https://doi.org/10.1142/S0129065717500551 Jirakittayakorn, N., &amp; Wongsawat, Y. (2017). Brain responses to a 6-Hz binaural beat: effects on general theta rhythm. Frontiers in Neuroscience, 11, 365. https://doi.org/10.3389/fnhum.2018.00387 Sharma, S., Rewadkar, S., Pawar, H., Deokar, V., &amp; Lomte, V. M. (2017, February). Survey on binaural beats and background music. In 2017 International Conference on Emerging Trends &amp; Innovation in ICT (ICEI) (pp. 98-103). IEEE. DOI: 10.1109/ETIICT.2017.7977018</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Elizabeth W. Krasnoff, PhD, is a lover of music and sound, and a singer/songwriter, with eight studio albums. She reviewed the transformative effects of sound, in her dissertation &quot;The Effects of Auditory Binaural Beats on Consciousness and the Human Nervous System.&quot; She has hearing issues such as deafness, tinnitus and misophonia, resulting in years of personal study of sound, hearing and the human voice. Elizabeth has been published in Frontiers in Human Neuroscience, the Journal for Scientific Exploration, the World Futures Journal, The Society for Consciousness Studies, Journal of Conscious Evolution, Maria Shriver&#x27;s Sunday Paper, Energy Magazine, and SFYogamag. She has a bi-monthly column in SF Yoga Mag and Energy Magazine. She presents internationally on sound and consciousness at venues such as the Bishops University, Quebec, CAN; Carelton University, Ottawa, CAN; plus Usona Institute; the Tuscon Science of Consciousnes Conference; Yale Divinity School; The Graduate Institute, CIIS, CIHS; the Academy of Intuition; the Globe Sound Healing Conference and JFK University.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

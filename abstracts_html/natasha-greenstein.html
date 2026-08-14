@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formal representations for conscious agent influence in quantum random number generators &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Natasha Greenstein</h1>
+  <p class="subtitle">Institute of Noetic Sciences (IONS), Novato, CA, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/natasha-greenstein.jpg" alt="Natasha Greenstein">
+    <div class="speaker-info">
+      <h2>Natasha Greenstein</h2>
+      <div class="affiliation">Institute of Noetic Sciences (IONS), Novato, CA, USA</div>
+      <div class="presentation">Monday, October 12 &middot; <a href="../concurrent.html#mon-1">MON-1 &mdash; Quantum Theories of Consciousness and the Measurement Problem</a> &middot; Ballroom</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">Formal representations for conscious agent influence in quantum random number generators</div>
+
+  <div class="authors-line">Natasha Greenstein, Thomas Brophy</div>
+  <div class="affiliations">Natasha Greenstein &mdash; Institute of Noetic Sciences (IONS), Novato, CA, USA<br>Thomas Brophy &mdash; Institute of Noetic Sciences (IONS), Novato, CA, USA</div>
+
+  <div class="abstract-text">
+<p>Here we propose from first principles four formalisms for conscious agent influence on quantum information in random number generators, validating recent empirical findings of transtemporal studies. Random number generators (RNGs) provide reliable sources of randomness where ordered signals could indicate causal deviation from expected randomness. The Global Consciousness Project (GCP) has studied the cumulative effects of these RNGs across the planet for over two decades, finding significant z-scores in the bit-flips during periods of planetary-scale collective behavior, such as midnight on New Year&#x27;s Eve and deaths of the Pope and other notable figures. Recently, Entangled Labs has created a quantum random number generator (QRNG) where randomness is sourced from a one-photon beam splitter and the observable is the path variable, connected to a mobile application where users can track their own data, their city, and the globe. Here, the app reports the same phenomena as the GCP, where users experience various levels of significant z-scores (proposed coherence) during periods of meaningful moments or emotional significance. To better understand these phenomena, we first identify relevant theories of quantum consciousness such as Hal Puthoff&#x27;s zero-point field (ZPF) coupling, Ed May&#x27;s Decision Augmentation Theory (DAT), and Antony Valentini&#x27;s subquantum H-theorem. We then propose quantum information formalism for the photon path incorporating a conscious agent variable in the landscape of each theory: ZPF coupling as gates between measurement events, DAT as two-state vector formalism with a tunable weight on the forward/backward moving states, and the ratio of adherence to Born&#x27;s rule (P = |Ψ|^2) for H-theorem influence. We then compute statistics on ensembles of detection events, and extract the parameter magnitudes needed to produce the significant z-scores observed in experimental data. Finally, we repeat the same process for an electron-based QRNG to emphasize universality across hardware. Importantly, we identify the orders of magnitude necessary to produce conscious influence in various given stages of the QRNG process, and propose mechanisms that could contribute to these events, rather than hard-coding or assuming exact mechanisms at construction. Overall, this work does not solve but brings us one step closer to theoretical models that can predict and explain empirical psi data from first principles of physics and metaphysics.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Natasha C. Greenstein, MSc, is a quantum biologist and computational neuroscientist studying the emergence of quantum information in various forms of consciousness. She received her bachelor&#x27;s  in Physics and minor in Chinese Language and Culture from Princeton University in 2025 and her master&#x27;s in Brain and Cognition from Universitat Pompeu Fabra this July. Her research spans a range of topics, from fractal criticality in quantum and cortical systems to conscious influence in quantum random number generators. Natasha was recruited to IONS at TSC 2025 in Barcelona by President Thomas Brophy and volunteers as a research physicist working directly with Dr. Brophy. She is also a Labs Coordinator for the Intercollegiate Psychedelics network and public speaker on a range of topics from computational neuroscience the interdisciplinary convergence of quantum and spiritual sciences.</p>
+<p>Thomas G. Brophy, PhD, is President of the Institute of Noetic Sciences (IONS). He previously served as president of California Institute for Human Science (CIHS). His tenure as president of CIHS oversaw a many-year effort to achieve regional accreditation from the Western Association of Schools and Colleges, Colleges and Universities Commission (WSCUC) in 2021, for CIHS as a unique mind, body, spirit integral university. Earning a BA in physics from Colorado College, and MS and PhD degrees in physics from the University of Colorado (CU), Boulder, Thomas&rsquo; academic and scientific appointments include: the CU Nuclear Physics Laboratory, the CU Laboratory for Atmospheric and Space Physics (LASP) where he worked on NASA&rsquo;s Voyager and Cassini spacecraft projects, and an appointment as a National Science Foundation Exchange Scientist at the University of Tokyo Department of Earth and Planetary Physics and ISAS robotic space program, where he published pioneering work on computational solutions to the Boltzmann equation, the astrodynamical origins of planetary rings and interstellar comets.  Thomas explored the fundamental science and ontology of consciousness and its cultural implications in his 1998 book The Mechanism Demands a Mysticism: An Exploration of Spirit, Matter, and Physics. His study of the archaeoastronomy of prehistoric Egypt, published in his books The Origin Map, and Black Genesis co-authored with Robert Bauval, has been cited as relevant to the study of extraterrestrial, or transhuman, intelligence.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>
