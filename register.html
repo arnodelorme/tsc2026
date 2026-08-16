@@ -90,6 +90,7 @@ img { max-width: 100%; height: auto; }
   opacity: 1 !important;
   text-shadow: 0 1px 8px rgba(0,0,0,.55);
 }
+.page-header .sub-seg { white-space: nowrap; }
 
 /* ── Content ─────────────────────────────────── */
 .content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 4rem; }
@@ -203,6 +204,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   .topnav ul.open { display: flex; }
   .hamburger { display: block; }
   .page-header h1 { font-size: 1.6rem; }
+  /* stack the subtitle segments on small screens: no dangling separators */
+  .page-header .sub-sep { display: none; }
+  .page-header .sub-seg { display: block; white-space: normal; }
   .content { padding: 2rem 1.2rem 3rem; }
   .steps { grid-template-columns: 1fr; }
   .pricing { grid-template-columns: 1fr; }
@@ -228,7 +232,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <!-- ═══ PAGE HEADER ═══ -->
 <header class="page-header">
   <h1>Register</h1>
-  <p class="subtitle">The Science of Consciousness 2026 &middot; October 11&ndash;16, 2026 &middot; Paradise Point Resort &amp; Spa, San Diego</p>
+  <p class="subtitle"><span class="sub-seg">The Science of Consciousness 2026</span><span class="sub-sep"> &middot; </span><span class="sub-seg">October 11&ndash;16</span><span class="sub-sep"> &middot; </span><span class="sub-seg">Paradise Point Resort &amp; Spa, San Diego</span></p>
 </header>
 
 <!-- ═══ CONTENT ═══ -->
@@ -272,7 +276,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
       <tr><td>Water view ($299)</td><td><a href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">reserve</a></td></tr>
     </table>
     <p class="fee-note">† While supplies last. “Students” includes up to the PhD level. We may cross-check student-rate bookings against conference registration.<br>†† A standard room might still include a water view, depending on availability.</p>
-    <p>Email <a href="mailto:BPerez@paradisepoint.com">BPerez@paradisepoint.com</a> for reservation questions.</p>
+    <p>For reservation questions, contact Paradise Point Resort &amp; Spa at (858) 274-4630 or <a href="mailto:reservations@paradisepoint.com">reservations@paradisepoint.com</a>.</p>
   </div>
 
 </div>
