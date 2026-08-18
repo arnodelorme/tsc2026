@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EEA Energetic Emission Analysis, measure for consciousness states &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Antonia Di Francesco</h1>
+  <p class="subtitle">Iomed, Lecce, LE, Italy / University of Rome Tor Vergata, Roma, RM, Italy</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/antonia-di-francesco.jpg" alt="Antonia Di Francesco">
+    <div class="speaker-info">
+      <h2>Antonia Di Francesco</h2>
+      <div class="affiliation">Iomed, Lecce, LE, Italy / University of Rome Tor Vergata, Roma, RM, Italy</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../posters.html#ps1">Poster Session 1</a></div>
+      <div class="tags">
+        <span class="tag tag-poster">Poster</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">EEA Energetic Emission Analysis, measure for consciousness states</div>
+
+  <div class="abstract-text">
+<p>The measuring of awakening conditions and resulting states of incresed consciousness has been investigated by Iomed. Inter alia, states of deep presence, experiencing joy and inner peace, trust, and higher state of consciousness, induces changes in measurable biophysical parameters. The instrument used is the GDV Bio-Well Camera, which detects, elaborate and analyses the emission of biophotons from the fingertips. The shape, size, luminescence, and position of these emissions are not random, but are interconnected to reflected areas on the fingertips in a holographic vision of the Universe and the human body. The reading of an EEA provides a holistic understanding of the predispositions and weaknesses present within the entire human system. Measurements of human energetic emissions were taken through Bio-Well EPI (Electro Photonic Imaging) GDV (Gas Discharge Visualization). Bio-electrography parameters of all fingers of both hands were measured with computerized complex Bio-Well GDV-camera, developed by Konstantin Korotkov, of the University of Saint-Petersburg, Russia. Bio-well GDV Camera is used for determining an EEA characterization for examining human psycho/emotional and physiological state, before and after specific treatments, as elucidated in the following. For example, once a personalized treatment of photobiomodulation (PBM) is administered, we thus proceed with a second EEA detection, in order to assess the body&#x27;s response to the electromagnetic stimulus of light to which it has been subjected. Specifically the PBM device used is the G4 Neuro-espresso Niraxx inc used for 10 min on forehead 850 nm 40Hz The measurements focused on pre-selected parameters, such as the hypothalamic-pituitary-adrenal axis, emotional pressure values, general energy values and the functioning of the corpus callosum in connecting the two hemispheres. The changes resulting from the PBM treatment are measured and analyzed as these parameters (&lsquo;stress measuring parameters&rsquo;) offer a direct measure of the state of connection. To this end, at Iomed medical center we have conducted several studies of this nature, proving how awakening experiences, through various techniques (photobiomodulation, mindfulness, or group therapies such as family constellations), lead to changes in these parameters, and therefore leading us to believe that the use of GDV Camera &ndash; Bio-Well technology - is a valid tool for performing effective measurements of the state of awareness. The results relating to the variation of the human energy field following photobiomodulation treatments on the reflex zones of the amygdala and prefrontal lobes, following mindfulness experiences, and following a constellation retreat will be presented.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Antonia Di Francesco Bio:</p>
+<p>Chemist, Researcher, Expert in Photobiomodulation, Colorpuncture, EEA Energetic Emission Analysis</p>
+<p>CEO and founder IOMED srl</p>
+<p>Chairperson and founder IOMED aps no-profit</p>
+<p>Adjunt Professor in Vibrational Medicine and Photobiomodulation</p>
+<p>University of Rome Tor Vergata - Master&#x27;s Degree in Natural Medicine</p>
+<p>and Naturopathic Sciences</p>
+<p>Moleskine Pioneer Creativity Awards</p>
+<p>SPEACH at CONGRESS:</p>
+<p>5° ECIM European Congress for Integrative Medicine 21-22- Settembre 2012 &ndash; Firenze Palazzo dei Congressi</p>
+<p>COLORPUNCTUR: A TERAPEUTIC THECNIQUE FOR INTEGRATIVE MEDICINE AND BIO-NATURAL DISCIPLINE</p>
+<p>6° ECIM European Congress for Integrative Medicine 4-5 ottobre 2013 - Berlino COLORPUNCTURE AND ENERGETIC EMISSION ANALYSIS (EEA) FOR CHRONIC PAIN THERAPY</p>
+<p>7° ECIM European Congress for Integrative Medicine 10-11 ottobre 2014 - Belgrado CROMOPUNCTURE AND AMENORREA &ndash; CASE REPORT</p>
+<p>SAND Science and non-duality Congress Ottobre 2015 San Josè California</p>
+<p>A NON-LOCAL APPROACH TO KARMIC AND GENEALOGICAL THERAPY BY WAY OF COLORPUNCTURE</p>
+<p>ECIM European Congress for Integrative Medicine 2016</p>
+<p>CHANGE OF HUMAN ENERGETIC FIELD EMISSION BEFORE AND AFTER PHOTOSTIMULATION OF ACUPUNCTURE POINTS FOR FIBROMYALGIA SYNDROME (FMS): CASE REPORT</p>
+<p>SIS Science Information Spirituality Congress July 2016 St Petersburg Russia</p>
+<p>EEA (ENERGETIC EMISSION ANALYSES) EVALUETION BEFORE AND AFTER COLOPUNCTURE TREATMENTS</p>
+<p>SAND Italy Titignano Ago 2016</p>
+<p>EEA AND COLORPUNCTURE.</p>
+<p>COLORPUNCTURE TECHNIQUES FOR TRAUMA AND DISHARMONIOUS MEMORIES.</p>
+<p>International Peacekeeping Assembly &ldquo;Birth of the World&rdquo; Maggio 2017 Roma- Città del Vaticano IMPACT OF EMOTIONS AND HUMAN CONDITIONS ON ENERGETIC EMISSION BIO-WELL DEVICE</p>
+<p>SIS Science Information Spirituality Congress 6-7 July 2024 St Petersburg Russia ON-LINE</p>
+<p>EEA ENERGETIC EMISSION ANALYSIS AND THE HOLOGRAFIC VISION OF UNIVERSE</p>
+<p>THE SCIENCE OF CONSCIOUSNESS CONFERENCE     July 6-11 2025 Barcelona</p>
+<p>PHOTOBIOMODULATION AND CONSCIOUSNESS</p>
+<p>My research aims to foster a scientific understanding of the effects of meditative and consciousness-related experiences, with the goal of making an implicit order (illness) explicit&mdash;in terms of health&mdash;by interacting with energy fields.</p>
+<p>My approach is based on the premise that both health and illness emerge from specific states of consciousness; consequently, at our Medical Center, we employ techniques, methodologies, and remedies designed to induce states of quantum coherence and enhance consciousness.</p>
+<p>Together with my team, I conduct both empirical and theoretical scientific inquiries, integrating ancient wisdom, modern scientific discoveries, and non-invasive technologies with an open-minded perspective.</p>
+<p>We conduct educational activities&mdash;based primarily on experiential practices and the use of non-invasive technological tools&mdash;to foster inner peace, dissolve limiting beliefs, and encourage pro-social behaviors, while remaining steadfast in our commitment to promoting human development potential at both individual and collective levels</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>

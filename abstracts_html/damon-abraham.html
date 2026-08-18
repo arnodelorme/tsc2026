@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIRV: Comparing Quantum and Local Randomness in Automated AI Remote Viewing &mdash; CS 2026</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; line-height: 1.6; background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul { list-style: none; display: flex; gap: 1.6rem; }
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em; transition: color .2s;
+}
+.topnav ul li a:hover { color: #fff; text-decoration: none; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center; padding: 7rem 2rem 2.5rem;
+}
+.page-header h1 {
+  font-size: 1.8rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35); margin-bottom: .3rem;
+}
+.page-header .subtitle { font-size: 1rem; opacity: .85; }
+
+.abstract-wrap {
+  max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+}
+.speaker-card {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.speaker-photo {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.speaker-info h2 {
+  font-size: 1.4rem; font-weight: 700; color: #0a2440;
+  margin-bottom: .2rem;
+}
+.speaker-info .affiliation {
+  font-size: .95rem; color: #555; margin-bottom: .3rem;
+}
+.speaker-info .presentation {
+  font-size: .85rem; color: #777; margin-bottom: .3rem;
+}
+.speaker-info .tags {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .3rem;
+}
+.speaker-info .tag {
+  font-size: .72rem; padding: .15rem .5rem; border-radius: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+}
+.tag-remote { background: #e0f0ff; color: #1a6fa0; }
+.tag-plenary { background: #d6e6f0; color: #1a3050; }
+.tag-concurrent { background: #d0eaee; color: #1a4a50; }
+.tag-poster { background: #ece6f4; color: #3a2a50; }
+.tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-workshop { background: #dce8e0; color: #2a4030; text-transform: none; }
+a.tag-workshop:hover { text-decoration: none; filter: brightness(.95); }
+
+.talk-title {
+  font-size: 1.15rem; font-weight: 700; color: #0a2440;
+  margin-bottom: 1.2rem; line-height: 1.4;
+}
+.authors-line { font-size: .9rem; color: #333; margin-bottom: .4rem; }
+.affiliations {
+  font-size: .8rem; color: #777; line-height: 1.5; margin-bottom: 1.2rem;
+}
+.abstract-text {
+  font-size: .95rem; line-height: 1.7; color: #333;
+}
+.abstract-text p { margin-bottom: 1rem; }
+.about-heading {
+  font-size: 1.05rem; font-weight: 700; color: #0a2440; margin: 2rem 0 .8rem;
+}
+
+.back-link {
+  display: inline-block; margin-bottom: 1.5rem;
+  font-size: .9rem; font-weight: 600;
+}
+
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.4rem; }
+  .speaker-card { flex-direction: column; align-items: center; text-align: center; }
+  .abstract-wrap { padding: 1.5rem 1rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand">
+    <img src="../img/logo.png" alt="CS Logo">
+    <span>CS 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="../nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<header class="page-header">
+  <h1>Damon Abraham</h1>
+  <p class="subtitle">Entangled Labs, Irvine, CA, USA / Sleep Consciousness Lab, Wilmington, Delaware, USA</p>
+</header>
+
+<div class="abstract-wrap">
+  <a href="../program.html" class="back-link">&larr; Back to Program</a>
+
+  <div class="speaker-card">
+    <img class="speaker-photo" src="../img/damon-abraham.png" alt="Damon Abraham">
+    <div class="speaker-info">
+      <h2>Damon Abraham</h2>
+      <div class="affiliation">Entangled Labs, Irvine, CA, USA / Sleep Consciousness Lab, Wilmington, Delaware, USA</div>
+      <div class="presentation">Tuesday, October 13 &middot; <a href="../concurrent.html#tue-6">TUE-6 &mdash; Probing Consciousness: Prediction, Machines, and Anomalous Influence</a> &middot; Breakout</div>
+      <div class="tags">
+        <span class="tag tag-concurrent">Concurrent</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="talk-title">AIRV: Comparing Quantum and Local Randomness in Automated AI Remote Viewing</div>
+
+  <div class="abstract-text">
+<p>Introduction: Remote viewing (RV) research examines whether information about distant or concealed targets can be accessed beyond the known senses. Classic RV protocols are slow, resource-intensive, and vulnerable to tasking and judging biases. In an IRVA-funded pilot, I developed AIRV, a fully automated RV pipeline that (i) randomly selects image targets from a database, (ii) generates AI viewing transcripts via a random number generator (RNG)-seeded text/image generation, and (iii) scores outputs through automated judging using multimodal similarity metrics. That pilot established an unbiased chance baseline and infrastructure for testing anomalous influence on stochastic sources. This presentation reports a redesigned follow-up study that directly compares entropy sources feeding an AI image generator&rsquo;s semantic embedding space. Aim / Objective / Hypothesis: This study tests whether quantum randomness from the Entangled.org API, hypothesized to carry a consciousness-entanglement signature, produces AI-generated images with stronger target correspondence than a local hardware quantum RNG (Quantis USB) or a classical onboard pseudo-random generator (PRNG). Methods &amp; Materials: Across 300 trials, Stable Diffusion 3.5 Medium generated three RV transcripts per trial (PRNG, Quantis, Entangled), yielding 900 images. A single target was drawn without replacement from the 2,607-image OMNI database. Entropy from each source was injected into the model&rsquo;s T5/CLIP text-conditioning space, replacing the text prompt to produce novel transcript images. Each transcript image was scored against all 2,607 targets across eight embedding models (SigLIP2, DINOv2, ImageBind, Places365, Gram-style, Depth, color histogram, FFT-spectral). Per-model rank percentiles were averaged into a Borda score, with the hit threshold derived from 2,000 target-assignment permutations (95th percentile = 0.744). Results: Overall Borda rank (M = 0.507) did not differ from the empirical null (M = 0.504; permutation p = .18; Wilcoxon p = .096). By arm, Quantis ranked highest (M = 0.514, hit rate 5.7%), PRNG was near null (M = 0.508, 4.7%), and Entangled trended at or below chance (M = 0.500, 4.7%). A Friedman test across arms approached significance (χ² = 4.89, p = .087), with ordering Quantis &gt; PRNG &gt; Entangled, opposite the consciousness-specific hypothesis. Quantis outranked PRNG in 155 of 300 within-trial pairs (51.7%). Semantic models (SigLIP2, ImageBind, DINOv2) showed the clearest signal; low-level models showed none. Implications / Discussion: This study demonstrates a fully automated remote-viewing pipeline integrating target selection, AI transcript generation, and objective multimodal judging. By eliminating manual tasking and human judging, AIRV reduces experimenter bias while enabling studies at scales impractical for conventional protocols. The null result is compatible with models in which conscious intention is necessary for influencing stochastic systems. No human viewer attempted to acquire target information or influence the entropy source. Future work will combine AIRV with human participants using the machine-mediated remote-viewing (MMRV) paradigm developed by Maddocks and Moddel, in which human viewers conduct trials in tandem with AIRV. AIRV provides a scalable platform for investigating human-AI hybrid remote viewing and other consciousness-machine interaction hypotheses.</p>
+  </div>
+
+  <div class="about-heading">About the speaker</div>
+  <div class="abstract-text">
+<p>Damon Abraham, PhD, is Principal Research Scientist for Entangled.com, a consciousness technology</p>
+<p>platform supporting psi research by providing user-associated quantum-derived randomness and</p>
+<p>dedicated experimental channels for testing non-local effects. He conducts research in parapsychology</p>
+<p>and consciousness studies, with a focus on non-local perception (remote viewing, precognition) and</p>
+<p>non-local influence on stochastic systems. He recently co-organized The Missing Link Symposium,</p>
+<p>convening researchers and builders working at the intersection of consciousness science, psi, and AI.</p>
+<p>Damon is engaged in multiple collaborations, including projects with IONS, IRVA, Social-RV, and Google</p>
+<p>X.</p>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="../footer.js"></script>
+
+</body>
+</html>
