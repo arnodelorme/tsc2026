@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-240YM08SNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-240YM08SNR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venue Map &mdash; The Science of Consciousness 2026</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #fff;
+}
+a { color: #1a6fa0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+/* ── Nav ──────────────────────────────────────── */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 36, 64, 0.97);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topnav .nav-brand {
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+}
+.topnav .nav-brand img { height: 36px; border-radius: 4px; }
+.topnav ul {
+  list-style: none; display: flex; gap: 1.6rem;
+}
+.topnav ul li a {
+  color: #c8ddf0; font-size: .9rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .04em;
+  transition: color .2s;
+}
+.topnav ul li a:hover, .topnav ul li a.active { color: #fff; text-decoration: none; }
+
+/* hamburger */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+/* ── Page Header ─────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, #0a2440 0%, #0d3868 40%, #14628a 70%, #1a96b8 100%);
+  color: #fff; text-align: center;
+  padding: 8rem 2rem 3rem;
+}
+.page-header h1 {
+  font-size: 2.2rem; font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  margin-bottom: .4rem;
+}
+.page-header .subtitle {
+  font-size: 1.05rem; opacity: .85;
+}
+
+/* ── Content ─────────────────────────────────── */
+.content { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+.content h2 {
+  font-size: 1.5rem; font-weight: 700; color: #0a2440;
+  margin: 2.5rem 0 .6rem; padding-bottom: .4rem;
+  border-bottom: 2px solid #1a96b8;
+}
+.content h2:first-of-type { margin-top: 0; }
+.content h3 {
+  font-size: 1.15rem; font-weight: 600; color: #0d3868;
+  margin: 1.5rem 0 .5rem;
+}
+.content p { margin-bottom: 1rem; }
+.content ul, .content ol { margin: .5rem 0 1.2rem 1.4rem; }
+.content li { margin-bottom: .4rem; }
+.content strong { color: #0a2440; }
+
+/* ── Float image ─────────────────────────────── */
+.content .img-right {
+  float: right; margin: 0 0 1rem 1.5rem;
+  width: 360px; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.content .img-left {
+  float: left; margin: 0 1.5rem 1rem 0;
+  width: 360px; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+@media (max-width: 768px) {
+  .content .img-right,
+  .content .img-left { float: none; display: block; margin: 0 auto 1.2rem; width: 60%; }
+}
+
+/* ── Footer ───────────────────────────────────── */
+footer {
+  background: #0a2440; color: #8baac8;
+  padding: 2.5rem 2rem; text-align: center; font-size: .85rem;
+}
+footer a { color: #c8ddf0; }
+footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .topnav ul { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: rgba(10,36,64,.98); padding: 1rem 2rem; gap: .8rem; }
+  .topnav ul.open { display: flex; }
+  .hamburger { display: block; }
+  .page-header h1 { font-size: 1.6rem; }
+  .content { padding: 2rem 1.2rem 3rem; }
+}
+</style>
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="img/logo.png" alt="TSC Logo">
+    <span>TSC 2026</span>
+  </a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.topnav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul></ul>
+</nav>
+<script>document.write('<script src="nav.js?v=' + Date.now() + '"><\/script>');</script>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <h1>Venue Map</h1>
+  <p class="subtitle">Paradise Point Resort &amp; Spa &middot; San Diego &middot; October 11&ndash;16, 2026</p>
+</header>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content">
+
+<h2 id="map">Meeting Rooms</h2>
+
+<p>All conference sessions take place at Paradise Point Resort &amp; Spa. The map below shows every meeting room; click or pinch to zoom, or <a href="img/meeting_space2.png" target="_blank" rel="noopener">open the full-size map</a> in a new tab.</p>
+
+<p style="margin:1.2rem 0;"><a href="img/meeting_space2.png" target="_blank" rel="noopener"><img src="img/meeting_space2.png" alt="Map of the Paradise Point meeting rooms: Paradise Ballroom, Dockside Room, Garden Room, Bay View Room, Sunset Ballroom, Mission Bay Room, and Paradise Terrace" style="width:100%;max-width:900px;display:block;margin:0 auto;border:1px solid #ddd;border-radius:8px;"></a></p>
+
+<h2>What Happens Where</h2>
+
+<table style="width:100%;border-collapse:collapse;font-size:.92rem;">
+  <tr style="background:#0a2440;color:#fff;text-align:left;"><th style="padding:.5rem .7rem;">Room</th><th style="padding:.5rem .7rem;">Sessions</th></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;white-space:nowrap;"><strong>Paradise Ballroom</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Plenary sessions; Sunday full-day and featured evening <a href="workshops.html">workshops</a>; evening <a href="concurrent.html">concurrent sessions</a> MON-1, TUE-1, WED-1, THU-1. Registration &amp; exhibitors adjacent.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Dockside Room</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-2, TUE-2, WED-2, THU-2.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Garden Room</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday afternoon workshop; concurrent sessions MON-3, TUE-3, WED-3, THU-3; lunchtime <a href="experientials.html">experiential sessions</a>.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Sunset Ballroom Zone B (IV&ndash;V)</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-4, TUE-4, WED-4, THU-4.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Sunset Ballroom Zone A (I&ndash;III)</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-5, TUE-5, WED-5, THU-5.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Bay View Room</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-6, TUE-6, WED-6, THU-6.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Mission Bay Room</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><a href="posters.html">Poster sessions</a> Tuesday and Wednesday evenings; concurrent sessions MON-7 and THU-7. Separate building northeast of the conference center &mdash; follow the signposted path.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong>Paradise Terrace</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Thursday Luau dinner.</td></tr>
+</table>
+
+<p style="margin-top:1.4rem;">See the <a href="program.html">program outline</a>, <a href="program_details.html">detailed program</a>, <a href="workshops.html">workshops</a>, <a href="concurrent.html">concurrent sessions</a>, and <a href="posters.html">posters</a> for full schedules.</p>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer></footer>
+<script src="footer.js"></script>
+
+</body>
+</html>
