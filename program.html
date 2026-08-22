@@ -733,63 +733,84 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <!-- Lunch / Closing -->
   <tr>
     <td class="ov-time">12:30</td>
-    <td class="bg-break" colspan="5" style="font-size:.72rem;">Lunch break (on your own) &mdash; <em><a href="experientials.html#confirmed">Experiential sessions (Monday to Thursday)</a></em></td>
+    <td class="bg-break" colspan="5" style="font-size:.72rem;">Lunch break (<a href="map.html#food-trucks">food trucks available</a>) &mdash; <em><a href="experientials.html#confirmed">Experiential sessions (Monday to Thursday)</a></em></td>
     <td class="bg-closing">
       <div class="ov-title">Closing (ends 1PM)</div>
     </td>
   </tr>
-  <!-- PM Plenary -->
+  <!-- PM Plenary (Sunday workshops end 4:00) -->
   <tr class="ov-row-plenary">
-    <td class="ov-time">2:00 pm</td>
-    <td class="bg-workshop"><div class="ov-title">Afternoon Workshops</div><div style="font-size:.66rem;margin-top:.1rem;"><a href="workshops.html">see details</a></div></td>
-    <td class="bg-plenary">
+    <td class="ov-time" rowspan="2">2:00 pm</td>
+    <td class="bg-workshop"><div class="ov-title">Afternoon Workshops</div><div style="font-size:.66rem;margin-top:.1rem;">(2:00 to 4:00) &mdash; <a href="workshops.html">see details</a></div></td>
+    <td class="bg-plenary" rowspan="2">
       <div class="ov-title">PL-3: Neuroscience of Consciousness</div>
       <div class="ov-speakers"><a href="abstracts_html/edward-boyden.html">Boyden</a>, <a href="abstracts_html/terrence-sejnowski.html">Sejnowski</a>, <a href="abstracts_html/tracy-brandmeyer.html">Brandmeyer</a></div>
     </td>
-    <td class="bg-plenary">
+    <td class="bg-plenary" rowspan="2">
       <div class="ov-title">PL-6: Quantum AI &amp; Consciousness</div>
       <div class="ov-speakers"><a href="abstracts_html/hartmut-neven.html">Neven</a>, <a href="abstracts_html/susan-schneider.html">Schneider</a>, <a href="abstracts_html/anirban-bandyopadhyay.html">Bandyopadhyay</a></div>
     </td>
-    <td class="bg-plenary">
+    <td class="bg-plenary" rowspan="2">
       <div class="ov-title">PL-9: Connectomics or Wavefields?</div>
       <div class="ov-speakers"><a href="abstracts_html/andre-bastos.html">Bastos</a>, <a href="abstracts_html/eric-halgren.html">Halgren</a>, <a href="abstracts_html/edward-large.html">Large</a></div>
     </td>
-    <td class="bg-plenary">
+    <td class="bg-plenary" rowspan="2">
       <div class="ov-title">PL-12: Consciousness and AI</div>
       <div class="ov-speakers"><a href="abstracts_html/jennifer-prendki.html">Prendki</a>, TBA</div>
     </td>
-    <td></td>
+    <td rowspan="2"></td>
+  </tr>
+  <!-- 4:00 Sunday break starts (grey cell runs to 4:30 via rowspan) -->
+  <tr style="height:5px;">
+    <td class="bg-break" rowspan="2" style="padding:0;"></td>
   </tr>
   <!-- Break -->
-  <tr>
-    <td class="ov-time">4:10</td>
-    <td class="bg-break" colspan="5" style="font-size:.72rem;">Break</td><td></td>
+  <tr style="height:7px;">
+    <td class="ov-time" rowspan="2">4:10</td>
+    <td class="bg-break" colspan="4" rowspan="2" style="font-size:.72rem;">Break</td>
+    <td rowspan="2"></td>
+  </tr>
+  <!-- 4:30 Sunday workshops resume (ends 6:00, mid concurrent row) -->
+  <tr style="height:24px;">
+    <td class="bg-workshop" rowspan="2" style="vertical-align:middle;padding:.1rem .4rem;">
+      <div class="ov-title" style="font-size:.68rem;">Afternoon Workshops (cont.)</div>
+      <div style="font-size:.62rem;">(4:30 to 6:00) &mdash; <a href="workshops.html">see details</a></div>
+    </td>
   </tr>
   <!-- Late afternoon -->
-  <tr>
-    <td class="ov-time">5:00 pm</td>
-    <td class="bg-social"><div class="ov-title">Light Reception</div></td>
-    <td class="bg-concurrent"><div class="ov-title">Concurrent 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
-    <td class="bg-concurrent"><div class="ov-title">Concurrent 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
-    <td class="bg-concurrent"><div class="ov-title">Concurrent 3</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
-    <td class="bg-concurrent"><div class="ov-title">Concurrent 4</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
-    <td></td>
+  <tr style="height:22px;">
+    <td class="ov-time" rowspan="2">5:00 pm</td>
+    <td class="bg-concurrent" rowspan="2"><div class="ov-title">Concurrent 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent" rowspan="2"><div class="ov-title">Concurrent 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent" rowspan="2"><div class="ov-title">Concurrent 3</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td class="bg-concurrent" rowspan="2"><div class="ov-title">Concurrent 4</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="concurrent.html"><i>see sessions</i></a></div></td>
+    <td rowspan="2"></td>
+  </tr>
+  <!-- 6:00 pm Sunday workshops end (grey gap runs to 8:00) -->
+  <tr style="height:25px;">
+    <td class="bg-break" rowspan="3"></td>
   </tr>
   <!-- 7:05 pm -->
-  <tr>
+  <tr style="height:30px;">
     <td class="ov-time">7:05 pm</td>
-    <td class="bg-closing"><div class="ov-title">Opening</div></td>
     <td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td class="bg-break"></td><td></td>
   </tr>
   <!-- 7:30 pm -->
-  <tr>
-    <td class="ov-time">7:30 pm</td>
-    <td class="bg-plenary"><div class="ov-title">Featured Workshop<br><span style="font-weight:normal;font-style:italic">To be announced (TBA)</span></div></td>
-    <td class="bg-social"><div class="ov-title">Reception</div></td>
-    <td class="bg-poster"><div class="ov-title">Poster Session 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
-    <td class="bg-poster"><div class="ov-title">Poster Session 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
-    <td class="bg-social"><div class="ov-title">Luau Dinner</div></td>
-    <td></td>
+  <tr style="height:11px;">
+    <td class="ov-time" rowspan="2">7:30 pm</td>
+    <td class="bg-social" rowspan="2"><div class="ov-title">Reception</div></td>
+    <td class="bg-poster" rowspan="2"><div class="ov-title">Poster Session 1</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
+    <td class="bg-poster" rowspan="2"><div class="ov-title">Poster Session 2</div><div style="font-size:.75rem;margin-top:.2rem;"><a href="posters.html"><i>see posters</i></a></div></td>
+    <td class="bg-social" rowspan="2"><div class="ov-title">Luau Dinner</div></td>
+    <td rowspan="2"></td>
+  </tr>
+  <!-- 8:00 pm Sunday featured workshop (ends 9:30) -->
+  <tr style="height:39px;">
+    <td class="bg-plenary" style="vertical-align:middle;padding:.1rem .4rem;line-height:1.15;">
+      <div style="font-size:.62rem;">Brief opening then</div>
+      <div class="ov-title" style="font-size:.7rem;">Featured Workshop <span style="font-weight:normal;font-style:italic">(TBA)</span></div>
+      <div style="font-size:.62rem;">(8:00 to 9:30)</div>
+    </td>
   </tr>
   <!-- 9:30 pm -->
   <tr>
