@@ -164,12 +164,12 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     </div>
   </div>
 
-  <div class="menu-break">Dinner break &middot; 4:00 &ndash; 7:00 pm</div>
+  <div class="menu-break">Dinner break &middot; 4:00 &ndash; 8:00 pm</div>
 
   <div class="menu-section">
-    <h3 class="menu-section-title">Evening &middot; 7:00 pm</h3>
+    <h3 class="menu-section-title">Evening &middot; 8:00 pm</h3>
     <div class="menu-grid">
-      <button class="menu-btn" data-panel="s6" onclick="showSession(this,'s6')">Non-Human Consciousness <span class="btn-time">7:00&ndash;9:00</span></button>
+      <button class="menu-btn" data-panel="s6" onclick="showSession(this,'s6')">Non-Human Consciousness <span class="btn-time">8:00&ndash;9:45</span></button>
     </div>
   </div>
 </div>
@@ -298,9 +298,9 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <p style="font-size:.92rem;color:#555;margin:.2rem 0 .6rem;"><strong>Part 2 (11:10 am &ndash; 12:30 pm)</strong> &mdash; panel discussion with all presenters.</p>
 </div>
 
-<div class="session-panel" data-slot="afternoon" id="s6">
+<div class="session-panel" data-slot="evening" id="s6">
   <h3>The Varieties of Non-Human Consciousness</h3>
-  <div class="ws-meta">Sunday evening &middot; 7:00 pm &ndash; 9:00 pm &middot; Chair: Susan Schneider &middot; <a href="map.html#paradise-ballroom">Paradise Ballroom</a></div>
+  <div class="ws-meta">Sunday evening &middot; 8:00 pm &ndash; 9:45 pm (follows a brief conference opening) &middot; Chair: Susan Schneider &middot; <a href="map.html#paradise-ballroom">Paradise Ballroom</a></div>
   <div class="spk-grid">
     <div class="spk"><img class="av" src="img/susan-schneider.jpg" alt="Susan Schneider"><span class="nm">Susan Schneider <em>(Chair)</em></span></div>
     <div class="spk"><img class="av" src="img/anirban-bandyopadhyay.jpg" alt="Anirban Bandyopadhyay"><span class="nm">Anirban Bandyopadhyay</span></div>
@@ -429,8 +429,8 @@ function applyHash() {
 }
 
 if (!applyHash()) {
-  // No recognized hash — show all workshops, first one active.
-  var firstBtn = document.querySelector('.menu-btn[data-panel="s9"]') || document.querySelector('.menu-btn');
+  // No recognized hash — show all workshops, featured evening one active.
+  var firstBtn = document.querySelector('.menu-btn[data-panel="s6"]') || document.querySelector('.menu-btn');
   if (firstBtn) {
     firstBtn.classList.add('active');
     document.getElementById(firstBtn.getAttribute('data-panel')).classList.add('active');
