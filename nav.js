@@ -22,7 +22,8 @@
       { href: base + 'program_details.html', label: 'Program (Detailed)' },
       { href: base + 'workshops.html', label: 'Workshops' },
       { href: base + 'concurrent.html', label: 'Concurrent Presentations' },
-      { href: base + 'posters.html', label: 'Posters' }
+      { href: base + 'posters.html', label: 'Posters' },
+      { href: base + 'map.html', label: 'Venue Map' }
     ]},
     { href: base + 'about.html',   label: 'About', children: [
       { href: base + 'about.html',     label: 'History' },
