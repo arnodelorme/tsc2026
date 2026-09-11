@@ -152,6 +152,18 @@ img { max-width: 100%; height: auto; }
 .step .fee-note {
   font-size: .78rem; color: #888; margin-top: .4rem;
 }
+/* A rate that is no longer bookable: muted row, non-clickable marker. */
+.step .fee-table tr.rate-closed td { color: #999; }
+.step .rate-closed .closed-tag {
+  color: #c0392b; font-weight: 700; text-transform: uppercase;
+  font-size: .72rem; letter-spacing: .05em;
+}
+.step .fee-alert {
+  font-size: .82rem; line-height: 1.45; color: #c0392b;
+  background: #fdeeec; border-left: 3px solid #c0392b;
+  padding: .6rem .8rem; border-radius: 6px; margin: .8rem 0;
+}
+.step .fee-alert a { color: #c0392b; text-decoration: underline; }
 
 /* ── Timeline ────────────────────────────────── */
 .timeline { position: relative; margin: 2.5rem 0 2rem; padding: 0; list-style: none; }
@@ -271,11 +283,12 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <p>Book at <a href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">Paradise Point Resort &amp; Spa</a> at a special conference rate. All rooms are bungalow-style.</p>
     <table class="fee-table">
       <tr><th colspan="2" style="text-align:left">Rate</th></tr>
-      <tr><td>Student rate ($199)†</td><td><a href="https://book.passkey.com/gt/221324309?gtid=22afe3fc6cd2e419507b471956118312">reserve</a></td></tr>
-      <tr><td>Standard ($249)††</td><td><a href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">reserve</a></td></tr>
+      <tr class="rate-closed"><td>Student rate ($199)</td><td><span class="closed-tag">Closed</span></td></tr>
+      <tr><td>Standard ($249)†</td><td><a href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">reserve</a></td></tr>
       <tr><td>Water view ($299)</td><td><a href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">reserve</a></td></tr>
     </table>
-    <p class="fee-note">† While supplies last. “Students” includes up to the PhD level. We may cross-check student-rate bookings against conference registration.<br>†† A standard room might still include a water view, depending on availability.</p>
+    <p class="fee-alert"><strong>Last minute:</strong> Sunday is full. Book from Monday, then email <a href="mailto:info@tsc2026.org">info@tsc2026.org</a> for Sunday &mdash; we can offer limited availability. All before September 14.</p>
+    <p class="fee-note">† A standard room might still include a water view, depending on availability.</p>
     <p>For reservation questions, contact Paradise Point Resort &amp; Spa at (858) 274-4630 or <a href="mailto:reservations@paradisepoint.com">reservations@paradisepoint.com</a>.</p>
   </div>
 
@@ -305,8 +318,8 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     <span class="tl-date">August 21, 2026</span>
     <span class="tl-label">Early registration deadline &mdash; extended from August 15, ends at midnight</span>
   </li>
-  <li data-date="2026-09-10">
-    <span class="tl-date">September 10, 2026</span>
+  <li data-date="2026-09-14">
+    <span class="tl-date">September 14, 2026</span>
     <span class="tl-label">Hotel reservation deadline &mdash; book your room before this date</span>
   </li>
   <li data-date="2026-10-16" class="tl-conference">
