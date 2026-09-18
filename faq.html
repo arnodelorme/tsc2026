@@ -92,6 +92,26 @@ img { max-width: 100%; height: auto; }
 .faq-item h3 { margin-bottom: .3rem; }
 .faq-item a.cta { font-weight: 600; }
 
+/* Nearby-hotel list (accommodation section) */
+.stay-table {
+  width: 100%; border-collapse: collapse;
+  font-size: .88rem; margin: .9rem 0; text-align: left;
+}
+.stay-table th {
+  font-weight: 600; color: #0a2440;
+  padding: .45rem .5rem; border-bottom: 2px solid #e0e8ef;
+}
+.stay-table td {
+  padding: .55rem .5rem; color: #555; vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+}
+.stay-table td:first-child { color: #0a2440; }
+.stay-table .stay-meta { display: block; font-size: .8rem; color: #888; margin-top: .15rem; }
+@media (max-width: 768px) {
+  .stay-table { font-size: .82rem; }
+  .stay-table th, .stay-table td { padding: .4rem .3rem; }
+}
+
 /* ── Footer ───────────────────────────────────── */
 footer {
   background: #0a2440; color: #8baac8;
@@ -222,6 +242,41 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 </div>
 
 <h2>Venue and Logistics</h2>
+
+<div class="faq-item">
+<h3 id="accommodation" style="scroll-margin-top:70px">Where do I stay? Is the conference hotel still available?</h3>
+<p>The conference takes place at <a href="https://www.paradisepoint.com/" target="_blank" rel="noopener">Paradise Point Resort &amp; Spa</a>, 1404 Vacation Road, San Diego, CA 92109 &mdash; <a href="tel:+18582744630">(858) 274-4630</a>. Staying on site is the easiest option: every session, the poster sessions and the Luau dinner are a short walk from the rooms.</p>
+<p><strong>The conference room block is now full.</strong> Paradise Point usually still has rooms available outside the block, so it is worth calling the resort directly or checking their website &mdash; but be aware that rooms sold outside the block are at the regular rate, which can be considerably higher than the conference rate. If that does not work for you, the hotels below are all within reach of the venue.</p>
+</div>
+
+<div class="faq-item">
+<h3 id="nearby-hotels" style="scroll-margin-top:70px">What other hotels are nearby?</h3>
+<p>Mission Bay and Mission Beach have plenty of accommodation within walking or short driving distance of Paradise Point. Four options attendees have used:</p>
+<table class="stay-table">
+  <tr><th>Hotel</th><th>On foot</th><th>By car</th></tr>
+  <tr>
+    <td><a href="https://www.catamaranresort.com/" target="_blank" rel="noopener">Catamaran Resort Hotel &amp; Spa</a>
+      <span class="stay-meta">3999 Mission Blvd &middot; (858) 488-1081 &middot; our pick &mdash; the walk follows the bay the whole way</span></td>
+    <td>45 min</td><td>10 min</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.surferbeachhotel.com/" target="_blank" rel="noopener">Surfer Beach Hotel</a>
+      <span class="stay-meta">Pacific Beach &middot; same bayside walk as the Catamaran</span></td>
+    <td>45 min</td><td>10 min</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.bahiahotel.com/" target="_blank" rel="noopener">Bahia Resort Hotel</a>
+      <span class="stay-meta">998 W Mission Bay Dr &middot; (858) 488-0551 &middot; closest by car, but the walk is less pleasant</span></td>
+    <td>40 min</td><td>6 min</td>
+  </tr>
+  <tr>
+    <td><a href="https://ithhostels.com/ith-san-diego-mission-beach-backpacker-hostel/" target="_blank" rel="noopener">ITH San Diego Mission Beach Backpacker Hostel</a>
+      <span class="stay-meta">3204 Mission Blvd &middot; (858) 412-3660 &middot; budget option, dorm and private rooms</span></td>
+    <td>45 min</td><td>7 min</td>
+  </tr>
+</table>
+<p>The walk is long, but it is a pleasant one &mdash; it follows the bay boardwalk almost the whole way, especially from the Catamaran and the Surfer Beach Hotel. All four are also an inexpensive rideshare from the venue, and parking at Paradise Point is free during the day if you drive in.</p>
+</div>
 
 <div class="faq-item">
 <h3>How far is the hotel from the airport?</h3>

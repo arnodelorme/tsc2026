@@ -154,37 +154,6 @@ img { max-width: 100%; height: auto; }
 }
 .hero-title-cell .hero-cta:hover { background: #c4173a; text-decoration: none; }
 
-/* ── Hotel rate dialog ──────────────────────── */
-.hotel-dialog {
-  width: min(90vw, 480px);
-  padding: 0;
-  border: 0;
-  border-top: 4px solid #AB0520;
-  background: #fff;
-  color: #0C234B;
-  box-shadow: 0 12px 40px rgba(0,0,0,.45);
-}
-.hotel-dialog::backdrop { background: rgba(0,0,0,.72); }
-.hotel-dialog-content { position: relative; padding: 2rem; text-align: center; }
-.hotel-dialog h2 { font-size: 1.45rem; margin-bottom: .55rem; }
-.hotel-dialog p { color: #4b5563; font-size: .92rem; }
-.hotel-options {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: .7rem; margin-top: 1.5rem;
-}
-.hotel-option {
-  display: inline-block; padding: .65rem 1.1rem;
-  background: #AB0520; color: #fff;
-  font-weight: 800; font-size: .82rem;
-  text-transform: uppercase; letter-spacing: .04em;
-}
-.hotel-option:hover { background: #c4173a; color: #fff; text-decoration: none; }
-.hotel-dialog-close {
-  position: absolute; top: .45rem; right: .65rem;
-  border: 0; background: transparent; color: #5a6070;
-  font-size: 1.7rem; line-height: 1; cursor: pointer;
-}
-
 /* ── Manifesto ─────────────────────────────── */
 .manifesto {
   padding: 3rem 2rem;
@@ -342,7 +311,7 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
       <div class="hero-meta">October 11&ndash;16, 2026 &bull; San Diego, CA</div>
       <div class="hero-actions">
         <a class="hero-cta" href="program.html">See the Program</a>
-        <button class="hero-cta" id="open-hotel-dialog" type="button" aria-haspopup="dialog" aria-controls="hotel-dialog">Book Hotel</button>
+        <a class="hero-cta" href="faq.html#accommodation">Where to Stay</a>
         <a class="hero-cta" href="https://na.eventscloud.com/ereg/index.php?eventid=878488&amp;" target="_blank" rel="noopener">Register for the Conference</a>
       </div>
     </div>
@@ -363,17 +332,6 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
   </a>
 </section>
 
-<dialog class="hotel-dialog" id="hotel-dialog" aria-labelledby="hotel-dialog-title">
-  <div class="hotel-dialog-content">
-    <button class="hotel-dialog-close" id="close-hotel-dialog" type="button" aria-label="Close">&times;</button>
-    <h2 id="hotel-dialog-title">Are you a student?</h2>
-    <p>The student rate is available through the PhD level while supplies last.</p>
-    <div class="hotel-options">
-      <a class="hotel-option" href="https://book.passkey.com/gt/221324309?gtid=22afe3fc6cd2e419507b471956118312">Yes, Student ($199)</a>
-      <a class="hotel-option" href="https://book.passkey.com/gt/221324327?gtid=6e9d0a9b04ece06d8c6cfa3e8b464f8b">No, Standard ($249)</a>
-    </div>
-  </div>
-</dialog>
 
 <!-- ═══ MANIFESTO ═══ -->
 <section id="manifesto" class="manifesto reveal">
@@ -515,19 +473,6 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
 })();
 </script>
 
-<script>
-(function() {
-  var dialog = document.getElementById('hotel-dialog');
-  var openButton = document.getElementById('open-hotel-dialog');
-  var closeButton = document.getElementById('close-hotel-dialog');
-
-  openButton.addEventListener('click', function() { dialog.showModal(); });
-  closeButton.addEventListener('click', function() { dialog.close(); });
-  dialog.addEventListener('click', function(event) {
-    if (event.target === dialog) dialog.close();
-  });
-})();
-</script>
 
 </body>
 </html>

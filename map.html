@@ -148,7 +148,14 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <h2 id="map">Meeting Rooms</h2>
 
-<p>All conference sessions take place at Paradise Point Resort &amp; Spa. The map below shows every meeting room &mdash; click a room name in the table to highlight it on the map, or <a href="img/meeting_space2.png" target="_blank" rel="noopener">open the full-size map</a> in a new tab. See the <a href="https://maps.app.goo.gl/gqbNseMx3KpVGHPfA" target="_blank" rel="noopener">conference center location on Google Maps</a>.</p>
+<div class="venue-card">
+  <div class="venue-name"><a href="https://www.paradisepoint.com/" target="_blank" rel="noopener">Paradise Point Resort &amp; Spa</a></div>
+  <div class="venue-line">1404 Vacation Road, San Diego, CA 92109</div>
+  <div class="venue-line"><a href="tel:+18582744630">(858) 274-4630</a> &middot; <a href="https://maps.app.goo.gl/gqbNseMx3KpVGHPfA" target="_blank" rel="noopener">conference center on Google Maps</a></div>
+  <div class="venue-line venue-stay">Room block full &mdash; <a href="faq.html#accommodation">nearby hotels in the FAQ &rarr;</a></div>
+</div>
+
+<p>All conference sessions take place at Paradise Point Resort &amp; Spa. The map below shows every meeting room &mdash; click a room name in the table to highlight it on the map, or <a href="img/meeting_space2.png" target="_blank" rel="noopener">open the full-size map</a> in a new tab.</p>
 
 <style>
 .map-wrap { position: relative; max-width: 900px; margin: 1.2rem auto;
@@ -167,6 +174,14 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   border: 3px solid #e8a727; border-radius: 6px;
   transform-origin: center;
 }
+/* Venue address / contact card above the map */
+.venue-card {
+  background: #f7f9fb; border-left: 3px solid #1a96b8; border-radius: 6px;
+  padding: .9rem 1.1rem; margin: 0 0 1.4rem;
+}
+.venue-card .venue-name { font-weight: 700; color: #0a2440; font-size: 1.02rem; margin-bottom: .2rem; }
+.venue-card .venue-line { font-size: .9rem; color: #555; margin-top: .15rem; }
+.venue-card .venue-stay { margin-top: .55rem; padding-top: .55rem; border-top: 1px solid #e0e8ef; }
 .room-hl.active { display: block; animation: roomPulse 1.4s ease-in-out infinite; }
 @keyframes roomPulse {
   0%, 100% { box-shadow: 0 0 0 2px rgba(232,167,39,.3), 0 0 8px 1px rgba(232,167,39,.35),
