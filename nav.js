@@ -35,7 +35,8 @@
     { href: base + 'community.html', label: 'Community', children: [
       { href: base + 'festival.html',  label: 'Hangout' },
       { href: base + 'experientials.html', label: 'Experiential' },
-      { href: base + 'hackathon.html', label: 'Hackathon' }
+      { href: base + 'hackathon.html', label: 'Hackathon' },
+      { href: base + 'discord.html',   label: 'Discord' }
     ]},
     { href: base + 'register.html', label: 'Register' }
   ];

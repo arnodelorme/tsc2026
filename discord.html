@@ -12,7 +12,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Community &mdash; The Science of Consciousness 2026</title>
+<title>Discord &mdash; The Science of Consciousness 2026</title>
 <style>
 /* ── Reset & Base ─────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -79,15 +79,41 @@ img { max-width: 100%; height: auto; }
 }
 .content h2:first-of-type { margin-top: 0; }
 .content p { margin-bottom: 1rem; }
-.content a.card-link {
-  display: block; padding: 1.5rem; margin-bottom: 1.2rem;
-  border: 1px solid #dde4ec; border-radius: 8px;
-  transition: box-shadow .2s, border-color .2s;
-  color: inherit; text-decoration: none;
+.content ol { margin: 0 0 1rem 1.3rem; }
+.content ol li { margin-bottom: .4rem; }
+
+/* join button */
+.join-btn {
+  display: inline-block; background: #5865F2; color: #fff;
+  padding: .75rem 1.6rem; border-radius: 6px;
+  font-weight: 700; font-size: 1rem; margin: .3rem 0 1.2rem;
 }
-.content a.card-link:hover { border-color: #1a96b8; box-shadow: 0 2px 12px rgba(26,150,184,.15); text-decoration: none; }
-.content a.card-link h3 { font-size: 1.15rem; font-weight: 700; color: #0a2440; margin: 0 0 .3rem; }
-.content a.card-link p { margin: 0; color: #444; }
+.join-btn:hover { background: #4752c4; color: #fff; text-decoration: none; }
+
+/* channel groups */
+.chan-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem; margin-bottom: 1.4rem;
+}
+.chan-group {
+  border: 1px solid #dde4ec; border-radius: 8px; padding: 1.1rem 1.2rem;
+}
+.chan-group h3 {
+  font-size: .78rem; font-weight: 700; color: #1a96b8;
+  text-transform: uppercase; letter-spacing: .06em; margin-bottom: .6rem;
+}
+.chan-group dl { margin: 0; }
+.chan-group dt {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .85rem; font-weight: 600; color: #0a2440; margin-top: .55rem;
+}
+.chan-group dt:first-child { margin-top: 0; }
+.chan-group dd { margin: 0; font-size: .85rem; color: #555; line-height: 1.45; }
+
+/* screenshot */
+figure { margin: 1.4rem 0 1.6rem; }
+figure img { border: 1px solid #dde4ec; border-radius: 8px; display: block; }
+figcaption { font-size: .82rem; color: #666; margin-top: .5rem; text-align: center; }
 
 /* ── Footer ───────────────────────────────────── */
 footer {
@@ -125,31 +151,70 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <!-- ═══ PAGE HEADER ═══ -->
 <header class="page-header">
-  <h1>Community</h1>
+  <h1>Discord</h1>
   <p class="subtitle">San Diego, California &middot; October 11&ndash;16, 2026</p>
 </header>
 
 <!-- ═══ CONTENT ═══ -->
 <div class="content">
 
-<h2>Beyond the Lectures</h2>
+<h2>The Conference Chat Server</h2>
 
-<p>TSC 2026 is more than talks and posters. These informal, self-organized activities run alongside the conference and are open to all participants.</p>
+<p>TSC 2026 has a Discord server where participants ask questions, find each other, share rides and rooms, and keep talking after the sessions end. It runs before, during, and after the conference week.</p>
 
-<a class="card-link" href="festival.html">
-  <h3>Hangout and Community Gathering</h3>
-  <p>Beach music, bonfires, morning yoga and meditation, art installations. Bring an instrument, bring art, or just show up.</p>
-</a>
+<a class="join-btn" href="https://discord.gg/w9fkrSqpu">Join the TSC 2026 Discord &rarr;</a>
 
-<a class="card-link" href="hackathon.html">
-  <h3>Consciousness Mini-Hackathon</h3>
-  <p>A drop-in room for collaborative coding and prototyping with AI-assisted tools. Bring your laptop and your ideas.</p>
-</a>
+<p>Signing up takes about a minute and is free:</p>
 
-<a class="card-link" href="discord.html">
-  <h3>Discord</h3>
-  <p>The conference chat server: schedule updates, discipline channels, roommate and ride sharing, and the hackathon. Free, and about a minute to join.</p>
-</a>
+<ol>
+  <li>Click the invite link above.</li>
+  <li>If you already use Discord, you are in. If not, pick a username and enter an email address &mdash; no app installation is required, it runs in any browser.</li>
+  <li>Say hello in <strong>#general</strong> and browse the channels in the left sidebar.</li>
+</ol>
+
+<h2>The Channels</h2>
+
+<div class="chan-grid">
+
+  <div class="chan-group">
+    <h3>Information</h3>
+    <dl>
+      <dt>#welcome</dt><dd>Start here &mdash; what the server is and how it is organized.</dd>
+      <dt>#announcements</dt><dd>Official updates from the organizers.</dd>
+      <dt>#program-and-schedule</dt><dd>Sessions, timing changes, and what to see.</dd>
+      <dt>#help-desk</dt><dd>Questions for the organizers: registration, posters, logistics.</dd>
+    </dl>
+  </div>
+
+  <div class="chan-group">
+    <h3>Topics</h3>
+    <dl>
+      <dt>#general</dt><dd>Open conversation across the whole conference.</dd>
+      <dt>#philosophy</dt><dd>Theories of mind, the hard problem, metaphysics.</dd>
+      <dt>#neuroscience</dt><dd>Neural correlates, methods, and measurement.</dd>
+      <dt>#cognitive-science-psychology</dt><dd>Attention, perception, self, and behaviour.</dd>
+      <dt>#physics-biology</dt><dd>Quantum approaches, biophysics, origins of life.</dd>
+      <dt>#experiential</dt><dd>Meditation, altered states, and first-person methods.</dd>
+      <dt>#humanities</dt><dd>Art, culture, language, and contemplative traditions.</dd>
+    </dl>
+  </div>
+
+  <div class="chan-group">
+    <h3>Social</h3>
+    <dl>
+      <dt>#social</dt><dd>Meetups, meals, and after-hours plans.</dd>
+      <dt>#roommate-finder</dt><dd>Share a hotel room and split the cost.</dd>
+      <dt>#rides-and-transportation</dt><dd>Airport pickups and shared rides.</dd>
+      <dt>#tsc-hackathon</dt><dd>Coordination for the <a href="hackathon.html">mini-hackathon</a>.</dd>
+    </dl>
+  </div>
+
+</div>
+
+<figure>
+  <img src="img/discord-channels.png" alt="The TSC 2026 Discord server, showing the Information, Topics and Social channel groups in the sidebar and the welcome message.">
+  <figcaption>The server as it appears once you join.</figcaption>
+</figure>
 
 </div>
 
