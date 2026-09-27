@@ -203,6 +203,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <div class="room-hl" id="hl-mission-bay" style="left:83.44%;top:8.04%;width:29.09%;height:12.91%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-sunset-a" style="left:23.47%;top:81.13%;width:14.94%;height:12.27%;transform:translate(-50%,-50%) rotate(-42.1deg);"></div>
   <div class="room-hl" id="hl-sunset-b" style="left:13.73%;top:89.06%;width:15.10%;height:12.30%;transform:translate(-50%,-50%) rotate(-42.1deg);"></div>
+  <div class="room-hl" id="hl-foyer" style="left:79.45%;top:54.33%;width:7.34%;height:15.15%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-food-trucks" style="left:97.30%;top:53.90%;width:4.60%;height:17.50%;transform:translate(-50%,-50%);"></div>
   </div>
 </div>
@@ -211,7 +212,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 var mapReset;
 (function () {
   var ROOMS = ['paradise-ballroom', 'garden', 'dockside', 'bay-view',
-               'terrace', 'mission-bay', 'sunset-a', 'sunset-b', 'food-trucks'];
+               'terrace', 'mission-bay', 'sunset-a', 'sunset-b', 'foyer', 'food-trucks'];
   var IMG_RATIO = 2332 / 2128;          // map image height / width
   var wrap = document.getElementById('venue-map');
   var zoomer = document.getElementById('map-zoom');
@@ -282,7 +283,8 @@ var mapReset;
 
 <table style="width:100%;border-collapse:collapse;font-size:.92rem;">
   <tr style="background:#0a2440;color:#fff;text-align:left;"><th style="padding:.5rem .7rem;">Room</th><th style="padding:.5rem .7rem;">Sessions</th></tr>
-  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;white-space:nowrap;"><strong><a href="#paradise-ballroom">Paradise Ballroom</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Plenary sessions; Sunday full-day and featured evening <a href="workshops.html">workshops</a>; evening <a href="concurrent.html">concurrent sessions</a> MON-1, TUE-1, WED-1, THU-1. Registration &amp; exhibitors adjacent.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;white-space:nowrap;"><strong><a href="#paradise-ballroom">Paradise Ballroom</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Plenary sessions; Sunday full-day and featured evening <a href="workshops.html">workshops</a>; evening <a href="concurrent.html">concurrent sessions</a> MON-1, TUE-1, WED-1, THU-1. Registration &amp; exhibitors in the adjacent <a href="#foyer">foyer</a>.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#foyer">Foyer (Registration)</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Registration and badge pick-up (opens Sunday 7:30 am) and exhibitors, just outside the Paradise Ballroom.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#dockside">Dockside Room</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-2, TUE-2, WED-2, THU-2.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#garden">Garden Room</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-3, TUE-3, WED-3, THU-3; lunchtime <a href="experientials.html">experiential sessions</a>.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#sunset-b">Sunset Ballroom Zone B (IV&ndash;V)</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Concurrent sessions MON-4, TUE-4, WED-4, THU-4; <a href="hackathon.html">mini-hackathon</a> the rest of the week.</td></tr>
@@ -290,7 +292,7 @@ var mapReset;
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#bay-view">Bay View Room</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday workshops; concurrent sessions MON-6, TUE-6, WED-6, THU-6.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#mission-bay">Mission Bay Room</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><a href="posters.html">Poster sessions</a> Tuesday and Wednesday evenings; concurrent sessions MON-7 and THU-7. Separate building northeast of the conference center &mdash; follow the signposted path.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#terrace">Paradise Terrace</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday light dessert (7 pm); Thursday Fire Show dinner by <a href="https://www.skyfirearts.com/" target="_blank" rel="noopener">Skyfire Arts</a>.</td></tr>
-  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#food-trucks">Food Trucks</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">On site every day for the lunch break &mdash; by the main entrance (porte coch&egrave;re), next to Registration.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#food-trucks">Food Trucks</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">On site every day for the lunch break &mdash; by the main entrance (porte coch&egrave;re), next to <a href="#foyer">Registration</a>.</td></tr>
 </table>
 
 <p style="margin-top:1.4rem;">See the <a href="program.html">program outline</a>, <a href="program_details.html">detailed program</a>, <a href="workshops.html">workshops</a>, <a href="concurrent.html">concurrent sessions</a>, and <a href="posters.html">posters</a> for full schedules.</p>
