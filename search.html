@@ -155,6 +155,18 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     });
     return safe;
   }
+  /* Fallback for word endings: "printing" also finds "printed" / "printer".
+     Tried only when the word as typed is not found, so exact matches rank
+     as before. Keeps at least four letters of the stem. */
+  function stem(w) {
+    var m = /^(.{4,}?)(ings|ing|ers|er|ed|es|s)$/.exec(w);
+    return m ? m[1] : w;
+  }
+  function matchWord(q, w) {
+    if (q.indexOf(w) >= 0) return w;
+    var s = stem(w);
+    return (s !== w && q.indexOf(s) >= 0) ? s : null;
+  }
   function initials(name) {
     return name.split(/\s+/).filter(Boolean).slice(0, 2)
                .map(function (w) { return w[0]; }).join('').toUpperCase();
@@ -164,8 +176,8 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   function scorePerson(rec, words) {
     var score = 0;
     for (var i = 0; i < words.length; i++) {
-      var w = words[i];
-      if (rec.q.indexOf(w) < 0) return 0;          /* word must match somewhere */
+      var w = matchWord(rec.q, words[i]);
+      if (w === null) return 0;                     /* word must match somewhere */
       var name = fold(rec.n);
       if (name.indexOf(w) === 0 || name.indexOf(' ' + w) >= 0) score += 100;
       else if (name.indexOf(w) >= 0) score += 80;
@@ -179,8 +191,8 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   function scorePage(rec, words) {
     var score = 0;
     for (var i = 0; i < words.length; i++) {
-      var w = words[i];
-      if (rec.q.indexOf(w) < 0) return 0;
+      var w = matchWord(rec.q, words[i]);
+      if (w === null) return 0;
       if (fold(rec.h).indexOf(w) >= 0) score += 70;
       else if (fold(rec.pg).indexOf(w) >= 0) score += 50;
       else score += 20;
@@ -220,6 +232,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
       return;
     }
     var words = fold(raw).split(/\s+/).filter(Boolean);
+    var hiWords = words.map(stem);   /* highlight stems so "printing" marks "print" in "printed" */
     var people = [], pages = [];
     SEARCH_INDEX.people.forEach(function (rec) {
       var s = scorePerson(rec, words);
@@ -235,14 +248,14 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     var htmlParts = [];
     if (people.length) {
       htmlParts.push('<div class="group-head">Speakers &amp; Abstracts (' + people.length + ')</div>');
-      people.slice(0, MAX_PEOPLE).forEach(function (p) { htmlParts.push(personRow(p[1], words)); });
+      people.slice(0, MAX_PEOPLE).forEach(function (p) { htmlParts.push(personRow(p[1], hiWords)); });
       if (people.length > MAX_PEOPLE) {
         htmlParts.push('<div class="more-note">Showing the first ' + MAX_PEOPLE + ' matches &mdash; refine your search to narrow down.</div>');
       }
     }
     if (pages.length) {
       htmlParts.push('<div class="group-head">Pages (' + pages.length + ')</div>');
-      pages.slice(0, MAX_PAGES).forEach(function (p) { htmlParts.push(pageRow(p[1], words)); });
+      pages.slice(0, MAX_PAGES).forEach(function (p) { htmlParts.push(pageRow(p[1], hiWords)); });
     }
     if (!htmlParts.length) {
       htmlParts.push('<div class="no-results">No matches for &ldquo;' + esc(raw)
