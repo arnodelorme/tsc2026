@@ -203,7 +203,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 </style>
 
 <div class="map-wrap" id="venue-map">
-  <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset()">&#10005; Full map</button>
+  <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset('venue-map')">&#10005; Full map</button>
   <div class="map-zoom" id="map-zoom">
   <img src="img/meeting_space2.png" alt="Map of the Paradise Point meeting rooms: Paradise Ballroom, Dockside Room, Garden Room, Bay View Room, Sunset Ballroom, Mission Bay Room, and Paradise Terrace">
   <div class="room-hl" id="hl-paradise-ballroom" style="left:65.53%;top:54.20%;width:22.98%;height:27.96%;transform:translate(-50%,-50%);"></div>
@@ -219,76 +219,6 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   </div>
 </div>
 
-<script>
-var mapReset;
-(function () {
-  var ROOMS = ['paradise-ballroom', 'garden', 'dockside', 'bay-view',
-               'terrace', 'mission-bay', 'sunset-a', 'sunset-b', 'foyer', 'food-trucks'];
-  var IMG_RATIO = 2332 / 2128;          // map image height / width
-  var wrap = document.getElementById('venue-map');
-  var zoomer = document.getElementById('map-zoom');
-  var current = '';                      // active room id, '' = none
-
-  function roomBox(id) {
-    var el = document.getElementById('hl-' + id);
-    var st = el.style;
-    var rot = /rotate\((-?[\d.]+)deg\)/.exec(st.transform);
-    return {
-      cx: parseFloat(st.left) / 100, cy: parseFloat(st.top) / 100,
-      w: parseFloat(st.width) / 100, h: parseFloat(st.height) / 100,
-      rot: rot ? parseFloat(rot[1]) * Math.PI / 180 : 0
-    };
-  }
-
-  function zoomTo(id) {
-    var b = roomBox(id);
-    var Wc = wrap.clientWidth, Hc = Wc * IMG_RATIO;
-    // axis-aligned extent of the (possibly rotated) room, in container px
-    var wpx = b.w * Wc, hpx = b.h * Hc;
-    var c = Math.abs(Math.cos(b.rot)), s = Math.abs(Math.sin(b.rot));
-    var bw = wpx * c + hpx * s, bh = wpx * s + hpx * c;
-    // scale so the room fills ~60% of the frame, harder zoom on phones
-    var cap = window.innerWidth < 768 ? 5 : 3.5;
-    var k = Math.min(cap, Math.max(1.4, 0.6 * Math.min(Wc / bw, Hc / bh)));
-    var tx = Wc / 2 - k * b.cx * Wc;
-    var ty = Hc / 2 - k * b.cy * Hc;
-    tx = Math.min(0, Math.max(Wc - k * Wc, tx));   // never show gaps
-    ty = Math.min(0, Math.max(Hc - k * Hc, ty));
-    zoomer.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + k + ')';
-    wrap.classList.add('zoomed');
-  }
-
-  mapReset = function () {
-    zoomer.style.transform = 'none';
-    wrap.classList.remove('zoomed');
-  };
-
-  function highlightRoom(scroll) {
-    var h = decodeURIComponent(location.hash.replace('#', ''));
-    current = ROOMS.indexOf(h) >= 0 ? h : '';
-    ROOMS.forEach(function (id) {
-      var el = document.getElementById('hl-' + id);
-      if (el) el.classList.toggle('active', id === current);
-    });
-    if (current) {
-      zoomTo(current);
-      if (scroll) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-      mapReset();
-    }
-  }
-
-  wrap.addEventListener('click', function () {
-    if (wrap.classList.contains('zoomed')) mapReset();
-    else if (current) zoomTo(current);
-  });
-  window.addEventListener('resize', function () {
-    if (current && wrap.classList.contains('zoomed')) zoomTo(current);
-  });
-  window.addEventListener('hashchange', function () { highlightRoom(true); });
-  highlightRoom(true);
-})();
-</script>
 
 <h2>What Happens Where</h2>
 
@@ -304,6 +234,8 @@ var mapReset;
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#mission-bay">Mission Bay Room</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><a href="posters.html">Poster sessions</a> Tuesday and Wednesday evenings; concurrent sessions MON-7 and THU-7. Separate building northeast of the conference center &mdash; follow the signposted path.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#terrace">Paradise Terrace</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Sunday light dessert (7 pm); Thursday Fire Show dinner by <a href="https://www.skyfirearts.com/" target="_blank" rel="noopener">Skyfire Arts</a>.</td></tr>
   <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#food-trucks">Food Trucks</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">On site every day for the lunch break &mdash; by the main entrance (porte coch&egrave;re), next to <a href="#foyer">Registration</a>.</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#executive-lawn">Executive Lawn</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;">Morning <a href="experientials.html#confirmed">MAHP yoga &amp; mindfulness</a>, Monday&ndash;Thursday 7:00&ndash;8:00 am (resort map below).</td></tr>
+  <tr><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><strong><a href="#tennis">Tennis Courts</a></strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid #eee;"><a href="experientials.html#confirmed">TennisCentric</a> morning sessions, Monday&ndash;Friday 7:00&ndash;7:45 am &mdash; meet at <a href="#foyer">Registration</a> at 6:45 am, walk or golf cart (resort map below).</td></tr>
 </table>
 
 <p style="margin-top:1.4rem;">See the <a href="program.html">program outline</a>, <a href="program_details.html">detailed program</a>, <a href="workshops.html">workshops</a>, <a href="concurrent.html">concurrent sessions</a>, and <a href="posters.html">posters</a> for full schedules.</p>
@@ -312,7 +244,104 @@ var mapReset;
 
 <p>Overview of the Paradise Point resort grounds &mdash; villages, pools, restaurants, parking, and the conference center. <a href="img/resort_map.jpg" target="_blank" rel="noopener">Open the full-size resort map</a> in a new tab, or see the <a href="https://maps.app.goo.gl/gqbNseMx3KpVGHPfA" target="_blank" rel="noopener">conference center location on Google Maps</a>.</p>
 
-<p><a href="img/resort_map.jpg" target="_blank" rel="noopener"><img src="img/resort_map.jpg" alt="Paradise Point resort map showing the villages, pools, restaurants and bars, meeting facilities, parking areas, and the entrance from Vacation Road" style="width:100%;border:1px solid #ddd;border-radius:8px;"></a></p>
+<p>Highlight on the map: <a href="#tennis">tennis &amp; basketball courts</a> &middot; <a href="#executive-lawn">Executive Lawn</a>. Click the map to zoom back out.</p>
+
+<div class="map-wrap" id="resort-map-wrap">
+  <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset('resort-map-wrap')">&#10005; Full map</button>
+  <div class="map-zoom" id="resort-zoom">
+  <img src="img/resort_map.jpg" alt="Paradise Point resort map showing the villages, pools, restaurants and bars, meeting facilities, parking areas, and the entrance from Vacation Road">
+  <div class="room-hl" id="hl-tennis" style="left:71.5%;top:36.7%;width:5.0%;height:14.0%;transform:translate(-50%,-50%);"></div>
+  <div class="room-hl" id="hl-executive-lawn" style="left:43.5%;top:74.0%;width:9.4%;height:11.6%;transform:translate(-50%,-50%);"></div>
+  </div>
+</div>
+
+<script>
+var mapReset;
+(function () {
+  /* Two zoomable maps share one mechanism: a URL hash naming a highlight
+     box (#dockside, #tennis, ...) zooms its map onto that box; a click on
+     a zoomed map or its "Full map" button zooms out. */
+  var MAPS = [
+    { wrap: 'venue-map', zoom: 'map-zoom', ratio: 2332 / 2128,   // image height / width
+      rooms: ['paradise-ballroom', 'garden', 'dockside', 'bay-view', 'terrace',
+              'mission-bay', 'sunset-a', 'sunset-b', 'foyer', 'food-trucks'] },
+    { wrap: 'resort-map-wrap', zoom: 'resort-zoom', ratio: 1257 / 1677,
+      rooms: ['tennis', 'executive-lawn'] }
+  ];
+
+  function roomBox(id) {
+    var el = document.getElementById('hl-' + id);
+    var st = el.style;
+    var rot = /rotate\((-?[\d.]+)deg\)/.exec(st.transform);
+    return {
+      cx: parseFloat(st.left) / 100, cy: parseFloat(st.top) / 100,
+      w: parseFloat(st.width) / 100, h: parseFloat(st.height) / 100,
+      rot: rot ? parseFloat(rot[1]) * Math.PI / 180 : 0
+    };
+  }
+
+  function zoomTo(m, id) {
+    var b = roomBox(id);
+    var Wc = m.wrapEl.clientWidth, Hc = Wc * m.ratio;
+    // axis-aligned extent of the (possibly rotated) room, in container px
+    var wpx = b.w * Wc, hpx = b.h * Hc;
+    var c = Math.abs(Math.cos(b.rot)), s = Math.abs(Math.sin(b.rot));
+    var bw = wpx * c + hpx * s, bh = wpx * s + hpx * c;
+    // scale so the room fills ~60% of the frame, harder zoom on phones
+    var cap = window.innerWidth < 768 ? 5 : 3.5;
+    var k = Math.min(cap, Math.max(1.4, 0.6 * Math.min(Wc / bw, Hc / bh)));
+    var tx = Wc / 2 - k * b.cx * Wc;
+    var ty = Hc / 2 - k * b.cy * Hc;
+    tx = Math.min(0, Math.max(Wc - k * Wc, tx));   // never show gaps
+    ty = Math.min(0, Math.max(Hc - k * Hc, ty));
+    m.zoomEl.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + k + ')';
+    m.wrapEl.classList.add('zoomed');
+  }
+
+  function reset(m) {
+    m.zoomEl.style.transform = 'none';
+    m.wrapEl.classList.remove('zoomed');
+  }
+
+  mapReset = function (wrapId) {
+    MAPS.forEach(function (m) { if (m.wrap === wrapId) reset(m); });
+  };
+
+  function highlightRoom(scroll) {
+    var h = decodeURIComponent(location.hash.replace('#', ''));
+    MAPS.forEach(function (m) {
+      m.current = m.rooms.indexOf(h) >= 0 ? h : '';   // active box id, '' = none
+      m.rooms.forEach(function (id) {
+        var el = document.getElementById('hl-' + id);
+        if (el) el.classList.toggle('active', id === m.current);
+      });
+      if (m.current) {
+        zoomTo(m, m.current);
+        if (scroll) m.wrapEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        reset(m);
+      }
+    });
+  }
+
+  MAPS.forEach(function (m) {
+    m.wrapEl = document.getElementById(m.wrap);
+    m.zoomEl = document.getElementById(m.zoom);
+    m.current = '';
+    m.wrapEl.addEventListener('click', function () {
+      if (m.wrapEl.classList.contains('zoomed')) reset(m);
+      else if (m.current) zoomTo(m, m.current);
+    });
+  });
+  window.addEventListener('resize', function () {
+    MAPS.forEach(function (m) {
+      if (m.current && m.wrapEl.classList.contains('zoomed')) zoomTo(m, m.current);
+    });
+  });
+  window.addEventListener('hashchange', function () { highlightRoom(true); });
+  highlightRoom(true);
+})();
+</script>
 
 </div>
 
