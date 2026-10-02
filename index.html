@@ -427,17 +427,10 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
 <!-- ═══ SPONSORS ═══ -->
 <style>
 .sponsors { padding: 4.5rem 2rem; text-align: center; background: #f7f9fb; scroll-margin-top: 64px; }
-.sponsors h2 { font-size: 1.7rem; font-weight: 800; color: #0a2440; margin-bottom: .4rem; }
-.sponsors .sp-lead { color: #5a6b7a; font-size: .95rem; margin-bottom: 2.5rem; }
-.sp-tier { margin-bottom: 2.5rem; }
-.sp-tier:last-child { margin-bottom: 0; }
-.sp-tier-label {
-  font-weight: 700; text-transform: uppercase;
-  letter-spacing: .12em; margin-bottom: 1.1rem;
+.sp-label {
+  font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: #8a98a6; font-size: .8rem; margin-bottom: 1.6rem;
 }
-.sp-tier-gold .sp-tier-label   { color: #e8a727; font-size: .95rem; }
-.sp-tier-silver .sp-tier-label { color: #8a98a6; font-size: .8rem; }
-.sp-tier-bronze .sp-tier-label { color: #a97142; font-size: .68rem; }
 .sp-row {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
   gap: 3rem;
@@ -447,54 +440,36 @@ footer .foot-brand { color: #fff; font-weight: 700; margin-bottom: .35rem; }
   transition: transform .2s, filter .2s; filter: grayscale(15%);
 }
 .sp-row a:hover { transform: translateY(-3px); filter: grayscale(0%); }
-.sp-tier-gold img   { height: 72px; width: auto; max-width: 260px; }
-.sp-tier-gold img[src="sponsors/cyan-banister.png"] { height: 84px; }
-.sp-tier-silver img { height: 72px; width: auto; max-width: 240px; }
-.sp-tier-bronze img { height: 42px; width: auto; max-width: 220px; }
+.sp-row img { height: 60px; width: auto; max-width: 240px; }
+.sp-row img[src="sponsors/cyan-banister.png"] { height: 70px; }
 @media (max-width: 768px) {
   .sponsors { padding: 3rem 1.25rem; }
   .sp-row { gap: 2rem; }
-  .sp-tier-gold img   { height: 56px; }
-  .sp-tier-gold img[src="sponsors/cyan-banister.png"] { height: 64px; }
-  .sp-tier-silver img { height: 58px; }
-  .sp-tier-bronze img { height: 36px; }
+  .sp-row img { height: 48px; }
+  .sp-row img[src="sponsors/cyan-banister.png"] { height: 56px; }
 }
 </style>
 <section id="sponsors" class="sponsors reveal">
-  <div class="sp-tier sp-tier-gold">
-    <div class="sp-tier-label">Gold Sponsors</div>
-    <div class="sp-row">
-      <a href="https://www.noetic.org/" target="_blank" rel="noopener" title="Institute of Noetic Sciences">
-        <img src="sponsors/IONS2.png" alt="Institute of Noetic Sciences">
-      </a>
-      <a href="https://oss.capital/" target="_blank" rel="noopener" title="OSS Capital">
-        <img src="sponsors/ossc-logo.svg" alt="OSS Capital">
-      </a>
-      <a href="https://en.wikipedia.org/wiki/Cyan_Banister" target="_blank" rel="noopener" title="Cyan Banister">
-        <img src="sponsors/cyan-banister.png" alt="Cyan Banister">
-      </a>
-    </div>
-  </div>
-
-  <div class="sp-tier sp-tier-silver">
-    <div class="sp-tier-label">Silver Sponsor</div>
-    <div class="sp-row">
-      <a href="https://cofo.org/" target="_blank" rel="noopener" title="The Consciousness Foundation">
-        <img src="sponsors/cofo-small.png" alt="The Consciousness Foundation">
-      </a>
-    </div>
-  </div>
-
-  <div class="sp-tier sp-tier-bronze">
-    <div class="sp-tier-label">Bronze Sponsors</div>
-    <div class="sp-row">
-      <span title="Alvin Clark">
-        <img src="sponsors/alvin_clark.png" alt="Alvin Clark">
-      </span>
-      <a href="https://quantumai.google/" target="_blank" rel="noopener" title="Google Quantum AI">
-        <img src="sponsors/GoogleQuantumAI.png" alt="Google Quantum AI">
-      </a>
-    </div>
+  <div class="sp-label">Sponsors</div>
+  <div class="sp-row">
+    <a href="https://oss.capital/" target="_blank" rel="noopener" title="OSS Capital">
+      <img src="sponsors/ossc-logo.svg" alt="OSS Capital">
+    </a>
+    <a href="https://cofo.org/" target="_blank" rel="noopener" title="The Consciousness Foundation">
+      <img src="sponsors/cofo-small.png" alt="The Consciousness Foundation">
+    </a>
+    <span title="Alvin Clark">
+      <img src="sponsors/alvin_clark.png" alt="Alvin Clark">
+    </span>
+    <a href="https://www.noetic.org/" target="_blank" rel="noopener" title="Institute of Noetic Sciences">
+      <img src="sponsors/IONS2.png" alt="Institute of Noetic Sciences">
+    </a>
+    <a href="https://quantumai.google/" target="_blank" rel="noopener" title="Google Quantum AI">
+      <img src="sponsors/GoogleQuantumAI.png" alt="Google Quantum AI">
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Cyan_Banister" target="_blank" rel="noopener" title="Cyan Banister">
+      <img src="sponsors/cyan-banister.png" alt="Cyan Banister">
+    </a>
   </div>
 </section>
 
