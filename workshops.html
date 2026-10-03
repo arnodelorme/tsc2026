@@ -67,7 +67,8 @@ a:hover { text-decoration: underline; }
   color: #fff !important; background: #24303a; border-left: 4px solid #1a96b8;
   padding: .4rem .7rem; border-radius: 4px; margin-bottom: .55rem;
 }
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .5rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+@media (max-width: 900px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
 .menu-break { font-size: .78rem; font-weight: 600; color: #444; margin: .15rem 0 1.1rem .2rem; }
 .menu-btn {
   display: block; padding: .6rem .8rem;
