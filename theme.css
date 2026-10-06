@@ -253,4 +253,10 @@ footer .foot-brand { color: var(--tsc-blue) !important; }
   border-color: var(--tsc-red) !important;
 }
 
+/* Zoom link / icon on streamed (Paradise Ballroom) sessions */
+.zoom-link { white-space: nowrap; }
+.zoom-link img { width: 1em; height: 1em; vertical-align: -.15em; margin-right: .3em; border-radius: 3px; }
+.zoom-ico { margin-left: .3em; }
+.zoom-ico img { width: .95em; height: .95em; vertical-align: -.12em; border-radius: 2px; }
+
 ::selection { background: var(--tsc-red); color: #fff; }
