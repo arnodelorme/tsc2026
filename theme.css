@@ -173,6 +173,7 @@ footer .foot-brand { color: var(--tsc-blue) !important; }
   display: block;
 }
 @media (max-width: 720px) { .speaker-avatar { width: 160px; height: 160px; } }
+.speaker-photo-link { display: block; }   /* photo links to the speaker's talks */
 .speaker-card h3 {
   font-size: 1.15rem !important;
   font-weight: 700;
