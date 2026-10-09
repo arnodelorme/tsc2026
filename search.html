@@ -84,6 +84,7 @@ a:hover { text-decoration: underline; }
 .tag-concurrent { background: #d0eaee; color: #1a4a50; }
 .tag-poster { background: #ece6f4; color: #3a2a50; }
 .tag-demo { background: #f7ecd3; color: #7a5a2a; }
+.tag-chair { background: #e6ecd6; color: #3a4a1a; }
 .hit-page { display: block; padding: .55rem .4rem; border-bottom: 1px solid #eef2f6; }
 .hit-page .crumb { font-weight: 700; color: #0a2440; font-size: .92rem; }
 .hit-page .snip { font-size: .82rem; color: #555; margin-top: .15rem; }
@@ -232,7 +233,8 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
     }
     if (raw.length < 2) {
       out.innerHTML = '<div class="type-more">Type at least two characters to search '
-        + SEARCH_INDEX.people.length + ' presentations and the main conference pages.</div>';
+        + SEARCH_INDEX.people.filter(function (r) { return r.ty !== 'Chair'; }).length
+        + ' presentations, the session chairs and the main conference pages.</div>';
       return;
     }
     var words = fold(raw).split(/\s+/).filter(Boolean);
@@ -251,7 +253,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
     var htmlParts = [];
     if (people.length) {
-      htmlParts.push('<div class="group-head">Speakers &amp; Abstracts (' + people.length + ')</div>');
+      htmlParts.push('<div class="group-head">Speakers, Chairs &amp; Abstracts (' + people.length + ')</div>');
       people.slice(0, MAX_PEOPLE).forEach(function (p) { htmlParts.push(personRow(p[1], hiWords)); });
       if (people.length > MAX_PEOPLE) {
         htmlParts.push('<div class="more-note">Showing the first ' + MAX_PEOPLE + ' matches &mdash; refine your search to narrow down.</div>');
