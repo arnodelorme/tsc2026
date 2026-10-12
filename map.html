@@ -244,7 +244,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 
 <p>Overview of the Paradise Point resort grounds &mdash; villages, pools, restaurants, parking, and the conference center. <a href="img/resort_map.jpg" target="_blank" rel="noopener">Open the full-size resort map</a> in a new tab, or see the <a href="https://maps.app.goo.gl/gqbNseMx3KpVGHPfA" target="_blank" rel="noopener">conference center location on Google Maps</a>.</p>
 
-<p>Highlight on the map: <a href="#tennis">tennis &amp; basketball courts</a> &middot; <a href="#executive-lawn">Executive Lawn</a>. Click the map to zoom back out.</p>
+<p>Highlight on the map: <a href="#tennis">tennis &amp; basketball courts</a> &middot; <a href="#executive-lawn">Executive Lawn</a> &middot; <a href="#bonfire">bonfire pit</a> (Monday reception bonfire, weather permitting, by Tidal Beach). Click the map to zoom back out.</p>
 
 <div class="map-wrap" id="resort-map-wrap">
   <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset('resort-map-wrap')">&#10005; Full map</button>
@@ -252,6 +252,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
   <img src="img/resort_map.jpg" alt="Paradise Point resort map showing the villages, pools, restaurants and bars, meeting facilities, parking areas, and the entrance from Vacation Road">
   <div class="room-hl" id="hl-tennis" style="left:71.5%;top:36.7%;width:5.0%;height:14.0%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-executive-lawn" style="left:43.5%;top:74.0%;width:9.4%;height:11.6%;transform:translate(-50%,-50%);"></div>
+  <div class="room-hl" id="hl-bonfire" style="left:5.72%;top:43.28%;width:3.6%;height:4.8%;transform:translate(-50%,-50%);border-radius:50%;"></div>
   </div>
 </div>
 
@@ -266,7 +267,7 @@ var mapReset;
       rooms: ['paradise-ballroom', 'garden', 'dockside', 'bay-view', 'terrace',
               'mission-bay', 'sunset-a', 'sunset-b', 'foyer', 'food-trucks'] },
     { wrap: 'resort-map-wrap', zoom: 'resort-zoom', ratio: 1257 / 1677,
-      rooms: ['tennis', 'executive-lawn'] }
+      rooms: ['tennis', 'executive-lawn', 'bonfire'] }
   ];
 
   function roomBox(id) {
