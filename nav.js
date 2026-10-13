@@ -194,10 +194,10 @@
      the previous one); it disappears by itself after `until`.  Set
      NEWS = null to remove it.  Not shown on the archived past/ pages. */
   var NEWS = {
-    id: 'poster-setup-2026',
+    id: 'poster-session-2026',
     until: '2026-10-15T00:00:00-07:00',
-    html: 'Posters: start setting up at 12:30&nbsp;pm in the Mission Bay Room &middot; ' +
-          '<a href="' + base + 'faq.html#poster-setup">where</a>'
+    html: 'Don&rsquo;t miss the poster session at 7:30&nbsp;pm, Mission Bay Room &middot; ' +
+          '<a href="' + base + 'posters.html">see posters</a>'
   };
   var newsKey = 'tsc_news_closed';
   var closed = '';
