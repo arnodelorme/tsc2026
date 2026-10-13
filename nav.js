@@ -188,4 +188,44 @@
       ul.classList.remove('open');
     });
   });
+
+  /* Hot-news toast: a small dismissible pill at the bottom of every page.
+     To post news, edit NEWS (a new id re-shows it to visitors who closed
+     the previous one); it disappears by itself after `until`.  Set
+     NEWS = null to remove it.  Not shown on the archived past/ pages. */
+  var NEWS = {
+    id: 'poster-setup-2026',
+    until: '2026-10-15T00:00:00-07:00',
+    html: 'Posters: start setting up at 12:30&nbsp;pm in the Mission Bay Room &middot; ' +
+          '<a href="' + base + 'faq.html#poster-setup">where</a>'
+  };
+  var newsKey = 'tsc_news_closed';
+  var closed = '';
+  try { closed = localStorage.getItem(newsKey) || ''; } catch (e) { /* storage blocked */ }
+  if (NEWS && !base && closed !== NEWS.id && Date.now() < Date.parse(NEWS.until)) {
+    var css = document.createElement('style');
+    css.textContent =
+      '.news-toast { position: fixed; z-index: 99; left: 0; right: 0; margin: 0 auto;' +
+      '  width: fit-content; max-width: calc(100% - 24px); box-sizing: border-box;' +
+      '  bottom: calc(12px + env(safe-area-inset-bottom, 0px));' +
+      '  display: flex; align-items: center; gap: .6rem; padding: .45rem .5rem .45rem 1rem;' +
+      '  background: rgba(10,36,64,.92); color: #fff; border-radius: 999px;' +
+      '  box-shadow: 0 3px 12px rgba(0,0,0,.25); font-size: .85rem; line-height: 1.3; }' +
+      '.news-toast a { color: #f2c46d; font-weight: 600; text-decoration: underline; }' +
+      '.news-toast button { flex: none; width: 26px; height: 26px; border: 0; border-radius: 50%;' +
+      '  background: rgba(255,255,255,.15); color: #fff; font-size: 15px; line-height: 1;' +
+      '  cursor: pointer; padding: 0; }' +
+      '@media print { .news-toast { display: none; } }';
+    document.head.appendChild(css);
+    var toast = document.createElement('div');
+    toast.className = 'news-toast';
+    toast.setAttribute('role', 'status');
+    toast.innerHTML = '<span>' + NEWS.html + '</span>' +
+      '<button type="button" aria-label="Close">&times;</button>';
+    toast.querySelector('button').addEventListener('click', function () {
+      toast.remove();
+      try { localStorage.setItem(newsKey, NEWS.id); } catch (e) { /* storage blocked */ }
+    });
+    document.body.appendChild(toast);
+  }
 })();
