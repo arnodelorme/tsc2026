@@ -172,7 +172,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 .map-wrap { position: relative; max-width: 900px; margin: 1.2rem auto;
   overflow: hidden; border: 1px solid #ddd; border-radius: 8px; }
 .map-zoom { transform-origin: 0 0; transition: transform .55s ease; }
-.map-zoom img { width: 100%; display: block; }
+.map-zoom img { width: 100%; height: auto; display: block; }
 .map-wrap.zoomed { cursor: zoom-out; }
 .map-reset {
   position: absolute; top: .6rem; right: .6rem; z-index: 5; display: none;
@@ -205,7 +205,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <div class="map-wrap" id="venue-map">
   <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset('venue-map')">&#10005; Full map</button>
   <div class="map-zoom" id="map-zoom">
-  <img src="img/meeting_space2.png" alt="Map of the Paradise Point meeting rooms: Paradise Ballroom, Dockside Room, Garden Room, Bay View Room, Sunset Ballroom, Mission Bay Room, and Paradise Terrace">
+  <img src="img/meeting_space2.png" width="2128" height="2332" alt="Map of the Paradise Point meeting rooms: Paradise Ballroom, Dockside Room, Garden Room, Bay View Room, Sunset Ballroom, Mission Bay Room, and Paradise Terrace">
   <div class="room-hl" id="hl-paradise-ballroom" style="left:65.53%;top:54.20%;width:22.98%;height:27.96%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-garden" style="left:45.37%;top:47.08%;width:15.28%;height:10.38%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-dockside" style="left:32.10%;top:49.94%;width:9.97%;height:14.20%;transform:translate(-50%,-50%);"></div>
@@ -249,7 +249,7 @@ footer .foot-brand { font-size: 1.05rem; font-weight: 700; color: #fff; margin-b
 <div class="map-wrap" id="resort-map-wrap">
   <button class="map-reset" type="button" onclick="event.stopPropagation(); mapReset('resort-map-wrap')">&#10005; Full map</button>
   <div class="map-zoom" id="resort-zoom">
-  <img src="img/resort_map.jpg" alt="Paradise Point resort map showing the villages, pools, restaurants and bars, meeting facilities, parking areas, and the entrance from Vacation Road">
+  <img src="img/resort_map.jpg" width="1677" height="1257" alt="Paradise Point resort map showing the villages, pools, restaurants and bars, meeting facilities, parking areas, and the entrance from Vacation Road">
   <div class="room-hl" id="hl-tennis" style="left:71.5%;top:36.7%;width:5.0%;height:14.0%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-executive-lawn" style="left:43.5%;top:74.0%;width:9.4%;height:11.6%;transform:translate(-50%,-50%);"></div>
   <div class="room-hl" id="hl-bonfire" style="left:5.72%;top:43.28%;width:3.6%;height:4.8%;transform:translate(-50%,-50%);border-radius:50%;"></div>
@@ -340,7 +340,33 @@ var mapReset;
     });
   });
   window.addEventListener('hashchange', function () { highlightRoom(true); });
-  highlightRoom(true);
+  /* Re-clicking the link of the current highlight fires no hashchange. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (a && a.getAttribute('href') === location.hash) {
+      e.preventDefault();
+      highlightRoom(true);
+    }
+  });
+  /* On arrival with a hash (map.html#bonfire), zoom now but scroll only once
+     the page is built.  The page's html { scroll-behavior: smooth } would
+     animate a scroll started while still loading, and that animation stops
+     short when the layout grows under it, so these scrolls are instant:
+     once at DOMContentLoaded, again at load, unless the visitor scrolled. */
+  highlightRoom(false);
+  var userScrolled = false;
+  ['wheel', 'touchmove', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { userScrolled = true; }, { passive: true, once: true });
+  });
+  function arrivalScroll() {
+    MAPS.forEach(function (m) {
+      if (m.current && !userScrolled) {
+        m.wrapEl.scrollIntoView({ behavior: 'instant', block: 'center' });
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', arrivalScroll);
+  window.addEventListener('load', arrivalScroll);
 })();
 </script>
 
