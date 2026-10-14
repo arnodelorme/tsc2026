@@ -197,7 +197,7 @@
     id: 'dinner-seats-released-2026',
     until: '2026-10-15T19:30:00-07:00',
     html: 'More Fire Show Dinner seats released for Thursday, 7:30&nbsp;pm ($150) &middot; ' +
-          '<a href="' + base + 'register.html#dinner">book a seat</a>'
+          '<a href="' + base + 'register.html#dinner">book a seat</a> or ask at the registration desk'
   };
   var newsKey = 'tsc_news_closed';
   var closed = '';
